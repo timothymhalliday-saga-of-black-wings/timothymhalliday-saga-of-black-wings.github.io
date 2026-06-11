@@ -1,132 +1,173 @@
-<!DOCTYPE html>
-<html lang="en">
+body {
 
-<head>
+  margin: 0;
 
-  <meta charset="UTF-8">
+  font-family: Georgia, 'Times New Roman', serif;
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Official website for Saga of Black Wings, a dark epic fantasy series by Timothy M. Halliday, featuring ravens, salt-marsh myth, haunted roads, chosen family, ancient powers, and the long war of witness, refusal, love, and black wings.">
+  background: #000000;
 
-<meta name="robots" content="index, follow">
-  <title>Saga of Black Wings</title>
+  color: #e7dcc5;
 
-  <link rel="stylesheet" href="style.css">
+  line-height: 1.7;
 
-</head>
+}
 
-<body>
+.hero {
 
-  <header class="hero">
+  padding: 50px 20px 20px;
 
-    <h1>Saga of Black Wings</h1>
+  text-align: center;
 
-    <p class="tagline">A dark epic fantasy saga of ravens, salt-marsh myth, haunted roads, chosen family, and the long war of witness, refusal, love, and black wings.</p>
+  background: #000000;
 
-  </header>
+}
 
-  <nav>
+.hero h1 {
 
-    <a href="#about">About</a>
+  margin: 0;
 
-    <a href="#books">Books</a>
+  font-size: 4rem;
 
-    <a href="#author">Author</a>
+  letter-spacing: 3px;
 
-    <a href="#contact">Contact</a>
+  color: #f5d58a;
 
-  </nav>
+}
 
-  <main>
+.tagline {
 
-    <section id="about">
+  max-width: 900px;
 
-      <h2>About the Saga</h2>
+  margin: 20px auto 0;
 
-      <p>
+  font-size: 1.2rem;
 
-        Saga of Black Wings is a dark epic fantasy series set among salt-marshes,
+  color: #e7dcc5;
 
-        haunted roads, ancient powers, ravens, dogs, oaths, wounds, and stubborn hope.
+}
 
-      </p>
+nav {
 
-      <p>
+  text-align: center;
 
-        It follows FATAS, Ness, the Braid, and their companions through wars of bloodline,
+  padding: 18px;
 
-        crown, root, ash, refusal, family, and the living law of witness.
+  background: #141416;
 
-      </p>
+  border-top: 1px solid #332719;
 
-    </section>
+  border-bottom: 1px solid #332719;
 
-    <section id="books">
+}
 
-      <h2>The Books</h2>
+nav a {
 
-      <ul>
+  color: #f5d58a;
 
-        <li>Book I: Saga of Black Wings</li>
+  text-decoration: none;
 
-        <li>Book II: The Reckoner’s Knot</li>
+  margin: 0 18px;
 
-        <li>Book III: The Crown of Thorns and Salt</li>
+  font-weight: bold;
 
-        <li>Book IV: The Crown Unmade</li>
+}
 
-        <li>Book V: The War of the Underroot</li>
+nav a:hover {
 
-        <li>Book VI: The Rising Root</li>
+  color: #ffffff;
 
-        <li>Book VII: The Severing War</li>
+}
 
-        <li>Book VIII: The Last Root</li>
+main {
 
-        <li>Book IX: The War Without Root</li>
+  max-width: 1000px;
 
-        <li>Book X: The Quieting World</li>
+  margin: 0 auto;
 
-        <li>Book XI: The Agreement of Ash</li>
+  padding: 45px 22px;
 
-        <li>Book XII: The Last Refusal</li>
+}
 
-        <li>Book XIII: The House That Raised the Raven</li>
+section {
 
-      </ul>
+  margin-bottom: 55px;
 
-    </section>
+  padding: 28px;
 
-    <section id="author">
+  background: #080808;
 
-      <h2>About the Author</h2>
+  border: 1px solid rgba(245, 213, 138, 0.35);
 
-      <p>
+  border-radius: 12px;
 
-        Timothy M. Halliday is the author of Saga of Black Wings, a mythic fantasy saga
+}
 
-        of love, resistance, memory, family, and the wild things that refuse the collar.
+h2 {
 
-      </p>
+  color: #f5d58a;
 
-    </section>
+  font-size: 2rem;
 
-    <section id="contact">
+  margin-top: 0;
 
-      <h2>Contact</h2>
+}
 
-      <p>Contact details coming soon.</p>
+p,
 
-    </section>
+li {
 
-  </main>
+  color: #e7dcc5;
 
-  <footer>
+}
 
-    <p>© Timothy M. Halliday. All rights reserved.</p>
+ul {
 
-  </footer>
+  columns: 2;
 
-</body>
+  padding-left: 24px;
 
-</html>
+}
+
+li {
+
+  margin-bottom: 8px;
+
+}
+
+footer {
+
+  text-align: center;
+
+  padding: 30px 15px;
+
+  background: #050506;
+
+  color: #b7aa92;
+
+  border-top: 1px solid #332719;
+
+}
+
+@media (max-width: 700px) {
+
+  .hero h1 {
+
+    font-size: 2.4rem;
+
+  }
+
+  ul {
+
+    columns: 1;
+
+  }
+
+  nav a {
+
+    display: inline-block;
+
+    margin: 6px 10px;
+
+  }
+
+}
