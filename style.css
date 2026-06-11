@@ -165,7 +165,19 @@ footer {
     display: inline-block;
 
     margin: 6px 10px;
+section p,
 
+section li {
+
+  color: #e7dcc5;
+
+}
+
+section {
+
+  background: rgba(255, 255, 255, 0.055);
+
+}
   }
 
 }
