@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://timothymhalliday-saga-of-black-wings.github.io/sitemap.xml
