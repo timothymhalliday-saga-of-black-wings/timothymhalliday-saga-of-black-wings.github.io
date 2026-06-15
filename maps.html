@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Maps | Saga of Black Wings</title>
+
+  <meta name="description" content="Explore the maps, roads, marshes, houses, crossings, northern routes, and mythic landscapes of The Saga of Black Wings by Timothy M. Halliday.">
+
+  <style>
+
+    body {
+
+      margin: 0;
+
+      background: #080808;
+
+      color: #f2eadf;
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      line-height: 1.7;
+
+    }
+
+    header {
+
+      background: #111111;
+
+      border-bottom: 1px solid #c9a45c;
+
+      padding: 22px;
+
+      text-align: center;
+
+    }
+
+    header h1 {
+
+      margin: 0;
+
+      color: #c9a45c;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      font-size: 30px;
+
+    }
+
+    nav {
+
+      margin-top: 15px;
+
+    }
+
+    nav a {
+
+      color: #f2eadf;
+
+      text-decoration: none;
+
+      margin: 0 10px;
+
+      font-size: 15px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1px;
+
+    }
+
+    nav a:hover {
+
+      color: #c9a45c;
+
+    }
+
+    .hero {
+
+      padding: 75px 20px;
+
+      text-align: center;
+
+      background:
+
+        linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.9)),
+
+        radial-gradient(circle at top, #4d1111, #080808 65%);
+
+    }
+
+    .hero h2 {
+
+      font-size: 52px;
+
+      color: #c9a45c;
+
+      margin: 0 0 18px;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+    }
+
+    .hero p {
+
+      max-width: 900px;
+
+      margin: 0 auto;
+
+      font-size: 21px;
+
+      color: #ddd0bd;
+
+    }
+
+    main {
+
+      max-width: 1180px;
+
+      margin: 0 auto;
+
+      padding: 45px 20px 85px;
+
+    }
+
+    section {
+
+      background: #141414;
+
+      border: 1px solid rgba(201, 164, 92, 0.45);
+
+      border-radius: 18px;
+
+      padding: 34px;
+
+      margin-bottom: 30px;
+
+      box-shadow: 0 0 35px rgba(0,0,0,0.35);
+
+    }
+
+    h3 {
+
+      color: #c9a45c;
+
+      font-size: 31px;
+
+      margin-top: 0;
+
+      margin-bottom: 18px;
+
+    }
+
+    p {
+
+      font-size: 18px;
+
+      margin-bottom: 18px;
+
+    }
+
+    .quote {
+
+      border-left: 4px solid #c9a45c;
+
+      padding: 18px 22px;
+
+      background: rgba(201, 164, 92, 0.08);
+
+      color: #f2eadf;
+
+      font-size: 22px;
+
+      margin: 28px 0;
+
+    }
+
+    .map-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 22px;
+
+      margin-top: 22px;
+
+    }
+
+    .map-card {
+
+      background: #1d1d1d;
+
+      border: 1px solid rgba(201, 164, 92, 0.32);
+
+      border-radius: 18px;
+
+      overflow: hidden;
+
+    }
+
+    .map-visual {
+
+      min-height: 220px;
+
+      background:
+
+        linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.72)),
+
+        radial-gradient(circle at 30% 30%, rgba(201,164,92,0.28), transparent 20%),
+
+        radial-gradient(circle at 70% 60%, rgba(125,31,31,0.35), transparent 25%),
+
+        linear-gradient(135deg, #1d1d1d, #0b0b0b);
+
+      border-bottom: 1px solid rgba(201, 164, 92, 0.25);
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      padding: 25px;
+
+      text-align: center;
+
+    }
+
+    .map-visual span {
+
+      color: #c9a45c;
+
+      font-size: 24px;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+    }
+
+    .map-content {
+
+      padding: 24px;
+
+    }
+
+    .map-content h4 {
+
+      color: #c9a45c;
+
+      font-size: 25px;
+
+      margin: 0 0 10px;
+
+    }
+
+    .role {
+
+      color: #b9aa93;
+
+      font-size: 14px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1.5px;
+
+      margin-bottom: 12px;
+
+    }
+
+    .map-content p {
+
+      color: #ddd0bd;
+
+      font-size: 16.5px;
+
+      margin-bottom: 14px;
+
+    }
+
+    .place-list {
+
+      list-style: none;
+
+      padding: 0;
+
+      margin: 18px 0 0;
+
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 12px;
+
+    }
+
+    .place-list li {
+
+      background: #1d1d1d;
+
+      border: 1px solid rgba(201, 164, 92, 0.28);
+
+      border-radius: 14px;
+
+      padding: 14px 16px;
+
+      color: #f2eadf;
+
+      font-size: 16.5px;
+
+    }
+
+    .note {
+
+      color: #b9aa93;
+
+      font-size: 16px;
+
+      font-style: italic;
+
+    }
+
+    footer {
+
+      text-align: center;
+
+      background: #111111;
+
+      border-top: 1px solid #c9a45c;
+
+      padding: 25px;
+
+      color: #b9aa93;
+
+      font-size: 14px;
+
+    }
+
+    @media (max-width: 850px) {
+
+      .map-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+      .place-list {
+
+        grid-template-columns: 1fr;
+
+      }
+
+      nav a {
+
+        display: inline-block;
+
+        margin: 6px 8px;
+
+      }
+
+      .hero h2 {
+
+        font-size: 38px;
+
+      }
+
+      .hero p {
+
+        font-size: 18px;
+
+      }
+
+      section,
+
+      .map-content {
+
+        padding: 24px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+
+    <h1>Saga of Black Wings</h1>
+
+    <nav>
+
+      <a href="index.html">Home</a>
+
+      <a href="books.html">Books</a>
+
+      <a href="characters.html">Characters</a>
+
+      <a href="world.html">World &amp; Law</a>
+
+      <a href="odes.html">Odes &amp; Songs</a>
+
+      <a href="maps.html">Maps</a>
+
+      <a href="author.html">Author</a>
+
+    </nav>
+
+  </header>
+
+  <div class="hero">
+
+    <h2>Maps</h2>
+
+    <p>
+
+      Roads, marshes, bridges, houses, cold halls, northern routes, hidden places,
+
+      and mythic landscapes from <em>The Saga of Black Wings</em>.
+
+    </p>
+
+  </div>
+
+  <main>
+
+    <section>
+
+      <h3>The Shape of the Road</h3>
+
+      <p>
+
+        Maps in <em>The Saga of Black Wings</em> are more than geography. They are memory,
+
+        danger, family, road-law, weather, warning, and witness. A crossing may carry
+
+        old grief. A house may remember breath. A marsh path may know which foot is afraid.
+
+        A northern road may open because something hidden has finally been found.
+
+      </p>
+
+      <p>
+
+        This page introduces the major landscapes and route-shapes of the saga without
+
+        giving away the deepest secrets of the books.
+
+      </p>
+
+      <div class="quote">
+
+        A map shows where the road lies. It does not always show what the road remembers.
+
+      </div>
+
+    </section>
+
+    <section>
+
+      <h3>Map Gallery</h3>
+
+      <p class="note">
+
+        Visual map artwork can be added here later. For now, these archive panels describe
+
+        the important routes and places for readers.
+
+      </p>
+
+      <div class="map-grid">
+
+        <div class="map-card">
+
+          <div class="map-visual">
+
+            <span>Witness Isle</span>
+
+          </div>
+
+          <div class="map-content">
+
+            <h4>Witness Isle</h4>
+
+            <div class="role">Home of the Braid</div>
+
+            <p>
+
+              Chosen home, sanctuary, hearth, argument, animal noise, food, law, witness,
+
+              and the place where people may arrive without being turned into proof.
+
+            </p>
+
+            <p>
+
+              Witness Isle is not home because blood commands it. It is home because care
+
+              keeps asking, feeding, waiting, and making room.
+
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="map-card">
+
+          <div class="map-visual">
+
+            <span>The Road Home</span>
+
+          </div>
+
+          <div class="map-content">
+
+            <h4>Route Home from Witness Isle</h4>
+
+            <div class="role">Book XIII road-map</div>
+
+            <p>
+
+              The road from chosen home toward the old House. A journey through marsh,
+
+              memory, old dog-truth, locked rooms, breath, weather, grief, humour, and
+
+              the final proof that origin is not ownership.
+
+            </p>
+
+            <p>
+
+              It is not a return to be claimed. It is a return to witness what once claimed.
+
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="map-card">
+
+          <div class="map-visual">
+
+            <span>The Old House</span>
+
+          </div>
+
+          <div class="map-content">
+
+            <h4>The House That Raised the Raven</h4>
+
+            <div class="role">Origin wound, Book XIII</div>
+
+            <p>
+
+              The old house stands at the end of the road home: rooms, doors, stair-dust,
+
+              old silence, breath, survival-shapes, and the child who came out.
+
+            </p>
+
+            <p>
+
+              The House matters because it shaped FATAS. It does not own him.
+
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="map-card">
+
+          <div class="map-visual">
+
+            <span>Skeld-Fell</span>
+
+          </div>
+
+          <div class="map-content">
+
+            <h4>The Road North to Skeld-Fell</h4>
+
+            <div class="role">Book XIV northern road</div>
+
+            <p>
+
+              A colder road where hearths burn blue-grey, dogs refuse thresholds, snow
+
+              remembers old bargains, and hidden family names are carried toward ransom.
+
+            </p>
+
+            <p>
+
+              The road north tests a hard law: need explains the hand, but it does not clean it.
+
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="map-card">
+
+          <div class="map-visual">
+
+            <span>Ransom House</span>
+
+          </div>
+
+          <div class="map-content">
+
+            <h4>The Ransom House of Snow</h4>
+
+            <div class="role">Book XIV captivity site</div>
+
+            <p>
+
+              A place of open doors, false warmth, helpful language, cold hearths, and
+
+              ledgers where people are priced as winter payment.
+
+            </p>
+
+            <p>
+
+              Its danger is not only that it holds people. Its danger is that it calls
+
+              holding them mercy.
+
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="map-card">
+
+          <div class="map-visual">
+
+            <span>Cold Hearth Hall</span>
+
+          </div>
+
+          <div class="map-content">
+
+            <h4>Cold Hearth Hall</h4>
+
+            <div class="role">Old winter agreement</div>
+
+            <p>
+
+              Beneath Skeld-Fell’s need waits something older than ordinary winter:
+
+              a cold intelligence speaking through shame, soot, and the hunger for warmth.
+
+            </p>
+
+            <p>
+
+              Here, fire remembers how to bargain before it remembers how to warm.
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section>
+
+      <h3>Route Home Landmarks</h3>
+
+      <p>
+
+        The route from Witness Isle toward the old House carries emotional geography as
+
+        much as physical geography. Each place is a marker of return without surrender.
+
+      </p>
+
+      <ul class="place-list">
+
+        <li>Witness Isle</li>
+
+        <li>Claymouth, Old Landing</li>
+
+        <li>Dead Salt Bridge</li>
+
+        <li>Blackfen Crossing</li>
+
+        <li>Brackenmere</li>
+
+        <li>Mirefold</li>
+
+        <li>Harrowend, Old Chapel &amp; Yard</li>
+
+        <li>The Northern Rise</li>
+
+        <li>Broken Window Ridge</li>
+
+        <li>Shane’s Run, Drowned Track</li>
+
+        <li>Reed Mere</li>
+
+        <li>The Old Brine Road</li>
+
+        <li>The First Locked Room</li>
+
+        <li>The Watcher Floor</li>
+
+        <li>The House That Raised the Raven</li>
+
+      </ul>
+
+    </section>
+
+    <section>
+
+      <h3>Book XIV Northern Landmarks</h3>
+
+      <p>
+
+        <em>The House Beyond the House</em> opens the road north. Elland’s secret,
+
+        the hidden Vey-Corren family, Jórga Rósahaddr, Glimra, Jack, Jórunn, Ness,
+
+        FATAS, Mia, Maisie, James, Blue, Hugo, and the Braid move toward a colder
+
+        mystery where welcome itself may have teeth.
+
+      </p>
+
+      <ul class="place-list">
+
+        <li>The Road North</li>
+
+        <li>Skeld-Fell Lower Houses</li>
+
+        <li>The Cold Hearth Roads</li>
+
+        <li>The Ransom House of Snow</li>
+
+        <li>Cold Hearth Hall</li>
+
+        <li>The Wolf-Bone Door</li>
+
+        <li>The Old Agreement Under the Mountain</li>
+
+        <li>The Hidden Vey-Corren Route</li>
+
+        <li>The False Warm Chamber</li>
+
+        <li>The Snow Ledger Room</li>
+
+        <li>The Hearth That Asked for Blood</li>
+
+        <li>The Door That Knocked Back</li>
+
+      </ul>
+
+      <div class="quote">
+
+        Open is not proof. Asking is the proof.
+
+      </div>
+
+    </section>
+
+    <section>
+
+      <h3>Marsh, Road, and Beast-Witness</h3>
+
+      <p>
+
+        The Black Wings world is full of living geography. Marshes may hide or reveal.
+
+        Roads may hurry or wait. Crossings may carry old debts. Animals often understand
+
+        a place before people do.
+
+      </p>
+
+      <p>
+
+        A hound’s sneeze, a raven’s silence, a crow’s insult, a wolf’s refusal, or the
+
+        sudden appearance of a leopard that had been standing two feet away may tell the
+
+        truth faster than any map.
+
+      </p>
+
+      <div class="quote">
+
+        The best maps leave room for paws, feathers, scent, mist, and warning.
+
+      </div>
+
+    </section>
+
+    <section>
+
+      <h3>Map Notes for Readers</h3>
+
+      <p>
+
+        These maps are spoiler-safe guideposts. They show the emotional shape of the saga:
+
+        chosen home, old home, northern danger, cold hearths, ransom logic, hidden family,
+
+        and the living roads between them.
+
+      </p>
+
+      <p>
+
+        More detailed artwork, symbol maps, crest maps, route plates, and hand-drawn archive
+
+        pieces can be added as the website grows.
+
+      </p>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    © 2026 Saga of Black Wings · Created by Timothy M. Halliday
+
+  </footer>
+
+</body>
+
+</html>
