@@ -1,1081 +1,314 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
-  <meta charset="UTF-8">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Odes & Songs | Saga of Black Wings</title>
-
-  <meta name="description" content="Read selected odes, songs, chants, epitaphs, and mysterious fragments from The Saga of Black Wings by Timothy M. Halliday.">
-
-  <style>
-
-    body {
-
-      margin: 0;
-
-      background: #080808;
-
-      color: #f2eadf;
-
-      font-family: Georgia, "Times New Roman", serif;
-
-      line-height: 1.7;
-
-    }
-
-    header {
-
-      background: #111111;
-
-      border-bottom: 1px solid #c9a45c;
-
-      padding: 22px;
-
-      text-align: center;
-
-    }
-
-    header h1 {
-
-      margin: 0;
-
-      color: #c9a45c;
-
-      letter-spacing: 2px;
-
-      text-transform: uppercase;
-
-      font-size: 30px;
-
-    }
-
-    nav {
-
-      margin-top: 15px;
-
-    }
-
-    nav a {
-
-      color: #f2eadf;
-
-      text-decoration: none;
-
-      margin: 0 10px;
-
-      font-size: 15px;
-
-      text-transform: uppercase;
-
-      letter-spacing: 1px;
-
-    }
-
-    nav a:hover {
-
-      color: #c9a45c;
-
-    }
-
-    .hero {
-
-      padding: 75px 20px;
-
-      text-align: center;
-
-      background:
-
-        linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.9)),
-
-        radial-gradient(circle at top, #4d1111, #080808 65%);
-
-    }
-
-    .hero h2 {
-
-      font-size: 52px;
-
-      color: #c9a45c;
-
-      margin: 0 0 18px;
-
-      letter-spacing: 2px;
-
-      text-transform: uppercase;
-
-    }
-
-    .hero p {
-
-      max-width: 900px;
-
-      margin: 0 auto;
-
-      font-size: 21px;
-
-      color: #ddd0bd;
-
-    }
-
-    main {
-
-      max-width: 1050px;
-
-      margin: 0 auto;
-
-      padding: 45px 20px 85px;
-
-    }
-
-    section {
-
-      background: #141414;
-
-      border: 1px solid rgba(201, 164, 92, 0.45);
-
-      border-radius: 18px;
-
-      padding: 34px;
-
-      margin-bottom: 30px;
-
-      box-shadow: 0 0 35px rgba(0,0,0,0.35);
-
-    }
-
-    h3 {
-
-      color: #c9a45c;
-
-      font-size: 31px;
-
-      margin-top: 0;
-
-      margin-bottom: 18px;
-
-    }
-
-    h4 {
-
-      color: #c9a45c;
-
-      font-size: 24px;
-
-      margin: 0 0 12px;
-
-    }
-
-    p {
-
-      font-size: 18px;
-
-      margin-bottom: 18px;
-
-    }
-
-    .quote {
-
-      border-left: 4px solid #c9a45c;
-
-      padding: 18px 22px;
-
-      background: rgba(201, 164, 92, 0.08);
-
-      color: #f2eadf;
-
-      font-size: 22px;
-
-      margin: 28px 0;
-
-    }
-
-    .note {
-
-      color: #b9aa93;
-
-      font-size: 16px;
-
-      font-style: italic;
-
-    }
-
-    .ode {
-
-      background: #1d1d1d;
-
-      border: 1px solid rgba(201, 164, 92, 0.32);
-
-      border-radius: 18px;
-
-      padding: 28px;
-
-      margin-top: 24px;
-
-      white-space: pre-line;
-
-      font-size: 18px;
-
-      color: #f2eadf;
-
-    }
-
-    .ode-title {
-
-      color: #c9a45c;
-
-      font-size: 25px;
-
-      text-transform: uppercase;
-
-      letter-spacing: 1.5px;
-
-      margin-bottom: 14px;
-
-      white-space: normal;
-
-    }
-
-    .ode-source {
-
-      color: #b9aa93;
-
-      font-size: 14px;
-
-      text-transform: uppercase;
-
-      letter-spacing: 1.5px;
-
-      margin-bottom: 18px;
-
-      white-space: normal;
-
-    }
-
-    .law-grid {
-
-      display: grid;
-
-      grid-template-columns: repeat(2, 1fr);
-
-      gap: 14px;
-
-      margin-top: 20px;
-
-    }
-
-    .law {
-
-      background: #1d1d1d;
-
-      border: 1px solid rgba(201, 164, 92, 0.28);
-
-      border-radius: 14px;
-
-      padding: 16px 18px;
-
-      color: #f2eadf;
-
-      font-size: 18px;
-
-    }
-
-    footer {
-
-      text-align: center;
-
-      background: #111111;
-
-      border-top: 1px solid #c9a45c;
-
-      padding: 25px;
-
-      color: #b9aa93;
-
-      font-size: 14px;
-
-    }
-
-    @media (max-width: 800px) {
-
-      .law-grid {
-
-        grid-template-columns: 1fr;
-
-      }
-
-      nav a {
-
-        display: inline-block;
-
-        margin: 6px 8px;
-
-      }
-
-      .hero h2 {
-
-        font-size: 38px;
-
-      }
-
-      .hero p {
-
-        font-size: 18px;
-
-      }
-
-      section,
-
-      .ode {
-
-        padding: 24px;
-
-      }
-
-    }
-
-  </style>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Odes & Saga Plates | Saga of Black Wings</title>
+  <meta name="description" content="Odes, songs, epitaphs, saga plates and website-exclusive mystery fragments from Timothy M. Halliday's Saga of Black Wings." />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-
-  <header>
-
-    <h1>Saga of Black Wings</h1>
-
-    <nav>
-
-      <a href="index.html">Home</a>
-
-      <a href="books.html">Books</a>
-
-      <a href="characters.html">Characters</a>
-
-      <a href="world.html">World &amp; Law</a>
-
-      <a href="odes.html">Odes &amp; Songs</a>
-
-      <a href="maps.html">Maps</a>
-
-      <a href="author.html">Author</a>
-
-    </nav>
-
-  </header>
-
-  <div class="hero">
-
-    <h2>Odes &amp; Songs</h2>
-
-    <p>
-
-      Selected odes, songs, chants, epitaphs, and mysterious fragments from
-
-      <em>The Saga of Black Wings</em>, where the world often speaks in rhythm before it speaks in prose.
-
+<header class="page-hero">
+  <div class="hero-text">
+    <p class="eyebrow">The Skald-Room</p>
+    <h1>Odes & Saga Plates</h1>
+    <p class="tagline">
+      Songs, epitaphs, witness fragments, beast-law, raven warnings, love-odes and
+      mystery plates from the world of Black Wings.
     </p>
-
+<div class="hero-buttons">
+  <a href="index.html" class="button primary">Home</a>
+  <a href="lore.html" class="button secondary">World & Lore</a>
+</div>
   </div>
-
-  <main>
-
-    <section>
-
-      <h3>The Voice of the Saga</h3>
-
-      <p>
-
-        In the Black Wings world, odes and songs are not decoration. They carry memory,
-
-        grief, warnings, old law, humour, love, battle, prophecy, animal witness, and
-
-        the truths that ordinary speech cannot always hold.
-
-      </p>
-
-      <p>
-
-        Some pieces appear inside the books. Others are archive fragments, road-songs,
-
-        hearth-songs, Druid chants, or spoiler-safe glimpses of the wider saga.
-
-      </p>
-
-      <div class="quote">
-
-        A song may remember what a kingdom tried to bury.
-
-      </div>
-
-    </section>
-
-    <section>
-
-      <h3>Opening Archive Fragment</h3>
-
-      <p class="note">
-
-        A spoiler-safe invocation for new readers entering the Black Wings world.
-
-      </p>
-
-      <div class="ode">
-
-        <div class="ode-title">Ode of the Black Wings Road</div>
-
-        <div class="ode-source">Archive Fragment</div>
-
-No road began clean.
-
-Mud knew it first.
-
-Then feather.
-
-Then foot.
-
-Then blood,
-
-though blood is always late
-
-to admit what the earth
-
-has already written.
-
-The raven flew low
-
-over fields that had forgotten
-
-how many names lay under them.
-
-The crow watched from a broken fence
-
-and judged the living
-
-with excellent patience.
-
-A child stepped where no map
-
-had given permission.
-
-A hound sneezed at danger.
-
-A wolf waited
-
-where lies hoped to pass.
-
-A woman lit the hearth
-
-without asking ownership
-
-to bless the flame.
-
-A man carried an axe
-
-that knew the difference
-
-between severing harm
-
-and cutting what still needed care.
-
-So the road opened.
-
-Not because it was safe.
-
-Not because it was kind.
-
-Because somewhere ahead,
-
-a locked thing had mistaken silence
-
-for victory.
-
-And the Black Wings
-
-had never been fond
-
-of that particular mistake.
-
-      </div>
-
-    </section>
-
-    <section>
-
-      <h3>Hearth-Song</h3>
-
-      <p class="note">
-
-        A short hearth-piece for the warmth, food, jokes, animals, and chosen-family side of the saga.
-
-      </p>
-
-      <div class="ode">
-
-        <div class="ode-title">Song of the Bowl Passed Twice</div>
-
-        <div class="ode-source">Hearth-Song</div>
-
-Pass the bowl once
-
-for hunger.
-
-Pass it twice
-
-for pride.
-
-Some mouths have learned
-
-to call need weakness.
-
-Some hands have learned
-
-to hide
-
-until shaking becomes custom.
-
-So pass the bowl once
-
-and do not stare.
-
-Pass it twice
-
-and tell a joke.
-
-Let Hugo lean on the wrong boot.
-
-Let Blue insult the spoon.
-
-Let Benson sit
-
-where no one asked him to sit
-
-and improve the meeting
-
-by force of body.
-
-Let Scarlet watch the window.
-
-Let Mad sneeze
-
-at whatever old trouble
-
-thinks itself hidden in the rafters.
-
-Let Ness warm the broth
-
-without making gratitude
-
-stand at attention.
-
-Let FATAS grumble
-
-and fetch more bread.
-
-That is how a hearth
-
-learns not to become a throne.
-
-That is how care
-
-keeps its hands clean.
-
-Not by being small.
-
-By asking.
-
-By offering.
-
-By staying.
-
-By passing the bowl twice.
-
-      </div>
-
-    </section>
-
-    <section>
-
-      <h3>Druid Chant</h3>
-
-      <p class="note">
-
-        A chant of old magic, beast-law, scent, reed, paw, flame, mist, and consent.
-
-      </p>
-
-      <div class="ode">
-
-        <div class="ode-title">Druid Chant of Reed, Paw, Flame, and Scent</div>
-
-        <div class="ode-source">Old Marsh Chant</div>
-
-Reed bends.
-
-Mud keeps.
-
-Paw knows.
-
-Claw waits.
-
-Feather sees
-
-where eye refuses.
-
-Fur hears
-
-what pride has buried.
-
-Flame lowers.
-
-Mist gathers.
-
-Scent walks only
-
-where choice opens.
-
-Name the road,
-
-but do not own it.
-
-Touch the gate,
-
-but do not force it.
-
-Call the beast,
-
-but do not command it.
-
-Ask the child,
-
-then wait.
-
-Ask the wound,
-
-then wait.
-
-Ask the door,
-
-then wait.
-
-Old magic remembers
-
-what old power forgot:
-
-Nothing living
-
-belongs to the hand
-
-that can reach it.
-
-      </div>
-
-    </section>
-
-    <section>
-
-      <h3>Book XIV Hint Plate</h3>
-
-      <p class="note">
-
-        A spoiler-safe hint toward <em>The House Beyond the House</em>.
-
-      </p>
-
-      <div class="ode">
-
-        <div class="ode-title">Ode of the Door That Opened Too Soon</div>
-
-        <div class="ode-source">From the Northern Road</div>
-
-The door opened
-
-before the hand had lifted.
-
-That was the warning.
-
-Warm light spilled out.
-
-Soup steamed.
-
-Blankets waited.
-
-A chair sat near the fire
-
-with its arms spread wide
-
-as if comfort itself
-
-had carved the wood.
-
-But Jack growled.
-
-Jórunn covered her nose.
-
-Blue said something
-
-deeply unhelpful
-
-and entirely correct.
-
-The leopard was not visible,
-
-which meant everyone wise
-
-made room for it.
-
-Ness looked at the open door
-
-and saw the price
-
-standing behind the welcome.
-
-FATAS looked at the warm room
-
-and remembered a colder one.
-
-Mia heard laughter
-
-where laughter had no right
-
-to be trusted yet.
-
-Maisie signed:
-
-OPEN IS NOT PROOF.
-
-James answered:
-
-ASKING IS THE PROOF.
-
-So no one entered.
-
-Not yet.
-
-For the Braid had learned
-
-what many houses fear
-
-the living will discover:
-
-A door may open wide
-
-and still be another lock
-
-with better manners.
-
-      </div>
-
-    </section>
-
-    <section>
-
-      <h3>Animal Verse</h3>
-
-      <p class="note">
-
-        A lighter piece, because the animals are often the first to know and the last to behave.
-
-      </p>
-
-      <div class="ode">
-
-        <div class="ode-title">Blue’s Complaint Before Breakfast</div>
-
-        <div class="ode-source">Possibly Authorised by Blue, Possibly Not</div>
-
-I warned you.
-
-I warned you in feather.
-
-I warned you in twig.
-
-I warned you by stealing
-
-the important ribbon
-
-and dropping it
-
-in the lap of the only woman
-
-with sense enough
-
-to suspect a ribbon.
-
-Did anyone listen?
-
-No.
-
-Humans require evidence,
-
-minutes,
-
-committee feeling,
-
-and three dramatic silences
-
-before admitting
-
-a bird may have been correct.
-
-I was correct
-
-before breakfast.
-
-This is difficult.
-
-Greatness often is.
-
-Now pass the crust.
-
-Not that crust.
-
-The better one.
-
-Honestly,
-
-how any of you survived
-
-before my arrival
-
-remains a question
-
-for the darker scholars.
-
-      </div>
-
-    </section>
-
-    <section>
-
-      <h3>Love-Ode Fragment</h3>
-
-      <p class="note">
-
-        A spoiler-safe love fragment for the heart of FATAS and Ness.
-
-      </p>
-
-      <div class="ode">
-
-        <div class="ode-title">Fragment for the One Who Stood Beside</div>
-
-        <div class="ode-source">Love-Ode Fragment</div>
-
-She did not stand before him
-
-like rescue.
-
-She did not stand behind him
-
-like shadow.
-
-She stood beside.
-
-That ruined every old law
-
-that required love
-
-to kneel,
-
-own,
-
-obey,
-
-or disappear.
-
-Beside is a dangerous word
-
-to crowns.
-
-Beside is a door
-
-blood cannot lock.
-
-Beside is a hearth
-
-that warms without ruling.
-
-Beside is the hand
-
-that takes your hand
-
-and still leaves it yours.
-
-So when the road darkened,
-
-and the house remembered,
-
-and the old wound opened
-
-one more eye,
-
-she stood beside him.
-
-And the dark,
-
-which had prepared
-
-for fear,
-
-found itself facing love
-
-with its boots on.
-
-      </div>
-
-    </section>
-
-    <section>
-
-      <h3>Epitaphs and Laws</h3>
-
-      <p>
-
-        The saga often opens or closes acts with epitaphs, laws, fragments, or lines
-
-        that feel carved into wood, ash, stone, feather, or memory.
-
-      </p>
-
-      <div class="law-grid">
-
-        <div class="law">No road is walked alone.</div>
-
-        <div class="law">No child is a key before being fed.</div>
-
-        <div class="law">Origin is not ownership.</div>
-
-        <div class="law">Need is not consent.</div>
-
-        <div class="law">Mercy is not ransom.</div>
-
-        <div class="law">Open is not proof.</div>
-
-        <div class="law">Asking is the proof.</div>
-
-        <div class="law">A helper names nothing without consent.</div>
-
-        <div class="law">The beast that waits may know more than the king who speaks.</div>
-
-        <div class="law">A song may carry the truth until a mouth is ready.</div>
-
-      </div>
-
-    </section>
-
-    <section>
-
-      <h3>From the Cold Hearth</h3>
-
-      <p class="note">
-
-        A short extract-style plate connected to the northern danger of Book XIV.
-
-      </p>
-
-      <div class="ode">
-
-        <div class="ode-title">Fragment of the Hearths That Burned Cold</div>
-
-        <div class="ode-source">Skeld-Fell Fragment</div>
-
-In Skeld-Fell,
-
-the fires did not go out.
-
-That was the cruelty.
-
-Had darkness come plainly,
-
-had ash settled
-
-where flame once danced,
-
-the clan might have known
-
-what enemy stood before them.
-
-But the fires burned.
-
-Blue-grey.
-
-Low.
-
-Beautiful in the way
-
-a frozen knife is beautiful
-
-under moonlight.
-
-They burned.
-
-They gave no warmth.
-
-A child asked
-
-why the fire hated them.
-
-No one answered.
-
-And when need grew teeth,
-
-the old stories were opened.
-
-Not the whole stories.
-
-Never the whole stories.
-
-Only the useful bones.
-
-      </div>
-
-    </section>
-
-    <section>
-
-      <h3>Why the Odes Matter</h3>
-
-      <p>
-
-        The odes are part of the saga’s architecture. They give the books a second voice:
-
-        half archive, half song, half warning, which is too many halves, but the ravens
-
-        have never cared for tidy counting.
-
-      </p>
-
-      <p>
-
-        They let the world remember itself. They let readers feel the law before the plot
-
-        explains it. They make space for grief, humour, prophecy, beauty, anger, and wonder
-
-        to stand together without asking which one owns the room.
-
-      </p>
-
-      <div class="quote">
-
-        The prose walks the road. The odes teach the road how to echo.
-
-      </div>
-
-    </section>
-
-  </main>
-
-  <footer>
-
-    © 2026 Saga of Black Wings · Created by Timothy M. Halliday
-
-  </footer>
-
+</header>
+<nav class="site-nav">
+  <a href="index.html">Home</a>
+  <a href="books.html">Books</a>
+  <a href="characters.html">Characters</a>
+  <a href="rogues.html">Rogues</a>
+  <a href="lore.html">World & Lore</a>
+  <a href="odes.html">Odes</a>
+  <a href="maps.html">Maps</a>
+  <a href="archive.html">Visual Archive</a>
+  <a href="author.html">Author</a>
+</nav>
+<main>
+  <section class="panel intro-panel">
+    <h2>The Songs Are Part of the Law</h2>
+    <p>
+      In the Saga of Black Wings, odes and songs are not decoration. They are witness,
+      warning, grief, love, memory, refusal and old law carried in a form even the dark
+      cannot easily file away.
+    </p>
+    <p>
+      Some pieces on this page are drawn from the spirit of the saga. Others are
+      website-exclusive plates written to welcome readers into Vardrum without revealing
+      the deeper storylines too early.
+    </p>
+<blockquote>
+  “A song is what survives when a clerk thinks the record is finished.”
+</blockquote>
+  </section>
+  <section class="panel">
+    <h2>Ode to Ness, the Only Woman My Heart Will Ever Seek</h2>
+    <p><em>FATAS to Ness · 16/06/2026</em></p>
+<div class="lore-list">
+  <span>
+    Ness,<br><br>
+    you are the quiet miracle<br>
+    my life kept walking toward<br>
+    before I even knew your name.<br><br>
+    Not a passing brightness.<br>
+    Not a sweet accident.<br>
+    Not some small pretty thing<br>
+    the world placed in my hands<br>
+    for a season.<br><br>
+    You are the one.<br><br>
+    The woman my heart knows<br>
+    before thought can speak.<br>
+    The face I would search for<br>
+    in every crowd,<br>
+    in every country,<br>
+    in every strange and shining afterlife<br>
+    where souls wake<br>
+    and remember who they loved.<br><br>
+    If eternity opened its black-winged door<br>
+    and asked me what I wanted,<br>
+    I would not ask for gold,<br>
+    or crowns,<br>
+    or a heaven built of easy songs.<br><br>
+    I would ask for you.<br><br>
+    For your hand in mine.<br>
+    For your voice in the room.<br>
+    For your laughter<br>
+    turning the dark into something bearable.<br>
+    For the beautiful kindness of you,<br>
+    the caring heart of you,<br>
+    the softness you carry<br>
+    without ever knowing<br>
+    how much it saves me.<br><br>
+    You are my beautiful Ness,<br>
+    my caring Ness,<br>
+    my kind Ness,<br>
+    my amazing bit of fluff,<br>
+    my bright little storm of sweetness,<br>
+    the softness that makes my heart clatter<br>
+    like a door blown open<br>
+    by joy itself.<br><br>
+    And I adore you.<br><br>
+    Not lightly.<br>
+    Not politely.<br>
+    Not in some careful little way<br>
+    that can be folded away<br>
+    when life grows hard.<br><br>
+    I adore you with the whole stubborn weather<br>
+    of my soul.<br><br>
+    I love the woman you are<br>
+    in the quiet moments,<br>
+    in the tired moments,<br>
+    in the ordinary hours<br>
+    where your beauty does not need candles<br>
+    because it already lives<br>
+    in the way you care,<br>
+    the way you listen,<br>
+    the way you make the world feel<br>
+    less sharp around the edges.<br><br>
+    You are the woman<br>
+    I would choose in this life,<br>
+    and the next,<br>
+    and the next after that.<br><br>
+    I would find you again<br>
+    through mist,<br>
+    through memory,<br>
+    through death,<br>
+    through whatever strange road waits<br>
+    beyond the last breath.<br><br>
+    And when I found you,<br>
+    I would smile like a man<br>
+    who had finally come home.<br><br>
+    I would say,<br><br>
+    There you are, my Ness.<br>
+    There you are, my only one.<br>
+    Shall we do it all again?<br><br>
+    And I would love you again<br>
+    from the first glance<br>
+    to the last star.<br><br>
+    Because no lifetime<br>
+    could ever be long enough<br>
+    to hold what I feel for you.<br><br>
+    No world could be wide enough<br>
+    to hide you from my heart.<br><br>
+    No ending could be final enough<br>
+    to stop me searching.<br><br>
+    You are my devotion.<br>
+    My romance.<br>
+    My adoration.<br>
+    My chosen woman.<br>
+    My beautiful softness.<br>
+    My forever.<br><br>
+    And if love is a vow<br>
+    written deeper than time,<br><br>
+    then mine is simple:<br><br>
+    Ness,<br>
+    I am yours<br>
+    in this life,<br><br>
+    and I will come looking for you<br>
+    in the next.<br><br>
+    FATAS · 16/06/2026 🖤🐦‍⬛🖤🐦‍⬛
+  </span>
+</div>
+  </section>
+  <section class="panel">
+    <h2>Website-Exclusive Mystery Plates</h2>
+    <p>
+      These pieces are not required reading for the books. They are doors, hints and
+      atmosphere: small lights held near the road before the reader steps fully into it.
+    </p>
+  </section>
+  <section class="panel">
+    <h2>The First Gate Epitaph</h2>
+    <p><em>A spoiler-safe opening fragment for new readers.</em></p>
+<div class="lore-list">
+  <span>
+    Do not ask first who carried the blade.<br><br>
+    Ask who named the wound.<br><br>
+    Ask what the raven saw from the broken roof,<br>
+    what the wolf refused at the threshold,<br>
+    what the dog heard beneath the kindly voice,<br>
+    what the child drew where no clerk thought to look.<br><br>
+    In Vardrum, history is not kept by kings alone.<br><br>
+    It is kept by mud,<br>
+    feathers,<br>
+    old women,<br>
+    burned doors,<br>
+    wrongly folded letters,<br>
+    names spoken too softly,<br>
+    and beasts who never learned to lie for comfort.
+  </span>
+</div>
+  </section>
+  <section class="panel">
+    <h2>Song of the Beast and Bird Witnesses</h2>
+    <p><em>For the dogs, ravens, wolves, strange small guides and watchful things of the saga.</em></p>
+<div class="lore-list">
+  <span>
+    The hound heard first.<br>
+    The raven turned.<br>
+    The wolf stood still where men would run.<br>
+    The cat watched under ash and stair,<br>
+    and every feather held the sun.<br><br>
+    No bell can count what paws remember.<br>
+    No law can cage what wings have seen.<br>
+    No hand may own the road by naming<br>
+    where another life has been.<br><br>
+    So scratch the mark.<br>
+    So leave the feather.<br>
+    So let the old gate understand:<br><br>
+    When beast and bird stand witness together,<br>
+    no stolen truth stays buried in the land.
+  </span>
+</div>
+  </section>
+  <section class="panel">
+    <h2>The Map That Would Not Sit Still</h2>
+    <p><em>A skaldic warning about roads, records and official certainty.</em></p>
+<div class="lore-list">
+  <span>
+    There was once a map of Vardrum that refused to remain accurate.<br><br>
+    Roads moved when frightened children dreamed.<br>
+    Marsh paths vanished when soldiers named them.<br>
+    Wells appeared where women wept.<br>
+    A black-winged mark crossed itself out whenever a clerk tried to measure it.<br><br>
+    The mapmaker blamed damp.<br><br>
+    The ravens blamed arrogance.<br><br>
+    The oldest marsh-wife said nothing at all,<br>
+    but burned the official copy,<br>
+    fed the ash to her geese,<br>
+    and drew the true road on the underside of a bread-board.<br><br>
+    That road is still missing from Crown records.
+  </span>
+</div>
+  </section>
+  <section class="panel">
+    <h2>Epitaph of the Little Hearth</h2>
+    <p><em>For family, food, shelter, ordinary care and the holy refusal to turn children into proof.</em></p>
+<div class="lore-list">
+  <span>
+    Let no one laugh at the small fire.<br><br>
+    Kingdoms have burned colder.<br>
+    Crowns have fed fewer.<br>
+    Great halls have opened their doors<br>
+    and still left children hungry in the corners.<br><br>
+    Little Hearth is not little<br>
+    because its room is small.<br><br>
+    It is little because it bends down.<br>
+    It knows the height of a child.<br>
+    It knows the bowl before the speech.<br>
+    It knows the blanket before the question.<br>
+    It knows that being safe should not require a performance.<br><br>
+    Where soup is given freely,<br>
+    where a name is spoken kindly,<br>
+    where a frightened hand may sign no<br>
+    and still be loved after,<br><br>
+    there stands a hearth<br>
+    no winter has yet conquered.
+  </span>
+</div>
+  </section>
+  <section class="panel">
+    <h2>Song for Hands That Speak</h2>
+    <p><em>For Braid-Hand, sign, silence, consent and the love that does not require sound.</em></p>
+<div class="lore-list">
+  <span>
+    Some truths arrive without thunder.<br>
+    Some names are carried by fingers.<br>
+    Some warnings cross a room<br>
+    without troubling the air.<br><br>
+    A hand can say stop.<br>
+    A hand can say stay.<br>
+    A hand can ask,<br>
+    and love can answer<br>
+    without stealing the mouth from grief.<br><br>
+    The Crown counted voices.<br>
+    The Braid watched hands.<br><br>
+    The road heard both.<br><br>
+    So let the loud learn humility.<br>
+    Let the silent be believed.<br>
+    Let no child be made smaller<br>
+    because their truth chose another door.<br><br>
+    In the house of Black Wings,<br>
+    speech has many bodies,<br>
+    and witness kneels to read them all.
+  </span>
+</div>
+  </section>
+  <section class="panel">
+    <h2>Short Epitaphs for the Road</h2>
+    <div class="lore-list">
+      <span>“No map is innocent after it learns where children hide.”</span>
+      <span>“The wolf is witness, not brand.”</span>
+      <span>“A quiet room may still be shouting.”</span>
+      <span>“Care that keeps a price hidden is not care.”</span>
+      <span>“A raven does not need permission from a roof.”</span>
+      <span>“The smallest name may be the hinge of the oldest door.”</span>
+      <span>“A hearth that demands tribute is already cold.”</span>
+      <span>“Where the road forgets, the paws remember.”</span>
+    </div>
+  </section>
+  <section class="panel">
+    <h2>Public-Safe Future Hint</h2>
+<blockquote>
+  “Beyond the house, there is another house. Beyond the road, another road. Beyond the raven, something colder has learned to watch the sky.”
+</blockquote>
+<p>
+  The titles of Books XV to XX remain sealed for now, but the saga has already begun
+  looking beyond the current map.
+</p>
+  </section>
+</main>
+<footer>
+  <p>© 2026 Saga of Black Wings · Created by Timothy M. Halliday</p>
+</footer>
 </body>
-
 </html>
