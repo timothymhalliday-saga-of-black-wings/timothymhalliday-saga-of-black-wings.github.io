@@ -1,1727 +1,203 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
-  <meta charset="UTF-8">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Characters | Saga of Black Wings</title>
-
-  <meta name="description" content="Meet the heroes, villains, beasts, spirits, druids, families, and strange companions of The Saga of Black Wings by Timothy M. Halliday.">
-
-  <style>
-
-    body {
-
-      margin: 0;
-
-      background: #080808;
-
-      color: #f2eadf;
-
-      font-family: Georgia, "Times New Roman", serif;
-
-      line-height: 1.7;
-
-    }
-
-    header {
-
-      background: #111111;
-
-      border-bottom: 1px solid #c9a45c;
-
-      padding: 22px;
-
-      text-align: center;
-
-    }
-
-    header h1 {
-
-      margin: 0;
-
-      color: #c9a45c;
-
-      letter-spacing: 2px;
-
-      text-transform: uppercase;
-
-      font-size: 30px;
-
-    }
-
-    nav {
-
-      margin-top: 15px;
-
-    }
-
-    nav a {
-
-      color: #f2eadf;
-
-      text-decoration: none;
-
-      margin: 0 10px;
-
-      font-size: 15px;
-
-      text-transform: uppercase;
-
-      letter-spacing: 1px;
-
-    }
-
-    nav a:hover {
-
-      color: #c9a45c;
-
-    }
-
-    .hero {
-
-      padding: 75px 20px;
-
-      text-align: center;
-
-      background:
-
-        linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.9)),
-
-        radial-gradient(circle at top, #4d1111, #080808 65%);
-
-    }
-
-    .hero h2 {
-
-      font-size: 52px;
-
-      color: #c9a45c;
-
-      margin: 0 0 18px;
-
-      letter-spacing: 2px;
-
-      text-transform: uppercase;
-
-    }
-
-    .hero p {
-
-      max-width: 900px;
-
-      margin: 0 auto;
-
-      font-size: 21px;
-
-      color: #ddd0bd;
-
-    }
-
-    main {
-
-      max-width: 1180px;
-
-      margin: 0 auto;
-
-      padding: 45px 20px 85px;
-
-    }
-
-    section {
-
-      background: #141414;
-
-      border: 1px solid rgba(201, 164, 92, 0.45);
-
-      border-radius: 18px;
-
-      padding: 34px;
-
-      margin-bottom: 30px;
-
-      box-shadow: 0 0 35px rgba(0,0,0,0.35);
-
-    }
-
-    h3 {
-
-      color: #c9a45c;
-
-      font-size: 31px;
-
-      margin-top: 0;
-
-      margin-bottom: 18px;
-
-    }
-
-    p {
-
-      font-size: 18px;
-
-      margin-bottom: 18px;
-
-    }
-
-    .quote {
-
-      border-left: 4px solid #c9a45c;
-
-      padding: 18px 22px;
-
-      background: rgba(201, 164, 92, 0.08);
-
-      color: #f2eadf;
-
-      font-size: 22px;
-
-      margin: 28px 0;
-
-    }
-
-    .character-grid {
-
-      display: grid;
-
-      grid-template-columns: repeat(3, 1fr);
-
-      gap: 20px;
-
-      margin-top: 22px;
-
-    }
-
-    .character-card {
-
-      background: #1d1d1d;
-
-      border: 1px solid rgba(201, 164, 92, 0.32);
-
-      border-radius: 18px;
-
-      padding: 24px;
-
-    }
-
-    .character-card h4 {
-
-      color: #c9a45c;
-
-      font-size: 24px;
-
-      margin: 0 0 10px;
-
-    }
-
-    .role {
-
-      color: #b9aa93;
-
-      font-size: 14px;
-
-      text-transform: uppercase;
-
-      letter-spacing: 1.5px;
-
-      margin-bottom: 12px;
-
-    }
-
-    .character-card p {
-
-      color: #ddd0bd;
-
-      font-size: 16.5px;
-
-      margin-bottom: 0;
-
-    }
-
-    .villain {
-
-      border-color: rgba(125, 31, 31, 0.85);
-
-      background: #1b1111;
-
-    }
-
-    .animal {
-
-      border-color: rgba(92, 141, 103, 0.55);
-
-      background: #121b14;
-
-    }
-
-    .spirit {
-
-      border-color: rgba(170, 190, 220, 0.42);
-
-      background: #121722;
-
-    }
-
-    .future {
-
-      border-style: dashed;
-
-    }
-
-    footer {
-
-      text-align: center;
-
-      background: #111111;
-
-      border-top: 1px solid #c9a45c;
-
-      padding: 25px;
-
-      color: #b9aa93;
-
-      font-size: 14px;
-
-    }
-
-    @media (max-width: 950px) {
-
-      .character-grid {
-
-        grid-template-columns: repeat(2, 1fr);
-
-      }
-
-    }
-
-    @media (max-width: 700px) {
-
-      .character-grid {
-
-        grid-template-columns: 1fr;
-
-      }
-
-      nav a {
-
-        display: inline-block;
-
-        margin: 6px 8px;
-
-      }
-
-      .hero h2 {
-
-        font-size: 38px;
-
-      }
-
-      .hero p {
-
-        font-size: 18px;
-
-      }
-
-      section,
-
-      .character-card {
-
-        padding: 24px;
-
-      }
-
-    }
-
-  </style>
-
+  <meta name="description" content="Character hall for The Saga of Black Wings by Timothy M. Halliday, featuring the Braid, familia, beast-witnesses, spirits, wounded roads, Crowmere threads and old powers of Vardrum." />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-
-  <header>
-
-    <h1>Saga of Black Wings</h1>
-
-    <nav>
-
-      <a href="index.html">Home</a>
-
-      <a href="books.html">Books</a>
-
-      <a href="characters.html">Characters</a>
-
-      <a href="world.html">World &amp; Law</a>
-
-      <a href="odes.html">Odes &amp; Songs</a>
-
-      <a href="maps.html">Maps</a>
-
-      <a href="author.html">Author</a>
-
-    </nav>
-
-  </header>
-
-  <div class="hero">
-
-    <h2>Characters</h2>
-
-    <p>
-
-      Heroes, villains, beasts, spirits, druids, families, traitors, watchers, ravens,
-
-      wolves, hounds, and strange companions from the world of <em>The Saga of Black Wings</em>.
-
+<header class="page-hero">
+  <div class="hero-text">
+    <p class="eyebrow">Character Hall</p>
+    <h1>The Names of Black Wings</h1>
+    <p class="tagline">
+      The Braid, the familia, the wounded road, the beast-witnesses, the remembered dead,
+      the hidden kin and the names old powers tried to make small.
     </p>
-
+<div class="hero-buttons">
+  <a href="books.html" class="button primary">The Books</a>
+  <a href="rogues.html" class="button secondary">Rogues Gallery</a>
+  <a href="lore.html" class="button secondary">World & Lore</a>
+</div>
   </div>
-
-  <main>
-
-    <section>
-
-      <h3>The Living Cast of the Saga</h3>
-
-      <p>
-
-        The world of Black Wings is carried by its people and creatures. Some are warriors.
-
-        Some are healers. Some are children. Some are animals with sharper judgement than kings.
-
-        Some are villains who wear law, mercy, family, or need as a mask.
-
-      </p>
-
-      <p>
-
-        This page introduces key figures without revealing every hidden turn of the books.
-
-        Some roles are kept deliberately mysterious, because the saga rewards discovery.
-
-      </p>
-
-      <div class="quote">
-
-        Names matter. Even small names may cast long shadows.
-
-      </div>
-
-    </section>
-
-    <section>
-
-      <h3>The Braid and the Heart-Circle</h3>
-
-      <div class="character-grid">
-
-        <div class="character-card">
-
-          <h4>FATAS</h4>
-
-          <div class="role">Raven, warrior, husband, witness</div>
-
-          <p>
-
-            A fierce, wounded, loyal figure at the centre of the saga. FATAS carries rage,
-
-            love, old rooms, road-law, Skuldrend, and the stubborn refusal to be owned by
-
-            what shaped him.
-
-          </p>
-
-        </div>
-
-        <div class="character-card">
-
-          <h4>Ness / Vanessa</h4>
-
-          <div class="role">Hearth, love, witness, chosen life</div>
-
-          <p>
-
-            Ness stands beside FATAS through war, house, grief, road, and refusal. She is
-
-            warmth without ownership, clarity without cruelty, and love that does not kneel.
-
-          </p>
-
-        </div>
-
-        <div class="character-card">
-
-          <h4>Mia</h4>
-
-          <div class="role">Daughter, heart-thread, wounded witness</div>
-
-          <p>
-
-            Mia carries love, heartbreak, fierce loyalty, and one of the saga’s most painful
-
-            emotional roads. Her story holds found family, trust, betrayal, and courage.
-
-          </p>
-
-        </div>
-
-        <div class="character-card">
-
-          <h4>Maisie</h4>
-
-          <div class="role">Daughter, crow-sharp watcher</div>
-
-          <p>
-
-            Maisie is quick-eyed, brave, and deeply tied to truth, crow-sign, and family.
-
-            She sees what others miss and refuses to let love become blindness.
-
-          </p>
-
-        </div>
-
-        <div class="character-card">
-
-          <h4>James</h4>
-
-          <div class="role">Quiet mystery, wolf-thread, hidden knowing</div>
-
-          <p>
-
-            James carries silence, loyalty, secrets, and a strange northern pull. His road
-
-            deepens through Jack, Maisie, old scars, and mysteries still opening.
-
-          </p>
-
-        </div>
-
-        <div class="character-card">
-
-          <h4>Katy</h4>
-
-          <div class="role">Mother-thread, child-first law</div>
-
-          <p>
-
-            Katy’s story holds one of the saga’s deepest principles: no child is a key before
-
-            being fed, held, named, or protected as a child first.
-
-          </p>
-
-        </div>
-
-        <div class="character-card">
-
-          <h4>Josie</h4>
-
-          <div class="role">Ally, separate thread</div>
-
-          <p>
-
-            Josie stands as her own person within the wider saga web. Her name and presence
-
-            matter in the living pattern of the Black Wings world.
-
-          </p>
-
-        </div>
-
-        <div class="character-card">
-
-          <h4>Jenny</h4>
-
-          <div class="role">Ally, separate thread</div>
-
-          <p>
-
-            Jenny belongs as a distinct presence, not folded into another character’s place.
-
-            The saga keeps its small and large names with equal care.
-
-          </p>
-
-        </div>
-
-        <div class="character-card">
-
-          <h4>Jesse</h4>
-
-          <div class="role">Braid-linked ally</div>
-
-          <p>
-
-            Jesse is part of the wider Black Wings pattern, tied to loyalty, witness, and
-
-            the roads that gather people into the Braid’s orbit.
-
-          </p>
-
-        </div>
-
-        <div class="character-card">
-
-          <h4>Lucy</h4>
-
-          <div class="role">Braid-linked ally</div>
-
-          <p>
-
-            Lucy carries important ties in the saga’s wider human circle, connected to
-
-            courage, memory, and the living consequences of earlier wars.
-
-          </p>
-
-        </div>
-
-        <div class="character-card">
-
-          <h4>Cael</h4>
-
-          <div class="role">Undercover thread, Crown-shadow</div>
-
-          <p>
-
-            Cael moves through danger, secrecy, and Crown-shadow. His loyalties and choices
-
-            help reveal what power tries to hide behind command.
-
-          </p>
-
-        </div>
-
-        <div class="character-card">
-
-          <h4>Brokan</h4>
-
-          <div class="role">Fighter, survivor, returning force</div>
-
-          <p>
-
-            Brokan brings strength, history, and battle-weight to the saga, returning into
-
-            later roads where old war and new trouble meet.
-
-          </p>
-
-        </div>
-
-        <div class="character-card">
-
-          <h4>Riven</h4>
-
-          <div class="role">Witness, fracture-reader</div>
-
-          <p>
-
-            Riven understands the danger of clean systems and quiet control. His path follows
-
-            witness, hard questions, and the refusal to mistake peace for truth.
-
-          </p>
-
-        </div>
-
-        <div class="character-card">
-
-          <h4>Lilja</h4>
-
-          <div class="role">Song, fracture, Crowmere thread</div>
-
-          <p>
-
-            Lilja carries song where silence tries to win. Her presence matters in family,
-
-            ash, agreement, and the emotional weather of the later saga.
-
-          </p>
-
-        </div>
-
-        <div class="character-card">
-
-          <h4>Jórrik</h4>
-
-          <div class="role">Crowmere thread, calm and conflict</div>
-
-          <p>
-
-            Jórrik stands near the pull of order, calm, and belonging, making his choices
-
-            matter where family and false peace begin to twist.
-
-          </p>
-
-        </div>
-
-        <div class="character-card">
-
-          <h4>Ulrike</h4>
-
-          <div class="role">Reader of burned law</div>
-
-          <p>
-
-            Ulrike reads where others look away. She follows ledgers, ash, routes, and hidden
-
-            systems, helping uncover what history tried to bury.
-
-          </p>
-
-        </div>
-
-        <div class="character-card">
-
-          <h4>Eldwyn</h4>
-
-          <div class="role">Guide, heir of fragments</div>
-
-          <p>
-
-            Eldwyn carries fragments, old signs, and Elland’s watcher-thread. He helps read
-
-            prophecy, law, root, road, and the warnings left behind.
-
-          </p>
-
-        </div>
-
-        <div class="character-card">
-
-          <h4>Taff</h4>
-
-          <div class="role">Salt-Raven</div>
-
-          <p>
-
-            Taff of Winchmore, the Salt-Raven, belongs to the saga’s living flock of allies,
-
-            road-signs, and sharp old loyalties.
-
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <section>
-
-      <h3>Animals, Beasts, and Spirit-Witness</h3>
-
-      <div class="character-grid">
-
-        <div class="character-card animal">
-
-          <h4>Blue</h4>
-
-          <div class="role">Crow, insult scholar, early warning system</div>
-
-          <p>
-
-            Blue is loud, rude, brilliant, and often correct before the humans catch up.
-
-            He brings comedy, warning, loyalty, and feathered outrage to the Braid.
-
-          </p>
-
-        </div>
-
-        <div class="character-card animal">
-
-          <h4>Scarlet</h4>
-
-          <div class="role">Raven, watcher, quiet signal</div>
-
-          <p>
-
-            Scarlet watches with sharp stillness. Where Blue complains, Scarlet measures.
-
-            Together they carry bird-law, humour, warning, and witness.
-
-          </p>
-
-        </div>
-
-        <div class="character-card animal">
-
-          <h4>Dusk</h4>
-
-          <div class="role">Bird of shadow and warning</div>
-
-          <p>
-
-            Dusk moves through air, shadow, and sign, carrying the sense that the sky itself
-
-            sometimes knows what the road is hiding.
-
-          </p>
-
-        </div>
-
-        <div class="character-card animal">
-
-          <h4>Mad</h4>
-
-          <div class="role">Hound, chaos, devotion</div>
-
-          <p>
-
-            Mad brings hound-heart, warning, humour, and wild loyalty. A sneeze, a refusal,
-
-            or a sudden change of mood may matter more than a council speech.
-
-          </p>
-
-        </div>
-
-        <div class="character-card animal">
-
-          <h4>Benson</h4>
-
-          <div class="role">Heavy wisdom, living wall</div>
-
-          <p>
-
-            Benson improves many situations by sitting down, leaning heavily, or blocking
-
-            poor decisions with the full authority of animal mass.
-
-          </p>
-
-        </div>
-
-        <div class="character-card animal">
-
-          <h4>Hugo</h4>
-
-          <div class="role">Holy inconvenience, animal humour</div>
-
-          <p>
-
-            Hugo is warmth, weight, chaos, tenderness, and comic timing on legs. He often
-
-            understands care before humans find the words for it.
-
-          </p>
-
-        </div>
-
-        <div class="character-card animal">
-
-          <h4>Jack</h4>
-
-          <div class="role">Moor-Wolf, judge, James-thread</div>
-
-          <p>
-
-            Jack is old road, wolf-judgement, beast-witness, and fierce loyalty. He does not
-
-            argue with lies. He simply stands where they cannot pass.
-
-          </p>
-
-        </div>
-
-        <div class="character-card animal">
-
-          <h4>Mylo</h4>
-
-          <div class="role">Road echo, child-route thread</div>
-
-          <p>
-
-            Mylo belongs to the hidden roads, old marks, and child-route mysteries that run
-
-            beneath the later saga.
-
-          </p>
-
-        </div>
-
-        <div class="character-card animal">
-
-          <h4>Shane</h4>
-
-          <div class="role">Old red hound, home-memory</div>
-
-          <p>
-
-            Shane carries the ache of old home, dog-memory, loyalty, and the truth that a
-
-            child may leave danger without abandoning the animal he loved.
-
-          </p>
-
-        </div>
-
-        <div class="character-card spirit">
-
-          <h4>Bella</h4>
-
-          <div class="role">Spirit-guide, flame, watcher</div>
-
-          <p>
-
-            Bella is a flame-presence and spirit-witness whose light bends near danger,
-
-            memory, grief, and old truth. She is small, bright, and never merely decorative.
-
-          </p>
-
-        </div>
-
-        <div class="character-card spirit">
-
-          <h4>Kian</h4>
-
-          <div class="role">Spirit-witness, mist, bell, axe-memory</div>
-
-          <p>
-
-            Kian remains a guiding presence, tied to mist, bells, old sacrifice, seam-law,
-
-            and the living memory of what was given and what must still be guarded.
-
-          </p>
-
-        </div>
-
-        <div class="character-card animal">
-
-          <h4>Glimra</h4>
-
-          <div class="role">Salt-Marsh Sabre-Leopard, Veiltooth</div>
-
-          <p>
-
-            Glimra is a massive Mýrhlébarði, a furred sabre-cat whose glimmering coat shifts
-
-            with reeds, fog, mud, snow, stone, and shadow. She can stand two feet away unseen.
-
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <section>
-
-      <h3>Druids, Watchers, and Old Magic</h3>
-
-      <div class="character-grid">
-
-        <div class="character-card">
-
-          <h4>Elland</h4>
-
-          <div class="role">Watcher, prophet, keeper of fragments</div>
-
-          <p>
-
-            Elland reads old signs, marsh omens, root-memory, watcher-signs, and prophecy.
-
-            His secrets can protect, wound, delay, and change the road.
-
-          </p>
-
-        </div>
-
-        <div class="character-card">
-
-          <h4>Jórunn Vánesja</h4>
-
-          <div class="role">Scent-worker, truth-reader</div>
-
-          <p>
-
-            Jórunn reads scent where lies have washed their faces clean. Her gift is powerful,
-
-            costly, and never a leash. Vánesja scent-work walks by choice.
-
-          </p>
-
-        </div>
-
-        <div class="character-card">
-
-          <h4>Jórga Rósahaddr</h4>
-
-          <div class="role">Pink-Head, Beast-Druid of the Salt-Marsh</div>
-
-          <p>
-
-            Jórga is an old-magic animal-whisperer druid, sharp, practical, strange, and
-
-            half-feral in manner. Animals trust her before people do. She arrives with Glimra.
-
-          </p>
-
-        </div>
-
-        <div class="character-card">
-
-          <h4>Old Vellum</h4>
-
-          <div class="role">Archive voice, old record</div>
-
-          <p>
-
-            Old Vellum carries the feel of ancient pages, hidden law, remembered horror,
-
-            and the terrible usefulness of records that survived too much.
-
-          </p>
-
-        </div>
-
-        <div class="character-card">
-
-          <h4>Nema</h4>
-
-          <div class="role">Keeper of names and difficult truths</div>
-
-          <p>
-
-            Nema stands near old knowledge, naming, and the careful handling of truths that
-
-            must not become another form of taking.
-
-          </p>
-
-        </div>
-
-        <div class="character-card">
-
-          <h4>Rúnhald Skald-Tongue</h4>
-
-          <div class="role">Skald, singer of saga-turnings</div>
-
-          <p>
-
-            Rúnhald gives voice to the saga’s turns, carrying bridge songs, witness odes,
-
-            and the half-funeral, half-resistance music of Black Wings history.
-
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <section>
-
-      <h3>Families, Children, and Hidden Lines</h3>
-
-      <div class="character-grid">
-
-        <div class="character-card">
-
-          <h4>Marek Vey-Corren</h4>
-
-          <div class="role">Hidden Raven-Crow family</div>
-
-          <p>
-
-            Marek is part of Elland’s hidden Vey-Corren family. He is not a map, not a
-
-            symbol, and not payment for anyone else’s warmth.
-
-          </p>
-
-        </div>
-
-        <div class="character-card">
-
-          <h4>Hedda Vey-Corren</h4>
-
-          <div class="role">Hidden Raven-Crow family</div>
-
-          <p>
-
-            Hedda carries moor-hearth strength, practical courage, and the refusal to let
-
-            her family be blessed into ransom.
-
-          </p>
-
-        </div>
-
-        <div class="character-card">
-
-          <h4>Kelda Vey-Corren</h4>
-
-          <div class="role">Hidden Raven-Crow family, water-sign thread</div>
-
-          <p>
-
-            Kelda is tied to water-sign, scent-memory, and choice. Her name matters because
-
-            no hidden child or family member exists to become a key.
-
-          </p>
-
-        </div>
-
-        <div class="character-card">
-
-          <h4>Finnr Vey-Corren</h4>
-
-          <div class="role">Hidden Raven-Crow family</div>
-
-          <p>
-
-            Finnr is restless, sharp, and young enough to be underestimated by fools. His
-
-            road opens through hidden family, ravens, and the refusal to be counted as proof.
-
-          </p>
-
-        </div>
-
-        <div class="character-card">
-
-          <h4>Edda</h4>
-
-          <div class="role">Rescued child, refusal witness</div>
-
-          <p>
-
-            Edda carries the voice of refusal after captivity, road-hunger, and the truth
-
-            that children are not proof, keys, debts, or symbols.
-
-          </p>
-
-        </div>
-
-        <div class="character-card">
-
-          <h4>Evin</h4>
-
-          <div class="role">Rescued child</div>
-
-          <p>
-
-            Evin is one of the children whose presence reminds the saga that rescue must
-
-            ask, wait, feed, and witness before it claims to understand.
-
-          </p>
-
-        </div>
-
-        <div class="character-card">
-
-          <h4>Lysa</h4>
-
-          <div class="role">Rescued child</div>
-
-          <p>
-
-            Lysa belongs to the child-law thread, where names, fear, silence, anger, and
-
-            choice must be handled without turning care into ownership.
-
-          </p>
-
-        </div>
-
-        <div class="character-card">
-
-          <h4>Oris</h4>
-
-          <div class="role">Rescued child</div>
-
-          <p>
-
-            Oris carries another living piece of the saga’s child-first law: the child is
-
-            not the lesson, the key, the payment, or the proof.
-
-          </p>
-
-        </div>
-
-        <div class="character-card">
-
-          <h4>Tovin</h4>
-
-          <div class="role">Child-thread</div>
-
-          <p>
-
-            Tovin is part of the wider child-road and witness pattern, where even quiet
-
-            names may hold important truth.
-
-          </p>
-
-        </div>
-
-        <div class="character-card">
-
-          <h4>Craig</h4>
-
-          <div class="role">Book XII family thread</div>
-
-          <p>
-
-            Craig belongs to the Book XII family group, part of the living human web that
-
-            gives the later saga its intimate stakes.
-
-          </p>
-
-        </div>
-
-        <div class="character-card">
-
-          <h4>Sarah</h4>
-
-          <div class="role">Book XII family thread</div>
-
-          <p>
-
-            Sarah carries family presence within the later books, grounding the epic world
-
-            in ordinary bonds, danger, and care.
-
-          </p>
-
-        </div>
-
-        <div class="character-card">
-
-          <h4>Lily</h4>
-
-          <div class="role">Book XII family thread</div>
-
-          <p>
-
-            Lily is part of the Book XII family group. Her name is kept with one L in the
-
-            middle, because in Black Wings, names matter.
-
-          </p>
-
-        </div>
-
-        <div class="character-card">
-
-          <h4>Joey</h4>
-
-          <div class="role">Book XII family thread</div>
-
-          <p>
-
-            Joey belongs to the family pattern of the later saga, where small names can
-
-            become important lights beside large wars.
-
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <section>
-
-      <h3>Villains, Threats, and Dangerous Powers</h3>
-
-      <div class="character-grid">
-
-        <div class="character-card villain">
-
-          <h4>The Crown</h4>
-
-          <div class="role">System of rule, ownership, and control</div>
-
-          <p>
-
-            The Crown is more than one ruler. It is a shape of power that counts, commands,
-
-            owns, erases, and calls obedience order.
-
-          </p>
-
-        </div>
-
-        <div class="character-card villain">
-
-          <h4>The Oath-Crown</h4>
-
-          <div class="role">Older oath-bound authority</div>
-
-          <p>
-
-            The Oath-Crown belongs to deeper Crown horror, where vows, kingship, and old
-
-            law become binding forces with teeth.
-
-          </p>
-
-        </div>
-
-        <div class="character-card villain">
-
-          <h4>Valkryn Bone-Hound</h4>
-
-          <div class="role">Champion of the Oath-Crown</div>
-
-          <p>
-
-            A bone-hound horror tied to oath, pursuit, and the monstrous shapes authority
-
-            can give itself when it wants fear to run ahead of it.
-
-          </p>
-
-        </div>
-
-        <div class="character-card villain">
-
-          <h4>Hraeldir the Oath-Breaker</h4>
-
-          <div class="role">Bound king, old oath shadow</div>
-
-          <p>
-
-            Hraeldir carries the sense of oath broken and kingship bound, one of the older
-
-            dark names in the saga’s deep Crown-shadow.
-
-          </p>
-
-        </div>
-
-        <div class="character-card villain">
-
-          <h4>The Cinder Host</h4>
-
-          <div class="role">Ash-road pursuit force</div>
-
-          <p>
-
-            The Cinder Host belongs to roads of pursuit, fire-memory, ash, and the long reach
-
-            of those who refuse to let escape remain escape.
-
-          </p>
-
-        </div>
-
-        <div class="character-card villain">
-
-          <h4>Torvik Brandhand</h4>
-
-          <div class="role">Hostile force, terms-bringer</div>
-
-          <p>
-
-            Torvik Brandhand carries threat, bargain, and road-pressure in the early saga
-
-            shadow, where names and terms may arrive before mercy does.
-
-          </p>
-
-        </div>
-
-        <div class="character-card villain">
-
-          <h4>Duchess Rootbound</h4>
-
-          <div class="role">Crown-aligned root antagonist</div>
-
-          <p>
-
-            Duchess Rootbound turns authority, root, hunger, and social pressure into tools
-
-            for control, making kindness dangerous and need useful.
-
-          </p>
-
-        </div>
-
-        <div class="character-card villain">
-
-          <h4>Súsanna Rótmóðir</h4>
-
-          <div class="role">The Root-Mother</div>
-
-          <p>
-
-            Ancient hunger beneath the world. Súsanna Rótmóðir is tied to the Underroot,
-
-            memory, root-command, buried war, and the danger of old powers waking.
-
-          </p>
-
-        </div>
-
-        <div class="character-card villain">
-
-          <h4>The Underroot</h4>
-
-          <div class="role">Buried root-system</div>
-
-          <p>
-
-            The Underroot is a living network of hunger, command, memory, and buried force.
-
-            It does not simply attack the world. It grows through it.
-
-          </p>
-
-        </div>
-
-        <div class="character-card villain">
-
-          <h4>Root-Born</h4>
-
-          <div class="role">Underroot creature class</div>
-
-          <p>
-
-            Root-Born creatures are tied to the living war beneath the soil, where old root
-
-            power finds bodies, mouths, and hands.
-
-          </p>
-
-        </div>
-
-        <div class="character-card villain">
-
-          <h4>Sentinels</h4>
-
-          <div class="role">Root and system watchers</div>
-
-          <p>
-
-            Sentinels guard, enforce, and carry the feel of old systems that do not sleep
-
-            just because the surface world has changed.
-
-          </p>
-
-        </div>
-
-        <div class="character-card villain">
-
-          <h4>Deep Root</h4>
-
-          <div class="role">Older Underroot force</div>
-
-          <p>
-
-            Deep Root belongs to the deeper dark below the visible war, where hunger and
-
-            memory are old enough to feel like landscape.
-
-          </p>
-
-        </div>
-
-        <div class="character-card villain">
-
-          <h4>Eiðarr / Sawtooth</h4>
-
-          <div class="role">Poisoner of happiness, later antagonist</div>
-
-          <p>
-
-            Eiðarr is personal poison, a dangerous figure tied to family-law, old harm,
-
-            and the later attempt to twist happiness, care, and kinship into weapons.
-
-          </p>
-
-        </div>
-
-        <div class="character-card villain">
-
-          <h4>The Wrong Un’s</h4>
-
-          <div class="role">Uncorrected wrong, human-layer threat</div>
-
-          <p>
-
-            The Wrong Un’s are those whose wrongs were never corrected, witnessed, repaid,
-
-            or bound. They move quietly where villages would rather forget.
-
-          </p>
-
-        </div>
-
-        <div class="character-card villain">
-
-          <h4>Agreement</h4>
-
-          <div class="role">False peace, soft control</div>
-
-          <p>
-
-            Agreement offers peace, comfort, and quiet while asking people to surrender
-
-            grief, names, refusal, memory, and difficult truth.
-
-          </p>
-
-        </div>
-
-        <div class="character-card villain">
-
-          <h4>Hollow</h4>
-
-          <div class="role">Simplification and emotional erasure</div>
-
-          <p>
-
-            Hollow is the danger of emptying people into easier shapes, where pain is not
-
-            healed but removed from sight.
-
-          </p>
-
-        </div>
-
-        <div class="character-card villain">
-
-          <h4>Alistair Venn</h4>
-
-          <div class="role">Agreement operator</div>
-
-          <p>
-
-            Alistair Venn carries the face of civic calm and controlled mercy, making him
-
-            dangerous in rooms where polite words do heavy harm.
-
-          </p>
-
-        </div>
-
-        <div class="character-card villain">
-
-          <h4>Morcant Veyr</h4>
-
-          <div class="role">Old druidic controller</div>
-
-          <p>
-
-            Morcant Veyr stands behind old child-control patterns, false rescue, Grey Cradle
-
-            threads, and the use of care as capture.
-
-          </p>
-
-        </div>
-
-        <div class="character-card villain">
-
-          <h4>The Grey Cradle</h4>
-
-          <div class="role">False rescue network</div>
-
-          <p>
-
-            The Grey Cradle is tied to child-snatching, control disguised as care, and the
-
-            horror of a cradle that does not ask before holding.
-
-          </p>
-
-        </div>
-
-        <div class="character-card villain">
-
-          <h4>The Thorn-Cradle Company</h4>
-
-          <div class="role">Cradle-control system</div>
-
-          <p>
-
-            The Thorn-Cradle Company carries soft cloth with teeth turned inward, proving
-
-            that gentleness can become violence when it refuses consent.
-
-          </p>
-
-        </div>
-
-        <div class="character-card villain">
-
-          <h4>Article Ash-Seven</h4>
-
-          <div class="role">Agreement doctrine</div>
-
-          <p>
-
-            Article Ash-Seven belongs to the legal and social machinery of control, where
-
-            written calm can become a cage.
-
-          </p>
-
-        </div>
-
-        <div class="character-card villain">
-
-          <h4>Skeld-Fell Ransom Faction</h4>
-
-          <div class="role">Book XIV mountain threat</div>
-
-          <p>
-
-            Desperate, freezing, frightened, and wrong. Skeld-Fell’s ransom faction has real
-
-            need, but need does not make another person payment.
-
-          </p>
-
-        </div>
-
-        <div class="character-card villain">
-
-          <h4>The True Cold Beneath Skeld-Fell</h4>
-
-          <div class="role">Old winter intelligence</div>
-
-          <p>
-
-            Beneath the cold hearths waits something older than ordinary winter, a force
-
-            learning to speak through need, shame, and ransom.
-
-          </p>
-
-        </div>
-
-        <div class="character-card villain">
-
-          <h4>Cold Hearth Hall</h4>
-
-          <div class="role">Place of cold-ransom logic</div>
-
-          <p>
-
-            Cold Hearth Hall stands as both place and symbol: a hall where warmth has learned
-
-            to demand people before it remembers fire.
-
-          </p>
-
-        </div>
-
-        <div class="character-card villain">
-
-          <h4>The Ransom House of Snow</h4>
-
-          <div class="role">Book XIV captivity site</div>
-
-          <p>
-
-            A place where open doors, cold hearths, and helpful language hide the ugly truth:
-
-            no one should be priced as winter payment.
-
-          </p>
-
-        </div>
-
-        <div class="character-card villain">
-
-          <h4>Blómblaða of Vardrum</h4>
-
-          <div class="role">Corrupted petal-druid</div>
-
-          <p>
-
-            Flower-name turned thorn-mouth. Blómblaða twists family, marriage, birth herbs,
-
-            garlands, pollen, healing, and care into ownership.
-
-          </p>
-
-        </div>
-
-        <div class="character-card villain">
-
-          <h4>Myah</h4>
-
-          <div class="role">Book XIV mystery thread</div>
-
-          <p>
-
-            Myah is tied to Mia, family-law, and a dangerous Book XIV thread. Her full role
-
-            is best discovered inside the story.
-
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <section>
-
-      <h3>Why the Cast Matters</h3>
-
-      <p>
-
-        Black Wings is not built only from battles and powers. It is built from names.
-
-        A child with no name yet. A dog refusing a doorway. A bird stealing a ribbon.
-
-        A druid asking before scenting. A leopard vanishing beside the road. A villain
-
-        saying family with poison under the tongue.
-
-      </p>
-
-      <p>
-
-        Every character, large or small, helps shape the road. Some carry swords. Some carry
-
-        bowls. Some carry jokes. Some carry old wrongs. Some carry warnings in feathers,
-
-        paws, breath, flame, mist, or silence.
-
-      </p>
-
-      <div class="quote">
-
-        The saga remembers its people, its beasts, and even the names whispered once beside a fire.
-
-      </div>
-
-    </section>
-
-  </main>
-
-  <footer>
-
-    © 2026 Saga of Black Wings · Created by Timothy M. Halliday
-
-  </footer>
-
+</header>
+<nav class="site-nav">
+  <a href="index.html">Home</a>
+  <a href="books.html">Books</a>
+  <a href="characters.html">Characters</a>
+  <a href="rogues.html">Rogues</a>
+  <a href="lore.html">World & Lore</a>
+  <a href="odes.html">Odes</a>
+  <a href="maps.html">Maps</a>
+  <a href="archive.html">Visual Archive</a>
+  <a href="author.html">Author</a>
+  <a href="dedications.html">Dedications</a>
+</nav>
+<main>
+  <section class="panel intro-panel">
+    <h2>Before the Names Begin</h2>
+<p>
+  The Saga of Black Wings is built from names. Some names are shouted across battlefields.
+  Some are whispered under floors. Some are carried by ravens, wolves, dogs, children,
+  ghosts, old roads and people who were told they did not matter.
+</p>
+<p>
+  This page is spoiler-safe. It introduces names, roles and flavour without opening the
+  locked doors too early.
+</p>
+<blockquote>
+  “A name remembered is a door the dark cannot fully close.”
+</blockquote>
+  </section>
+  <section class="panel">
+    <h2>The Braid</h2>
+<p>
+  The Braid is not blood alone. It is chosen witness, dangerous love, shared road,
+  stubborn humour, animal judgement, old oath and the refusal to let people be made small.
+</p>
+<div class="lore-list">
+  <span><strong>FATAS</strong>: raven-hearted warrior, oath-bearer, wound-carrier and storm-centre of the saga.</span>
+  <span><strong>Ness</strong>: beloved of the raven, fierce witness, healer of hard places and one of the saga’s deepest hearts.</span>
+  <span><strong>Mia</strong>: daughter, survivor, young woman of divided roads, grief, fire and dangerous becoming.</span>
+  <span><strong>Maisie</strong>: daughter, witness, fierce heart and central thread of love, refusal, family and future law.</span>
+  <span><strong>James</strong>: quiet mystery, wounded survivor, road-marked presence and one of the saga’s most important hidden hearts.</span>
+  <span><strong>Eldwyn</strong>: Hearth-bound guide, keeper of signs, old knowledge and practical stubbornness.</span>
+  <span><strong>Ulrike</strong>: strong-hearted presence of loyalty, grit, witness and sharp sense.</span>
+  <span><strong>Cael</strong>: Crown-threaded survivor, hidden operator and man caught between danger, loyalty and difficult truth.</span>
+  <span><strong>Brokan</strong>: scarred, powerful and impossible to file neatly under simple judgement.</span>
+  <span><strong>Jórunn Vánesja</strong>: scent-bearer, tracker, living witness of old Vánesja care and dangerous roads.</span>
+  <span><strong>Jesse</strong>: Braid presence of friendship, courage, witness and hard road loyalty.</span>
+  <span><strong>Lucy</strong>: Braid presence of love, witness and remembered courage, tied also to one of the saga’s most honoured names.</span>
+  <span><strong>Taff</strong>: a grounded, human thread in the wider Braid-world, carrying warmth, humour and ordinary loyalty.</span>
+</div>
+  </section>
+  <section class="panel">
+    <h2>The Wounded Road</h2>
+<p>
+  Not every important person in Black Wings arrives clean. Some arrive damaged, pressured,
+  misled, hunted, guilty, frightened or half-owned by terrible choices. The saga does not
+  pretend wound and harm are simple things.
+</p>
+<div class="lore-list">
+  <span><strong>Bran</strong>: a wounded, troubled figure bound to one of the saga’s darker roads, carrying debt, pain and the possibility of change.</span>
+  <span><strong>Phoebe “Phebs”</strong>: a sharp, wounded presence whose path crosses guilt, survival, danger and difficult mercy.</span>
+  <span><strong>Myah</strong>: a deeply tangled figure tied to love, trust, family-law and one of the saga’s most painful emotional fractures.</span>
+  <span><strong>Riven</strong>: a marked presence of old hurt, road-shadow and the kind of survival that leaves teeth in the heart.</span>
+  <span><strong>Lark</strong>: a carried and protected name, bound to old danger, tenderness and the fierce law of not abandoning the vulnerable.</span>
+</div>
+  </section>
+  <section class="panel">
+    <h2>Familia and Hearth-Names</h2>
+<p>
+  The saga’s wars are not only fought with blades. They are fought with food, warmth,
+  stubborn care, laughter, shelter, witness and the refusal to let families be defined
+  by the systems that wounded them.
+</p>
+<div class="lore-list">
+  <span><strong>Katy</strong>: a familia thread of love, memory, future and the child whose presence changes the shape of prophecy.</span>
+  <span><strong>Jenny</strong>: familia presence, carrying grounded love, human warmth and the ordinary strength that keeps people standing.</span>
+  <span><strong>Josie</strong>: familia presence, tied to care, belonging and the living world beyond battle.</span>
+  <span><strong>Little Hearth</strong>: child-thread, future-thread and small living proof that old systems do not get the final word.</span>
+  <span><strong>The Children of Witness Isle</strong>: small witnesses whose games, object-laws, fears and courage reshape the meaning of protection.</span>
+</div>
+  </section>
+  <section class="panel">
+    <h2>The Crowmere Thread</h2>
+<p>
+  The Crowmere family belongs to the village-pressure, healer-wagon and old-remedy
+  side of the saga: care, fear, guilt, habit, harm and the terrible question of when
+  help becomes another kind of wrongness.
+</p>
+<div class="lore-list">
+  <span><strong>Krágr Halveth</strong>: a Crowmere healer tied to warm-handed care, old wrongness, family fear and the terrible question of when help becomes harm.</span>
+  <span><strong>Særa Veydís</strong>: a healer-mother figure caught between care, guilt, old remedies and the slow horror of comfort used wrongly.</span>
+  <span><strong>Lilja Crowmere</strong>: a Crowmere daughter with more truth in her than the systems around her expected, and the courage to speak late rather than never.</span>
+  <span><strong>Jórrik Salt-Marsh</strong>: a vulnerable Crowmere child-thread who hears roads too loudly and learns that hearing is not the same as obeying.</span>
+</div>
+  </section>
+  <section class="panel">
+    <h2>Beast and Bird Witnesses</h2>
+<p>
+  The animals of Black Wings are not decoration. They judge, remember, warn, refuse,
+  comfort, hunt, carry messages, expose lies and sometimes understand the law better
+  than people do.
+</p>
+<div class="lore-list">
+  <span><strong>Mad</strong>: dog, guardian, patrol-heart and loyal beast with more sense than many official systems.</span>
+  <span><strong>Benson</strong>: beast-witness, companion, watcher and living argument against treating animals as property or tools.</span>
+  <span><strong>Hugo</strong>: beast-witness and loyal presence, often close to danger, scent, road and family.</span>
+  <span><strong>Blue</strong>: sharp-winged messenger, proud objector, loud opinion wrapped in feathers and one of the saga’s finest professional complainers.</span>
+  <span><strong>Scarlet</strong>: messenger-bird, sky-witness, route-reader and bearer of warning across dangerous roads.</span>
+  <span><strong>Dusk</strong>: quiet-winged witness, watcher of old routes and bird of shadowed intelligence.</span>
+  <span><strong>Jack</strong>: the Moor-Wolf, judge of hidden leashes, old animal law and the question of what is wild, trusted or falsely feared.</span>
+  <span><strong>Shane</strong>: dog-thread of pain, fear, loyalty and the complicated memory of what children survive.</span>
+  <span><strong>Mylo</strong>: salt-marsh cat, impossible courier, object-guardian and smug vanisher of great professional importance.</span>
+  <span><strong>Glimra</strong>: great Salt-Marsh Leopard, companion of old beast-druid power and northern danger.</span>
+</div>
+  </section>
+  <section class="panel">
+    <h2>Old Beasts and Fire-Wolves</h2>
+<p>
+  Some beasts belong to the living road. Some belong to older ash, root-war, flame,
+  hunger and stories told too late beside dying fires.
+</p>
+<div class="lore-list">
+  <span><strong>Cinder Wolves</strong>: fire-bound wolf-kind of ash, old roads, root-war and ancient fear. Where they run, root-magic remembers fire.</span>
+  <span><strong>The Cinder King</strong>: a vast fire-wolf presence of flame, ash and old beast-power. Not tame. Not safe. Not simple.</span>
+  <span><strong>The Valkryn Bone-Hound</strong>: old threat-shape of bone, pursuit and dread, remembered where bad roads grow teeth.</span>
+  <span><strong>Root-Hounds</strong>: root-made horrors of pursuit, obedience and old underground hunger.</span>
+</div>
+  </section>
+  <section class="panel">
+    <h2>Spirits, Watchers and Remembered Dead</h2>
+<p>
+  In Black Wings, the dead do not always leave. Sometimes they guide. Sometimes they warn.
+  Sometimes they stand quietly near the fire and make the living braver than they thought
+  they could be.
+</p>
+<div class="lore-list">
+  <span><strong>Kian</strong>: brave little bell-light, spirit-warrior, remembered name and sacred presence whose courage echoes through the saga.</span>
+  <span><strong>Bella</strong>: spirit-guide, hearth-fire presence and loving witness whose gentleness has teeth against the dark.</span>
+  <span><strong>Elland</strong>: watcher, prophet, keeper of hidden signs and old warnings, with mud on his boots and secrets that refuse to stay buried.</span>
+  <span><strong>The Watcher Under the Floor</strong>: small witness of hidden childhood spaces, breath-counts, dust, fear and the law that the hidden child must be believed.</span>
+</div>
+  </section>
+  <section class="panel">
+    <h2>Hidden Kin and Northern Roads</h2>
+<p>
+  As the saga moves north, family becomes more dangerous, not less. Hidden kin, mountain
+  sickness, ransom logic and old agreements begin to test whether help can stay free
+  when desperation bares its teeth.
+</p>
+<div class="lore-list">
+  <span><strong>Jórga Rósahaddr</strong>: rose-haired beast-druid of the Salt-Marsh, practical, sharp, half-feral and dangerous to underestimate.</span>
+  <span><strong>Marek Vey-Corren</strong>: hidden kin-thread tied to Elland, bloodline witness and the northern test of family without ownership.</span>
+  <span><strong>Hedda Vey-Corren</strong>: hidden kin-thread of the house beyond the house, bound to the dangerous question of what family can demand.</span>
+  <span><strong>Kelda Vey-Corren</strong>: hidden kin-thread, water-sign bearer and part of the northern road’s deepest family-law test.</span>
+  <span><strong>Finnr Vey-Corren</strong>: hidden child-thread of the Vey-Corren line, caught where ransom logic tries to turn need into ownership.</span>
+</div>
+  </section>
+  <section class="panel">
+    <h2>How to Read the Names</h2>
+<p>
+  These entries are fragments, not verdicts. Some people change. Some fall. Some return.
+  Some are loved before they are understood. Some are feared before anyone asks what
+  taught the road to fear them.
+</p>
+<blockquote>
+  “The Braid does not ask whether a name is tidy. It asks whether the living are still there.”
+</blockquote>
+<div class="hero-buttons">
+  <a href="books.html" class="button primary">Go to the Books</a>
+  <a href="rogues.html" class="button secondary">Open the Rogues Gallery</a>
+  <a href="archive.html" class="button secondary">Open the Visual Archive</a>
+</div>
+  </section>
+</main>
+<footer>
+  <p>© 2026 Saga of Black Wings · Created by Timothy M. Halliday</p>
+</footer>
 </body>
-
 </html>
