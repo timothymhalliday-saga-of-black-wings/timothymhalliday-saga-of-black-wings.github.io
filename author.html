@@ -1,213 +1,832 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta charset="UTF-8">
+  <title>Author | The Saga of Black Wings</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Meet Timothy M. Halliday, writing as T.M.H, creator of The Saga of Black Wings, a dark epic fantasy world carried for around forty years."
+  />
+  <meta name="author" content="Timothy M. Halliday" />
+  <meta name="theme-color" content="#050608" />
 
-  <title>Author | Saga of Black Wings</title>
+  <meta property="og:title" content="Author | The Saga of Black Wings" />
+  <meta
+    property="og:description"
+    content="Meet Timothy M. Halliday, creator of a fifteen-book manuscript saga of ravens, wolves, chosen family, living law and stubborn hope."
+  />
+  <meta property="og:type" content="profile" />
+  <meta property="og:url" content="https://sagaofblackwings.com/author.html" />
+  <meta
+    property="og:image"
+    content="https://sagaofblackwings.com/4BC7F1F3-A69C-4867-A3E3-8BFA8B22D55C.png"
+  />
+  <meta
+    property="og:image:alt"
+    content="Black Wings author portrait of Timothy M. Halliday"
+  />
 
-  <meta name="description" content="Meet Timothy M. Halliday, creator of The Saga of Black Wings, an epic fantasy saga more than forty years in the making.">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Author | The Saga of Black Wings" />
+  <meta
+    name="twitter:description"
+    content="Meet Timothy M. Halliday, writing as T.M.H, creator of The Saga of Black Wings."
+  />
+  <meta
+    name="twitter:image"
+    content="https://sagaofblackwings.com/4BC7F1F3-A69C-4867-A3E3-8BFA8B22D55C.png"
+  />
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://sagaofblackwings.com/author.html" />
+  <link rel="stylesheet" href="style.css" />
 
+  <style>
+    .author-hero {
+      min-height: 76vh;
+      padding-top: 5.2rem;
+      padding-bottom: 5.2rem;
+      background:
+        radial-gradient(circle at 14% 18%, rgba(116, 37, 55, 0.24), transparent 29rem),
+        radial-gradient(circle at 88% 12%, rgba(221, 182, 95, 0.17), transparent 28rem),
+        linear-gradient(180deg, rgba(4, 5, 7, 0.97), rgba(11, 10, 12, 0.99));
+    }
+
+    .author-hero-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.74fr);
+      gap: clamp(2rem, 6vw, 5rem);
+      align-items: center;
+      width: min(100%, 1120px);
+      margin: 0 auto;
+    }
+
+    .author-hero .hero-text {
+      width: 100%;
+      text-align: left;
+    }
+
+    .author-hero .tagline,
+    .author-hero .hero-quote {
+      margin-left: 0;
+    }
+
+    .author-hero .hero-buttons {
+      justify-content: flex-start;
+    }
+
+    .author-hero-art {
+      margin: 0;
+      padding: 0.6rem;
+      background: rgba(5, 6, 8, 0.75);
+      border: 1px solid rgba(221, 182, 95, 0.42);
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .author-hero-art img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 19px;
+    }
+
+    .author-seal {
+      max-width: 870px;
+      margin: 1.5rem auto 0;
+      padding: 1rem 1.2rem;
+      color: var(--parchment-soft);
+      background: rgba(5, 6, 8, 0.42);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 12px 12px 0;
+    }
+
+    .author-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.7rem;
+      margin-top: 1.8rem;
+    }
+
+    .author-nav a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 0.55rem 0.9rem;
+      color: var(--parchment);
+      background: rgba(18, 21, 26, 0.84);
+      border: 1px solid rgba(221, 182, 95, 0.3);
+      border-radius: 999px;
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.67rem;
+      font-weight: 700;
+      letter-spacing: 0.052em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .author-nav a:hover {
+      color: #160f07;
+      background: var(--gold-bright);
+      border-color: var(--gold-bright);
+    }
+
+    .bio-layout {
+      display: grid;
+      grid-template-columns: minmax(270px, 0.74fr) minmax(0, 1.12fr);
+      gap: clamp(1.6rem, 5vw, 3.6rem);
+      align-items: center;
+    }
+
+    .bio-photo {
+      margin: 0;
+      padding: 0.55rem;
+      background: rgba(5, 6, 8, 0.5);
+      border: 1px solid rgba(221, 182, 95, 0.3);
+      border-radius: 20px;
+      box-shadow: var(--soft-shadow);
+    }
+
+    .bio-photo img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 14px;
+    }
+
+    .bio-photo figcaption {
+      padding: 0.75rem 0.3rem 0.15rem;
+      color: var(--parchment-soft);
+      font-size: 0.8rem;
+      font-style: italic;
+      text-align: center;
+    }
+
+    .milestone-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1.7rem;
+    }
+
+    .milestone {
+      padding: 1.25rem 1rem;
+      text-align: center;
+      background: rgba(5, 6, 8, 0.46);
+      border: 1px solid rgba(221, 182, 95, 0.25);
+      border-radius: 16px;
+    }
+
+    .milestone strong {
+      display: block;
+      margin-bottom: 0.35rem;
+      color: var(--gold-bright);
+      font-family: "Cinzel", Georgia, serif;
+      font-size: clamp(1.35rem, 3vw, 2rem);
+    }
+
+    .milestone span {
+      color: var(--parchment-soft);
+      font-size: 0.84rem;
+    }
+
+    .theme-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .theme-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    .theme-card .theme-note {
+      margin-top: auto;
+      padding-top: 0.75rem;
+      color: var(--gold);
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.64rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .animal-theme {
+      border-color: rgba(74, 91, 132, 0.55);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(49, 93, 131, 0.18), transparent 17rem),
+        linear-gradient(145deg, rgba(23, 28, 34, 0.98), rgba(10, 12, 15, 0.99));
+    }
+
+    .forest-theme {
+      border-color: rgba(71, 122, 81, 0.58);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(71, 122, 81, 0.21), transparent 17rem),
+        linear-gradient(145deg, rgba(23, 37, 27, 0.98), rgba(9, 14, 11, 0.99));
+    }
+
+    .love-theme {
+      border-color: rgba(116, 68, 83, 0.52);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(116, 68, 83, 0.19), transparent 17rem),
+        linear-gradient(145deg, rgba(31, 26, 30, 0.98), rgba(10, 12, 15, 0.99));
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem;
+      margin-top: 1.7rem;
+    }
+
+    .process-card {
+      margin: 0;
+      padding: 1.1rem;
+      color: var(--parchment-soft);
+      background: rgba(5, 6, 8, 0.48);
+      border: 1px solid rgba(221, 182, 95, 0.24);
+      border-radius: 14px;
+    }
+
+    .process-card strong {
+      display: block;
+      margin-bottom: 0.45rem;
+      color: var(--gold-bright);
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.83rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .portrait-pair {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.2rem;
+      margin-top: 1.7rem;
+    }
+
+    .portrait-card {
+      overflow: hidden;
+      background: rgba(5, 6, 8, 0.5);
+      border: 1px solid rgba(221, 182, 95, 0.28);
+      border-radius: 18px;
+      box-shadow: var(--soft-shadow);
+    }
+
+    .portrait-card a {
+      display: block;
+    }
+
+    .portrait-card img {
+      width: 100%;
+      height: clamp(390px, 55vw, 690px);
+      object-fit: contain;
+      background: #080a0d;
+    }
+
+    .portrait-card .portrait-copy {
+      padding: 1.1rem;
+      border-top: 1px solid rgba(221, 182, 95, 0.18);
+      text-align: center;
+    }
+
+    .portrait-card h3 {
+      margin-bottom: 0.45rem;
+      color: #fff0ce;
+    }
+
+    .contact-panel {
+      text-align: center;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(221, 182, 95, 0.1), transparent 22rem),
+        linear-gradient(145deg, rgba(27, 25, 26, 0.98), rgba(10, 12, 15, 0.99));
+    }
+
+    .contact-address {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      margin: 1rem auto 0;
+      padding: 0.75rem 1.15rem;
+      color: var(--gold-bright);
+      background: rgba(5, 6, 8, 0.58);
+      border: 1px solid rgba(221, 182, 95, 0.35);
+      border-radius: 999px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(0.9rem, 2.5vw, 1.05rem);
+      overflow-wrap: anywhere;
+      text-decoration: none;
+    }
+
+    .contact-address:hover {
+      color: #160f07;
+      background: var(--gold-bright);
+    }
+
+    .author-law-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem;
+      margin-top: 1.7rem;
+    }
+
+    .author-law {
+      margin: 0;
+      padding: 1.1rem;
+      color: #eef0df;
+      background:
+        linear-gradient(135deg, rgba(49, 90, 69, 0.2), rgba(5, 6, 8, 0.52));
+      border: 1px solid rgba(83, 128, 94, 0.38);
+      border-radius: 14px;
+    }
+
+    .author-law::before {
+      content: "◆";
+      margin-right: 0.55rem;
+      color: var(--gold);
+    }
+
+    @media (max-width: 980px) {
+      .author-hero-layout,
+      .bio-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .author-hero .hero-text {
+        text-align: center;
+      }
+
+      .author-hero .tagline,
+      .author-hero .hero-quote {
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .author-hero .hero-buttons {
+        justify-content: center;
+      }
+
+      .author-hero-art,
+      .bio-photo {
+        width: min(100%, 560px);
+        margin: 0 auto;
+      }
+
+      .theme-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      .author-hero {
+        min-height: auto;
+      }
+
+      .author-nav {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .author-nav a {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .milestone-grid,
+      .theme-grid,
+      .process-grid,
+      .portrait-pair,
+      .author-law-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .portrait-card img {
+        height: auto;
+        max-height: 720px;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Timothy M. Halliday",
+    "alternateName": "T.M.H",
+    "url": "https://sagaofblackwings.com/author.html",
+    "image": "https://sagaofblackwings.com/B867CB65-51D1-4FD9-8756-A006F869B5A0.png",
+    "jobTitle": "Author",
+    "description": "Creator of The Saga of Black Wings, a dark epic fantasy saga carried for around forty years."
+  }
+  </script>
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-<header class="page-hero">
+  <header class="page-hero author-hero">
+    <div class="author-hero-layout">
+      <div class="hero-text">
+        <p class="eyebrow">Behind the Black Wings</p>
 
-  <div class="hero-text">
+        <h1>Timothy M. Halliday</h1>
 
-    <p class="eyebrow">The Author</p>
+        <p class="tagline">
+          Writing as T.M.H, creator of a living dark fantasy saga carried
+          through around forty years of imagination, memory and stubborn hope.
+        </p>
 
-    <h1>Timothy M. Halliday</h1>
+        <blockquote class="hero-quote">
+          “Some stories arrive in a season. Others spend decades gathering their own weather.”
+        </blockquote>
 
-    <p class="tagline">
+        <div class="hero-buttons">
+          <a href="#about-the-author" class="button primary">Read the Story</a>
+          <a href="books.html" class="button secondary">Explore the Books</a>
+          <a href="index.html" class="button secondary">Return Home</a>
+        </div>
+      </div>
 
-      Creator of <em>The Saga of Black Wings</em>, a living fantasy world
-
-      more than forty years in the making.
-
-    </p>
-
-    <div class="hero-buttons">
-
-      <a href="index.html" class="button primary">Home</a>
-
-      <a href="books.html" class="button secondary">Books</a>
-
+      <figure class="author-hero-art">
+        <img
+          src="4BC7F1F3-A69C-4867-A3E3-8BFA8B22D55C.png"
+          alt="Black Wings author portrait of Timothy M. Halliday with raven, dark hall and old-road clothing"
+          width="1122"
+          height="1402"
+          fetchpriority="high"
+        />
+      </figure>
     </div>
-
-  </div>
-
-</header>
-
-<nav class="site-nav">
-
-  <a href="index.html">Home</a>
-
-  <a href="books.html">Books</a>
-
-  <a href="characters.html">Characters</a>
-
-  <a href="rogues.html">Rogues</a>
-
-  <a href="lore.html">World &amp; Lore</a>
-
-  <a href="odes.html">Odes</a>
-
-  <a href="maps.html">Maps</a>
-
-  <a href="archive.html">Visual Archive</a>
-
-  <a href="author.html" class="active">Author</a>
-
-</nav>
-
-<main>
-
-<section class="panel author-panel">
-
-<div class="author-text">
-
-<h2>Forty Years Becoming One World</h2>
-
-<p>
-
-Some stories arrive in a season.
-
-Others spend decades gathering their own weather.
-
-</p>
-
-<p>
-
-<b>The Saga of Black Wings</b> belongs to the second kind.
-
-For over forty years Timothy M. Halliday has built a world of kingdoms,
-
-marshes, forests, forgotten roads, ancient law, witness marks,
-
-animals, impossible friendships, quiet courage and people who refuse to
-
-be measured by crowns.
-
-</p>
-
-<p>
-
-The series draws upon folklore, mythology, humour, grief, hope and the
-
-small moments that often matter more than battles. Every book adds
-
-another path through a living world whose history stretches far beyond
-
-the page.
-
-</p>
-
-<blockquote>
-
-"Forty years in the making.<br>
-
-One saga still unfolding."
-
-</blockquote>
-
-</div>
-
-<div class="author-image">
-
-<img
-
-src="4BC7F1F3-A69C-4867-A3E3-8BFA8B22D55C.png"
-
-alt="Timothy M. Halliday"
-
-class="author-photo">
-
-</div>
-
-</section>
-
-<section class="panel">
-
-<h2>The Heart of the Saga</h2>
-
-<p>
-
-Black Wings is epic fantasy, but it is equally a story about loyalty,
-
-family, endurance, laughter, betrayal, kindness and the remarkable bond
-
-between people and animals.
-
-</p>
-
-<p>
-
-Readers will find ravens that remember, wolves that judge, forests with
-
-their own laws, forgotten kings, impossible romances, songs, odes,
-
-ancient customs and ordinary people discovering extraordinary courage.
-
-</p>
-
-<p>
-
-The world may be dark, but it is never without light. Hope is earned,
-
-friendship matters, and love often proves stronger than power.
-
-</p>
-
-</section>
-
-<section class="panel">
-
-<h2>Looking Forward</h2>
-
-<p>
-
-The Saga of Black Wings continues to grow, with many books already
-
-written and later volumes expanding the mythology, history and living
-
-world still further.
-
-</p>
-
-<p>
-
-This website exists as both a companion to the novels and a place where
-
-readers can explore maps, characters, lore, artwork, odes and the wider
-
-history surrounding the saga.
-
-</p>
-
-</section>
-
-</main>
-
-<footer>
-
-<p>
-
-© 2026 Saga of Black Wings<br>
-
-Created by Timothy M. Halliday
-
-</p>
-
-</footer>
-
+  </header>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="books.html">Books</a>
+    <a href="characters.html">Characters</a>
+    <a href="rogues.html">Rogues</a>
+    <a href="world.html">World</a>
+    <a href="lore.html">Lore</a>
+    <a href="odes.html">Odes</a>
+    <a href="maps.html">Maps</a>
+    <a href="archive.html">Archive</a>
+    <a href="author.html" aria-current="page">Author</a>
+    <a href="dedications.html">Dedications</a>
+  </nav>
+
+  <main id="main-content">
+    <section class="panel intro-panel" id="about-the-author">
+      <p class="eyebrow">The Long Road to the Page</p>
+      <h2>Forty Years Becoming One World</h2>
+
+      <p>
+        Timothy M. Halliday, writing as T.M.H, has carried
+        <em>The Saga of Black Wings</em> for around forty years.
+      </p>
+
+      <p>
+        What began as a private world grew through changing seasons of life,
+        gathering ravens, wolves, dogs, cats, salt roads, hidden houses,
+        dangerous crowns, forgotten roots, impossible friendships, old songs
+        and people who refuse to be made smaller by power.
+      </p>
+
+      <p>
+        The saga is dark epic fantasy, but its deepest road is human. It is
+        concerned with loyalty, grief, humour, betrayal, endurance, difficult
+        mercy, chosen family and the small acts of care that sometimes carry
+        more weight than battles.
+      </p>
+
+      <p class="author-seal">
+        The world is still growing. Fifteen books already stand within the
+        manuscript, while the later road through Books XVI to XX continues to
+        open.
+      </p>
+
+      <nav class="author-nav" aria-label="Jump to author sections">
+        <a href="#writing-life">Writing Life</a>
+        <a href="#saga-heart">Heart of the Saga</a>
+        <a href="#working-method">Working Method</a>
+        <a href="#portraits">Portraits</a>
+        <a href="#professional-contact">Professional Contact</a>
+      </nav>
+    </section>
+
+    <section class="panel bio-layout" id="writing-life">
+      <figure class="bio-photo">
+        <img
+          src="B867CB65-51D1-4FD9-8756-A006F869B5A0.png"
+          alt="Professional portrait of author Timothy M. Halliday against a dark blue background"
+          width="1122"
+          height="1402"
+          loading="lazy"
+        />
+        <figcaption>
+          Timothy M. Halliday, author of The Saga of Black Wings.
+        </figcaption>
+      </figure>
+
+      <div>
+        <p class="eyebrow">A Writer’s Life</p>
+        <h2>The Story Kept Returning</h2>
+
+        <p>
+          Black Wings did not begin as a publishing plan. It began as a world
+          that continued returning, growing new roads whenever life appeared to
+          have closed the old ones.
+        </p>
+
+        <p>
+          Over decades, private mythology became a full saga. Characters
+          gathered histories. Animals became witnesses. Houses learned memory.
+          Love stories developed their own languages. The Crown and the
+          Underroot emerged as different forms of ownership, while the Braid
+          became the living answer: chosen belonging without possession.
+        </p>
+
+        <p>
+          The work now joins large-scale fantasy with intimate human stakes.
+          Battles matter, but so do meals, jokes, frightened silences, animals
+          at the door and the moment someone finally discovers they are allowed
+          to refuse.
+        </p>
+
+        <div class="milestone-grid" aria-label="Author and saga milestones">
+          <div class="milestone">
+            <strong>40</strong>
+            <span>Around forty years of worldbuilding</span>
+          </div>
+
+          <div class="milestone">
+            <strong>15</strong>
+            <span>Books already in manuscript</span>
+          </div>
+
+          <div class="milestone">
+            <strong>XVI–XX</strong>
+            <span>The next movement now opening</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="saga-heart">
+      <p class="eyebrow">What the Books Carry</p>
+      <h2>The Heart of the Saga</h2>
+
+      <div class="book-grid theme-grid">
+        <article class="book-card theme-card featured-book">
+          <p class="book-number">Living Bond</p>
+          <h3>Chosen Family</h3>
+          <p>
+            The Braid is built from people who continue choosing one another
+            without turning care into debt or belonging into ownership.
+          </p>
+          <p class="theme-note">Offer, not net</p>
+        </article>
+
+        <article class="book-card theme-card animal-theme">
+          <p class="book-number">Fur and Feather</p>
+          <h3>Animal Witnesses</h3>
+          <p>
+            Ravens, crows, dogs, wolf, cat, bear and spirit flame warn, judge,
+            remember and protect as participants in the story.
+          </p>
+          <p class="theme-note">Never ornaments</p>
+        </article>
+
+        <article class="book-card theme-card love-theme">
+          <p class="book-number">Many Tongues</p>
+          <h3>Love and Loyalty</h3>
+          <p>
+            Romance, friendship, parenthood, companionship and remembered love
+            each speak differently and are allowed their own pace.
+          </p>
+          <p class="theme-note">Love without possession</p>
+        </article>
+
+        <article class="book-card theme-card">
+          <p class="book-number">Living No</p>
+          <h3>Refusal</h3>
+          <p>
+            The right to say no runs beneath the saga as a law older and more
+            honest than any crown.
+          </p>
+          <p class="theme-note">Consent remains sacred</p>
+        </article>
+
+        <article class="book-card theme-card forest-theme">
+          <p class="book-number">Road and Root</p>
+          <h3>World-Law</h3>
+          <p>
+            Marshes, forests, houses and roads carry memory and consequence,
+            making landscape an active witness.
+          </p>
+          <p class="theme-note">The world remembers</p>
+        </article>
+
+        <article class="book-card theme-card">
+          <p class="book-number">Darkness with Firelight</p>
+          <h3>Earned Hope</h3>
+          <p>
+            The world can be cruel, but humour, companionship and stubborn care
+            keep darkness from owning the final word.
+          </p>
+          <p class="theme-note">Hope with scars</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" id="working-method">
+      <p class="eyebrow">Building the Long Saga</p>
+      <h2>The Working Method</h2>
+
+      <p>
+        Black Wings is written as one continuous world rather than a row of
+        disconnected adventures. Every book must remember the emotional,
+        mythic and physical roads that came before it.
+      </p>
+
+      <div class="process-grid">
+        <p class="process-card">
+          <strong>Canon First</strong>
+          Names, family links, animal identities and living laws are checked so
+          the world remains coherent across the long series.
+        </p>
+
+        <p class="process-card">
+          <strong>Story Before Ornament</strong>
+          Odes, songs, crests, folklore and maps must grow from the narrative
+          rather than being pasted onto it.
+        </p>
+
+        <p class="process-card">
+          <strong>People Remain Human</strong>
+          Epic stakes never erase food, exhaustion, jokes, fear, tenderness or
+          the ordinary details that make a life believable.
+        </p>
+
+        <p class="process-card">
+          <strong>Animals Remain Themselves</strong>
+          The animal witnesses may carry mythic meaning, but their instincts,
+          choices and dignity come before symbolism.
+        </p>
+
+        <p class="process-card">
+          <strong>Love Takes Time</strong>
+          Bonds are not forced to resolve together. Each relationship develops
+          through its own pressure, humour, wounds and acts of trust.
+        </p>
+
+        <p class="process-card">
+          <strong>The Road Must Join</strong>
+          Later books expand the world without making the saga feel patched
+          together. Every new path must lead back into the living whole.
+        </p>
+      </div>
+
+      <blockquote>
+        “The story does not ask who was born important. It asks who remained when remaining became difficult.”
+      </blockquote>
+    </section>
+
+    <section class="panel" id="portraits">
+      <p class="eyebrow">Two Faces of the Author Page</p>
+      <h2>Author Portraits</h2>
+
+      <p>
+        The professional portrait serves publishing and formal use. The
+        Black Wings portrait belongs to the imaginative world behind the saga.
+        Tap either image to open its full-size file.
+      </p>
+
+      <div class="portrait-pair">
+        <article class="portrait-card">
+          <a
+            href="B867CB65-51D1-4FD9-8756-A006F869B5A0.png"
+            target="_blank"
+            rel="noopener"
+            aria-label="Open Timothy M. Halliday's professional portrait at full size"
+          >
+            <img
+              src="B867CB65-51D1-4FD9-8756-A006F869B5A0.png"
+              alt="Professional portrait of Timothy M. Halliday"
+              width="1122"
+              height="1402"
+              loading="lazy"
+            />
+          </a>
+
+          <div class="portrait-copy">
+            <h3>Professional Portrait</h3>
+            <p>For biography, publishing and representation material.</p>
+          </div>
+        </article>
+
+        <article class="portrait-card">
+          <a
+            href="4BC7F1F3-A69C-4867-A3E3-8BFA8B22D55C.png"
+            target="_blank"
+            rel="noopener"
+            aria-label="Open Timothy M. Halliday's Black Wings portrait at full size"
+          >
+            <img
+              src="4BC7F1F3-A69C-4867-A3E3-8BFA8B22D55C.png"
+              alt="Saga-styled Black Wings portrait of Timothy M. Halliday with raven and old-road clothing"
+              width="1122"
+              height="1402"
+              loading="lazy"
+            />
+          </a>
+
+          <div class="portrait-copy">
+            <h3>Black Wings Portrait</h3>
+            <p>For the imaginative identity and visual language of the saga.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="hero-buttons">
+        <a href="archive.html#author-portraits" class="button primary">Visit the Visual Archive</a>
+      </div>
+    </section>
+
+    <section class="panel">
+      <p class="eyebrow">The Writer’s Compass</p>
+      <h2>What Must Remain True</h2>
+
+      <div class="author-law-grid">
+        <p class="author-law">Names belong to the named.</p>
+        <p class="author-law">Care freely given is not ransom.</p>
+        <p class="author-law">Animals are witnesses, never ornaments.</p>
+        <p class="author-law">Blood may begin a story but does not own its ending.</p>
+        <p class="author-law">Humour may survive inside darkness.</p>
+        <p class="author-law">No crown shall count us smaller.</p>
+      </div>
+    </section>
+
+    <section class="panel contact-panel" id="professional-contact">
+      <p class="eyebrow">Publishing and Representation</p>
+      <h2>Professional Contact</h2>
+
+      <p>
+        <em>The Saga of Black Wings</em> is being prepared for publication.
+        Publishing enquiries, representation interest and professional contact
+        are welcome.
+      </p>
+
+      <a
+        class="contact-address"
+        href="mailto:Timothymhalliday@outlook.com"
+      >
+        Timothymhalliday@outlook.com
+      </a>
+
+      <p class="author-seal">
+        Reader discussion and saga exploration belong throughout the website.
+        This address is reserved for professional enquiries.
+      </p>
+    </section>
+
+    <section class="panel final-road-panel">
+      <p class="eyebrow">Continue into the Saga</p>
+      <h2>Follow the Work</h2>
+
+      <p>
+        Enter through the book road, the Character Hall, the Skald-Room or the
+        quiet chamber of dedications.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="books.html" class="button primary">Explore the Books</a>
+        <a href="characters.html" class="button secondary">Meet the Braid</a>
+        <a href="dedications.html" class="button secondary">Read the Dedications</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="index.html">Home</a>
+      <a href="books.html">Books</a>
+      <a href="characters.html">Characters</a>
+      <a href="rogues.html">Rogues</a>
+      <a href="world.html">World</a>
+      <a href="lore.html">Lore</a>
+      <a href="odes.html">Odes</a>
+      <a href="maps.html">Maps</a>
+      <a href="archive.html">Archive</a>
+      <a href="dedications.html">Dedications</a>
+    </nav>
+
+    <p>© 2026 Saga of Black Wings · Created by Timothy M. Halliday</p>
+    <p class="footer-motto">No crown shall count us smaller.</p>
+  </footer>
 </body>
-
 </html>
