@@ -201,25 +201,78 @@
       align-items: center;
     }
 
-    .region-plate figure {
-      margin: 0;
-    }
-
-    .region-plate img {
-      width: 100%;
-      max-height: 690px;
-      object-fit: cover;
-      border: 1px solid rgba(221, 182, 95, 0.35);
-      border-radius: 18px;
+    .forest-world-sigil {
+      display: grid;
+      min-height: 540px;
+      padding: clamp(1.25rem, 4vw, 2rem);
+      place-items: center;
+      background:
+        radial-gradient(circle at center, rgba(73, 122, 82, 0.25), transparent 55%),
+        linear-gradient(145deg, rgba(20, 34, 24, 0.98), rgba(7, 12, 9, 0.99));
+      border: 1px solid rgba(94, 150, 103, 0.5);
+      border-radius: 24px;
       box-shadow: var(--soft-shadow);
     }
 
-    .region-plate figcaption {
-      margin-top: 0.75rem;
-      color: var(--parchment-soft);
-      font-size: 0.82rem;
+    .forest-world-sigil svg {
+      width: min(100%, 440px);
+      height: auto;
+      overflow: visible;
+    }
+
+    .forest-world-sigil .sigil-ring {
+      fill: rgba(5, 8, 6, 0.58);
+      stroke: #8fb49a;
+      stroke-width: 7;
+    }
+
+    .forest-world-sigil .sigil-inner {
+      fill: none;
+      stroke: rgba(240, 210, 140, 0.58);
+      stroke-width: 3;
+    }
+
+    .forest-world-sigil .sigil-tree,
+    .forest-world-sigil .sigil-branch,
+    .forest-world-sigil .sigil-bear,
+    .forest-world-sigil .sigil-road {
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .forest-world-sigil .sigil-tree,
+    .forest-world-sigil .sigil-branch {
+      stroke: #9dc4a7;
+      stroke-width: 8;
+    }
+
+    .forest-world-sigil .sigil-bear {
+      stroke: #f0d28c;
+      stroke-width: 7;
+    }
+
+    .forest-world-sigil .sigil-road {
+      stroke: rgba(240, 210, 140, 0.52);
+      stroke-width: 5;
+      stroke-dasharray: 8 11;
+    }
+
+    .forest-world-sigil .sigil-title {
+      fill: #fff0ce;
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-anchor: middle;
+    }
+
+    .forest-world-sigil .sigil-subtitle {
+      fill: #c9d9c8;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 18px;
       font-style: italic;
-      text-align: center;
+      text-anchor: middle;
     }
 
     .road-table {
@@ -324,10 +377,14 @@
       }
 
       .world-crest,
-      .region-plate figure,
+      .forest-world-sigil,
       .mark-panel figure {
         width: min(100%, 560px);
         margin: 0 auto;
+      }
+
+      .forest-world-sigil {
+        min-height: 440px;
       }
 
       .place-grid {
@@ -796,18 +853,59 @@
     </section>
 
     <section class="panel region-plate" id="green-deer-wood">
-      <figure>
-        <img
-          src="IMG_5588.jpeg"
-          alt="Forest keeper Kelda Veyrún kneeling beside a great bear"
-          width="1024"
-          height="1536"
-          loading="lazy"
-        />
-        <figcaption>
-          The keeper and the witness-bear upon the forest road.
-        </figcaption>
-      </figure>
+      <div
+        class="forest-world-sigil"
+        role="img"
+        aria-label="Symbolic map seal of Green Deer-Wood showing a listening tree, a great bear and an old forest road"
+      >
+        <svg viewBox="0 0 470 560" aria-hidden="true">
+          <circle class="sigil-ring" cx="235" cy="225" r="195" />
+          <circle class="sigil-inner" cx="235" cy="225" r="169" />
+
+          <path
+            class="sigil-road"
+            d="M110 348 C155 330 187 335 222 361
+               C260 389 297 385 356 348"
+          />
+
+          <path
+            class="sigil-tree"
+            d="M235 340 C227 286 233 244 235 202
+               C237 158 231 125 235 88"
+          />
+          <path
+            class="sigil-branch"
+            d="M235 176 C193 151 165 124 142 93
+               M235 168 C276 141 305 113 327 78
+               M235 223 C193 207 160 183 126 153
+               M235 216 C281 197 318 171 348 137"
+          />
+
+          <path
+            class="sigil-bear"
+            d="M139 342
+               C151 314 175 298 202 301
+               C220 280 255 278 276 300
+               C307 298 331 315 342 342
+               C330 357 314 367 296 371
+               C292 393 275 408 256 409
+               C240 409 227 400 218 387
+               C207 402 192 409 175 406
+               C156 402 144 386 144 367
+               C130 360 125 349 139 342 Z"
+          />
+          <path
+            class="sigil-bear"
+            d="M175 324 C169 308 174 292 185 282
+               M303 324 C309 308 304 292 293 282
+               M199 346 C212 355 224 358 235 358
+               C247 358 260 355 272 346"
+          />
+
+          <text class="sigil-title" x="235" y="480">GREEN DEER-WOOD</text>
+          <text class="sigil-subtitle" x="235" y="511">Old Forest Law · The Witness-Bear Road</text>
+        </svg>
+      </div>
 
       <div>
         <p class="eyebrow">Old Forest Law</p>
