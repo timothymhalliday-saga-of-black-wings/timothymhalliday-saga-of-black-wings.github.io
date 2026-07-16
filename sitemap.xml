@@ -1,85 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <url>
-
     <loc>https://sagaofblackwings.com/</loc>
-
-    <lastmod>2026-06-15</lastmod>
-
-    <priority>1.00</priority>
-
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
 
   <url>
-
-    <loc>https://sagaofblackwings.com/index.html</loc>
-
-    <lastmod>2026-06-15</lastmod>
-
-    <priority>1.00</priority>
-
-  </url>
-
-  <url>
-
     <loc>https://sagaofblackwings.com/books.html</loc>
-
-    <lastmod>2026-06-15</lastmod>
-
-    <priority>0.95</priority>
-
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <url>
-
     <loc>https://sagaofblackwings.com/characters.html</loc>
-
-    <lastmod>2026-06-15</lastmod>
-
-    <priority>0.95</priority>
-
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <url>
+    <loc>https://sagaofblackwings.com/rogues.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
+  <url>
     <loc>https://sagaofblackwings.com/world.html</loc>
-
-    <lastmod>2026-06-15</lastmod>
-
-    <priority>0.90</priority>
-
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <url>
+    <loc>https://sagaofblackwings.com/lore.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
+  <url>
     <loc>https://sagaofblackwings.com/odes.html</loc>
-
-    <lastmod>2026-06-15</lastmod>
-
-    <priority>0.90</priority>
-
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
-
     <loc>https://sagaofblackwings.com/maps.html</loc>
-
-    <lastmod>2026-06-15</lastmod>
-
-    <priority>0.85</priority>
-
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
-
-    <loc>https://sagaofblackwings.com/author.html</loc>
-
-    <lastmod>2026-06-15</lastmod>
-
-    <priority>0.90</priority>
-
+    <loc>https://sagaofblackwings.com/archive.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://sagaofblackwings.com/author.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://sagaofblackwings.com/dedications.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
