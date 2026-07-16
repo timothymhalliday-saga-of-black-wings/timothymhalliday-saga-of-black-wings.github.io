@@ -1,1173 +1,991 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Lore | Saga of Black Wings</title>
+  <title>Lore | The Saga of Black Wings</title>
 
   <meta
-
     name="description"
-
-    content="Discover the Witness-Marks, living laws, prayers, customs, folklore and remembered signs of The Saga of Black Wings."
-
+    content="Discover the fictional Witness-Marks, Braid-Hand, living laws, Salt-Marsh prayers, customs, warnings and forest-keeper lore of The Saga of Black Wings."
   />
-
   <meta name="author" content="Timothy M. Halliday" />
-
   <meta name="theme-color" content="#050608" />
 
-  <meta property="og:title" content="Lore | Saga of Black Wings" />
-
+  <meta property="og:title" content="Lore | The Saga of Black Wings" />
   <meta
-
     property="og:description"
-
-    content="Witness-Marks, old laws, prayers, customs and folklore from The Saga of Black Wings."
-
+    content="Witness-Marks, Braid-Hand, prayers, customs, old warnings and living law from Vardrum."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sagaofblackwings.com/lore.html" />
+  <meta
+    property="og:image"
+    content="https://sagaofblackwings.com/2BBF05BA-25CC-4628-A950-B1068F109A6E.png"
+  />
+  <meta
+    property="og:image:alt"
+    content="Black Wings fictional Witness-Marks archive plate"
   />
 
-  <meta property="og:type" content="website" />
-
-  <meta property="og:url" content="https://sagaofblackwings.com/lore.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Lore | The Saga of Black Wings" />
+  <meta
+    name="twitter:description"
+    content="Enter the remembered archive of Vardrum."
+  />
+  <meta
+    name="twitter:image"
+    content="https://sagaofblackwings.com/2BBF05BA-25CC-4628-A950-B1068F109A6E.png"
+  />
 
   <link rel="canonical" href="https://sagaofblackwings.com/lore.html" />
-
   <link rel="stylesheet" href="style.css" />
 
+  <style>
+    .lore-hero {
+      min-height: 74vh;
+      padding-top: 5.2rem;
+      padding-bottom: 5.2rem;
+      background:
+        radial-gradient(circle at 14% 18%, rgba(96, 70, 111, 0.25), transparent 29rem),
+        radial-gradient(circle at 88% 12%, rgba(221, 182, 95, 0.15), transparent 28rem),
+        linear-gradient(180deg, rgba(4, 5, 7, 0.97), rgba(10, 11, 14, 0.99));
+    }
+
+    .lore-hero-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(270px, 0.72fr);
+      gap: clamp(2rem, 6vw, 5rem);
+      align-items: center;
+      width: min(100%, 1120px);
+      margin: 0 auto;
+    }
+
+    .lore-hero .hero-text {
+      width: 100%;
+      text-align: left;
+    }
+
+    .lore-hero .tagline,
+    .lore-hero .hero-quote {
+      margin-left: 0;
+    }
+
+    .lore-hero .hero-buttons {
+      justify-content: flex-start;
+    }
+
+    .lore-hero-art {
+      margin: 0;
+      padding: 0.6rem;
+      background: rgba(5, 6, 8, 0.75);
+      border: 1px solid rgba(221, 182, 95, 0.4);
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .lore-hero-art img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 19px;
+    }
+
+    .archive-seal {
+      max-width: 860px;
+      margin: 1.5rem auto 0;
+      padding: 1rem 1.2rem;
+      color: var(--parchment-soft);
+      background: rgba(5, 6, 8, 0.42);
+      border-left: 3px solid #755b82;
+      border-radius: 0 12px 12px 0;
+    }
+
+    .lore-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.7rem;
+      margin-top: 1.8rem;
+    }
+
+    .lore-nav a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 0.55rem 0.9rem;
+      color: var(--parchment);
+      background: rgba(18, 21, 26, 0.84);
+      border: 1px solid rgba(96, 70, 111, 0.55);
+      border-radius: 999px;
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.67rem;
+      font-weight: 700;
+      letter-spacing: 0.052em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .lore-nav a:hover {
+      color: #140e17;
+      background: #b39abf;
+      border-color: #b39abf;
+    }
+
+    .marks-plate {
+      display: grid;
+      grid-template-columns: minmax(290px, 0.9fr) minmax(0, 1fr);
+      gap: clamp(1.5rem, 5vw, 3.5rem);
+      align-items: start;
+    }
+
+    .marks-plate figure {
+      position: sticky;
+      top: 6.5rem;
+      margin: 0;
+      padding: 0.55rem;
+      background: rgba(5, 6, 8, 0.52);
+      border: 1px solid rgba(221, 182, 95, 0.32);
+      border-radius: 18px;
+    }
+
+    .marks-plate img {
+      width: 100%;
+      border-radius: 13px;
+    }
+
+    .marks-plate figcaption {
+      padding: 0.75rem 0.35rem 0.25rem;
+      color: var(--parchment-soft);
+      font-size: 0.8rem;
+      font-style: italic;
+      text-align: center;
+    }
+
+    .mark-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .mark-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      padding: 1.2rem;
+      background:
+        linear-gradient(145deg, rgba(27, 26, 32, 0.97), rgba(10, 12, 15, 0.99));
+      border: 1px solid rgba(96, 70, 111, 0.42);
+      border-radius: 15px;
+    }
+
+    .mark-card h3 {
+      margin-bottom: 0.5rem;
+      color: #f3dfbe;
+    }
+
+    .mark-card .mark-name {
+      margin: 0 0 0.35rem;
+      color: #c8a9d4;
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.67rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .mark-card .mark-law {
+      margin-top: auto;
+      padding-top: 0.75rem;
+      color: var(--gold);
+      font-size: 0.8rem;
+      font-style: italic;
+    }
+
+    .scarlet-mark {
+      border-color: rgba(116, 37, 55, 0.62);
+    }
+
+    .blue-mark {
+      border-color: rgba(48, 78, 142, 0.67);
+    }
+
+    .marsh-mark {
+      border-color: rgba(74, 127, 122, 0.62);
+    }
+
+    .flame-mark {
+      border-color: rgba(176, 81, 31, 0.62);
+    }
+
+    .living-law-grid,
+    .custom-grid,
+    .warning-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem;
+      margin-top: 1.7rem;
+    }
+
+    .living-law,
+    .custom-card,
+    .warning-card {
+      margin: 0;
+      padding: 1.1rem;
+      border-radius: 14px;
+    }
+
+    .living-law {
+      color: #eef0df;
+      background:
+        linear-gradient(135deg, rgba(49, 90, 69, 0.25), rgba(5, 6, 8, 0.5));
+      border: 1px solid rgba(83, 128, 94, 0.42);
+    }
+
+    .living-law::before {
+      content: "◆";
+      margin-right: 0.55rem;
+      color: var(--gold);
+    }
+
+    .gesture-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .gesture-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      text-align: center;
+    }
+
+    .gesture-symbol {
+      display: grid;
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 1rem;
+      place-items: center;
+      color: var(--gold-bright);
+      background: rgba(5, 6, 8, 0.62);
+      border: 1px solid rgba(221, 182, 95, 0.32);
+      border-radius: 50%;
+      font-size: 1.8rem;
+    }
+
+    .prayer-panel {
+      background:
+        radial-gradient(circle at 92% 10%, rgba(81, 122, 116, 0.18), transparent 21rem),
+        linear-gradient(145deg, rgba(22, 31, 31, 0.98), rgba(10, 12, 15, 0.99));
+      border-color: rgba(81, 122, 116, 0.5);
+    }
+
+    .prayer-leaf {
+      max-width: 780px;
+      margin: 1.7rem auto;
+      padding: clamp(1.4rem, 4vw, 2.3rem);
+      color: #f1e5c9;
+      background:
+        linear-gradient(rgba(17, 18, 17, 0.84), rgba(17, 18, 17, 0.84)),
+        radial-gradient(circle at center, rgba(221, 182, 95, 0.16), transparent 70%);
+      border: 1px solid rgba(221, 182, 95, 0.36);
+      border-radius: 4px 18px 4px 18px;
+      box-shadow: var(--soft-shadow);
+      text-align: center;
+    }
+
+    .prayer-leaf h3 {
+      color: var(--gold-bright);
+    }
+
+    .prayer-leaf p {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1rem, 2.3vw, 1.18rem);
+      line-height: 1.9;
+    }
+
+    .keeper-list {
+      display: grid;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+
+    .keeper-note {
+      margin: 0;
+      padding: 1rem 1.1rem;
+      color: var(--parchment-soft);
+      background: rgba(5, 6, 8, 0.43);
+      border-left: 3px solid var(--forest);
+      border-radius: 0 12px 12px 0;
+    }
+
+    .custom-card {
+      color: var(--parchment-soft);
+      background:
+        linear-gradient(145deg, rgba(29, 28, 26, 0.97), rgba(10, 12, 15, 0.99));
+      border: 1px solid rgba(221, 182, 95, 0.25);
+    }
+
+    .custom-card h3 {
+      color: #f2dfbc;
+    }
+
+    .forest-panel {
+      background:
+        radial-gradient(circle at 90% 8%, rgba(49, 90, 69, 0.26), transparent 23rem),
+        linear-gradient(145deg, rgba(22, 34, 26, 0.98), rgba(9, 13, 11, 0.99));
+      border-color: rgba(71, 122, 81, 0.6);
+    }
+
+    .warning-card {
+      color: var(--parchment-soft);
+      background: rgba(5, 6, 8, 0.5);
+      border: 1px solid rgba(159, 40, 55, 0.3);
+    }
+
+    .warning-card h3 {
+      color: #f1d5bd;
+    }
+
+    .warning-card .quote {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    .truth-strip {
+      margin-top: 1.8rem;
+      padding: 1.35rem;
+      color: var(--gold-bright);
+      background:
+        linear-gradient(135deg, rgba(96, 70, 111, 0.25), rgba(5, 6, 8, 0.55));
+      border: 1px solid rgba(221, 182, 95, 0.3);
+      border-radius: 16px;
+      text-align: center;
+    }
+
+    .truth-strip strong {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-family: "Cinzel", Georgia, serif;
+      letter-spacing: 0.055em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 1020px) {
+      .lore-hero-layout,
+      .marks-plate {
+        grid-template-columns: 1fr;
+      }
+
+      .lore-hero .hero-text {
+        text-align: center;
+      }
+
+      .lore-hero .tagline,
+      .lore-hero .hero-quote {
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .lore-hero .hero-buttons {
+        justify-content: center;
+      }
+
+      .lore-hero-art {
+        width: min(100%, 520px);
+        margin: 0 auto;
+      }
+
+      .marks-plate figure {
+        position: static;
+        width: min(100%, 700px);
+        margin: 0 auto;
+      }
+
+      .gesture-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      .lore-hero {
+        min-height: auto;
+      }
+
+      .lore-nav {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .lore-nav a {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .mark-grid,
+      .living-law-grid,
+      .custom-grid,
+      .warning-grid,
+      .gesture-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Lore of The Saga of Black Wings",
+    "url": "https://sagaofblackwings.com/lore.html",
+    "description": "The fictional Witness-Marks, Braid-Hand, living laws, prayers, customs and warnings of Vardrum.",
+    "author": {
+      "@type": "Person",
+      "name": "Timothy M. Halliday"
+    }
+  }
+  </script>
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <a class="skip-link" href="#main-content">
+  <header class="page-hero lore-hero">
+    <div class="lore-hero-layout">
+      <div class="hero-text">
+        <p class="eyebrow">The Remembered Archive</p>
 
-    Skip to main content
+        <h1>Lore of Black Wings</h1>
 
-  </a>
+        <p class="tagline">
+          Witness-Marks, Braid-Hand, marsh prayers, old customs, animal
+          warnings and living laws carried beneath the spoken story.
+        </p>
 
-  <header class="page-hero">
+        <blockquote class="hero-quote">
+          “What is remembered cannot be completely owned.”
+        </blockquote>
 
-    <div class="hero-text">
-
-      <p class="eyebrow">
-
-        The Remembered Archive
-
-      </p>
-
-      <h1>
-
-        Lore of Black Wings
-
-      </h1>
-
-      <p class="tagline">
-
-        Witness-Marks, living laws, marsh prayers, old customs,
-
-        beast signs and truths carried beneath the spoken story.
-
-      </p>
-
-      <blockquote class="hero-quote">
-
-        “What is remembered cannot be completely owned.”
-
-      </blockquote>
-
-      <div class="hero-buttons">
-
-        <a href="#witness-marks" class="button primary">
-
-          See the Witness-Marks
-
-        </a>
-
-        <a href="odes.html" class="button secondary">
-
-          Read the Odes
-
-        </a>
-
-        <a href="index.html" class="button secondary">
-
-          Return Home
-
-        </a>
-
+        <div class="hero-buttons">
+          <a href="#witness-marks" class="button primary">See the Witness-Marks</a>
+          <a href="odes.html" class="button secondary">Read the Odes</a>
+          <a href="index.html" class="button secondary">Return Home</a>
+        </div>
       </div>
 
+      <figure class="lore-hero-art">
+        <img
+          src="AB854AAB-8F11-4453-B5D2-F5850178C570.png"
+          alt="Living Black Wings crest surrounded by animal witnesses"
+          width="1254"
+          height="1254"
+          fetchpriority="high"
+        />
+      </figure>
     </div>
-
   </header>
 
   <nav class="site-nav" aria-label="Main navigation">
-
     <a href="index.html">Home</a>
-
     <a href="books.html">Books</a>
-
     <a href="characters.html">Characters</a>
-
     <a href="rogues.html">Rogues</a>
-
     <a href="world.html">World</a>
-
     <a href="lore.html" aria-current="page">Lore</a>
-
     <a href="odes.html">Odes</a>
-
     <a href="maps.html">Maps</a>
-
     <a href="archive.html">Archive</a>
-
     <a href="author.html">Author</a>
-
     <a href="dedications.html">Dedications</a>
-
   </nav>
 
   <main id="main-content">
-
     <section class="panel intro-panel">
-
-      <p class="eyebrow">
-
-        Beneath the Spoken Story
-
-      </p>
-
-      <h2>
-
-        A World Written in Signs
-
-      </h2>
+      <p class="eyebrow">Beneath the Spoken Story</p>
+      <h2>A World Written in Signs</h2>
 
       <p>
-
-        The lore of <em>The Saga of Black Wings</em> lives in marks,
-
-        gestures, songs, warnings, animals, roads and rules older
-
-        than any crown.
-
+        The lore of <em>The Saga of Black Wings</em> lives in marks, gestures,
+        songs, warnings, animals, roads and rules older than any crown.
       </p>
 
       <p>
-
-        Some knowledge is written in books. Some is carried through
-
-        family. Some survives because a raven watched, a dog refused
-
-        to leave or a frightened person finally said no.
-
+        Some knowledge is written in books. Some is carried through family.
+        Some survives because a raven watched, a dog refused to leave or a
+        frightened person finally said no.
       </p>
 
       <p>
-
-        These traditions belong entirely to the fictional world
-
-        of Black Wings.
-
+        These traditions belong entirely to the fictional world of Black Wings.
+        They are not presented as historical alphabets, religions or real-world
+        magical systems.
       </p>
 
+      <p class="archive-seal">
+        This archive is spoiler-safe. It records the public language and customs
+        of Vardrum without opening the deepest sealed material of the books.
+      </p>
+
+      <nav class="lore-nav" aria-label="Jump to lore sections">
+        <a href="#witness-marks">Witness-Marks</a>
+        <a href="#living-law">Living Law</a>
+        <a href="#braid-hand">Braid-Hand</a>
+        <a href="#prayer-leaf">Prayer-Leaf</a>
+        <a href="#animal-warning">Animal Warnings</a>
+        <a href="#marsh-customs">Marsh Customs</a>
+        <a href="#forest-law">Forest Law</a>
+        <a href="#house-lore">House-Lore</a>
+        <a href="#old-warnings">Old Warnings</a>
+      </nav>
     </section>
 
-    <section class="panel" id="witness-marks">
+    <section class="panel marks-plate" id="witness-marks">
+      <figure>
+        <img
+          src="2BBF05BA-25CC-4628-A950-B1068F109A6E.png"
+          alt="Archive plate of the fictional Black Wings Witness-Marks"
+          width="1024"
+          height="1536"
+          loading="lazy"
+        />
+        <figcaption>
+          An in-world archive plate of Black Wings Witness-Marks.
+        </figcaption>
+      </figure>
 
-      <p class="eyebrow">
+      <div>
+        <p class="eyebrow">Signs of the Living Braid</p>
+        <h2>Black Wings Witness-Marks</h2>
 
-        Signs of the Living Braid
+        <p>
+          Witness-Marks are original fictional signs of identity, memory,
+          protection, warning and freely chosen belonging. They may be carved,
+          painted, signed by hand, worn in the palm or carried through song.
+        </p>
 
-      </p>
+        <p>
+          A mark can witness a person, beast, place or oath. It can never replace
+          the living being, speak over them or turn their name into property.
+        </p>
 
-      <h2>
+        <div class="mark-grid">
+          <article class="mark-card">
+            <p class="mark-name">FATAS</p>
+            <h3>The Unconquered Raven-Heart</h3>
+            <p>
+              A mark of endurance, protection, repeated rising and the breaking
+              of false crowns.
+            </p>
+            <p class="mark-law">Strength without ownership.</p>
+          </article>
 
-        Black Wings Witness-Marks
+          <article class="mark-card">
+            <p class="mark-name">The Watcher</p>
+            <h3>The Open Eye</h3>
+            <p>
+              Attention without possession, warning without command and witness
+              without turning another life into evidence.
+            </p>
+            <p class="mark-law">See clearly. Do not claim.</p>
+          </article>
 
-      </h2>
+          <article class="mark-card">
+            <p class="mark-name">Cael</p>
+            <h3>The Divided Road</h3>
+            <p>
+              A sign of hidden pressure, difficult loyalty and the path between
+              imposed command and freely chosen truth.
+            </p>
+            <p class="mark-law">A road may divide without ending.</p>
+          </article>
+
+          <article class="mark-card">
+            <p class="mark-name">Jórunn</p>
+            <h3>The Scent-Reader</h3>
+            <p>
+              A trailing spiral of instinct, scent-work and truth carried beneath
+              speech, perfume, weather and old-road guilt.
+            </p>
+            <p class="mark-law">The body remembers the hidden road.</p>
+          </article>
+
+          <article class="mark-card marsh-mark">
+            <p class="mark-name">The Marsh</p>
+            <h3>Two Water-Lines and a Reed</h3>
+            <p>
+              Two winding lines crossed by a reed, marking tidal roads, hidden
+              crossings and memory held in salt mud.
+            </p>
+            <p class="mark-law">The path changes with the water.</p>
+          </article>
+
+          <article class="mark-card flame-mark">
+            <p class="mark-name">The Flame</p>
+            <h3>Vardrum’s Living Fire</h3>
+            <p>
+              A sign of courage, spirit, memory and refusal, tied to Bella’s
+              Flame and the living heart of Vardrum.
+            </p>
+            <p class="mark-law">Warm. Remember. Refuse.</p>
+          </article>
+
+          <article class="mark-card scarlet-mark">
+            <p class="mark-name">Scarlet</p>
+            <h3>The Crow Feather</h3>
+            <p>
+              A feather-shaped mark carried in black with restrained crimson
+              and purple, representing patience, warning and calm judgement.
+            </p>
+            <p class="mark-law">Observe before deciding.</p>
+          </article>
+
+          <article class="mark-card blue-mark">
+            <p class="mark-name">Blue</p>
+            <h3>The Raven Wing</h3>
+            <p>
+              A wing-shaped mark carried in black and deep blue, representing
+              curiosity, hidden doors and truth that refuses to remain covered.
+            </p>
+            <p class="mark-law">Follow what others overlook.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="living-law">
+      <p class="eyebrow">The Laws Beneath Law</p>
+      <h2>The Living Law</h2>
 
       <p>
-
-        Witness-Marks are signs of identity, memory, protection,
-
-        warning and freely chosen belonging.
-
+        The Living Law is not written by crowns. It grows from consent, care,
+        witness and the right of every living being to remain their own.
       </p>
+
+      <div class="living-law-grid">
+        <p class="living-law">Names belong to the named.</p>
+        <p class="living-law">Care freely given is not ransom.</p>
+        <p class="living-law">Origin is not ownership.</p>
+        <p class="living-law">Bloodline is witness, not claim.</p>
+        <p class="living-law">Desperation is not permission.</p>
+        <p class="living-law">Silence is not consent.</p>
+        <p class="living-law">A child is never proof.</p>
+        <p class="living-law">An animal is not an ornament.</p>
+        <p class="living-law">Shelter cannot demand surrender.</p>
+        <p class="living-law">The Braid is offer, not net.</p>
+      </div>
+
+      <div class="truth-strip">
+        <strong>The Test of Living Law</strong>
+        Can the frightened leave? Can the living refuse? Does accepting help
+        create a debt? If the answer is wrong, the law is wrong.
+      </div>
+    </section>
+
+    <section class="panel" id="braid-hand">
+      <p class="eyebrow">Language Without Demand</p>
+      <h2>Braid-Hand</h2>
 
       <p>
-
-        They are not historical runes. They are original fictional
-
-        symbols created for the world of Black Wings.
-
+        Braid-Hand is a language of simple gestures used when speech is
+        difficult, dangerous or unnecessary. It can offer welcome, ask
+        permission, signal danger, show refusal or acknowledge grief without
+        demanding words.
       </p>
 
-      <img
+      <div class="book-grid gesture-grid">
+        <article class="book-card gesture-card">
+          <div class="gesture-symbol" aria-hidden="true">✋</div>
+          <p class="book-number">Open Hand</p>
+          <h3>Offer</h3>
+          <p>
+            An invitation without pressure. The other person remains free to
+            accept or refuse.
+          </p>
+        </article>
 
-        src="black-wings-witness-marks-v2.png"
+        <article class="book-card gesture-card">
+          <div class="gesture-symbol" aria-hidden="true">◇</div>
+          <p class="book-number">Hand to Heart</p>
+          <h3>Witness</h3>
+          <p>
+            Acknowledgement of a name, grief, promise or truth that has been heard.
+          </p>
+        </article>
 
-        alt="Chart of the fictional Black Wings Witness-Marks"
+        <article class="book-card gesture-card">
+          <div class="gesture-symbol" aria-hidden="true">↶</div>
+          <p class="book-number">Turned Palm</p>
+          <h3>Refusal</h3>
+          <p>
+            A clear living no. It requires no defence, apology or explanation.
+          </p>
+        </article>
 
-        loading="lazy"
-
-      />
+        <article class="book-card gesture-card">
+          <div class="gesture-symbol" aria-hidden="true">⌁</div>
+          <p class="book-number">Two Fingers to the Road</p>
+          <h3>Safe Passage</h3>
+          <p>
+            A promise that the traveller may pass freely and will not be claimed
+            for accepting help.
+          </p>
+        </article>
+      </div>
 
       <blockquote>
-
-        “A mark may witness a name. It may never replace the living person.”
-
+        “A gesture may open the door. It may never push someone through it.”
       </blockquote>
-
     </section>
 
-    <section class="panel">
+    <section class="panel prayer-panel" id="prayer-leaf">
+      <p class="eyebrow">Salt-Marsh Prayer-Leaf of Vardrum</p>
+      <h2>Prayer for Ravens and Crows</h2>
 
-      <p class="eyebrow">
+      <div class="prayer-leaf">
+        <h3>For Black Wings Above the Reed Roads</h3>
 
-        Marks of Wing and Feather
+        <p>
+          Black wing above us,<br />
+          dark eye beside us,<br />
+          remember the road we could not name.
+        </p>
 
-      </p>
-
-      <h2>
-
-        Scarlet and Blue
-
-      </h2>
-
-      <div class="book-grid">
-
-        <article class="character-card animal-card">
-
-          <p class="role">
-
-            Scarlet’s Mark
-
-          </p>
-
-          <h3>
-
-            The Crow Feather
-
-          </h3>
-
-          <p>
-
-            A feather-shaped sign carried in black and restrained
-
-            crimson-purple.
-
-          </p>
-
-          <p>
-
-            It represents judgement, patience, warning and the courage
-
-            to observe before acting.
-
-          </p>
-
-        </article>
-
-        <article class="character-card animal-card">
-
-          <p class="role">
-
-            Blue’s Mark
-
-          </p>
-
-          <h3>
-
-            The Raven Wing
-
-          </h3>
-
-          <p>
-
-            A wing-shaped sign carried in black and deep blue.
-
-          </p>
-
-          <p>
-
-            It represents curiosity, hidden roads, discovery
-
-            and the truth that refuses to remain covered.
-
-          </p>
-
-        </article>
-
+        <p>
+          Carry no chain in our honour.<br />
+          Bring no crown to our door.<br />
+          Witness only what was freely given,<br />
+          and leave the living their own sky.
+        </p>
       </div>
 
-    </section>
-
-    <section class="panel">
-
-      <p class="eyebrow">
-
-        Signs of Road and Hearth
-
-      </p>
-
-      <h2>
-
-        The Living Marks
-
-      </h2>
-
-      <div class="book-grid">
-
-        <article class="book-card">
-
-          <p class="book-number">
-
-            FATAS
-
-          </p>
-
-          <h3>
-
-            The Unconquered Mark
-
-          </h3>
-
-          <p>
-
-            A sign of endurance, repeated rising and strength
-
-            that does not need to announce itself.
-
-          </p>
-
-        </article>
-
-        <article class="book-card">
-
-          <p class="book-number">
-
-            Cael
-
-          </p>
-
-          <h3>
-
-            The Divided Road
-
-          </h3>
-
-          <p>
-
-            A mark of hidden pressure, difficult loyalty
-
-            and the path between command and chosen truth.
-
-          </p>
-
-        </article>
-
-        <article class="book-card">
-
-          <p class="book-number">
-
-            Jórunn
-
-          </p>
-
-          <h3>
-
-            The Scent-Reader
-
-          </h3>
-
-          <p>
-
-            A sign of instinct, tracking, truth beneath words
-
-            and old guilt carried in the body.
-
-          </p>
-
-        </article>
-
-        <article class="book-card">
-
-          <p class="book-number">
-
-            The Watcher
-
-          </p>
-
-          <h3>
-
-            The Open Eye
-
-          </h3>
-
-          <p>
-
-            A sign of attention without possession,
-
-            warning without command and witness without judgement.
-
-          </p>
-
-        </article>
-
-        <article class="book-card">
-
-          <p class="book-number">
-
-            The Marsh
-
-          </p>
-
-          <h3>
-
-            Reed and Water
-
-          </h3>
-
-          <p>
-
-            Two winding water-lines and a reed, marking tidal paths,
-
-            hidden crossings and memory held in mud.
-
-          </p>
-
-        </article>
-
-        <article class="book-card spirit-card">
-
-          <p class="book-number">
-
-            The Flame
-
-          </p>
-
-          <h3>
-
-            Vardrum’s Living Fire
-
-          </h3>
-
-          <p>
-
-            A sign of courage, spirit, memory and refusal,
-
-            tied to Bella’s Flame and the living heart of Vardrum.
-
-          </p>
-
-        </article>
-
+      <h2>Dusk Blessing</h2>
+
+      <div class="prayer-leaf">
+        <p>
+          May the road soften beneath the tired.<br />
+          May the hearth recognise the frightened.<br />
+          May the bird above see danger first.<br />
+          May the beast beside you refuse to leave.<br />
+          May night conceal you only from harm.<br />
+          May dawn return your name unchanged.
+        </p>
       </div>
-
     </section>
 
-    <section class="panel">
-
-      <p class="eyebrow">
-
-        The Laws Beneath Law
-
-      </p>
-
-      <h2>
-
-        The Living Law
-
-      </h2>
+    <section class="panel" id="animal-warning">
+      <p class="eyebrow">Keeper’s Note</p>
+      <h2>How to Read an Animal Warning</h2>
 
       <p>
-
-        The Living Law is not written by crowns.
-
-        It grows from consent, care, witness and the right
-
-        of every living being to remain their own.
-
+        Animal witnesses are never treated as magical furniture. Their fear,
+        trust, attention, comfort and refusal matter before anyone turns their
+        behaviour into legend.
       </p>
 
-      <div class="lore-list law-list">
-
-        <span>Names belong to the named.</span>
-
-        <span>Care freely given is not ransom.</span>
-
-        <span>Origin is not ownership.</span>
-
-        <span>Bloodline is witness, not claim.</span>
-
-        <span>Desperation is not permission.</span>
-
-        <span>Silence is not consent.</span>
-
-        <span>A child is never proof.</span>
-
-        <span>An animal is not property of the story.</span>
-
-        <span>Shelter cannot demand surrender.</span>
-
-        <span>The Braid is offer, not net.</span>
-
-      </div>
-
-    </section>
-
-    <section class="panel">
-
-      <p class="eyebrow">
-
-        The Braid-Hand
-
-      </p>
-
-      <h2>
-
-        Gesture, Welcome and Refusal
-
-      </h2>
-
-      <p>
-
-        Braid-Hand is a language of simple gestures used when speech
-
-        is difficult, dangerous or unnecessary.
-
-      </p>
-
-      <p>
-
-        It can offer welcome, ask permission, signal danger,
-
-        show refusal or acknowledge grief without demanding words.
-
-      </p>
-
-      <div class="book-grid">
-
-        <article class="book-card">
-
-          <p class="book-number">
-
-            Open Hand
-
-          </p>
-
-          <h3>
-
-            Offer
-
-          </h3>
-
-          <p>
-
-            An invitation given without pressure.
-
-            The other person remains free to accept or refuse.
-
-          </p>
-
-        </article>
-
-        <article class="book-card">
-
-          <p class="book-number">
-
-            Hand to Heart
-
-          </p>
-
-          <h3>
-
-            Witness
-
-          </h3>
-
-          <p>
-
-            Acknowledgement of a name, grief, promise
-
-            or truth that has been heard.
-
-          </p>
-
-        </article>
-
-        <article class="book-card">
-
-          <p class="book-number">
-
-            Turned Palm
-
-          </p>
-
-          <h3>
-
-            Refusal
-
-          </h3>
-
-          <p>
-
-            A clear living no.
-
-            It requires no defence, apology or explanation.
-
-          </p>
-
-        </article>
-
-        <article class="book-card">
-
-          <p class="book-number">
-
-            Two Fingers to the Road
-
-          </p>
-
-          <h3>
-
-            Safe Passage
-
-          </h3>
-
-          <p>
-
-            A promise that the traveller may pass freely
-
-            and will not be claimed for accepting help.
-
-          </p>
-
-        </article>
-
-      </div>
-
-    </section>
-
-    <section class="panel">
-
-      <p class="eyebrow">
-
-        Prayer-Leaf of Vardrum
-
-      </p>
-
-      <h2>
-
-        Prayer for Ravens and Crows
-
-      </h2>
-
-      <blockquote>
-
-        Black wing above us,<br />
-
-        dark eye beside us,<br />
-
-        remember the road we could not name.<br /><br />
-
-        Carry no chain in our honour.<br />
-
-        Bring no crown to our door.<br />
-
-        Witness only what was freely given,<br />
-
-        and leave the living their own sky.
-
-      </blockquote>
-
-      <p class="quote">
-
-        From the Salt-Marsh Prayer-Leaf of Vardrum.
-
-      </p>
-
-    </section>
-
-    <section class="panel">
-
-      <p class="eyebrow">
-
-        Dusk Blessing
-
-      </p>
-
-      <h2>
-
-        For Those Still Travelling
-
-      </h2>
-
-      <blockquote>
-
-        May the road soften beneath the tired.<br />
-
-        May the hearth recognise the frightened.<br />
-
-        May the bird above see danger first.<br />
-
-        May the beast beside you refuse to leave.<br />
-
-        May night conceal you only from harm.<br />
-
-        May dawn return your name unchanged.
-
-      </blockquote>
-
-    </section>
-
-    <section class="panel">
-
-      <p class="eyebrow">
-
-        Keeper’s Note
-
-      </p>
-
-      <h2>
-
-        How to Read an Animal Warning
-
-      </h2>
-
-      <p>
-
-        Animal witnesses are never treated as magical furniture.
-
-        Their fear, trust, attention and refusal matter.
-
-      </p>
-
-      <div class="lore-list">
-
-        <span>A bird leaving suddenly may be warning, not omen.</span>
-
-        <span>A dog refusing a doorway should not be dragged through it.</span>
-
-        <span>A cat watching an empty place may have noticed movement first.</span>
-
-        <span>A wolf standing between traveller and road has made a choice.</span>
-
-        <span>A bear that lowers its head is not offering ownership.</span>
-
+      <div class="keeper-list">
+        <p class="keeper-note">
+          A bird leaving suddenly may be warning, not omen.
+        </p>
+        <p class="keeper-note">
+          A dog refusing a doorway should not be dragged through it.
+        </p>
+        <p class="keeper-note">
+          A cat watching an empty place may have noticed movement first.
+        </p>
+        <p class="keeper-note">
+          A wolf standing between traveller and road has made a choice.
+        </p>
+        <p class="keeper-note">
+          A bear lowering its head is not offering ownership.
+        </p>
       </div>
 
       <blockquote>
-
         “Listen before turning instinct into legend.”
-
       </blockquote>
-
     </section>
 
-    <section class="panel">
+    <section class="panel" id="marsh-customs">
+      <p class="eyebrow">Salt-Marsh Customs</p>
+      <h2>Ways of the Reed Roads</h2>
 
-      <p class="eyebrow">
-
-        Salt-Marsh Customs
-
-      </p>
-
-      <h2>
-
-        Ways of the Reed Roads
-
-      </h2>
-
-      <div class="book-grid">
-
-        <article class="book-card">
-
-          <p class="book-number">
-
-            Door Custom
-
-          </p>
-
-          <h3>
-
-            The Empty Chair
-
-          </h3>
-
+      <div class="custom-grid">
+        <article class="custom-card">
+          <p class="role">Door Custom</p>
+          <h3>The Empty Chair</h3>
           <p>
-
-            A chair left open for the absent, the delayed
-
-            or the traveller who has not yet found the road home.
-
+            A chair left open for the absent, the delayed or the traveller who
+            has not yet found the road home.
           </p>
-
         </article>
 
-        <article class="book-card">
-
-          <p class="book-number">
-
-            Hearth Custom
-
-          </p>
-
-          <h3>
-
-            First Bowl Freely Given
-
-          </h3>
-
+        <article class="custom-card">
+          <p class="role">Hearth Custom</p>
+          <h3>First Bowl Freely Given</h3>
           <p>
-
-            Food offered before questions.
-
-            Accepting it creates no debt.
-
+            Food offered before questions. Accepting it creates no debt.
           </p>
-
         </article>
 
-        <article class="book-card">
-
-          <p class="book-number">
-
-            Marsh Custom
-
-          </p>
-
-          <h3>
-
-            Reed at the Threshold
-
-          </h3>
-
+        <article class="custom-card">
+          <p class="role">Marsh Custom</p>
+          <h3>Reed at the Threshold</h3>
           <p>
-
-            A bent reed placed beside a door to show that
-
-            frightened travellers may knock without explanation.
-
+            A bent reed placed beside a door to show that frightened travellers
+            may knock without explanation.
           </p>
-
         </article>
 
-        <article class="book-card">
-
-          <p class="book-number">
-
-            Mourning Custom
-
-          </p>
-
-          <h3>
-
-            The Name Spoken Twice
-
-          </h3>
-
+        <article class="custom-card">
+          <p class="role">Mourning Custom</p>
+          <h3>The Name Spoken Twice</h3>
           <p>
-
-            Once for the life that was lived,
-
-            and once for the place that life still holds.
-
+            Once for the life that was lived, and once for the place that life
+            still holds.
           </p>
-
         </article>
-
       </div>
 
+      <div class="hero-buttons">
+        <a href="odes.html" class="button primary">Read the Salt-Reed Song</a>
+        <a href="world.html#salt-marsh" class="button secondary">Visit the Salt-Marsh</a>
+      </div>
     </section>
 
-    <section class="panel">
-
-      <p class="eyebrow">
-
-        Forest-Keeper Lore
-
-      </p>
-
-      <h2>
-
-        The Law of Green Deer-Wood
-
-      </h2>
+    <section class="panel forest-panel" id="forest-law">
+      <p class="eyebrow">Forest-Keeper Lore</p>
+      <h2>The Law of Green Deer-Wood</h2>
 
       <p>
-
-        Green Deer-Wood is kept through attention rather than conquest.
-
-        Its law asks what must be healed, what must be protected
-
-        and what rot must finally be cut away.
-
+        Green Deer-Wood is kept through attention rather than conquest. Its law
+        asks what must be healed, what must be protected and what rot must
+        finally be cut away.
       </p>
 
-      <div class="lore-list">
-
-        <span>Listen before cutting.</span>
-
-        <span>Protect the saplings first.</span>
-
-        <span>Do not heal rot by hiding it.</span>
-
-        <span>Leave animal roads unblocked.</span>
-
-        <span>Take no branch without purpose.</span>
-
-        <span>Mercy does not forbid culling corruption.</span>
-
-        <span>The forest remembers broken promises.</span>
-
+      <div class="living-law-grid">
+        <p class="living-law">Listen before cutting.</p>
+        <p class="living-law">Protect the saplings first.</p>
+        <p class="living-law">Do not heal rot by hiding it.</p>
+        <p class="living-law">Leave animal roads unblocked.</p>
+        <p class="living-law">Take no branch without purpose.</p>
+        <p class="living-law">Mercy does not forbid culling corruption.</p>
+        <p class="living-law">The forest remembers broken promises.</p>
+        <p class="living-law">A keeper belongs beside the forest, not above it.</p>
       </div>
 
+      <div class="hero-buttons">
+        <a href="world.html#green-deer-wood" class="button primary">Enter Green Deer-Wood</a>
+        <a href="characters.html#green-deer-wood" class="button secondary">Meet Kelda Veyrún</a>
+      </div>
     </section>
 
-    <section class="panel">
-
-      <p class="eyebrow">
-
-        House-Lore
-
-      </p>
-
-      <h2>
-
-        What Makes a Hearth Safe
-
-      </h2>
+    <section class="panel" id="house-lore">
+      <p class="eyebrow">House-Lore</p>
+      <h2>What Makes a Hearth Safe</h2>
 
       <p>
-
-        A safe house is not defined by walls, bloodline,
-
-        ownership or authority.
-
+        A safe house is not defined by walls, bloodline, ownership or authority.
+        It is defined by what happens after someone frightened reaches the door.
       </p>
 
-      <div class="lore-list law-list">
-
-        <span>The frightened may leave.</span>
-
-        <span>The hungry are fed before questioning.</span>
-
-        <span>Children are believed.</span>
-
-        <span>Animals may refuse a room.</span>
-
-        <span>Locked doors are explained.</span>
-
-        <span>No gift becomes a leash.</span>
-
-        <span>No guest becomes property.</span>
-
-        <span>A name is never altered as punishment.</span>
-
+      <div class="living-law-grid">
+        <p class="living-law">The frightened may leave.</p>
+        <p class="living-law">The hungry are fed before questioning.</p>
+        <p class="living-law">Children are believed.</p>
+        <p class="living-law">Animals may refuse a room.</p>
+        <p class="living-law">Locked doors are explained.</p>
+        <p class="living-law">No gift becomes a leash.</p>
+        <p class="living-law">No guest becomes property.</p>
+        <p class="living-law">A name is never altered as punishment.</p>
       </div>
 
       <blockquote>
-
         “A house is judged by what happens after someone says no.”
-
       </blockquote>
-
     </section>
 
-    <section class="panel">
+    <section class="panel" id="old-warnings">
+      <p class="eyebrow">Old Warnings</p>
+      <h2>Sayings of Vardrum</h2>
 
-      <p class="eyebrow">
-
-        Old Warnings
-
-      </p>
-
-      <h2>
-
-        Sayings of Vardrum
-
-      </h2>
-
-      <div class="book-grid">
-
-        <article class="book-card">
-
-          <h3>
-
-            On Crowns
-
-          </h3>
-
+      <div class="warning-grid">
+        <article class="warning-card">
+          <h3>On Crowns</h3>
           <p class="quote">
-
             “Count the hands behind the crown before trusting the head beneath it.”
-
           </p>
-
         </article>
 
-        <article class="book-card">
-
-          <h3>
-
-            On Roots
-
-          </h3>
-
+        <article class="warning-card">
+          <h3>On Roots</h3>
           <p class="quote">
-
             “Not every root feeds the tree. Some only hold it still.”
-
           </p>
-
         </article>
 
-        <article class="book-card">
-
-          <h3>
-
-            On Mercy
-
-          </h3>
-
+        <article class="warning-card">
+          <h3>On Mercy</h3>
           <p class="quote">
-
             “Ask what the kindness costs before calling it mercy.”
-
           </p>
-
         </article>
 
-        <article class="book-card">
-
-          <h3>
-
-            On Roads
-
-          </h3>
-
+        <article class="warning-card">
+          <h3>On Roads</h3>
           <p class="quote">
-
             “A road that permits no turning is only a corridor without walls.”
-
           </p>
-
         </article>
 
-        <article class="book-card">
-
-          <h3>
-
-            On Animals
-
-          </h3>
-
+        <article class="warning-card">
+          <h3>On Animals</h3>
           <p class="quote">
-
             “The beast may forgive you. The witness will still remember.”
-
           </p>
-
         </article>
 
-        <article class="book-card">
-
-          <h3>
-
-            On Family
-
-          </h3>
-
+        <article class="warning-card">
+          <h3>On Family</h3>
           <p class="quote">
-
             “Blood may begin a story. It does not own the ending.”
-
           </p>
-
         </article>
-
       </div>
-
     </section>
 
     <section class="panel final-road-panel">
+      <p class="eyebrow">Continue Through the Archive</p>
+      <h2>Follow the Remembered Words</h2>
 
-      <p class="eyebrow">
-
-        Continue Through the Archive
-
+      <p>
+        Carry the old laws into the Skald-Room, the map chamber or the visual
+        archive.
       </p>
 
-      <h2>
-
-        Follow the Remembered Words
-
-      </h2>
-
       <div class="hero-buttons">
-
-        <a href="odes.html" class="button primary">
-
-          Read the Odes and Songs
-
-        </a>
-
-        <a href="maps.html" class="button secondary">
-
-          Open the Maps
-
-        </a>
-
-        <a href="archive.html" class="button secondary">
-
-          Visit the Visual Archive
-
-        </a>
-
+        <a href="odes.html" class="button primary">Read the Odes and Songs</a>
+        <a href="maps.html" class="button secondary">Open the Maps</a>
+        <a href="archive.html" class="button secondary">Visit the Visual Archive</a>
       </div>
-
     </section>
-
   </main>
 
   <footer>
-
     <nav class="footer-nav" aria-label="Footer navigation">
-
       <a href="index.html">Home</a>
-
       <a href="books.html">Books</a>
-
       <a href="characters.html">Characters</a>
-
+      <a href="rogues.html">Rogues</a>
       <a href="world.html">World</a>
-
       <a href="odes.html">Odes</a>
-
+      <a href="maps.html">Maps</a>
+      <a href="archive.html">Archive</a>
       <a href="author.html">Author</a>
-
     </nav>
 
-    <p>
-
-      © 2026 Saga of Black Wings · Created by Timothy M. Halliday
-
-    </p>
-
-    <p class="footer-motto">
-
-      No crown shall count us smaller.
-
-    </p>
-
+    <p>© 2026 Saga of Black Wings · Created by Timothy M. Halliday</p>
+    <p class="footer-motto">No crown shall count us smaller.</p>
   </footer>
-
 </body>
-
 </html>
