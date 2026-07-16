@@ -1,1627 +1,1041 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Rogues Gallery | Saga of Black Wings</title>
+  <title>Rogues Gallery | The Saga of Black Wings</title>
 
   <meta
-
     name="description"
-
-    content="Enter the spoiler-safe Rogues Gallery of The Saga of Black Wings, where crowns, roots, false mercy, old law and human cruelty take shape."
-
+    content="Enter the spoiler-safe Rogues Gallery of The Saga of Black Wings, where crowns, roots, false mercy, cold houses, corrupted law and human cruelty take shape."
   />
-
   <meta name="author" content="Timothy M. Halliday" />
-
   <meta name="theme-color" content="#050608" />
 
-  <meta property="og:title" content="Rogues Gallery | Saga of Black Wings" />
-
+  <meta property="og:title" content="Rogues Gallery | The Saga of Black Wings" />
   <meta
-
     property="og:description"
-
-    content="Crowns, roots, false mercy, bad law, cold houses and the enemies of Vardrum."
-
+    content="Crowns, roots, false mercy, cold houses and the dark powers that make witness necessary."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sagaofblackwings.com/rogues.html" />
+  <meta
+    property="og:image"
+    content="https://sagaofblackwings.com/92B5CDC8-3C87-426D-9C13-A4BE908193FC.png"
+  />
+  <meta
+    property="og:image:alt"
+    content="A black raven flying through a pale sky"
   />
 
-  <meta property="og:type" content="website" />
-
-  <meta property="og:url" content="https://sagaofblackwings.com/rogues.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Rogues Gallery | The Saga of Black Wings" />
+  <meta
+    name="twitter:description"
+    content="A spoiler-safe gallery of the people, systems and old powers opposing the living Braid."
+  />
+  <meta
+    name="twitter:image"
+    content="https://sagaofblackwings.com/92B5CDC8-3C87-426D-9C13-A4BE908193FC.png"
+  />
 
   <link rel="canonical" href="https://sagaofblackwings.com/rogues.html" />
-
   <link rel="stylesheet" href="style.css" />
 
+  <style>
+    .rogues-hero {
+      min-height: 72vh;
+      padding-top: 5.2rem;
+      padding-bottom: 5.2rem;
+      background:
+        radial-gradient(circle at 17% 12%, rgba(159, 40, 55, 0.3), transparent 28rem),
+        radial-gradient(circle at 88% 15%, rgba(80, 88, 98, 0.18), transparent 27rem),
+        linear-gradient(180deg, rgba(4, 5, 7, 0.96), rgba(10, 11, 14, 0.98));
+    }
+
+    .rogues-hero-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(270px, 0.72fr);
+      gap: clamp(2rem, 6vw, 5rem);
+      align-items: center;
+      width: min(100%, 1120px);
+      margin: 0 auto;
+    }
+
+    .rogues-hero .hero-text {
+      width: 100%;
+      text-align: left;
+    }
+
+    .rogues-hero .tagline,
+    .rogues-hero .hero-quote {
+      margin-left: 0;
+    }
+
+    .rogues-hero .hero-buttons {
+      justify-content: flex-start;
+    }
+
+    .rogues-hero-art {
+      margin: 0;
+      padding: 0.6rem;
+      background: rgba(5, 6, 8, 0.76);
+      border: 1px solid rgba(159, 40, 55, 0.52);
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .rogues-hero-art img {
+      width: 100%;
+      aspect-ratio: 1 / 1.08;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 19px;
+      filter: contrast(1.08);
+    }
+
+    .warning-seal {
+      max-width: 860px;
+      margin: 1.5rem auto 0;
+      padding: 1rem 1.2rem;
+      color: var(--parchment-soft);
+      background: rgba(5, 6, 8, 0.42);
+      border-left: 3px solid var(--crimson);
+      border-radius: 0 12px 12px 0;
+    }
+
+    .gallery-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.7rem;
+      margin-top: 1.8rem;
+    }
+
+    .gallery-nav a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 0.55rem 0.9rem;
+      color: var(--parchment);
+      background: rgba(18, 21, 26, 0.84);
+      border: 1px solid rgba(159, 40, 55, 0.45);
+      border-radius: 999px;
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.055em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .gallery-nav a:hover {
+      color: #fff1df;
+      background: var(--crimson-dark);
+      border-color: var(--crimson);
+    }
+
+    .threat-panel {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .threat-panel::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 180px;
+      height: 180px;
+      pointer-events: none;
+      opacity: 0.48;
+      background: radial-gradient(circle, rgba(159, 40, 55, 0.2), transparent 68%);
+    }
+
+    .threat-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .threat-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      border-color: rgba(159, 40, 55, 0.28);
+      background:
+        linear-gradient(145deg, rgba(28, 25, 28, 0.97), rgba(10, 12, 15, 0.99));
+    }
+
+    .threat-card h3 {
+      color: #ffe7cf;
+    }
+
+    .threat-card .threat-note {
+      margin-top: auto;
+      padding-top: 0.8rem;
+      color: #d8a4a8;
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.66rem;
+      font-weight: 800;
+      letter-spacing: 0.085em;
+      text-transform: uppercase;
+    }
+
+    .crown-card {
+      border-color: rgba(221, 182, 95, 0.32);
+    }
+
+    .root-card {
+      border-color: rgba(49, 90, 69, 0.55);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(49, 90, 69, 0.2), transparent 17rem),
+        linear-gradient(145deg, rgba(23, 32, 27, 0.97), rgba(10, 13, 13, 0.99));
+    }
+
+    .cinder-card {
+      border-color: rgba(160, 80, 36, 0.5);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(160, 80, 36, 0.18), transparent 17rem),
+        linear-gradient(145deg, rgba(37, 25, 21, 0.97), rgba(12, 12, 13, 0.99));
+    }
+
+    .mercy-card {
+      border-color: rgba(72, 102, 128, 0.52);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(49, 93, 131, 0.19), transparent 17rem),
+        linear-gradient(145deg, rgba(22, 28, 34, 0.97), rgba(10, 12, 15, 0.99));
+    }
+
+    .human-card {
+      border-color: rgba(159, 40, 55, 0.44);
+    }
+
+    .north-card {
+      border-color: rgba(161, 180, 198, 0.42);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(190, 210, 225, 0.13), transparent 17rem),
+        linear-gradient(145deg, rgba(27, 31, 36, 0.97), rgba(9, 12, 15, 0.99));
+    }
+
+    .beast-card {
+      border-color: rgba(96, 70, 111, 0.5);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(96, 70, 111, 0.22), transparent 17rem),
+        linear-gradient(145deg, rgba(30, 26, 36, 0.97), rgba(11, 12, 16, 0.99));
+    }
+
+    .law-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.9rem;
+      margin-top: 1.7rem;
+    }
+
+    .enemy-law {
+      margin: 0;
+      padding: 1rem;
+      color: #f0d9c8;
+      background: rgba(5, 6, 8, 0.55);
+      border: 1px solid rgba(159, 40, 55, 0.34);
+      border-radius: 13px;
+      font-size: 0.93rem;
+      text-align: center;
+    }
+
+    .enemy-law::before {
+      content: "×";
+      display: block;
+      margin-bottom: 0.25rem;
+      color: var(--crimson);
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 1.45rem;
+      font-weight: 800;
+    }
+
+    .counter-law {
+      margin-top: 2rem;
+      padding: 1.4rem;
+      color: var(--gold-bright);
+      background:
+        linear-gradient(135deg, rgba(49, 90, 69, 0.28), rgba(5, 6, 8, 0.55));
+      border: 1px solid rgba(221, 182, 95, 0.3);
+      border-radius: 16px;
+      text-align: center;
+    }
+
+    .counter-law strong {
+      display: block;
+      margin-bottom: 0.55rem;
+      font-family: "Cinzel", Georgia, serif;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 980px) {
+      .rogues-hero-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .rogues-hero .hero-text {
+        text-align: center;
+      }
+
+      .rogues-hero .tagline,
+      .rogues-hero .hero-quote {
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .rogues-hero .hero-buttons {
+        justify-content: center;
+      }
+
+      .rogues-hero-art {
+        width: min(100%, 520px);
+        margin: 0 auto;
+      }
+
+      .threat-grid,
+      .law-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      .rogues-hero {
+        min-height: auto;
+      }
+
+      .gallery-nav {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .gallery-nav a {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .threat-grid,
+      .law-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Rogues Gallery of The Saga of Black Wings",
+    "url": "https://sagaofblackwings.com/rogues.html",
+    "description": "A spoiler-safe guide to the enemy powers, harmful systems and corrupted laws within The Saga of Black Wings.",
+    "author": {
+      "@type": "Person",
+      "name": "Timothy M. Halliday"
+    }
+  }
+  </script>
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <a class="skip-link" href="#main-content">
+  <header class="page-hero rogues-hero">
+    <div class="rogues-hero-layout">
+      <div class="hero-text">
+        <p class="eyebrow">The Rogues Gallery</p>
 
-    Skip to main content
+        <h1>The Enemies of Black Wings</h1>
 
-  </a>
+        <p class="tagline">
+          Crowns, roots, false mercy, cold houses, corrupted law, old hunger
+          and the dark names that teach Vardrum why witness matters.
+        </p>
 
-  <header class="page-hero">
+        <blockquote class="hero-quote">
+          “Evil does not always roar. Sometimes it brings a form and asks you to sign.”
+        </blockquote>
 
-    <div class="hero-text">
-
-      <p class="eyebrow">
-
-        The Rogues Gallery
-
-      </p>
-
-      <h1>
-
-        The Enemies of Black Wings
-
-      </h1>
-
-      <p class="tagline">
-
-        Crowns, roots, false mercy, cold houses, wrong agreements,
-
-        old hunger and the names that teach Vardrum why witness matters.
-
-      </p>
-
-      <blockquote class="hero-quote">
-
-        “Evil does not always roar. Sometimes it brings a form and asks you to sign.”
-
-      </blockquote>
-
-      <div class="hero-buttons">
-
-        <a href="#dark-names" class="button primary">
-
-          Enter the Gallery
-
-        </a>
-
-        <a href="characters.html" class="button secondary">
-
-          Character Hall
-
-        </a>
-
-        <a href="index.html" class="button secondary">
-
-          Return Home
-
-        </a>
-
+        <div class="hero-buttons">
+          <a href="#dark-names" class="button primary">Enter the Gallery</a>
+          <a href="characters.html" class="button secondary">Character Hall</a>
+          <a href="index.html" class="button secondary">Return Home</a>
+        </div>
       </div>
 
+      <figure class="rogues-hero-art">
+        <img
+          src="92B5CDC8-3C87-426D-9C13-A4BE908193FC.png"
+          alt="A black raven flying with its wings spread"
+          width="1122"
+          height="1402"
+          fetchpriority="high"
+        />
+      </figure>
     </div>
-
   </header>
 
   <nav class="site-nav" aria-label="Main navigation">
-
     <a href="index.html">Home</a>
-
     <a href="books.html">Books</a>
-
     <a href="characters.html">Characters</a>
-
     <a href="rogues.html" aria-current="page">Rogues</a>
-
     <a href="world.html">World</a>
-
     <a href="lore.html">Lore</a>
-
     <a href="odes.html">Odes</a>
-
     <a href="maps.html">Maps</a>
-
     <a href="archive.html">Archive</a>
-
     <a href="author.html">Author</a>
-
     <a href="dedications.html">Dedications</a>
-
   </nav>
 
   <main id="main-content">
-
     <section class="panel intro-panel" id="dark-names">
-
-      <p class="eyebrow">
-
-        Before the Dark Names Begin
-
-      </p>
-
-      <h2>
-
-        Harm Has Many Faces
-
-      </h2>
+      <p class="eyebrow">Before the Dark Names Begin</p>
+      <h2>Harm Has Many Faces</h2>
 
       <p>
-
-        The enemies of <em>The Saga of Black Wings</em> are not only
-
-        people carrying blades.
-
-      </p>
-
-      <p>
-
-        Some arrive as offices. Some as roots. Some as kindness with
-
-        hooks beneath it. Some as laws that smile while quietly
-
+        The enemies of <em>The Saga of Black Wings</em> are not only people
+        carrying blades. Some arrive as offices. Some as roots. Some as
+        kindness with hooks beneath it. Some as laws that smile while quietly
         closing the door.
-
       </p>
 
       <p>
-
-        This gallery remains spoiler-safe. It names the major
-
-        threat-shapes of the saga without opening the deepest
-
-        sealed rooms too early.
-
+        This gallery names the major shapes of danger without opening the
+        saga’s deepest sealed rooms. It records not only villains, but the
+        systems, beliefs and hungers that teach ordinary people to participate
+        in harm.
       </p>
 
+      <p class="warning-seal">
+        Spoiler seal: descriptions reveal the flavour of each threat, not its
+        final fate, hidden alliances or deepest connection to the Braid.
+      </p>
+
+      <nav class="gallery-nav" aria-label="Jump to threat groups">
+        <a href="#crown">Crown</a>
+        <a href="#underroot">Underroot</a>
+        <a href="#cinder">Cinder</a>
+        <a href="#false-mercy">False Mercy</a>
+        <a href="#human-rot">Human Rot</a>
+        <a href="#house-law">House Law</a>
+        <a href="#north">Northern Threats</a>
+        <a href="#beast-horrors">Beast Horrors</a>
+        <a href="#enemy-laws">Enemy Laws</a>
+      </nav>
     </section>
 
-    <section class="panel">
-
-      <p class="eyebrow">
-
-        Ink, Iron and Command
-
-      </p>
-
-      <h2>
-
-        The Crown and Its Laws
-
-      </h2>
+    <section class="panel threat-panel" id="crown">
+      <p class="eyebrow">Ink, Iron and Command</p>
+      <h2>The Crown and Its Laws</h2>
 
       <p>
-
-        The Crown is not merely a throne. It is office, corridor,
-
-        paper, command, custody and the old belief that people
-
-        can be made smaller by being named incorrectly.
-
+        The Crown is not merely a throne. It is office, corridor, paper,
+        custody, command and the old belief that living people can be made
+        smaller by being named incorrectly.
       </p>
 
-      <div class="book-grid">
-
-        <article class="character-card featured-book">
-
-          <p class="role">
-
-            System of Possession
-
-          </p>
-
-          <h3>
-
-            The Crown
-
-          </h3>
-
+      <div class="book-grid threat-grid">
+        <article class="character-card threat-card crown-card featured-book">
+          <p class="role">System of Possession</p>
+          <h3>The Crown</h3>
           <p>
-
-            A vast structure of order, command, ownership and
-
-            official harm, powerful enough to make cruelty
-
-            look ordinary.
-
+            A vast structure of order, command, ownership and official harm,
+            powerful enough to make cruelty appear ordinary.
           </p>
-
+          <p class="threat-note">Authority without living consent</p>
         </article>
 
-        <article class="character-card">
-
-          <p class="role">
-
-            Oath Turned Leash
-
-          </p>
-
-          <h3>
-
-            The Oath-Crown
-
-          </h3>
-
+        <article class="character-card threat-card crown-card">
+          <p class="role">Oath Turned Leash</p>
+          <h3>The Oath-Crown</h3>
           <p>
-
-            Duty twisted into ownership and loyalty transformed
-
-            into a locked room.
-
+            Duty twisted into ownership and loyalty transformed into a locked room.
           </p>
-
+          <p class="threat-note">Obedience disguised as honour</p>
         </article>
 
-        <article class="character-card">
-
-          <p class="role">
-
-            Small Hands of Large Harm
-
-          </p>
-
-          <h3>
-
-            Crown Clerks
-
-          </h3>
-
+        <article class="character-card threat-card crown-card">
+          <p class="role">Small Hands of Large Harm</p>
+          <h3>Crown Clerks</h3>
           <p>
-
-            Calm voices, careful forms and ink capable of writing
-
-            living people into cages.
-
+            Calm voices, careful forms and ink capable of writing living
+            people into cages.
           </p>
-
+          <p class="threat-note">The violence of procedure</p>
         </article>
 
-        <article class="character-card">
-
-          <p class="role">
-
-            Protection as Claim
-
-          </p>
-
-          <h3>
-
-            Custody Law
-
-          </h3>
-
+        <article class="character-card threat-card crown-card">
+          <p class="role">Protection as Claim</p>
+          <h3>Custody Law</h3>
           <p>
-
-            The language of safety used to contain, redirect
-
-            and possess those it claims to protect.
-
+            The language of safety used to contain, redirect and possess those
+            it claims to protect.
           </p>
-
+          <p class="threat-note">A cage labelled care</p>
         </article>
 
-        <article class="character-card">
-
-          <p class="role">
-
-            Polite Control
-
-          </p>
-
-          <h3>
-
-            Soft Authority
-
-          </h3>
-
+        <article class="character-card threat-card crown-card">
+          <p class="role">Polite Control</p>
+          <h3>Soft Authority</h3>
           <p>
-
-            Power becomes most dangerous when it stops shouting
-
-            and begins sounding reasonable.
-
+            Power becomes most dangerous when it stops shouting and begins
+            sounding reasonable.
           </p>
-
+          <p class="threat-note">The quiet voice of command</p>
         </article>
 
-        <article class="character-card">
-
-          <p class="role">
-
-            Places of Containment
-
-          </p>
-
-          <h3>
-
-            Iron Corridors
-
-          </h3>
-
+        <article class="character-card threat-card crown-card">
+          <p class="role">Places of Containment</p>
+          <h3>Iron Corridors</h3>
           <p>
-
-            Crown-built spaces of pressure, obedience,
-
-            isolation and broken choice.
-
+            Crown-built spaces of pressure, obedience, isolation and broken choice.
           </p>
+          <p class="threat-note">Architecture that teaches surrender</p>
+        </article>
+      </div>
+    </section>
 
+    <section class="panel threat-panel" id="underroot">
+      <p class="eyebrow">Beneath the Known World</p>
+      <h2>Rootbound Powers</h2>
+
+      <p>
+        The Underroot does not simply attack. It grows beneath things. It
+        studies memory, blood, family and fear. It wants the living rooted
+        where they can no longer choose the road.
+      </p>
+
+      <div class="book-grid threat-grid">
+        <article class="character-card threat-card root-card featured-book">
+          <p class="role">Ancient Beneath-Power</p>
+          <h3>The Underroot</h3>
+          <p>
+            Root, memory, hunger and patient control moving beneath the
+            foundations of the world.
+          </p>
+          <p class="threat-note">The buried will</p>
         </article>
 
+        <article class="character-card threat-card root-card">
+          <p class="role">Rootbound Intelligence</p>
+          <h3>The Duchess Rootbound</h3>
+          <p>
+            A terrible force of possession, abduction, bloodline hunger and
+            long design.
+          </p>
+          <p class="threat-note">Patience sharpened into claim</p>
+        </article>
+
+        <article class="character-card threat-card root-card">
+          <p class="role">Ancient Root-Mother</p>
+          <h3>Súsanna Rótmóðir</h3>
+          <p>
+            Old appetite, buried planning and dark intelligence moving beneath
+            the name of the Root-Mother.
+          </p>
+          <p class="threat-note">A mother-name without mercy</p>
+        </article>
+
+        <article class="character-card threat-card root-card">
+          <p class="role">Root-Shaped Servants</p>
+          <h3>The Root-Born</h3>
+          <p>
+            Bodies and servants shaped by underground will, grown for
+            obedience rather than life.
+          </p>
+          <p class="threat-note">Life remade as instrument</p>
+        </article>
+
+        <article class="character-card threat-card root-card">
+          <p class="role">Root-Made Pursuit</p>
+          <h3>Root-Hounds</h3>
+          <p>
+            Scent, hunger and root-made teeth sent running after those who
+            refuse to remain contained.
+          </p>
+          <p class="threat-note">The hunt beneath the soil</p>
+        </article>
+
+        <article class="character-card threat-card root-card">
+          <p class="role">Watchers Below</p>
+          <h3>Deep Root Sentinels</h3>
+          <p>
+            Watching things built to hold, hunt, report and keep the old
+            beneath-power informed.
+          </p>
+          <p class="threat-note">Eyes under the road</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel threat-panel" id="cinder">
+      <p class="eyebrow">Fire Without Warmth</p>
+      <h2>Ash, Cinder and Old Burning</h2>
+
+      <p>
+        Cinder is one of the saga’s older dark languages: ash without rest,
+        fire without comfort and obedience taught upon burned roads.
+      </p>
+
+      <div class="book-grid threat-grid">
+        <article class="character-card threat-card cinder-card featured-book">
+          <p class="role">Cinder-King</p>
+          <h3>Hrothar Vael</h3>
+          <p>
+            A dangerous old name tied to ash-road power, command, fear and the
+            history of burned obedience.
+          </p>
+          <p class="threat-note">A crown forged from aftermath</p>
+        </article>
+
+        <article class="character-card threat-card cinder-card">
+          <p class="role">Ash-Road War Band</p>
+          <h3>The Cinder Host</h3>
+          <p>
+            A force of old violence, fire-dark loyalty and obedience hardened
+            into war.
+          </p>
+          <p class="threat-note">Many hands, one burning command</p>
+        </article>
+
+        <article class="character-card threat-card cinder-card">
+          <p class="role">Burned Pursuit</p>
+          <h3>Cinder-Wolves</h3>
+          <p>
+            Wolf-shaped threats tied to fear, burned tracks and the Cinder
+            language of command.
+          </p>
+          <p class="threat-note">Fire taught to hunt</p>
+        </article>
+
+        <article class="character-card threat-card cinder-card">
+          <p class="role">Fire-Marked Threat</p>
+          <h3>Torvik Brandhand</h3>
+          <p>
+            Bound to old burning violence and hands that remember harm too well.
+          </p>
+          <p class="threat-note">The brand that outlives the flame</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel threat-panel" id="false-mercy">
+      <p class="eyebrow">Kindness with Hooks</p>
+      <h2>False Mercy and the Agreement</h2>
+
+      <p>
+        Some enemies arrive wearing mercy like a clean coat. They offer help,
+        safety, agreement and care until every word carries a hidden hook.
+      </p>
+
+      <div class="book-grid threat-grid">
+        <article class="character-card threat-card mercy-card featured-book">
+          <p class="role">Managed Consent</p>
+          <h3>The Agreement</h3>
+          <p>
+            A beautiful horror of polite pressure, controlled choice and
+            consent made unsafe.
+          </p>
+          <p class="threat-note">A signature where refusal should stand</p>
+        </article>
+
+        <article class="character-card threat-card mercy-card">
+          <p class="role">Written Harm</p>
+          <h3>Article Ash-Seven</h3>
+          <p>
+            A legal wound and delayed threat hidden inside the language of order.
+          </p>
+          <p class="threat-note">The clause waiting in the dark</p>
+        </article>
+
+        <article class="character-card threat-card mercy-card">
+          <p class="role">Administrative Mercy</p>
+          <h3>Grey Cradle</h3>
+          <p>
+            A false-care system of children, routes, quieting and managed lives.
+          </p>
+          <p class="threat-note">Care emptied of choice</p>
+        </article>
+
+        <article class="character-card threat-card mercy-card">
+          <p class="role">Company-Shaped Harm</p>
+          <h3>Thorn-Cradle Company</h3>
+          <p>
+            Records, routes and claims used to turn children into objects under
+            management.
+          </p>
+          <p class="threat-note">Commerce sharpened into custody</p>
+        </article>
+
+        <article class="character-card threat-card mercy-card">
+          <p class="role">Contract Manipulator</p>
+          <h3>Morcant Veyr</h3>
+          <p>
+            A pressure-worker tied to contracts, quieting and the machinery of
+            false mercy.
+          </p>
+          <p class="threat-note">Words arranged as restraints</p>
+        </article>
+
+        <article class="character-card threat-card mercy-card">
+          <p class="role">Adapting Threat</p>
+          <h3>Alistair Venn</h3>
+          <p>
+            Clever with image, language and survival inside corrupted systems.
+          </p>
+          <p class="threat-note">A face fitted to every room</p>
+        </article>
+
+        <article class="character-card threat-card mercy-card">
+          <p class="role">Trusted Hands Gone Wrong</p>
+          <h3>Doc</h3>
+          <p>
+            A figure of soft professional harm, false help and quiet danger.
+          </p>
+          <p class="threat-note">Expertise without conscience</p>
+        </article>
+
+        <article class="character-card threat-card mercy-card">
+          <p class="role">Emptiness Given Shape</p>
+          <h3>The Hollow</h3>
+          <p>
+            An absence that studies the living and learns precisely where to press.
+          </p>
+          <p class="threat-note">Nothingness that has learned hunger</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel threat-panel" id="human-rot">
+      <p class="eyebrow">Human Teeth</p>
+      <h2>Sawtooth, Broken Trust and Ordinary Rot</h2>
+
+      <p>
+        Not every enemy is ancient. Some are painfully human. Some learn
+        exactly where love hurts and press there.
+      </p>
+
+      <div class="book-grid threat-grid">
+        <article class="character-card threat-card human-card featured-book">
+          <p class="role">Poisoner of Safe Moments</p>
+          <h3>Eiðarr, Called Sawtooth</h3>
+          <p>
+            Cruel, intelligent and intimate in his harm. Sawtooth turns
+            happiness into a target.
+          </p>
+          <p class="threat-note">The blade hidden inside timing</p>
+        </article>
+
+        <article class="character-card threat-card human-card">
+          <p class="role">Corrupted Care</p>
+          <h3>The Sawtooth Thread</h3>
+          <p>
+            Remedy craft, family pressure and the old lie that harm may call
+            itself help.
+          </p>
+          <p class="threat-note">Care poisoned at the source</p>
+        </article>
+
+        <article class="character-card threat-card human-card">
+          <p class="role">Broken Trust</p>
+          <h3>Myah</h3>
+          <p>
+            A trusted presence tied to one of the Braid’s most grievous wounds
+            in love, family and chosen belonging.
+          </p>
+          <p class="threat-note">The name kept behind the spoiler seal</p>
+        </article>
+
+        <article class="character-card threat-card human-card">
+          <p class="role">Local Human Cruelty</p>
+          <h3>The Wrong Un’s</h3>
+          <p>
+            A network of old rot, shared silence and bad roads wearing ordinary
+            faces.
+          </p>
+          <p class="threat-note">Cruelty protected by familiarity</p>
+        </article>
+
+        <article class="character-card threat-card human-card">
+          <p class="role">Weaponised Absence</p>
+          <h3>The Absence</h3>
+          <p>
+            The terrible space where someone should have stood, but did not.
+          </p>
+          <p class="threat-note">The wound left by refusal to witness</p>
+        </article>
+
+        <article class="character-card threat-card human-card">
+          <p class="role">Watching Dread</p>
+          <h3>The Thing That Watches</h3>
+          <p>
+            The horror of being studied without kindness and turned into evidence.
+          </p>
+          <p class="threat-note">A gaze with no mercy in it</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel threat-panel" id="house-law">
+      <p class="eyebrow">Walls That Claim the Living</p>
+      <h2>House, Blood and Ownership</h2>
+
+      <p>
+        A house does not need a crown to command. It can use blood, memory,
+        inheritance, silence and the fear of being cast outside.
+      </p>
+
+      <div class="book-grid threat-grid">
+        <article class="character-card threat-card crown-card featured-book">
+          <p class="role">Origin Turned Claim</p>
+          <h3>The House</h3>
+          <p>
+            Blood, place and inherited authority used to insist that origin
+            decides ownership.
+          </p>
+          <p class="threat-note">Home turned into boundary</p>
+        </article>
+
+        <article class="character-card threat-card crown-card">
+          <p class="role">Inherited Control</p>
+          <h3>House-Law</h3>
+          <p>
+            Rules handed down until obedience feels older and more natural than
+            freedom.
+          </p>
+          <p class="threat-note">Tradition used as a lock</p>
+        </article>
+
+        <article class="character-card threat-card crown-card">
+          <p class="role">Inherited Wound</p>
+          <h3>Blood-Wrong</h3>
+          <p>
+            The belief that blood may demand, own, punish or erase the living.
+          </p>
+          <p class="threat-note">Kinship corrupted into claim</p>
+        </article>
+
+        <article class="character-card threat-card crown-card">
+          <p class="role">False Measurement</p>
+          <h3>The Ledger That Counted Children Wrong</h3>
+          <p>
+            A record that turns young lives into numbers, claims and evidence
+            for someone else’s purpose.
+          </p>
+          <p class="threat-note">A child reduced to an entry</p>
+        </article>
+
+        <article class="character-card threat-card crown-card">
+          <p class="role">Fear Dressed as Rule</p>
+          <h3>The Thunder That Called Itself Law</h3>
+          <p>
+            Noise, punishment and intimidation claiming the dignity of justice.
+          </p>
+          <p class="threat-note">Volume pretending to be truth</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel threat-panel" id="north">
+      <p class="eyebrow">Cold Roads and Ransom</p>
+      <h2>Northern Threats</h2>
+
+      <p>
+        In the north, cold is not the only danger. Ransom, sick hospitality,
+        corrupted craft and older things wait beneath the snow.
+      </p>
+
+      <div class="book-grid threat-grid">
+        <article class="character-card threat-card north-card featured-book">
+          <p class="role">Mountain Ransom Faction</p>
+          <h3>The Skeld-Fell Ransom Faction</h3>
+          <p>
+            A power built from isolation, leverage and the belief that every
+            traveller carries a price.
+          </p>
+          <p class="threat-note">The mountain toll made human</p>
+        </article>
+
+        <article class="character-card threat-card north-card">
+          <p class="role">Sick Hearth</p>
+          <h3>Cold Hearth Hall</h3>
+          <p>
+            A place where welcome has been hollowed out and hospitality becomes
+            another method of control.
+          </p>
+          <p class="threat-note">A fire that offers no shelter</p>
+        </article>
+
+        <article class="character-card threat-card north-card">
+          <p class="role">Winter Claim</p>
+          <h3>The Ransom House of Snow</h3>
+          <p>
+            A northern house shaped around debt, capture and the long patience
+            of winter.
+          </p>
+          <p class="threat-note">Snow laid over a locked door</p>
+        </article>
+
+        <article class="character-card threat-card north-card">
+          <p class="role">Druid Gone Wrong</p>
+          <h3>Blómblaða</h3>
+          <p>
+            Living craft bent away from balance and toward possession,
+            corruption and rot.
+          </p>
+          <p class="threat-note">Growth without listening</p>
+        </article>
+
+        <article class="character-card threat-card north-card">
+          <p class="role">Older Than Winter</p>
+          <h3>The True Cold Beneath Skeld-Fell</h3>
+          <p>
+            A buried northern terror whose cold is more than weather.
+          </p>
+          <p class="threat-note">The silence under the snow</p>
+        </article>
+
+        <article class="character-card threat-card north-card">
+          <p class="role">Corrupted Craft</p>
+          <h3>Two-Faced Witchcraft</h3>
+          <p>
+            Magic that speaks differently to each side while hiding the cost
+            from both.
+          </p>
+          <p class="threat-note">Power divided against truth</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel threat-panel" id="beast-horrors">
+      <p class="eyebrow">The Hunt Given Shape</p>
+      <h2>Beast-Horrors and Pursuit</h2>
+
+      <p>
+        These are not the animal witnesses of the Braid. They are creatures,
+        cages and commands shaped by hostile hands to hunt, frighten or possess.
+      </p>
+
+      <div class="book-grid threat-grid">
+        <article class="character-card threat-card beast-card featured-book">
+          <p class="role">Bone-Hound</p>
+          <h3>The Valkryn Bone-Hound</h3>
+          <p>
+            A pursuit-shape of bone, hunger and old command moving where no
+            ordinary hound should walk.
+          </p>
+          <p class="threat-note">The hunt stripped of life</p>
+        </article>
+
+        <article class="character-card threat-card beast-card">
+          <p class="role">Root Hunters</p>
+          <h3>Root-Hounds</h3>
+          <p>
+            Beneath-made hunters that follow scent, fear and the command of the
+            Underroot.
+          </p>
+          <p class="threat-note">Teeth grown from obedience</p>
+        </article>
+
+        <article class="character-card threat-card beast-card">
+          <p class="role">Cages Called Care</p>
+          <h3>False Beast Shelters</h3>
+          <p>
+            Places that use the language of protection while treating living
+            creatures as objects to be controlled.
+          </p>
+          <p class="threat-note">Shelter without freedom</p>
+        </article>
+
+        <article class="character-card threat-card beast-card">
+          <p class="role">Hidden Leashes</p>
+          <h3>Handler Whistles</h3>
+          <p>
+            Small sounds carrying command, conditioning and the memory of
+            punishment.
+          </p>
+          <p class="threat-note">Control made almost invisible</p>
+        </article>
       </div>
 
+      <p class="warning-seal">
+        The deeper fire-wolf mystery remains behind the Character Hall’s
+        spoiler seal.
+      </p>
     </section>
 
-    <section class="panel">
-
-      <p class="eyebrow">
-
-        Beneath the Known World
-
-      </p>
-
-      <h2>
-
-        Rootbound Powers
-
-      </h2>
+    <section class="panel" id="enemy-laws">
+      <p class="eyebrow">The Lies Beneath the Chains</p>
+      <h2>Enemy Laws</h2>
 
       <p>
-
-        The Underroot does not simply attack. It grows beneath
-
-        things. It studies memory, blood, family and fear.
-
+        Most cruelty begins by teaching a false rule until people stop asking
+        who benefits from it.
       </p>
 
-      <p>
-
-        It wants the living rooted where they can no longer
-
-        choose the road.
-
-      </p>
-
-      <div class="book-grid">
-
-        <article class="character-card featured-book">
-
-          <p class="role">
-
-            Ancient Beneath-Power
-
-          </p>
-
-          <h3>
-
-            The Underroot
-
-          </h3>
-
-          <p>
-
-            Root, memory, hunger and patient control moving
-
-            beneath the foundations of the world.
-
-          </p>
-
-        </article>
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Rootbound Intelligence
-
-          </p>
-
-          <h3>
-
-            The Duchess Rootbound
-
-          </h3>
-
-          <p>
-
-            A terrible force of possession, abduction,
-
-            bloodline hunger and long design.
-
-          </p>
-
-        </article>
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Ancient Root-Mother
-
-          </p>
-
-          <h3>
-
-            Súsanna Rótmóðir
-
-          </h3>
-
-          <p>
-
-            Old appetite, buried planning and dark intelligence
-
-            moving beneath the name of the Root-Mother.
-
-          </p>
-
-        </article>
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Root-Shaped Servants
-
-          </p>
-
-          <h3>
-
-            The Root-Born
-
-          </h3>
-
-          <p>
-
-            Bodies and servants shaped by underground will,
-
-            grown for obedience rather than life.
-
-          </p>
-
-        </article>
-
-        <article class="character-card animal-card">
-
-          <p class="role">
-
-            Root-Made Pursuit
-
-          </p>
-
-          <h3>
-
-            Root-Hounds
-
-          </h3>
-
-          <p>
-
-            Scent, hunger and root-made teeth sent running
-
-            after those who refuse to stay contained.
-
-          </p>
-
-        </article>
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Watchers Below
-
-          </p>
-
-          <h3>
-
-            Deep Root Sentinels
-
-          </h3>
-
-          <p>
-
-            Watching things built to hold, hunt, report
-
-            and keep the old beneath-power informed.
-
-          </p>
-
-        </article>
-
+      <div class="law-grid">
+        <p class="enemy-law">Need makes permission.</p>
+        <p class="enemy-law">Care creates debt.</p>
+        <p class="enemy-law">Blood creates ownership.</p>
+        <p class="enemy-law">Safety cancels refusal.</p>
+        <p class="enemy-law">Children can become proof.</p>
+        <p class="enemy-law">Animals must be controlled.</p>
+        <p class="enemy-law">Silence means consent.</p>
+        <p class="enemy-law">Origin decides destiny.</p>
+        <p class="enemy-law">A softer voice makes a chain kinder.</p>
+        <p class="enemy-law">A signed paper can replace a living no.</p>
+        <p class="enemy-law">Authority is the same as truth.</p>
+        <p class="enemy-law">Those made small should remain grateful.</p>
       </div>
 
-    </section>
-
-    <section class="panel">
-
-      <p class="eyebrow">
-
-        Fire Without Warmth
-
-      </p>
-
-      <h2>
-
-        Ash, Cinder and Old Burning
-
-      </h2>
-
-      <p>
-
-        Cinder is one of the saga’s older dark languages:
-
-        ash without rest, fire without comfort and obedience
-
-        taught on burned roads.
-
-      </p>
-
-      <div class="book-grid">
-
-        <article class="character-card featured-book">
-
-          <p class="role">
-
-            Cinder-King
-
-          </p>
-
-          <h3>
-
-            Hrothar Vael
-
-          </h3>
-
-          <p>
-
-            A dangerous old name tied to ash-road power,
-
-            command, fear and the history of burned obedience.
-
-          </p>
-
-        </article>
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Ash-Road War Band
-
-          </p>
-
-          <h3>
-
-            The Cinder Host
-
-          </h3>
-
-          <p>
-
-            A force of old violence, fire-dark loyalty
-
-            and obedience hardened into war.
-
-          </p>
-
-        </article>
-
-        <article class="character-card animal-card">
-
-          <p class="role">
-
-            Burned Pursuit
-
-          </p>
-
-          <h3>
-
-            Cinder-Wolves
-
-          </h3>
-
-          <p>
-
-            Wolf-shaped threats tied to fear, burned tracks
-
-            and the Cinder language of command.
-
-          </p>
-
-        </article>
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Fire-Marked Threat
-
-          </p>
-
-          <h3>
-
-            Torvik Brandhand
-
-          </h3>
-
-          <p>
-
-            Bound to old burning violence and hands that
-
-            remember harm too well.
-
-          </p>
-
-        </article>
-
-      </div>
-
-    </section>
-
-    <section class="panel">
-
-      <p class="eyebrow">
-
-        Kindness with Hooks
-
-      </p>
-
-      <h2>
-
-        False Mercy and the Agreement
-
-      </h2>
-
-      <p>
-
-        Some enemies arrive wearing mercy like a clean coat.
-
-        They offer help, safety, agreement and care until
-
-        every word carries a hidden hook.
-
-      </p>
-
-      <div class="book-grid">
-
-        <article class="character-card featured-book">
-
-          <p class="role">
-
-            Managed Consent
-
-          </p>
-
-          <h3>
-
-            The Agreement
-
-          </h3>
-
-          <p>
-
-            A beautiful horror of polite pressure,
-
-            controlled choice and consent made unsafe.
-
-          </p>
-
-        </article>
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Written Harm
-
-          </p>
-
-          <h3>
-
-            Article Ash-Seven
-
-          </h3>
-
-          <p>
-
-            A legal wound and delayed threat hidden inside
-
-            the language of order.
-
-          </p>
-
-        </article>
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Administrative Mercy
-
-          </p>
-
-          <h3>
-
-            Grey Cradle
-
-          </h3>
-
-          <p>
-
-            A false-care system of children, routes,
-
-            quieting and managed lives.
-
-          </p>
-
-        </article>
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Company-Shaped Harm
-
-          </p>
-
-          <h3>
-
-            Thorn-Cradle Company
-
-          </h3>
-
-          <p>
-
-            Records, routes and claims used to turn children
-
-            into objects under management.
-
-          </p>
-
-        </article>
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Contract Manipulator
-
-          </p>
-
-          <h3>
-
-            Morcant Veyr
-
-          </h3>
-
-          <p>
-
-            A pressure-worker tied to contracts, quieting
-
-            and the machinery of false mercy.
-
-          </p>
-
-        </article>
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Adapting Threat
-
-          </p>
-
-          <h3>
-
-            Alistair Venn
-
-          </h3>
-
-          <p>
-
-            Clever with image, language and survival
-
-            inside corrupted systems.
-
-          </p>
-
-        </article>
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Trusted Hands Gone Wrong
-
-          </p>
-
-          <h3>
-
-            Doc
-
-          </h3>
-
-          <p>
-
-            A figure of soft professional harm,
-
-            false help and quiet danger.
-
-          </p>
-
-        </article>
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Emptiness Given Shape
-
-          </p>
-
-          <h3>
-
-            The Hollow
-
-          </h3>
-
-          <p>
-
-            An absence that studies the living
-
-            and learns precisely where to press.
-
-          </p>
-
-        </article>
-
-      </div>
-
-    </section>
-
-    <section class="panel">
-
-      <p class="eyebrow">
-
-        Human Teeth
-
-      </p>
-
-      <h2>
-
-        Sawtooth, Betrayal and Ordinary Rot
-
-      </h2>
-
-      <p>
-
-        Not every enemy is ancient. Some are painfully human.
-
-        Some learn exactly where love hurts and press there.
-
-      </p>
-
-      <div class="book-grid">
-
-        <article class="character-card featured-book">
-
-          <p class="role">
-
-            Poisoner of Safe Moments
-
-          </p>
-
-          <h3>
-
-            Eiðarr, Called Sawtooth
-
-          </h3>
-
-          <p>
-
-            Cruel, intelligent and intimate in his harm.
-
-            Sawtooth turns happiness into a target.
-
-          </p>
-
-        </article>
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Corrupted Care
-
-          </p>
-
-          <h3>
-
-            The Sawtooth Thread
-
-          </h3>
-
-          <p>
-
-            Remedy craft, family pressure and the old lie
-
-            that harm may call itself help.
-
-          </p>
-
-        </article>
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Betrayer of the Braid
-
-          </p>
-
-          <h3>
-
-            Myah
-
-          </h3>
-
-          <p>
-
-            A trusted presence whose choices wound love,
-
-            family and the laws of chosen belonging.
-
-          </p>
-
-        </article>
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Local Human Cruelty
-
-          </p>
-
-          <h3>
-
-            The Wrong Un’s
-
-          </h3>
-
-          <p>
-
-            A network of old rot, shared silence
-
-            and bad roads wearing ordinary faces.
-
-          </p>
-
-        </article>
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Weaponised Absence
-
-          </p>
-
-          <h3>
-
-            The Absence
-
-          </h3>
-
-          <p>
-
-            The terrible space where someone should
-
-            have stood, but did not.
-
-          </p>
-
-        </article>
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Watching Dread
-
-          </p>
-
-          <h3>
-
-            The Thing That Watches
-
-          </h3>
-
-          <p>
-
-            The horror of being studied without kindness
-
-            and turned into evidence.
-
-          </p>
-
-        </article>
-
-      </div>
-
-    </section>
-
-    <section class="panel">
-
-      <p class="eyebrow">
-
-        Walls That Claim the Living
-
-      </p>
-
-      <h2>
-
-        House, Blood and Ownership
-
-      </h2>
-
-      <p>
-
-        A house does not need a crown to command.
-
-        It can use blood, memory, inheritance and silence.
-
-      </p>
-
-      <div class="book-grid">
-
-        <article class="character-card featured-book">
-
-          <p class="role">
-
-            Origin Turned Claim
-
-          </p>
-
-          <h3>
-
-            The House
-
-          </h3>
-
-          <p>
-
-            Childhood turned into prison and memory
-
-            turned into furniture.
-
-          </p>
-
-        </article>
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Inherited Control
-
-          </p>
-
-          <h3>
-
-            House-Law
-
-          </h3>
-
-          <p>
-
-            The lie that walls, parents, blood or old rooms
-
-            may decide who the living must become.
-
-          </p>
-
-        </article>
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Inherited Wound
-
-          </p>
-
-          <h3>
-
-            Blood-Wrong
-
-          </h3>
-
-          <p>
-
-            Old hurt pretending to be truth,
-
-            sacred duty or family power.
-
-          </p>
-
-        </article>
-
-        <article class="character-card">
-
-          <p class="role">
-
-            False Measurement
-
-          </p>
-
-          <h3>
-
-            The Ledger That Counted Children Wrong
-
-          </h3>
-
-          <p>
-
-            Blame, obedience and debt written into
-
-            a record that mistakes numbers for truth.
-
-          </p>
-
-        </article>
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Fear Dressed as Rule
-
-          </p>
-
-          <h3>
-
-            The Thunder That Called Itself Law
-
-          </h3>
-
-          <p>
-
-            Loud harm, father-force and command
-
-            disguised as protection.
-
-          </p>
-
-        </article>
-
-      </div>
-
-    </section>
-
-    <section class="panel">
-
-      <p class="eyebrow">
-
-        Cold Roads North
-
-      </p>
-
-      <h2>
-
-        Northern Threats
-
-      </h2>
-
-      <p>
-
-        The northern road brings cold hearths, desperate bargains,
-
-        mountain sickness and people who confuse need
-
-        with permission.
-
-      </p>
-
-      <div class="book-grid">
-
-        <article class="character-card featured-book">
-
-          <p class="role">
-
-            Mountain Ransom Faction
-
-          </p>
-
-          <h3>
-
-            The Skeld-Fell Ransom Faction
-
-          </h3>
-
-          <p>
-
-            A desperate faction that turns suffering
-
-            into claim and children into payment.
-
-          </p>
-
-        </article>
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Sick Hearth
-
-          </p>
-
-          <h3>
-
-            Cold Hearth Hall
-
-          </h3>
-
-          <p>
-
-            Blue-grey fires, poisoned warmth
-
-            and family logic gone wrong.
-
-          </p>
-
-        </article>
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Winter Claim
-
-          </p>
-
-          <h3>
-
-            The Ransom House of Snow
-
-          </h3>
-
-          <p>
-
-            A place where desperation dresses itself
-
-            as right and winter demands a price.
-
-          </p>
-
-        </article>
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Druid Gone Wrong
-
-          </p>
-
-          <h3>
-
-            Blómblaða
-
-          </h3>
-
-          <p>
-
-            Poisoner of family and enemy of the love
-
-            that holds the Braid together.
-
-          </p>
-
-        </article>
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Older Than Winter
-
-          </p>
-
-          <h3>
-
-            The True Cold Beneath Skeld-Fell
-
-          </h3>
-
-          <p>
-
-            A deeper threat, colder than ordinary snow
-
-            and older than simple hunger.
-
-          </p>
-
-        </article>
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Corrupted Craft
-
-          </p>
-
-          <h3>
-
-            Two-Faced Witchcraft
-
-          </h3>
-
-          <p>
-
-            Help with one face, harm with the other,
-
-            and old craft turned against consent.
-
-          </p>
-
-        </article>
-
-      </div>
-
-    </section>
-
-    <section class="panel">
-
-      <p class="eyebrow">
-
-        Teeth on the Road
-
-      </p>
-
-      <h2>
-
-        Beast-Horrors and Pursuit Shapes
-
-      </h2>
-
-      <div class="book-grid">
-
-        <article class="character-card animal-card featured-book">
-
-          <p class="role">
-
-            Bone-Hound
-
-          </p>
-
-          <h3>
-
-            The Valkryn Bone-Hound
-
-          </h3>
-
-          <p>
-
-            An old threat-shape of bone, hunt, dread
-
-            and pursuit across ruined roads.
-
-          </p>
-
-        </article>
-
-        <article class="character-card animal-card">
-
-          <p class="role">
-
-            Root Hunters
-
-          </p>
-
-          <h3>
-
-            Root-Hounds
-
-          </h3>
-
-          <p>
-
-            Underground hunger given scent, speed
-
-            and teeth.
-
-          </p>
-
-        </article>
-
-        <article class="character-card animal-card">
-
-          <p class="role">
-
-            Cages Called Care
-
-          </p>
-
-          <h3>
-
-            False Beast Shelters
-
-          </h3>
-
-          <p>
-
-            Places built to make animal freedom
-
-            appear dangerous.
-
-          </p>
-
-        </article>
-
-        <article class="character-card animal-card">
-
-          <p class="role">
-
-            Hidden Leashes
-
-          </p>
-
-          <h3>
-
-            Handler Whistles
-
-          </h3>
-
-          <p>
-
-            Command-tools, fear-tools and the sound
-
-            of obedience being forced from afar.
-
-          </p>
-
-        </article>
-
-      </div>
-
-    </section>
-
-    <section class="panel">
-
-      <p class="eyebrow">
-
-        The Laws Black Wings Fights
-
-      </p>
-
-      <h2>
-
-        Enemy Laws
-
-      </h2>
-
-      <div class="lore-list law-list">
-
-        <span>Need makes permission.</span>
-
-        <span>Care creates debt.</span>
-
-        <span>Blood creates ownership.</span>
-
-        <span>Safety cancels refusal.</span>
-
-        <span>Children can become proof.</span>
-
-        <span>Animals must be controlled.</span>
-
-        <span>Silence means consent.</span>
-
-        <span>Origin decides destiny.</span>
-
-        <span>A softer voice makes a chain kinder.</span>
-
-        <span>A signed paper can replace a living no.</span>
-
+      <div class="counter-law">
+        <strong>The Witness Answer</strong>
+        Ask what the kindness costs. Ask who holds the road. Ask whether the
+        living may still say no.
       </div>
 
       <blockquote>
-
-        “Ask what the kindness costs. Ask who holds the road.
-
-        Ask whether the living may still say no.”
-
+        “A chain does not become mercy because someone polished it.”
       </blockquote>
-
     </section>
 
     <section class="panel final-road-panel">
-
-      <p class="eyebrow">
-
-        Leave the Gallery
-
-      </p>
-
-      <h2>
-
-        Return to the Living
-
-      </h2>
+      <p class="eyebrow">Leave the Gallery</p>
+      <h2>Return to the Living</h2>
 
       <p>
-
-        Not every enemy is a person. Some are systems.
-
-        Some are old powers. Some are people who learned
-
-        how to use both.
-
+        Not every enemy is a person. Some are systems. Some are old powers.
+        Some are people who learned how to use both. The answer of Black Wings
+        is not purity. It is witness, refusal, freely chosen care and the road
+        kept open.
       </p>
 
       <div class="hero-buttons">
-
-        <a href="characters.html" class="button primary">
-
-          Return to the Character Hall
-
-        </a>
-
-        <a href="world.html" class="button secondary">
-
-          Explore the World
-
-        </a>
-
-        <a href="lore.html" class="button secondary">
-
-          Read the Lore
-
-        </a>
-
+        <a href="characters.html" class="button primary">Return to the Character Hall</a>
+        <a href="world.html" class="button secondary">Explore the World</a>
+        <a href="lore.html" class="button secondary">Read the Lore</a>
       </div>
-
     </section>
-
   </main>
 
   <footer>
-
     <nav class="footer-nav" aria-label="Footer navigation">
-
       <a href="index.html">Home</a>
-
       <a href="books.html">Books</a>
-
       <a href="characters.html">Characters</a>
-
       <a href="world.html">World</a>
-
+      <a href="lore.html">Lore</a>
       <a href="odes.html">Odes</a>
-
+      <a href="maps.html">Maps</a>
+      <a href="archive.html">Archive</a>
       <a href="author.html">Author</a>
-
     </nav>
 
-    <p>
-
-      © 2026 Saga of Black Wings · Created by Timothy M. Halliday
-
-    </p>
-
-    <p class="footer-motto">
-
-      No crown shall count us smaller.
-
-    </p>
-
+    <p>© 2026 Saga of Black Wings · Created by Timothy M. Halliday</p>
+    <p class="footer-motto">No crown shall count us smaller.</p>
   </footer>
-
 </body>
-
 </html>
