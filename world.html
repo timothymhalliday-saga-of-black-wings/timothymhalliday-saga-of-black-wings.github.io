@@ -1,863 +1,988 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>World | Saga of Black Wings</title>
+  <title>World | The Saga of Black Wings</title>
 
   <meta
-
     name="description"
-
-    content="Explore Vardrum, Witness Isle, the Salt-Marsh, Green Deer-Wood and the hidden roads of The Saga of Black Wings."
-
+    content="Explore Vardrum, Witness Isle, the Salt-Marsh, the Crown Lands, the Underroot, Skeld-Fell, Green Deer-Wood and the hidden roads of The Saga of Black Wings."
   />
-
   <meta name="author" content="Timothy M. Halliday" />
-
   <meta name="theme-color" content="#050608" />
 
-  <meta property="og:title" content="World | Saga of Black Wings" />
-
+  <meta property="og:title" content="World | The Saga of Black Wings" />
   <meta
-
     property="og:description"
-
-    content="Enter the lands, roads, houses, forests and hidden laws of The Saga of Black Wings."
-
+    content="Enter the lands, roads, houses, forests and living laws of The Saga of Black Wings."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sagaofblackwings.com/world.html" />
+  <meta
+    property="og:image"
+    content="https://sagaofblackwings.com/3B43F815-45F1-4657-A898-C6782F8507E6.png"
+  />
+  <meta
+    property="og:image:alt"
+    content="Black raven crest bearing the motto No Crown Shall Count Us Smaller"
   />
 
-  <meta property="og:type" content="website" />
-
-  <meta property="og:url" content="https://sagaofblackwings.com/world.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="World | The Saga of Black Wings" />
+  <meta
+    name="twitter:description"
+    content="Explore the lands, roads, forests and hidden laws of Black Wings."
+  />
+  <meta
+    name="twitter:image"
+    content="https://sagaofblackwings.com/3B43F815-45F1-4657-A898-C6782F8507E6.png"
+  />
 
   <link rel="canonical" href="https://sagaofblackwings.com/world.html" />
-
   <link rel="stylesheet" href="style.css" />
 
+  <style>
+    .world-hero {
+      min-height: 74vh;
+      padding-top: 5.2rem;
+      padding-bottom: 5.2rem;
+      background:
+        radial-gradient(circle at 14% 18%, rgba(49, 90, 69, 0.28), transparent 29rem),
+        radial-gradient(circle at 88% 12%, rgba(221, 182, 95, 0.14), transparent 28rem),
+        linear-gradient(180deg, rgba(4, 5, 7, 0.97), rgba(10, 12, 13, 0.99));
+    }
+
+    .world-hero-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(270px, 0.72fr);
+      gap: clamp(2rem, 6vw, 5rem);
+      align-items: center;
+      width: min(100%, 1120px);
+      margin: 0 auto;
+    }
+
+    .world-hero .hero-text {
+      width: 100%;
+      text-align: left;
+    }
+
+    .world-hero .tagline,
+    .world-hero .hero-quote {
+      margin-left: 0;
+    }
+
+    .world-hero .hero-buttons {
+      justify-content: flex-start;
+    }
+
+    .world-crest {
+      margin: 0;
+      padding: 0.6rem;
+      background: rgba(5, 6, 8, 0.75);
+      border: 1px solid rgba(221, 182, 95, 0.4);
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .world-crest img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 19px;
+    }
+
+    .world-seal {
+      max-width: 850px;
+      margin: 1.5rem auto 0;
+      padding: 1rem 1.2rem;
+      color: var(--parchment-soft);
+      background: rgba(5, 6, 8, 0.42);
+      border-left: 3px solid var(--forest);
+      border-radius: 0 12px 12px 0;
+    }
+
+    .world-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.7rem;
+      margin-top: 1.8rem;
+    }
+
+    .world-nav a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 0.55rem 0.9rem;
+      color: var(--parchment);
+      background: rgba(18, 21, 26, 0.84);
+      border: 1px solid rgba(49, 90, 69, 0.52);
+      border-radius: 999px;
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.055em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .world-nav a:hover {
+      color: #0b120e;
+      background: #8fb49a;
+      border-color: #8fb49a;
+    }
+
+    .place-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .place-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    .place-card .place-note {
+      margin-top: auto;
+      padding-top: 0.8rem;
+      color: var(--gold);
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.66rem;
+      font-weight: 800;
+      letter-spacing: 0.085em;
+      text-transform: uppercase;
+    }
+
+    .isle-card {
+      border-color: rgba(221, 182, 95, 0.42);
+    }
+
+    .marsh-card {
+      border-color: rgba(81, 122, 116, 0.55);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(81, 122, 116, 0.2), transparent 17rem),
+        linear-gradient(145deg, rgba(22, 32, 32, 0.97), rgba(10, 13, 14, 0.99));
+    }
+
+    .crown-place-card {
+      border-color: rgba(145, 115, 91, 0.5);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(115, 85, 61, 0.18), transparent 17rem),
+        linear-gradient(145deg, rgba(31, 27, 25, 0.97), rgba(11, 12, 14, 0.99));
+    }
+
+    .root-place-card {
+      border-color: rgba(49, 90, 69, 0.6);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(49, 90, 69, 0.23), transparent 17rem),
+        linear-gradient(145deg, rgba(23, 33, 27, 0.97), rgba(9, 13, 12, 0.99));
+    }
+
+    .north-place-card {
+      border-color: rgba(161, 180, 198, 0.42);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(190, 210, 225, 0.13), transparent 17rem),
+        linear-gradient(145deg, rgba(27, 31, 36, 0.97), rgba(9, 12, 15, 0.99));
+    }
+
+    .forest-place-card {
+      border-color: rgba(71, 122, 81, 0.64);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(71, 122, 81, 0.25), transparent 17rem),
+        linear-gradient(145deg, rgba(23, 37, 27, 0.97), rgba(9, 14, 11, 0.99));
+    }
+
+    .region-plate {
+      display: grid;
+      grid-template-columns: minmax(270px, 0.75fr) minmax(0, 1.1fr);
+      gap: clamp(1.5rem, 5vw, 3.5rem);
+      align-items: center;
+    }
+
+    .region-plate figure {
+      margin: 0;
+    }
+
+    .region-plate img {
+      width: 100%;
+      max-height: 690px;
+      object-fit: cover;
+      border: 1px solid rgba(221, 182, 95, 0.35);
+      border-radius: 18px;
+      box-shadow: var(--soft-shadow);
+    }
+
+    .region-plate figcaption {
+      margin-top: 0.75rem;
+      color: var(--parchment-soft);
+      font-size: 0.82rem;
+      font-style: italic;
+      text-align: center;
+    }
+
+    .road-table {
+      display: grid;
+      grid-template-columns: minmax(150px, 0.42fr) minmax(0, 1fr);
+      gap: 0;
+      margin-top: 1.7rem;
+      overflow: hidden;
+      border: 1px solid rgba(221, 182, 95, 0.28);
+      border-radius: 16px;
+    }
+
+    .road-table dt,
+    .road-table dd {
+      margin: 0;
+      padding: 1rem 1.1rem;
+      border-bottom: 1px solid rgba(221, 182, 95, 0.17);
+    }
+
+    .road-table dt {
+      color: var(--gold-bright);
+      background: rgba(5, 6, 8, 0.58);
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .road-table dd {
+      color: var(--parchment-soft);
+      background: rgba(18, 21, 26, 0.54);
+    }
+
+    .road-table dt:last-of-type,
+    .road-table dd:last-of-type {
+      border-bottom: 0;
+    }
+
+    .law-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem;
+      margin-top: 1.7rem;
+    }
+
+    .world-law {
+      margin: 0;
+      padding: 1.1rem;
+      color: #eef0df;
+      background:
+        linear-gradient(135deg, rgba(49, 90, 69, 0.25), rgba(5, 6, 8, 0.5));
+      border: 1px solid rgba(83, 128, 94, 0.42);
+      border-radius: 14px;
+    }
+
+    .world-law::before {
+      content: "◆";
+      margin-right: 0.55rem;
+      color: var(--gold);
+    }
+
+    .mark-panel {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(270px, 0.92fr);
+      gap: clamp(1.5rem, 5vw, 3.2rem);
+      align-items: center;
+    }
+
+    .mark-panel figure {
+      margin: 0;
+      padding: 0.55rem;
+      background: rgba(5, 6, 8, 0.5);
+      border: 1px solid rgba(221, 182, 95, 0.27);
+      border-radius: 18px;
+    }
+
+    .mark-panel img {
+      width: 100%;
+      border-radius: 13px;
+    }
+
+    @media (max-width: 980px) {
+      .world-hero-layout,
+      .region-plate,
+      .mark-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .world-hero .hero-text {
+        text-align: center;
+      }
+
+      .world-hero .tagline,
+      .world-hero .hero-quote {
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .world-hero .hero-buttons {
+        justify-content: center;
+      }
+
+      .world-crest,
+      .region-plate figure,
+      .mark-panel figure {
+        width: min(100%, 560px);
+        margin: 0 auto;
+      }
+
+      .place-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      .world-hero {
+        min-height: auto;
+      }
+
+      .world-nav {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .world-nav a {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .place-grid,
+      .law-grid,
+      .road-table {
+        grid-template-columns: 1fr;
+      }
+
+      .road-table dt,
+      .road-table dd {
+        border-bottom: 1px solid rgba(221, 182, 95, 0.17);
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "The World of The Saga of Black Wings",
+    "url": "https://sagaofblackwings.com/world.html",
+    "description": "A guide to Vardrum, Witness Isle, the Salt-Marsh, the Underroot, Skeld-Fell, Green Deer-Wood and the living laws of The Saga of Black Wings.",
+    "author": {
+      "@type": "Person",
+      "name": "Timothy M. Halliday"
+    }
+  }
+  </script>
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <a class="skip-link" href="#main-content">
+  <header class="page-hero world-hero">
+    <div class="world-hero-layout">
+      <div class="hero-text">
+        <p class="eyebrow">The World Beyond the Hearth</p>
 
-    Skip to main content
+        <h1>The Lands of Black Wings</h1>
 
-  </a>
+        <p class="tagline">
+          Salt roads, witness islands, hidden houses, root-dark places,
+          northern halls and forests where old laws still breathe.
+        </p>
 
-  <header class="page-hero">
+        <blockquote class="hero-quote">
+          “The road remembers who crossed it freely.”
+        </blockquote>
 
-    <div class="hero-text">
-
-      <p class="eyebrow">
-
-        The World Beyond the Hearth
-
-      </p>
-
-      <h1>
-
-        The Lands of Black Wings
-
-      </h1>
-
-      <p class="tagline">
-
-        Salt roads, witness islands, hidden houses, root-dark places,
-
-        northern halls and forests where the old laws still breathe.
-
-      </p>
-
-      <blockquote class="hero-quote">
-
-        “The road remembers who crossed it freely.”
-
-      </blockquote>
-
-      <div class="hero-buttons">
-
-        <a href="#vardrum" class="button primary">
-
-          Enter Vardrum
-
-        </a>
-
-        <a href="maps.html" class="button secondary">
-
-          Open the Maps
-
-        </a>
-
-        <a href="index.html" class="button secondary">
-
-          Return Home
-
-        </a>
-
+        <div class="hero-buttons">
+          <a href="#vardrum" class="button primary">Enter Vardrum</a>
+          <a href="maps.html" class="button secondary">Open the Maps</a>
+          <a href="index.html" class="button secondary">Return Home</a>
+        </div>
       </div>
 
+      <figure class="world-crest">
+        <img
+          src="3B43F815-45F1-4657-A898-C6782F8507E6.png"
+          alt="Black raven crest bearing the motto No Crown Shall Count Us Smaller"
+          width="1254"
+          height="1254"
+          fetchpriority="high"
+        />
+      </figure>
     </div>
-
   </header>
 
   <nav class="site-nav" aria-label="Main navigation">
-
     <a href="index.html">Home</a>
-
     <a href="books.html">Books</a>
-
     <a href="characters.html">Characters</a>
-
     <a href="rogues.html">Rogues</a>
-
     <a href="world.html" aria-current="page">World</a>
-
     <a href="lore.html">Lore</a>
-
     <a href="odes.html">Odes</a>
-
     <a href="maps.html">Maps</a>
-
     <a href="archive.html">Archive</a>
-
     <a href="author.html">Author</a>
-
     <a href="dedications.html">Dedications</a>
-
   </nav>
 
   <main id="main-content">
-
     <section class="panel intro-panel" id="vardrum">
-
-      <p class="eyebrow">
-
-        The Wider Realm
-
-      </p>
-
-      <h2>
-
-        Vardrum
-
-      </h2>
+      <p class="eyebrow">The Wider Realm</p>
+      <h2>Vardrum</h2>
 
       <p>
-
-        Vardrum is a land of old roads, black birds, ruined laws,
-
-        stubborn houses and people who have learned that survival
-
-        is rarely granted by those in power.
-
+        Vardrum is a realm of old roads, black birds, ruined laws, stubborn
+        houses and people who have learned that survival is rarely granted by
+        those in power.
       </p>
 
       <p>
-
-        Its landscapes are alive with memory. Marshes keep secrets.
-
-        Forests listen. Houses remember names. Mountains hold cold
-
-        older than winter.
-
+        Its landscapes are alive with memory. Marshes keep secrets. Forests
+        listen. Houses remember names. Mountains hold a cold older than winter.
+        Roads are not empty spaces between events. They are witnesses carrying
+        every footstep, pursuit, rescue and return.
       </p>
 
       <p>
-
-        The world is not divided simply between good places and bad ones.
-
-        Every road carries history, and every hearth must decide what kind
-
-        of welcome it will become.
-
+        The world is not divided neatly into good places and bad ones. Every
+        region carries history, and every hearth must decide what kind of
+        welcome it will become.
       </p>
 
+      <p class="world-seal">
+        This guide remains spoiler-safe. It names the great regions and their
+        living character without revealing the deepest roads hidden inside the
+        later books.
+      </p>
+
+      <nav class="world-nav" aria-label="Jump to regions">
+        <a href="#witness-isle">Witness Isle</a>
+        <a href="#salt-marsh">Salt-Marsh</a>
+        <a href="#crown-lands">Crown Lands</a>
+        <a href="#underroot">Underroot</a>
+        <a href="#hidden-houses">Hidden Houses</a>
+        <a href="#skeld-fell">Skeld-Fell</a>
+        <a href="#green-deer-wood">Green Deer-Wood</a>
+        <a href="#world-law">Living Law</a>
+      </nav>
     </section>
 
-    <section class="panel">
-
-      <p class="eyebrow">
-
-        The Central Hearth
-
-      </p>
-
-      <h2>
-
-        Witness Isle
-
-      </h2>
+    <section class="panel" id="witness-isle">
+      <p class="eyebrow">The Central Hearth</p>
+      <h2>Witness Isle</h2>
 
       <p>
-
-        Witness Isle stands as refuge, meeting ground and living archive.
-
-        It is a place where wounded people arrive carrying names,
-
-        animals, secrets and unfinished grief.
-
+        Witness Isle stands as refuge, meeting ground and living archive. It is
+        a place where wounded people arrive carrying names, animals, secrets,
+        unfinished grief and the hope that shelter need not become another cage.
       </p>
 
       <p>
-
-        The island does not erase the past. It gives the living enough
-
-        shelter to face it without standing alone.
-
+        The island does not erase the past. It gives the living enough room to
+        face it without standing alone. Its law is made real through daily work:
+        listening, feeding, watching, repairing, arguing honestly and leaving
+        the road open.
       </p>
 
-      <div class="lore-list">
+      <div class="book-grid place-grid">
+        <article class="book-card place-card isle-card featured-book">
+          <p class="book-number">Living Centre</p>
+          <h3>The Great Hearth</h3>
+          <p>
+            A gathering place of food, argument, oath, laughter and the
+            difficult work of becoming family.
+          </p>
+          <p class="place-note">No one earns the right to be safe</p>
+        </article>
 
-        <span>The Great Hearth</span>
+        <article class="book-card place-card isle-card">
+          <p class="book-number">Hall of Memory</p>
+          <h3>The Witness Hall</h3>
+          <p>
+            Names, testimony, marks and remembered roads are kept without being
+            turned into weapons.
+          </p>
+          <p class="place-note">Memory without ownership</p>
+        </article>
 
-        <span>The Raven Paths</span>
+        <article class="book-card place-card isle-card">
+          <p class="book-number">Shore and Sky</p>
+          <h3>The Raven Paths</h3>
+          <p>
+            High routes and watching places favoured by Scarlet, Blue and every
+            black-winged visitor with an opinion.
+          </p>
+          <p class="place-note">Feathered watch</p>
+        </article>
 
-        <span>The Animal Grounds</span>
+        <article class="book-card place-card isle-card">
+          <p class="book-number">Ground of Beasts</p>
+          <h3>The Animal Grounds</h3>
+          <p>
+            Space for dogs, wolf, cat, birds and other witnesses to move without
+            becoming decorations or property.
+          </p>
+          <p class="place-note">Freedom is part of shelter</p>
+        </article>
 
-        <span>The Witness Hall</span>
+        <article class="book-card place-card isle-card">
+          <p class="book-number">Edge of Arrival</p>
+          <h3>The Shore Watch</h3>
+          <p>
+            The island’s first line of welcome, warning and recognition when a
+            new boat or old danger crosses the water.
+          </p>
+          <p class="place-note">Look before fear decides</p>
+        </article>
 
-        <span>The Shore Watch</span>
-
-        <span>The Garden of Names</span>
-
+        <article class="book-card place-card isle-card">
+          <p class="book-number">Names in Bloom</p>
+          <h3>The Garden of Names</h3>
+          <p>
+            A living place of flowers, memory and witness where remembrance is
+            allowed to grow rather than harden.
+          </p>
+          <p class="place-note">Grief given weather and root</p>
+        </article>
       </div>
 
       <blockquote>
-
         “A refuge is not where nothing hurts. It is where hurt is not used against you.”
-
       </blockquote>
-
     </section>
 
-    <section class="panel">
-
-      <p class="eyebrow">
-
-        Reed, Tide and Memory
-
-      </p>
-
-      <h2>
-
-        The Salt-Marsh
-
-      </h2>
+    <section class="panel" id="salt-marsh">
+      <p class="eyebrow">Reed, Tide and Memory</p>
+      <h2>The Salt-Marsh</h2>
 
       <p>
-
-        The Salt-Marsh is a place of wind-bent reeds, dark water,
-
-        tidal roads and memory carried through mud.
-
+        The Salt-Marsh is a region of wind-bent reeds, dark water, tidal roads
+        and memory carried through mud. It holds prayers for ravens and crows,
+        old harvest songs, hidden crossings and paths that reveal themselves
+        only when the tide permits.
       </p>
 
       <p>
-
-        It holds prayers for ravens and crows, old harvest songs,
-
-        hidden crossings and paths that only reveal themselves
-
-        when the tide permits.
-
+        Survival here is shared labour. Weather, tide and neighbourly knowledge
+        matter more than any distant command.
       </p>
 
-      <div class="book-grid">
-
-        <article class="book-card">
-
-          <p class="book-number">
-
-            Marsh Road
-
-          </p>
-
-          <h3>
-
-            The Reed Paths
-
-          </h3>
-
+      <div class="book-grid place-grid">
+        <article class="book-card place-card marsh-card featured-book">
+          <p class="book-number">Marsh Road</p>
+          <h3>The Reed Paths</h3>
           <p>
-
-            Narrow tracks through salt grass and dark pools,
-
-            changing with weather, tide and memory.
-
+            Narrow tracks through salt grass and dark pools, changing with
+            weather, tide and memory.
           </p>
-
+          <p class="place-note">The road moves with the water</p>
         </article>
 
-        <article class="book-card">
-
-          <p class="book-number">
-
-            Old Prayer Ground
-
-          </p>
-
-          <h3>
-
-            The Crow Reaches
-
-          </h3>
-
+        <article class="book-card place-card marsh-card">
+          <p class="book-number">Old Prayer Ground</p>
+          <h3>The Crow Reaches</h3>
           <p>
-
-            Places where birds gather, warnings are read
-
-            and old names are spoken into the wind.
-
+            Places where birds gather, warnings are read and old names are
+            spoken into the wind.
           </p>
-
+          <p class="place-note">Black wings over salt water</p>
         </article>
 
-        <article class="book-card">
-
-          <p class="book-number">
-
-            Harvest Country
-
-          </p>
-
-          <h3>
-
-            The Salt-Reed Fields
-
-          </h3>
-
+        <article class="book-card place-card marsh-card">
+          <p class="book-number">Harvest Country</p>
+          <h3>The Salt-Reed Fields</h3>
           <p>
-
-            Working land shaped by weather, song and people
-
-            who know survival is a shared labour.
-
+            Working land shaped by weather, song and people who know survival
+            must be carried together.
           </p>
-
+          <p class="place-note">Work remembered in song</p>
         </article>
-
       </div>
 
-    </section>
-
-    <section class="panel">
-
-      <p class="eyebrow">
-
-        Roads of Command
-
-      </p>
-
-      <h2>
-
-        The Crown Lands
-
-      </h2>
-
-      <p>
-
-        The Crown Lands are shaped by offices, corridors,
-
-        ledgers, custody, command and the belief that official
-
-        language can make harm lawful.
-
-      </p>
-
-      <p>
-
-        Their power is not only military. It lives in records,
-
-        signatures, controlled routes and rooms where people
-
-        are spoken about rather than listened to.
-
-      </p>
-
-      <div class="lore-list law-list">
-
-        <span>The Crown Roads</span>
-
-        <span>The Iron Corridors</span>
-
-        <span>The Clerk Houses</span>
-
-        <span>The Custody Halls</span>
-
-        <span>The Oath Chambers</span>
-
+      <div class="hero-buttons">
+        <a href="lore.html" class="button primary">Read the Salt-Marsh Lore</a>
+        <a href="odes.html" class="button secondary">Enter the Song Archive</a>
       </div>
-
     </section>
 
-    <section class="panel">
-
-      <p class="eyebrow">
-
-        Beneath the Roots
-
-      </p>
-
-      <h2>
-
-        The Underroot
-
-      </h2>
+    <section class="panel" id="crown-lands">
+      <p class="eyebrow">Roads of Command</p>
+      <h2>The Crown Lands</h2>
 
       <p>
+        The Crown Lands are shaped by offices, corridors, ledgers, custody,
+        command and the belief that official language can make harm lawful.
+        Their power is not only military. It lives in records, signatures,
+        controlled routes and rooms where people are spoken about rather than
+        listened to.
+      </p>
 
-        Beneath Vardrum lies an older world of root-memory,
+      <div class="book-grid place-grid">
+        <article class="book-card place-card crown-place-card featured-book">
+          <p class="book-number">Official Roads</p>
+          <h3>The Crown Roads</h3>
+          <p>
+            Routes watched, measured and controlled by people who mistake
+            passage for permission.
+          </p>
+          <p class="place-note">Movement turned into privilege</p>
+        </article>
 
-        underground law and patient hunger.
+        <article class="book-card place-card crown-place-card">
+          <p class="book-number">Administrative Maze</p>
+          <h3>The Clerk Houses</h3>
+          <p>
+            Quiet buildings where lives can be rearranged by ink, delay and
+            careful language.
+          </p>
+          <p class="place-note">Paper with iron beneath it</p>
+        </article>
 
+        <article class="book-card place-card crown-place-card">
+          <p class="book-number">Controlled Shelter</p>
+          <h3>The Custody Halls</h3>
+          <p>
+            Places where the language of protection threatens to swallow
+            refusal and choice.
+          </p>
+          <p class="place-note">Safety used as claim</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" id="underroot">
+      <p class="eyebrow">Beneath the Known World</p>
+      <h2>The Underroot</h2>
+
+      <p>
+        Beneath Vardrum lies an older world of root-memory, underground law and
+        patient hunger. The Underroot does not see people as travellers. It sees
+        them as things to be planted, claimed and held.
       </p>
 
       <p>
-
-        The Underroot does not see people as travellers.
-
-        It sees them as things to be planted, claimed and held.
-
+        Its tunnels, chambers and root-roads carry the remains of wars that
+        never truly ended. Here, belonging is corrupted into permanence and
+        memory is used as a leash.
       </p>
 
-      <p>
+      <div class="book-grid place-grid">
+        <article class="book-card place-card root-place-card featured-book">
+          <p class="book-number">Below the Roads</p>
+          <h3>The Root-Roads</h3>
+          <p>
+            Buried passages carrying scent, memory and the movement of an old
+            intelligence.
+          </p>
+          <p class="place-note">A road that wants to become a root</p>
+        </article>
 
-        Its tunnels, chambers and root-roads carry the remains
+        <article class="book-card place-card root-place-card">
+          <p class="book-number">Deep Chambers</p>
+          <h3>The Root Halls</h3>
+          <p>
+            Places built for holding, shaping and remembering the living in the
+            wrong way.
+          </p>
+          <p class="place-note">Memory turned into confinement</p>
+        </article>
 
-        of wars that never truly ended.
-
-      </p>
+        <article class="book-card place-card root-place-card">
+          <p class="book-number">War Beneath War</p>
+          <h3>The Severed Depths</h3>
+          <p>
+            Ruined grounds carrying the aftermath of root conflict and the
+            wounds left when ancient systems are cut apart.
+          </p>
+          <p class="place-note">The buried aftermath</p>
+        </article>
+      </div>
 
       <blockquote>
-
         “The root asked where he belonged. The road answered: wherever he chooses.”
-
       </blockquote>
-
     </section>
 
-    <section class="panel">
-
-      <p class="eyebrow">
-
-        The Houses That Remember
-
-      </p>
-
-      <h2>
-
-        Hidden Houses
-
-      </h2>
+    <section class="panel" id="hidden-houses">
+      <p class="eyebrow">The Houses That Remember</p>
+      <h2>Hidden Houses</h2>
 
       <p>
-
-        Houses throughout the saga are never merely buildings.
-
-        They can become refuge, prison, witness, inheritance,
-
-        warning or living memory.
-
+        Houses throughout the saga are never merely buildings. They can become
+        refuge, prison, witness, inheritance, warning or living memory. Their
+        truest law is revealed by what happens when someone frightened reaches
+        the door.
       </p>
 
-      <div class="book-grid">
-
-        <article class="book-card">
-
-          <p class="book-number">
-
-            House of Memory
-
-          </p>
-
-          <h3>
-
-            The Raven House
-
-          </h3>
-
+      <div class="book-grid place-grid">
+        <article class="book-card place-card featured-book">
+          <p class="book-number">House of Memory</p>
+          <h3>The Raven House</h3>
           <p>
-
-            A house tied to old rooms, remembered names,
-
-            black wings and the lives it helped shape.
-
+            A house tied to old rooms, remembered names, black wings and the
+            lives it helped shape.
           </p>
-
+          <p class="place-note">Rooms that refuse forgetting</p>
         </article>
 
-        <article class="book-card">
-
-          <p class="book-number">
-
-            House Beyond
-
-          </p>
-
-          <h3>
-
-            The Second Threshold
-
-          </h3>
-
+        <article class="book-card place-card">
+          <p class="book-number">House Beyond</p>
+          <h3>The Second Threshold</h3>
           <p>
-
-            A place beyond the familiar home where identity,
-
-            inheritance and freedom are tested again.
-
+            A place beyond the familiar hearth where identity, inheritance and
+            freedom are tested again.
           </p>
-
+          <p class="place-note">Another door, another choice</p>
         </article>
 
-        <article class="book-card">
-
-          <p class="book-number">
-
-            House of False Care
-
-          </p>
-
-          <h3>
-
-            Grey Cradle
-
-          </h3>
-
+        <article class="book-card place-card crown-place-card">
+          <p class="book-number">House of False Care</p>
+          <h3>Grey Cradle</h3>
           <p>
-
-            A controlled place where protection and possession
-
-            become dangerously difficult to separate.
-
+            A controlled place where protection and possession become
+            dangerously difficult to separate.
           </p>
-
+          <p class="place-note">A cradle built as a cage</p>
         </article>
-
       </div>
-
     </section>
 
-    <section class="panel">
-
-      <p class="eyebrow">
-
-        The Cold Road North
-
-      </p>
-
-      <h2>
-
-        Skeld-Fell
-
-      </h2>
+    <section class="panel" id="skeld-fell">
+      <p class="eyebrow">The Cold Road North</p>
+      <h2>Skeld-Fell</h2>
 
       <p>
-
-        Skeld-Fell rises in the north beneath snow, stone,
-
-        desperate law and cold hearths.
-
-      </p>
-
-      <p>
-
-        Its people know scarcity, but the saga asks whether need
-
+        Skeld-Fell rises in the north beneath snow, stone, desperate law and
+        cold hearths. Its people know scarcity, but the saga asks whether need
         can ever become permission to claim another life.
-
       </p>
 
-      <div class="lore-list">
+      <div class="book-grid place-grid">
+        <article class="book-card place-card north-place-card featured-book">
+          <p class="book-number">Sick Hearth</p>
+          <h3>Cold Hearth Hall</h3>
+          <p>
+            A hall where hospitality has thinned into pressure and blue-grey
+            fire offers warmth without safety.
+          </p>
+          <p class="place-note">Welcome hollowed out</p>
+        </article>
 
-        <span>Cold Hearth Hall</span>
+        <article class="book-card place-card north-place-card">
+          <p class="book-number">Winter Claim</p>
+          <h3>The Ransom House of Snow</h3>
+          <p>
+            A northern house shaped around debt, capture and the long patience
+            of winter.
+          </p>
+          <p class="place-note">A price beneath the snow</p>
+        </article>
 
-        <span>The Ransom House of Snow</span>
-
-        <span>The Mountain Roads</span>
-
-        <span>The Blue-Grey Fires</span>
-
-        <span>The Deep Cold</span>
-
+        <article class="book-card place-card north-place-card">
+          <p class="book-number">Mountain Road</p>
+          <h3>The Far Passes</h3>
+          <p>
+            High routes of weather, isolation, dangerous bargains and old cold
+            moving beneath the stone.
+          </p>
+          <p class="place-note">Beyond the last easy fire</p>
+        </article>
       </div>
-
     </section>
 
-    <section class="panel">
+    <section class="panel region-plate" id="green-deer-wood">
+      <figure>
+        <img
+          src="IMG_5588.jpeg"
+          alt="Forest keeper Kelda Veyrún kneeling beside a great bear"
+          width="1024"
+          height="1536"
+          loading="lazy"
+        />
+        <figcaption>
+          The keeper and the witness-bear upon the forest road.
+        </figcaption>
+      </figure>
 
-      <p class="eyebrow">
+      <div>
+        <p class="eyebrow">Old Forest Law</p>
+        <h2>Green Deer-Wood</h2>
 
-        Old Forest Law
+        <p>
+          Green Deer-Wood is a living forest of hidden law, animal signs, old
+          paths and roots that should not have begun speaking again.
+        </p>
 
-      </p>
+        <p>
+          The forest is kept through listening, pruning, healing, protecting
+          saplings and cutting away rot before it spreads. It is not passive
+          wilderness. It is a living community with memory, consequence and
+          laws older than human ownership.
+        </p>
 
-      <h2>
+        <p>
+          This is the road of Kelda Veyrún, the great witness-bear and the deeper
+          mysteries waiting beyond Book XVI.
+        </p>
 
-        Green Deer-Wood
+        <div class="book-grid">
+          <article class="book-card place-card forest-place-card featured-book">
+            <p class="book-number">Forest Heart</p>
+            <h3>The Green Roads</h3>
+            <p>
+              Paths shifting beneath leaf, rain, scent and animal memory.
+            </p>
+            <p class="place-note">The forest chooses how it is crossed</p>
+          </article>
 
-      </h2>
+          <article class="book-card place-card forest-place-card">
+            <p class="book-number">Keeper Ground</p>
+            <h3>The Listening Groves</h3>
+            <p>
+              Places where silence is read as carefully as speech.
+            </p>
+            <p class="place-note">Attention before action</p>
+          </article>
 
-      <p>
-
-        Green Deer-Wood is a living forest of hidden law,
-
-        animal signs, old paths and roots that should not
-
-        have begun speaking again.
-
-      </p>
-
-      <p>
-
-        The forest is kept through listening, pruning, healing,
-
-        protecting saplings and cutting away rot before it spreads.
-
-      </p>
-
-      <p>
-
-        It is also the road of Kelda Veyrún, the great witness-bear
-
-        and the deeper mysteries waiting beyond Book XVI.
-
-      </p>
-
-      <div class="book-grid">
-
-        <article class="book-card featured-book">
-
-          <p class="book-number">
-
-            Forest Heart
-
-          </p>
-
-          <h3>
-
-            The Green Roads
-
-          </h3>
-
-          <p>
-
-            Paths that shift beneath leaf, rain and animal memory.
-
-          </p>
-
-        </article>
-
-        <article class="book-card">
-
-          <p class="book-number">
-
-            Keeper Ground
-
-          </p>
-
-          <h3>
-
-            The Listening Groves
-
-          </h3>
-
-          <p>
-
-            Places where silence is read as carefully as speech.
-
-          </p>
-
-        </article>
-
-        <article class="book-card animal-card">
-
-          <p class="book-number">
-
-            Bear Law
-
-          </p>
-
-          <h3>
-
-            The Witness-Bear Paths
-
-          </h3>
-
-          <p>
-
-            Ancient animal roads known by scent, memory and trust.
-
-          </p>
-
-        </article>
-
+          <article class="book-card place-card forest-place-card">
+            <p class="book-number">Bear Law</p>
+            <h3>The Witness-Bear Paths</h3>
+            <p>
+              Ancient animal roads known through scent, memory and trust.
+            </p>
+            <p class="place-note">Older than the human map</p>
+          </article>
+        </div>
       </div>
-
     </section>
 
-    <section class="panel">
-
-      <p class="eyebrow">
-
-        Roads Beyond the Map
-
-      </p>
-
-      <h2>
-
-        The Unfinished Lands
-
-      </h2>
+    <section class="panel" id="unfinished-lands">
+      <p class="eyebrow">Roads Beyond the Map</p>
+      <h2>The Unfinished Lands</h2>
 
       <p>
-
-        Not every region has yet been fully named.
-
-        Some remain beyond the current manuscript roads,
-
-        waiting for Books XVIII to XX.
-
+        Not every region has yet been fully named. Some remain beyond the
+        current manuscript roads, waiting for Books XVIII to XX. The archive
+        knows enough to whisper, but not enough to open every gate.
       </p>
 
-      <div class="lore-list">
+      <dl class="road-table">
+        <dt>Deep Forest Roads</dt>
+        <dd>Leaf-dark routes carrying older animal law and forest memory.</dd>
 
-        <span>The Deep Forest Roads</span>
+        <dt>The Old Bear Line</dt>
+        <dd>A witness road whose history reaches beyond Green Deer-Wood.</dd>
 
-        <span>The Old Bear Line</span>
+        <dt>Far Northern Passes</dt>
+        <dd>Routes beyond Skeld-Fell where weather and law become stranger.</dd>
 
-        <span>The Far Northern Passes</span>
+        <dt>The Forgotten Shore</dt>
+        <dd>A coast held behind the later-book spoiler seal.</dd>
 
-        <span>The Forgotten Shore</span>
+        <dt>Roads Beneath Roads</dt>
+        <dd>Hidden passages linking memory, root and journeys not yet finished.</dd>
 
-        <span>The Roads Beneath Roads</span>
-
-        <span>The Lands After Root</span>
-
-      </div>
+        <dt>The Lands After Root</dt>
+        <dd>Places learning how to live after an ancient foundation is removed.</dd>
+      </dl>
 
       <blockquote>
-
         “The map ends only where courage stops drawing.”
-
       </blockquote>
-
     </section>
 
-    <section class="panel">
+    <section class="panel mark-panel">
+      <div>
+        <p class="eyebrow">Marks of Place and Witness</p>
+        <h2>The World Is Read, Not Merely Seen</h2>
 
-      <p class="eyebrow">
+        <p>
+          Vardrum’s roads, marshes, animals, keepers and witnesses carry marks
+          that help the living read danger, memory and belonging. These are the
+          fictional Witness-Marks of Black Wings, not borrowed historical runes.
+        </p>
 
-        The Laws Beneath Geography
+        <p>
+          A mark may record road, beast, spirit, witness or remembered law. Its
+          meaning depends upon who placed it, where it stands and whether the
+          living still consent to the story attached to it.
+        </p>
 
-      </p>
-
-      <h2>
-
-        Living World-Law
-
-      </h2>
-
-      <div class="lore-list law-list">
-
-        <span>A road belongs to those who walk it freely.</span>
-
-        <span>A house is judged by how it treats the frightened.</span>
-
-        <span>A forest is not empty because humans are silent.</span>
-
-        <span>An animal witness is still a witness.</span>
-
-        <span>Origin is not ownership.</span>
-
-        <span>Shelter cannot demand surrender.</span>
-
-        <span>Need does not create permission.</span>
-
-        <span>No crown owns the land’s memory.</span>
-
+        <div class="hero-buttons">
+          <a href="lore.html" class="button primary">Study the Lore</a>
+          <a href="maps.html" class="button secondary">Open the Maps</a>
+        </div>
       </div>
 
+      <figure>
+        <img
+          src="2BBF05BA-25CC-4628-A950-B1068F109A6E.png"
+          alt="Black Wings fictional Witness-Marks chart"
+          width="1254"
+          height="1254"
+          loading="lazy"
+        />
+      </figure>
+    </section>
+
+    <section class="panel" id="world-law">
+      <p class="eyebrow">The Laws Beneath Geography</p>
+      <h2>Living World-Law</h2>
+
+      <p>
+        Places in Black Wings are judged not by grandeur, age or ownership, but
+        by the choices they permit and the lives they protect.
+      </p>
+
+      <div class="law-grid">
+        <p class="world-law">A road belongs to those who walk it freely.</p>
+        <p class="world-law">A house is judged by how it treats the frightened.</p>
+        <p class="world-law">A forest is not empty because humans are silent.</p>
+        <p class="world-law">An animal witness is still a witness.</p>
+        <p class="world-law">Origin is not ownership.</p>
+        <p class="world-law">Shelter cannot demand surrender.</p>
+        <p class="world-law">Need does not create permission.</p>
+        <p class="world-law">No crown owns the land’s memory.</p>
+      </div>
     </section>
 
     <section class="panel final-road-panel">
+      <p class="eyebrow">Continue the Journey</p>
+      <h2>Choose the Next Road</h2>
 
-      <p class="eyebrow">
-
-        Continue the Journey
-
+      <p>
+        Follow the geography into maps, old law, songs, prayer-leaves and the
+        people who cross these lands.
       </p>
 
-      <h2>
-
-        Choose the Next Road
-
-      </h2>
-
       <div class="hero-buttons">
-
-        <a href="maps.html" class="button primary">
-
-          Open the Maps
-
-        </a>
-
-        <a href="lore.html" class="button secondary">
-
-          Read the Lore
-
-        </a>
-
-        <a href="characters.html" class="button secondary">
-
-          Meet the Travellers
-
-        </a>
-
+        <a href="maps.html" class="button primary">Open the Maps</a>
+        <a href="lore.html" class="button secondary">Read the Lore</a>
+        <a href="characters.html" class="button secondary">Meet the Travellers</a>
       </div>
-
     </section>
-
   </main>
 
   <footer>
-
     <nav class="footer-nav" aria-label="Footer navigation">
-
       <a href="index.html">Home</a>
-
       <a href="books.html">Books</a>
-
       <a href="characters.html">Characters</a>
-
+      <a href="rogues.html">Rogues</a>
       <a href="lore.html">Lore</a>
-
+      <a href="odes.html">Odes</a>
       <a href="maps.html">Maps</a>
-
+      <a href="archive.html">Archive</a>
       <a href="author.html">Author</a>
-
     </nav>
 
-    <p>
-
-      © 2026 Saga of Black Wings · Created by Timothy M. Halliday
-
-    </p>
-
-    <p class="footer-motto">
-
-      No crown shall count us smaller.
-
-    </p>
-
+    <p>© 2026 Saga of Black Wings · Created by Timothy M. Halliday</p>
+    <p class="footer-motto">No crown shall count us smaller.</p>
   </footer>
-
 </body>
-
 </html>
