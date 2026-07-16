@@ -1,156 +1,696 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Odes & Saga Plates | Saga of Black Wings</title>
+  <title>Odes and Songs | The Saga of Black Wings</title>
 
-  <meta name="description" content="Songs, odes, epitaphs, witness fragments, beast-law, raven warnings, love-odes, prayer-leaves and music sheets from the world of The Saga of Black Wings." />
+  <meta
+    name="description"
+    content="Enter the Skald-Room of The Saga of Black Wings: full odes, songs, epitaphs, prayer-leaves, beast verses, love poems and saga plates by Timothy M. Halliday."
+  />
+  <meta name="author" content="Timothy M. Halliday" />
+  <meta name="theme-color" content="#050608" />
 
+  <meta property="og:title" content="Odes and Songs | The Saga of Black Wings" />
+  <meta
+    property="og:description"
+    content="Full songs, odes, epitaphs, witness fragments and saga plates from Vardrum."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sagaofblackwings.com/odes.html" />
+  <meta
+    property="og:image"
+    content="https://sagaofblackwings.com/F8098CC8-B454-449C-B6F1-3623429B74A1.png"
+  />
+  <meta
+    property="og:image:alt"
+    content="The Braid raven crest bearing the motto No Crown Shall Count Us Smaller"
+  />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Odes and Songs | The Saga of Black Wings" />
+  <meta
+    name="twitter:description"
+    content="Open the Skald-Room and read the remembered verses of Black Wings."
+  />
+  <meta
+    name="twitter:image"
+    content="https://sagaofblackwings.com/F8098CC8-B454-449C-B6F1-3623429B74A1.png"
+  />
+
+  <link rel="canonical" href="https://sagaofblackwings.com/odes.html" />
   <link rel="stylesheet" href="style.css" />
 
   <style>
+    .odes-hero {
+      min-height: 74vh;
+      padding-top: 5.2rem;
+      padding-bottom: 5.2rem;
+      background:
+        radial-gradient(circle at 14% 18%, rgba(121, 67, 44, 0.24), transparent 28rem),
+        radial-gradient(circle at 88% 12%, rgba(221, 182, 95, 0.16), transparent 28rem),
+        linear-gradient(180deg, rgba(4, 5, 7, 0.97), rgba(11, 10, 12, 0.99));
+    }
+
+    .odes-hero-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(270px, 0.72fr);
+      gap: clamp(2rem, 6vw, 5rem);
+      align-items: center;
+      width: min(100%, 1120px);
+      margin: 0 auto;
+    }
+
+    .odes-hero .hero-text {
+      width: 100%;
+      text-align: left;
+    }
+
+    .odes-hero .tagline,
+    .odes-hero .hero-quote {
+      margin-left: 0;
+    }
+
+    .odes-hero .hero-buttons {
+      justify-content: flex-start;
+    }
+
+    .odes-crest {
+      margin: 0;
+      padding: 0.6rem;
+      background: rgba(5, 6, 8, 0.75);
+      border: 1px solid rgba(221, 182, 95, 0.42);
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .odes-crest img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 19px;
+    }
+
+    .archive-seal {
+      max-width: 880px;
+      margin: 1.5rem auto 0;
+      padding: 1rem 1.2rem;
+      color: var(--parchment-soft);
+      background: rgba(5, 6, 8, 0.42);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 12px 12px 0;
+    }
+
+    .skald-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.7rem;
+      margin-top: 1.8rem;
+    }
+
+    .skald-nav a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 0.55rem 0.9rem;
+      color: var(--parchment);
+      background: rgba(18, 21, 26, 0.84);
+      border: 1px solid rgba(221, 182, 95, 0.3);
+      border-radius: 999px;
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.67rem;
+      font-weight: 700;
+      letter-spacing: 0.052em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .skald-nav a:hover {
+      color: #160f07;
+      background: var(--gold-bright);
+      border-color: var(--gold-bright);
+    }
+
+    .canon-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .canon-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      border-color: rgba(221, 182, 95, 0.31);
+    }
+
+    .canon-card h3 {
+      font-size: clamp(1.2rem, 2.5vw, 1.65rem);
+    }
+
+    .canon-card .placement {
+      margin-top: auto;
+      padding-top: 0.8rem;
+      color: var(--gold);
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.075em;
+      text-transform: uppercase;
+    }
+
+    .canon-card.animals {
+      border-color: rgba(116, 68, 83, 0.52);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(116, 68, 83, 0.19), transparent 17rem),
+        linear-gradient(145deg, rgba(31, 26, 30, 0.97), rgba(10, 12, 15, 0.99));
+    }
+
+    .canon-card.ness {
+      border-color: rgba(111, 82, 124, 0.5);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(111, 82, 124, 0.19), transparent 17rem),
+        linear-gradient(145deg, rgba(30, 27, 36, 0.97), rgba(10, 12, 15, 0.99));
+    }
+
+    .canon-card.future {
+      border-color: rgba(49, 90, 69, 0.55);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(49, 90, 69, 0.22), transparent 17rem),
+        linear-gradient(145deg, rgba(23, 33, 27, 0.97), rgba(9, 13, 12, 0.99));
+    }
+
+    .song-feature {
+      display: grid;
+      grid-template-columns: minmax(270px, 0.72fr) minmax(0, 1.1fr);
+      gap: clamp(1.5rem, 5vw, 3.5rem);
+      align-items: center;
+    }
+
+    .song-feature figure {
+      margin: 0;
+      padding: 0.55rem;
+      background: rgba(5, 6, 8, 0.5);
+      border: 1px solid rgba(221, 182, 95, 0.3);
+      border-radius: 18px;
+    }
+
+    .song-feature img {
+      width: 100%;
+      border-radius: 13px;
+    }
+
+    .song-feature figcaption {
+      padding: 0.75rem 0.3rem 0.2rem;
+      color: var(--parchment-soft);
+      font-size: 0.8rem;
+      font-style: italic;
+      text-align: center;
+    }
+
+    .verse-stack {
+      display: grid;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .verse-entry {
+      overflow: hidden;
+      background:
+        linear-gradient(145deg, rgba(27, 25, 26, 0.98), rgba(10, 12, 15, 0.99));
+      border: 1px solid rgba(221, 182, 95, 0.28);
+      border-radius: 17px;
+      box-shadow: var(--soft-shadow);
+    }
+
+    .verse-entry[open] {
+      border-color: rgba(240, 210, 140, 0.48);
+    }
+
+    .verse-entry summary {
+      position: relative;
+      display: grid;
+      gap: 0.35rem;
+      padding: 1.25rem 3.4rem 1.25rem 1.3rem;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .verse-entry summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .verse-entry summary::after {
+      content: "+";
+      position: absolute;
+      top: 50%;
+      right: 1.3rem;
+      transform: translateY(-50%);
+      color: var(--gold-bright);
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 1.6rem;
+      line-height: 1;
+    }
+
+    .verse-entry[open] summary::after {
+      content: "−";
+    }
+
+    .verse-title {
+      color: #fff0ce;
+      font-family: "Cinzel", Georgia, serif;
+      font-size: clamp(1.05rem, 2.4vw, 1.45rem);
+      font-weight: 800;
+      line-height: 1.25;
+    }
+
+    .verse-subtitle {
+      color: var(--parchment-soft);
+      font-size: 0.86rem;
+      font-style: italic;
+    }
+
+    .verse-body {
+      padding: 1.3rem clamp(1.1rem, 4vw, 2.4rem) 2rem;
+      border-top: 1px solid rgba(221, 182, 95, 0.17);
+    }
+
+    .verse-body > p,
+    .verse-body > blockquote {
+      max-width: 760px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .verse-body > p {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1rem, 2.25vw, 1.12rem);
+      line-height: 1.85;
+    }
+
+    .verse-body h3 {
+      max-width: 760px;
+      margin: 1.8rem auto 0.8rem;
+      text-align: center;
+    }
+
+    .verse-body blockquote {
+      font-size: clamp(1.05rem, 2.35vw, 1.22rem);
+    }
+
+    .verse-body .download-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      margin: 1.2rem 0;
+    }
+
+    .verse-body .download-row a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 0.65rem 1rem;
+      color: var(--gold-bright);
+      background: rgba(5, 6, 8, 0.58);
+      border: 1px solid rgba(221, 182, 95, 0.35);
+      border-radius: 999px;
+      text-decoration: none;
+    }
 
     .music-sheet-frame {
-
-      margin-top: 1.25rem;
-
-      border: 1px solid rgba(230, 191, 118, 0.42);
-
-      border-radius: 18px;
-
-      overflow: hidden;
-
-      background: rgba(0, 0, 0, 0.28);
-
-      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
-
+      max-width: 760px;
+      margin: 1.4rem auto 0;
+      padding: 0.5rem;
+      background: rgba(5, 6, 8, 0.52);
+      border: 1px solid rgba(221, 182, 95, 0.32);
+      border-radius: 17px;
     }
 
     .music-sheet-frame img {
-
-      display: block;
-
       width: 100%;
-
-      height: auto;
-
+      border-radius: 12px;
     }
 
     .music-sheet-frame figcaption {
-
-      padding: 1rem;
-
-      border-top: 1px solid rgba(230, 191, 118, 0.3);
-
-      font-size: 0.95rem;
-
-      opacity: 0.92;
-
+      padding: 0.8rem 0.4rem 0.25rem;
+      color: var(--parchment-soft);
+      font-size: 0.8rem;
+      font-style: italic;
+      text-align: center;
     }
 
-    .download-row {
-
-      margin: 1rem 0 0.25rem;
-
-      display: flex;
-
-      flex-wrap: wrap;
-
-      gap: 0.75rem;
-
+    .epitaph-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem;
+      margin-top: 1.7rem;
     }
 
-    .download-row a {
-
-      display: inline-block;
-
-      padding: 0.75rem 1rem;
-
-      border: 1px solid rgba(230, 191, 118, 0.45);
-
-      border-radius: 999px;
-
-      text-decoration: none;
-
-      background: rgba(0, 0, 0, 0.22);
-
+    .epitaph-chip {
+      margin: 0;
+      padding: 1.1rem;
+      color: #f1e4cc;
+      background: rgba(5, 6, 8, 0.48);
+      border: 1px solid rgba(221, 182, 95, 0.23);
+      border-radius: 14px;
+      text-align: center;
     }
 
-    .song-credit {
-
-      font-size: 0.95rem;
-
-      opacity: 0.9;
-
+    .birds-plate {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(270px, 0.85fr);
+      gap: clamp(1.5rem, 5vw, 3.2rem);
+      align-items: center;
     }
 
+    .birds-plate figure {
+      margin: 0;
+      padding: 0.55rem;
+      background: rgba(5, 6, 8, 0.5);
+      border: 1px solid rgba(221, 182, 95, 0.27);
+      border-radius: 18px;
+    }
+
+    .birds-plate img {
+      width: 100%;
+      border-radius: 13px;
+    }
+
+    @media (max-width: 980px) {
+      .odes-hero-layout,
+      .song-feature,
+      .birds-plate {
+        grid-template-columns: 1fr;
+      }
+
+      .odes-hero .hero-text {
+        text-align: center;
+      }
+
+      .odes-hero .tagline,
+      .odes-hero .hero-quote {
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .odes-hero .hero-buttons {
+        justify-content: center;
+      }
+
+      .odes-crest,
+      .song-feature figure,
+      .birds-plate figure {
+        width: min(100%, 560px);
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .odes-hero {
+        min-height: auto;
+      }
+
+      .skald-nav {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .skald-nav a {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .canon-grid,
+      .epitaph-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .verse-entry summary {
+        padding-right: 3rem;
+      }
+    }
   </style>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Odes and Songs of The Saga of Black Wings",
+    "url": "https://sagaofblackwings.com/odes.html",
+    "description": "Full songs, odes, epitaphs, prayer-leaves and saga plates from The Saga of Black Wings.",
+    "author": {
+      "@type": "Person",
+      "name": "Timothy M. Halliday"
+    }
+  }
+  </script>
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <header class="hero">
+  <header class="page-hero odes-hero">
+    <div class="odes-hero-layout">
+      <div class="hero-text">
+        <p class="eyebrow">The Skald-Room</p>
 
-    <p class="eyebrow">The Skald-Room</p>
+        <h1>Odes, Songs and Saga Plates</h1>
 
-    <h1>Odes &amp; Saga Plates</h1>
+        <p class="tagline">
+          Love-odes, beast verses, work songs, epitaphs, prayer-leaves,
+          witness fragments and the words Vardrum refuses to forget.
+        </p>
 
-    <p class="hero-text">
+        <blockquote class="hero-quote">
+          “Not all who witness speak with human tongues.”
+        </blockquote>
 
-      Songs, epitaphs, witness fragments, beast-law, raven warnings, love-odes,
+        <div class="hero-buttons">
+          <a href="#public-archive" class="button primary">Open the Public Archive</a>
+          <a href="lore.html" class="button secondary">Read the Lore</a>
+          <a href="index.html" class="button secondary">Return Home</a>
+        </div>
+      </div>
 
-      prayer-leaves, music sheets and mystery plates from the world of Black Wings.
-
-    </p>
-
-    <div class="hero-actions">
-
-      <a href="index.html">Home</a>
-
-      <a href="lore.html">World &amp; Lore</a>
-
+      <figure class="odes-crest">
+        <img
+          src="F8098CC8-B454-449C-B6F1-3623429B74A1.png"
+          alt="The Braid raven crest bearing the motto No Crown Shall Count Us Smaller"
+          width="1254"
+          height="1254"
+          fetchpriority="high"
+        />
+      </figure>
     </div>
-
-    <nav class="site-nav" aria-label="Main navigation">
-
-      <a href="index.html">Home</a>
-
-      <a href="books.html">Books</a>
-
-      <a href="characters.html">Characters</a>
-
-      <a href="rogues.html">Rogues</a>
-
-      <a href="lore.html">World &amp; Lore</a>
-
-      <a href="odes.html">Odes</a>
-
-      <a href="maps.html">Maps</a>
-
-      <a href="archive.html">Visual Archive</a>
-
-      <a href="author.html">Author</a>
-
-      <a href="dedications.html">Dedications</a>
-
-    </nav>
-
   </header>
 
-  <main class="page-shell">
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="books.html">Books</a>
+    <a href="characters.html">Characters</a>
+    <a href="rogues.html">Rogues</a>
+    <a href="world.html">World</a>
+    <a href="lore.html">Lore</a>
+    <a href="odes.html" aria-current="page">Odes</a>
+    <a href="maps.html">Maps</a>
+    <a href="archive.html">Archive</a>
+    <a href="author.html">Author</a>
+    <a href="dedications.html">Dedications</a>
+  </nav>
 
-    <section class="card">
-
-      <h2>Salt-Marches Prayer-Leaf of Vardrum</h2>
+  <main id="main-content">
+    <section class="panel intro-panel">
+      <p class="eyebrow">Songs Beneath the Story</p>
+      <h2>The Archive That Sings Back</h2>
 
       <p>
+        Poetry in Black Wings is record, warning, grief, humour, romance,
+        folklore and living law. Some pieces are sung inside the books. Some
+        stand at chapter thresholds. Others belong to the wider archive of
+        Witness Isle and the Salt-Marsh.
+      </p>
+
+      <p>
+        The longer public pieces below sit inside tap-to-open panels. This keeps
+        the page gentle to navigate while preserving the full poems and songs.
+      </p>
+
+      <p class="archive-seal">
+        The Book XVI shelf names approved canonical odes without exposing their
+        full manuscript text or exact story events. The complete public works
+        remain available farther down the page.
+      </p>
+
+      <nav class="skald-nav" aria-label="Jump to Skald-Room sections">
+        <a href="#book-sixteen">Book XVI Shelf</a>
+        <a href="#salt-reed-song">Salt-Reed Song</a>
+        <a href="#public-archive">Full Public Works</a>
+        <a href="#road-epitaphs">Road Epitaphs</a>
+        <a href="#wing-pair">Wing-Pair</a>
+      </nav>
+    </section>
+
+    <section class="panel" id="book-sixteen">
+      <p class="eyebrow">The Canon Shelf</p>
+      <h2>Approved Odes of Book XVI</h2>
+
+      <p>
+        These are part of <em>Book XVI: The Braid, Part II</em>. Their titles
+        and roles may be known. Their full manuscript placement remains guarded.
+      </p>
+
+      <div class="book-grid canon-grid">
+        <article class="book-card canon-card featured-book">
+          <p class="book-number">Opening Threshold</p>
+          <h3>Ode of the Braid Who Loved in Many Tongues</h3>
+          <p>
+            The leading bridge into a book where love speaks through romance,
+            friendship, family, sign, scent, feather, fur and flame.
+          </p>
+          <p class="placement">Opening Book XVI</p>
+        </article>
+
+        <article class="book-card canon-card">
+          <p class="book-number">Bruhald Scarweary</p>
+          <h3>Ode of the Braid, Their Loves, Their Disasters, and the Animals Who Took the Piss</h3>
+          <p>
+            A rowdier threshold telling, attributed to Bruhald after three cups
+            of mercy, two cups of regret and one crow stealing his supper.
+          </p>
+          <p class="placement">Opening companion ode</p>
+        </article>
+
+        <article class="book-card canon-card">
+          <p class="book-number">Endurance Ode</p>
+          <h3>Ode of the Battles That Would Not Finish</h3>
+          <p>
+            FATAS, invisible wars, repeated rising, the animal witnesses and
+            Ness walking beside rather than behind.
+          </p>
+          <p class="placement">Book XVI manuscript canon</p>
+        </article>
+
+        <article class="book-card canon-card animals">
+          <p class="book-number">Animal Witness Ode</p>
+          <h3>Ode of the Animals Who Kept the Braid</h3>
+          <p>
+            Scarlet, Blue, Mad, Benson, Hugo, Shane, Mylo, Jack, Dusk and
+            Bella’s Flame remembered as part of the Braid itself.
+          </p>
+          <p class="placement">After reunion or shared hardship</p>
+        </article>
+
+        <article class="book-card canon-card ness">
+          <p class="book-number">Principal Ness Ode</p>
+          <h3>Ode of Ness, Who Kept the Braid from Unravelling</h3>
+          <p>
+            Ness as the quiet living force who steadies and reconnects the
+            family without becoming owner, crown or command.
+          </p>
+          <p class="placement">Later third of Book XVI</p>
+        </article>
+
+        <article class="book-card canon-card">
+          <p class="book-number">Inter-Chapter I</p>
+          <h3>Ode of the Hearth That Made Room</h3>
+          <p>
+            A hearth measured by who is welcomed, fed and allowed to remain
+            entirely themselves.
+          </p>
+          <p class="placement">Book XVI inter-chapter canon</p>
+        </article>
+
+        <article class="book-card canon-card animals">
+          <p class="book-number">Inter-Chapter II</p>
+          <h3>Ode of the Wing-Pair Who Would Not Bow</h3>
+          <p>
+            Scarlet and Blue as bonded witnesses, one carrying sharp laughter
+            and the other high silence.
+          </p>
+          <p class="placement">Book XVI inter-chapter canon</p>
+        </article>
+
+        <article class="book-card canon-card">
+          <p class="book-number">Inter-Chapter III</p>
+          <h3>Ode of the Reed-Shaft That Remembered</h3>
+          <p>
+            Salt-Marsh memory carried through ordinary material after official
+            records have failed.
+          </p>
+          <p class="placement">Book XVI inter-chapter canon</p>
+        </article>
+
+        <article class="book-card canon-card future">
+          <p class="book-number">Later Mythic Archive</p>
+          <h3>Ode of the Beasts Who Bore the Braid</h3>
+          <p>
+            A larger and more legendary beast-ode reserved for the distant road
+            after Book XVI.
+          </p>
+          <p class="placement">Held for Books XVIII to XX</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel song-feature" id="salt-reed-song">
+      <figure>
+        <img
+          src="4BFA5717-5C1B-4135-8539-ECD4D79704B2.png"
+          alt="Where the Salt Reeds Grow lyric and chord sheet by Timothy M. Halliday"
+          width="1055"
+          height="1491"
+          loading="lazy"
+        />
+        <figcaption>
+          Full lyric and chord plate for “Where the Salt Reeds Grow.”
+        </figcaption>
+      </figure>
+
+      <div>
+        <p class="eyebrow">Salt-Marsh Work Song</p>
+        <h2>Where the Salt Reeds Grow</h2>
+
+        <p>
+          A harvest song for reed-cutters, mat-makers, shoemakers, children,
+          grandmothers, gull-watchers and all who know ordinary labour may carry
+          old magic in its rhythm.
+        </p>
+
+        <p>
+          Best sung in a steady walking beat: one cut, one lift, one bind, one
+          carry.
+        </p>
+
+        <p class="quote">Written by Timothy M. Halliday.</p>
+
+        <div class="hero-buttons">
+          <a
+            href="where_the_salt_reeds_grow_timothy_m_halliday.docx"
+            class="button primary"
+            download
+          >
+            Download the Song Sheet
+          </a>
+          <a href="#public-archive" class="button secondary">Read the Full Entry</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="public-archive">
+      <p class="eyebrow">Full Public Works</p>
+      <h2>Tap a Title to Open It</h2>
+
+      <p>
+        Every poem and song from the existing public Skald-Room has been
+        preserved below. Tap the same title again to close it.
+      </p>
+
+      <div class="verse-stack">
+        <details class="verse-entry"><summary><span class="verse-title">Salt-Marches Prayer-Leaf of Vardrum</span><span class="verse-subtitle">A preserved entry from the Skald-Room.</span></summary><div class="verse-body">
+
+<p>
 
         Copied from the reed-bound household leaves of the Salt-Marches, where black wings
 
@@ -159,106 +699,93 @@
         anyone with sense enough to keep a roof.
 
       </p>
+<h3>Prayer for the Ravens &amp; Crows</h3>
+<p>
 
-      <h3>Prayer for the Ravens &amp; Crows</h3>
+        O black-feathered keepers of the wind,<br/>
 
-      <p>
+        you who write the sky with your wings,<br/>
 
-        O black-feathered keepers of the wind,<br>
-
-        you who write the sky with your wings,<br>
-
-        carry the whispers of the earth<br>
+        carry the whispers of the earth<br/>
 
         to the far edges of the dawn.
 
       </p>
+<p>
 
-      <p>
+        Guardians of shadow and silver light,<br/>
 
-        Guardians of shadow and silver light,<br>
+        your eyes hold the memory of storms,<br/>
 
-        your eyes hold the memory of storms,<br>
-
-        the glint of hidden rivers,<br>
+        the glint of hidden rivers,<br/>
 
         the truth that outlives the telling.
 
       </p>
+<p>
 
-      <p>
+        May your flight be unbroken,<br/>
 
-        May your flight be unbroken,<br>
+        your hunger always met by the generous field,<br/>
 
-        your hunger always met by the generous field,<br>
-
-        your nests cradled in branches<br>
+        your nests cradled in branches<br/>
 
         that sway but never break.
 
       </p>
+<p>
 
-      <p>
+        Teach us the patience of your watch,<br/>
 
-        Teach us the patience of your watch,<br>
+        the courage of your descent,<br/>
 
-        the courage of your descent,<br>
-
-        the wisdom to find beauty<br>
+        the wisdom to find beauty<br/>
 
         in what others cast aside.
 
       </p>
+<p>
 
-      <p>
+        And when the night folds over the hills,<br/>
 
-        And when the night folds over the hills,<br>
+        let your voices rise like dark bells,<br/>
 
-        let your voices rise like dark bells,<br>
-
-        calling us home<br>
+        calling us home<br/>
 
         to the mystery we have forgotten.
 
       </p>
+<h3>Dusk Blessing for Ravens &amp; Crows</h3>
+<p>
 
-      <h3>Dusk Blessing for Ravens &amp; Crows</h3>
-
-      <p>
-
-        Black-winged watchers of the fading light,<br>
+        Black-winged watchers of the fading light,<br/>
 
         circle the sky where the sun bows low.
 
       </p>
+<p>
 
-      <p>
-
-        Carry the day’s last breath to the stars,<br>
+        Carry the day’s last breath to the stars,<br/>
 
         and guard the dreams that the sleepers sow.
 
       </p>
+<p>
 
-      <p>
-
-        Feathers of night, eyes of ember-glow,<br>
+        Feathers of night, eyes of ember-glow,<br/>
 
         keep the path between worlds in sight.
 
       </p>
+<p>
 
-      <p>
-
-        Return at dawn with the truth you know,<br>
+        Return at dawn with the truth you know,<br/>
 
         and rest in the arms of the sheltering night.
 
       </p>
-
-      <h3>Keeper’s Note</h3>
-
-      <p>
+<h3>Keeper’s Note</h3>
+<p>
 
         In Vardrum, these prayers were not always said in temples. More often they were
 
@@ -269,34 +796,20 @@
         before weather changed.
 
       </p>
-
-      <p>
+<p>
 
         The old ones said ravens carried memory upward, and crows carried warning sideways.
 
       </p>
+<p>Neither bird belonged to death alone.</p>
+<p>They belonged to witness.</p>
+<p>They belonged to what survived being thrown away.</p>
+<p>They belonged to the black grammar of the sky.</p>
+</div></details>
+<details class="verse-entry" open=""><summary><span class="verse-title">Where the Salt Reeds Grow</span><span class="verse-subtitle">Full lyric and chord sheet · Timothy M. Halliday</span></summary><div class="verse-body">
 
-      <p>Neither bird belonged to death alone.</p>
 
-      <p>They belonged to witness.</p>
-
-      <p>They belonged to what survived being thrown away.</p>
-
-      <p>They belonged to the black grammar of the sky.</p>
-
-    </section>
-
-    <section class="card">
-
-      <h2>Where the Salt Reeds Grow</h2>
-
-      <p class="lede">
-
-        Full lyric and chord sheet · Timothy M. Halliday
-
-      </p>
-
-      <p>
+<p>
 
         A Salt-Marsh work song for reed-cutters, mat-makers, shoemakers, children,
 
@@ -305,1239 +818,1120 @@
         old magic in its rhythm.
 
       </p>
-
-      <p class="song-credit">
+<p class="song-credit">
 
         Best sung in a steady walking beat: one cut, one lift, one bind, one carry.
 
       </p>
-
-      <div class="download-row">
-
-        <a href="where_the_salt_reeds_grow_timothy_m_halliday.docx" download>
+<div class="download-row">
+<a download="" href="where_the_salt_reeds_grow_timothy_m_halliday.docx">
 
           Download original Word song sheet
 
         </a>
-
-      </div>
-
-      <figure class="music-sheet-frame">
-
-        <img src="4BFA5717-5C1B-4135-8539-ECD4D79704B2.png" alt="Where the Salt Reeds Grow full lyric and chord sheet by Timothy M. Halliday." />
-
-        <figcaption>
+</div>
+<figure class="music-sheet-frame">
+<img alt="Where the Salt Reeds Grow full lyric and chord sheet by Timothy M. Halliday." src="4BFA5717-5C1B-4135-8539-ECD4D79704B2.png"/>
+<figcaption>
 
           Where the Salt Reeds Grow: a Salt-Marsh harvest song with chords, call-and-response bridge and singing note.
 
         </figcaption>
+</figure>
+</div></details>
+<details class="verse-entry"><summary><span class="verse-title">Ode of Ness, Lucy, Jesse, and Kian</span><span class="verse-subtitle">The Family Love That Death Could Not Unmake</span></summary><div class="verse-body">
 
-      </figure>
 
-    </section>
+<p>
 
-    <section class="card">
+        Sing softly now, O hearth and hall,<br/>
 
-      <h2>Ode of Ness, Lucy, Jesse, and Kian</h2>
+        of love that would not bow,<br/>
 
-      <p class="lede">
-
-        The Family Love That Death Could Not Unmake
-
-      </p>
-
-      <p>
-
-        Sing softly now, O hearth and hall,<br>
-
-        of love that would not bow,<br>
-
-        of hands that held through storm and night,<br>
+        of hands that held through storm and night,<br/>
 
         and still are holding now.
 
       </p>
+<p>
 
-      <p>
+        Sing Ness, whose heart kept lanterns lit<br/>
 
-        Sing Ness, whose heart kept lanterns lit<br>
+        when winter filled the door,<br/>
 
-        when winter filled the door,<br>
-
-        who gave her love not loud, but deep,<br>
+        who gave her love not loud, but deep,<br/>
 
         like roots beneath the floor.
 
       </p>
+<p>
 
-      <p>
+        She stood where broken voices shook,<br/>
 
-        She stood where broken voices shook,<br>
+        where grief had left its scar,<br/>
 
-        where grief had left its scar,<br>
-
-        and still she made a home of warmth<br>
+        and still she made a home of warmth<br/>
 
         beneath each wounded star.
 
       </p>
+<p>
 
-      <p>
+        Sing Lucy, fierce with mother-light,<br/>
 
-        Sing Lucy, fierce with mother-light,<br>
+        with sorrow in her flame,<br/>
 
-        with sorrow in her flame,<br>
-
-        who carried love through days no heart<br>
+        who carried love through days no heart<br/>
 
         should ever have to name.
 
       </p>
+<p>
 
-      <p>
+        She knew the ache of empty rooms,<br/>
 
-        She knew the ache of empty rooms,<br>
+        the silence after prayer,<br/>
 
-        the silence after prayer,<br>
-
-        yet still her love rose every dawn<br>
+        yet still her love rose every dawn<br/>
 
         and filled the breathing air.
 
       </p>
+<p>
 
-      <p>
+        Sing Jesse, steady as a shield,<br/>
 
-        Sing Jesse, steady as a shield,<br>
+        with loyalty in his bones,<br/>
 
-        with loyalty in his bones,<br>
-
-        who did not flee the heavy days<br>
+        who did not flee the heavy days<br/>
 
         or leave love on its own.
 
       </p>
+<p>
 
-      <p>
+        He stood beside the family fire<br/>
 
-        He stood beside the family fire<br>
+        when ash and darkness came,<br/>
 
-        when ash and darkness came,<br>
-
-        and kept his place with quiet strength<br>
+        and kept his place with quiet strength<br/>
 
         that grief could never tame.
 
       </p>
+<p>
 
-      <p>
+        And sing young Kian, little bell<br/>
 
-        And sing young Kian, little bell<br>
+        of worlds beyond our sight,<br/>
 
-        of worlds beyond our sight,<br>
-
-        whose courage walked through shadowed fields<br>
+        whose courage walked through shadowed fields<br/>
 
         and turned the dark to light.
 
       </p>
+<p>
 
-      <p>
+        No illness stole his warrior heart,<br/>
 
-        No illness stole his warrior heart,<br>
+        no pain unmade his grace;<br/>
 
-        no pain unmade his grace;<br>
-
-        his smile still runs through memory’s halls<br>
+        his smile still runs through memory’s halls<br/>
 
         and blesses every place.
 
       </p>
+<p>
 
-      <p>
+        He is not gone from family love,<br/>
 
-        He is not gone from family love,<br>
+        not lost, not cast away;<br/>
 
-        not lost, not cast away;<br>
-
-        he walks where unseen rivers shine<br>
+        he walks where unseen rivers shine<br/>
 
         beyond the edge of day.
 
       </p>
+<p>
 
-      <p>
+        He is the laugh inside the wind,<br/>
 
-        He is the laugh inside the wind,<br>
+        the feather near the door,<br/>
 
-        the feather near the door,<br>
-
-        the small brave star that finds the house<br>
+        the small brave star that finds the house<br/>
 
         and watches evermore.
 
       </p>
+<p>
 
-      <p>
+        For Ness loved on, and Lucy loved,<br/>
 
-        For Ness loved on, and Lucy loved,<br>
+        and Jesse held the line;<br/>
 
-        and Jesse held the line;<br>
-
-        and Kian, bright beyond the veil,<br>
+        and Kian, bright beyond the veil,<br/>
 
         still keeps his place in time.
 
       </p>
+<p>
 
-      <p>
+        A family is not blood alone,<br/>
 
-        A family is not blood alone,<br>
+        nor walls, nor name, nor ground;<br/>
 
-        nor walls, nor name, nor ground;<br>
-
-        it is the vow that says, I’m here,<br>
+        it is the vow that says, I’m here,<br/>
 
         when no easy road is found.
 
       </p>
+<p>
 
-      <p>
+        It is the chair kept in the heart,<br/>
 
-        It is the chair kept in the heart,<br>
+        the candle never dimmed,<br/>
 
-        the candle never dimmed,<br>
-
-        the whispered name at evening’s hush,<br>
+        the whispered name at evening’s hush,<br/>
 
         the prayer still shaped for him.
 
       </p>
+<p>
 
-      <p>
+        So let the Braid remember them,<br/>
 
-        So let the Braid remember them,<br>
+        by hearth, by wing, by stone:<br/>
 
-        by hearth, by wing, by stone:<br>
-
-        that love can make a kingdom wide<br>
+        that love can make a kingdom wide<br/>
 
         from one small family home.
 
       </p>
+<p>
 
-      <p>
+        Let every raven lower wing,<br/>
 
-        Let every raven lower wing,<br>
+        let every wolf stand still,<br/>
 
-        let every wolf stand still,<br>
-
-        let every child of grief be told:<br>
+        let every child of grief be told:<br/>
 
         love lives against the chill.
 
       </p>
+<p>
 
-      <p>
+        For Ness, for Lucy, Jesse too,<br/>
 
-        For Ness, for Lucy, Jesse too,<br>
+        for Kian, brave and bright,<br/>
 
-        for Kian, brave and bright,<br>
-
-        their family love remains a flame<br>
+        their family love remains a flame<br/>
 
         no dark can steal from light.
 
       </p>
+<p>
 
-      <p>
+        And when the final stars are called,<br/>
 
-        And when the final stars are called,<br>
+        and all old wounds are healed,<br/>
 
-        and all old wounds are healed,<br>
-
-        their names shall bloom like golden reeds<br>
+        their names shall bloom like golden reeds<br/>
 
         across the unseen field.
 
       </p>
+<p>
 
-      <p>
+        So sing them soft, and sing them true,<br/>
 
-        So sing them soft, and sing them true,<br>
+        where love and memory run:<br/>
 
-        where love and memory run:<br>
-
-        four hearts held in one sacred thread,<br>
+        four hearts held in one sacred thread,<br/>
 
         four flames that burn as one.
 
       </p>
+<p>FATAS · 05/07/2026 🐦‍⬛</p>
+</div></details>
+<details class="verse-entry"><summary><span class="verse-title">Ode of FATAS to Maisie</span><span class="verse-subtitle">Keeper of Hugo from Benson Without Just Cause</span></summary><div class="verse-body">
 
-      <p>FATAS · 05/07/2026 🐦‍⬛</p>
 
-    </section>
+<p>
 
-    <section class="card">
+        O Maisie, daughter of mine own storm-lit heart,<br/>
 
-      <h2>Ode of FATAS to Maisie</h2>
+        thou small queen of attitude and doorways barred,<br/>
 
-      <p class="lede">
+        thou keeper of Hugo beyond the sacred reach,<br/>
 
-        Keeper of Hugo from Benson Without Just Cause
-
-      </p>
-
-      <p>
-
-        O Maisie, daughter of mine own storm-lit heart,<br>
-
-        thou small queen of attitude and doorways barred,<br>
-
-        thou keeper of Hugo beyond the sacred reach,<br>
-
-        thou warden of cuddles, splitter of paws,<br>
+        thou warden of cuddles, splitter of paws,<br/>
 
         hear now the cry of thy wounded father.
 
       </p>
+<p>
 
-      <p>
+        For lo, each morning breaketh upon this house<br/>
 
-        For lo, each morning breaketh upon this house<br>
+        with the same sorrow nailed upon the sun:<br/>
 
-        with the same sorrow nailed upon the sun:<br>
+        Hugo, poor Hugo, soft lord of snuffles,<br/>
 
-        Hugo, poor Hugo, soft lord of snuffles,<br>
+        held from Benson, noble Benson,<br/>
 
-        held from Benson, noble Benson,<br>
+        for no grand law,<br/>
 
-        for no grand law,<br>
+        for no ancient oath,<br/>
 
-        for no ancient oath,<br>
-
-        for no prophecy whispered by ravens,<br>
+        for no prophecy whispered by ravens,<br/>
 
         but merely because thou knowest it windeth me up.
 
       </p>
+<p>
 
-      <p>
+        And yea, thou dost wind me up.<br/>
 
-        And yea, thou dost wind me up.<br>
+        Thou windest me like a battle-horn before ruin.<br/>
 
-        Thou windest me like a battle-horn before ruin.<br>
+        Thou windest me like a clock made by goblins.<br/>
 
-        Thou windest me like a clock made by goblins.<br>
+        Thou windest me till my very eyebrows march north<br/>
 
-        Thou windest me till my very eyebrows march north<br>
-
-        and my soul crieth,<br>
+        and my soul crieth,<br/>
 
         “Maisie, why hast thou done this thing?”
 
       </p>
+<p>
 
-      <p>
+        For Hugo longeth.<br/>
 
-        For Hugo longeth.<br>
+        Benson wondereth.<br/>
 
-        Benson wondereth.<br>
+        The house itself groaneth in its beams.<br/>
 
-        The house itself groaneth in its beams.<br>
-
-        Even the dust upon the windowsill doth say,<br>
+        Even the dust upon the windowsill doth say,<br/>
 
         “Surely this is too much.”
 
       </p>
+<p>
 
-      <p>
+        What crime hath Benson committed?<br/>
 
-        What crime hath Benson committed?<br>
+        Hath he stolen thy crown?<br/>
 
-        Hath he stolen thy crown?<br>
-
-        Hath he eaten thy slippers?<br>
+        Hath he eaten thy slippers?<br/>
 
         Hath he written lies upon the moon?
 
       </p>
+<p>
 
-      <p>
+        Nay.<br/>
 
-        Nay.<br>
+        He merely existeth, full of Bensonness,<br/>
 
-        He merely existeth, full of Bensonness,<br>
+        waiting with a heart as loyal as an old gate,<br/>
 
-        waiting with a heart as loyal as an old gate,<br>
-
-        while Hugo is kept away<br>
+        while Hugo is kept away<br/>
 
         behind the invisible fortress of thy stubbornness.
 
       </p>
+<p>
 
-      <p>
+        O daughter, thou art loved beyond measure,<br/>
 
-        O daughter, thou art loved beyond measure,<br>
-
-        but by the old bones of the Braid,<br>
+        but by the old bones of the Braid,<br/>
 
         this is an absolute travesty.
 
       </p>
+<p>
 
-      <p>
+        A disgrace.<br/>
 
-        A disgrace.<br>
+        An abomination of misdeeds.<br/>
 
-        An abomination of misdeeds.<br>
-
-        A sorrow fit to be carved upon black stone<br>
+        A sorrow fit to be carved upon black stone<br/>
 
         and sung by tired fathers beside cold tea.
 
       </p>
+<p>
 
-      <p>
+        Every day thou keepest Hugo from Benson,<br/>
 
-        Every day thou keepest Hugo from Benson,<br>
+        another candle gutters in the hall of our happiness.<br/>
 
-        another candle gutters in the hall of our happiness.<br>
+        Every day thou smirkest and sayest,<br/>
 
-        Every day thou smirkest and sayest,<br>
-
-        “No,”<br>
+        “No,”<br/>
 
         another tiny crack runneth through the family hearth.
 
       </p>
+<p>
 
-      <p>
+        Every day this separation endureth,<br/>
 
-        Every day this separation endureth,<br>
+        thy father’s heart doth fall dramatically<br/>
 
-        thy father’s heart doth fall dramatically<br>
-
-        upon the floor,<br>
+        upon the floor,<br/>
 
         where even the dogs must step around it.
 
       </p>
+<p>
 
-      <p>
+        Hast thou no mercy?<br/>
 
-        Hast thou no mercy?<br>
+        Hast thou no pity?<br/>
 
-        Hast thou no pity?<br>
-
-        Hast thou no small crumb of kindness<br>
+        Hast thou no small crumb of kindness<br/>
 
         for the ancient fellowship of Hugo and Benson?
 
       </p>
+<p>
 
-      <p>
+        Let them meet.<br/>
 
-        Let them meet.<br>
+        Let them sniff.<br/>
 
-        Let them sniff.<br>
-
-        Let them wag.<br>
+        Let them wag.<br/>
 
         Let peace return upon four paws.
 
       </p>
+<p>
 
-      <p>
+        For this house was not built for needless division.<br/>
 
-        For this house was not built for needless division.<br>
+        It was not raised so that Hugo should sit apart<br/>
 
-        It was not raised so that Hugo should sit apart<br>
+        and Benson should wonder why joy hath been cancelled.<br/>
 
-        and Benson should wonder why joy hath been cancelled.<br>
-
-        It was not made for the cold theatre<br>
+        It was not made for the cold theatre<br/>
 
         of thy winding-up behaviour.
 
       </p>
+<p>
 
-      <p>
-
-        Nay, Maisie.<br>
+        Nay, Maisie.<br/>
 
         A thousand times nay.
 
       </p>
+<p>
 
-      <p>
+        Thou art my daughter,<br/>
 
-        Thou art my daughter,<br>
+        my bright trouble,<br/>
 
-        my bright trouble,<br>
-
-        my fierce little thundercloud,<br>
+        my fierce little thundercloud,<br/>
 
         and I would fight the world for thee.
 
       </p>
+<p>
 
-      <p>
-
-        But hear me now with both ears open:<br>
+        But hear me now with both ears open:<br/>
 
         this daily heartbreak hath gone too far.
 
       </p>
+<p>
 
-      <p>
+        Release Hugo unto Benson.<br/>
 
-        Release Hugo unto Benson.<br>
-
-        Open the way.<br>
+        Open the way.<br/>
 
         End this cruel saga of unnecessary separation.
 
       </p>
+<p>
 
-      <p>
+        Let the paws be joined,<br/>
 
-        Let the paws be joined,<br>
+        let the tails declare victory,<br/>
 
-        let the tails declare victory,<br>
+        let thy father breathe again<br/>
 
-        let thy father breathe again<br>
-
-        without muttering,<br>
+        without muttering,<br/>
 
         “She is doing this just to piss me orf.”
 
       </p>
+<p>
 
-      <p>
+        For I know thee, Maisie.<br/>
 
-        For I know thee, Maisie.<br>
+        I know thy smile when thou art up to something.<br/>
 
-        I know thy smile when thou art up to something.<br>
-
-        I know thy face of innocence,<br>
+        I know thy face of innocence,<br/>
 
         which is about as innocent as a raven holding a stolen biscuit.
 
       </p>
+<p>
 
-      <p>
-
-        Thou hast power in this matter,<br>
+        Thou hast power in this matter,<br/>
 
         and power must be used wisely.
 
       </p>
+<p>
 
-      <p>
+        So I beseech thee,<br/>
 
-        So I beseech thee,<br>
+        by love,<br/>
 
-        by love,<br>
+        by family,<br/>
 
-        by family,<br>
-
-        by every soft-eared creature that ever waited at a door,<br>
+        by every soft-eared creature that ever waited at a door,<br/>
 
         stop this sorrow.
 
       </p>
-
-      <p>
+<p>
 
         Let Hugo go to Benson.
 
       </p>
+<p>
 
-      <p>
+        And if thou dost not,<br/>
 
-        And if thou dost not,<br>
+        then let it be known across the lands,<br/>
 
-        then let it be known across the lands,<br>
+        from sofa to staircase,<br/>
 
-        from sofa to staircase,<br>
+        from kitchen to garden gate,<br/>
 
-        from kitchen to garden gate,<br>
+        that FATAS, thy father,<br/>
 
-        that FATAS, thy father,<br>
+        did raise his voice in noble protest,<br/>
 
-        did raise his voice in noble protest,<br>
+        not from anger alone,<br/>
 
-        not from anger alone,<br>
+        but because his heart,<br/>
 
-        but because his heart,<br>
+        and Benson’s heart,<br/>
 
-        and Benson’s heart,<br>
+        and Hugo’s heart,<br/>
 
-        and Hugo’s heart,<br>
-
-        are being battered daily<br>
+        are being battered daily<br/>
 
         by this needless, wicked, attitude-fuelled calamity.
 
       </p>
-
-      <p>
+<p>
 
         Return them to one another, daughter.
 
       </p>
+<p>
 
-      <p>
+        Do this,<br/>
 
-        Do this,<br>
+        and peace shall come again.<br/>
 
-        and peace shall come again.<br>
+        Do this,<br/>
 
-        Do this,<br>
+        and thy father shall call thee merciful.<br/>
 
-        and thy father shall call thee merciful.<br>
-
-        Do this,<br>
+        Do this,<br/>
 
         and the house shall sing.
 
       </p>
+<p>
 
-      <p>
-
-        But delay again,<br>
+        But delay again,<br/>
 
         and the bards shall name this age forever:
 
       </p>
+<blockquote>
 
-      <blockquote>
+        The Great Keeping-Apart of Hugo and Benson,<br/>
 
-        The Great Keeping-Apart of Hugo and Benson,<br>
-
-        A Disgrace Most Furry,<br>
+        A Disgrace Most Furry,<br/>
 
         Committed Under the Reign of Maisie the Wind-Up Queen.
 
       </blockquote>
+</div></details>
+<details class="verse-entry"><summary><span class="verse-title">Ode to Ness, the Only Woman My Heart Will Ever Seek</span><span class="verse-subtitle">FATAS to Ness · 16/06/2026</span></summary><div class="verse-body">
 
-    </section>
 
-    <section class="card">
+<p>Ness,</p>
+<p>
 
-      <h2>Ode to Ness, the Only Woman My Heart Will Ever Seek</h2>
+        you are the quiet miracle<br/>
 
-      <p class="lede">
-
-        FATAS to Ness · 16/06/2026
-
-      </p>
-
-      <p>Ness,</p>
-
-      <p>
-
-        you are the quiet miracle<br>
-
-        my life kept walking toward<br>
+        my life kept walking toward<br/>
 
         before I even knew your name.
 
       </p>
+<p>
 
-      <p>
+        Not a passing brightness.<br/>
 
-        Not a passing brightness.<br>
+        Not a sweet accident.<br/>
 
-        Not a sweet accident.<br>
+        Not some small pretty thing<br/>
 
-        Not some small pretty thing<br>
-
-        the world placed in my hands<br>
+        the world placed in my hands<br/>
 
         for a season.
 
       </p>
+<p>
 
-      <p>
+        You are the one.<br/>
 
-        You are the one.<br>
-
-        The woman my heart knows<br>
+        The woman my heart knows<br/>
 
         before thought can speak.
 
       </p>
+<p>
 
-      <p>
+        The face I would search for<br/>
 
-        The face I would search for<br>
+        in every crowd,<br/>
 
-        in every crowd,<br>
+        in every country,<br/>
 
-        in every country,<br>
+        in every strange and shining afterlife<br/>
 
-        in every strange and shining afterlife<br>
-
-        where souls wake<br>
+        where souls wake<br/>
 
         and remember who they loved.
 
       </p>
+<p>
 
-      <p>
+        If eternity opened its black-winged door<br/>
 
-        If eternity opened its black-winged door<br>
+        and asked me what I wanted,<br/>
 
-        and asked me what I wanted,<br>
+        I would not ask for gold,<br/>
 
-        I would not ask for gold,<br>
-
-        or crowns,<br>
+        or crowns,<br/>
 
         or a heaven built of easy songs.
 
       </p>
+<p>
 
-      <p>
+        I would ask for you.<br/>
 
-        I would ask for you.<br>
+        For your hand in mine.<br/>
 
-        For your hand in mine.<br>
+        For your voice in the room.<br/>
 
-        For your voice in the room.<br>
-
-        For your laughter<br>
+        For your laughter<br/>
 
         turning the dark into something bearable.
 
       </p>
+<p>
 
-      <p>
+        For the beautiful kindness of you,<br/>
 
-        For the beautiful kindness of you,<br>
+        the caring heart of you,<br/>
 
-        the caring heart of you,<br>
+        the softness you carry<br/>
 
-        the softness you carry<br>
-
-        without ever knowing<br>
+        without ever knowing<br/>
 
         how much it saves me.
 
       </p>
+<p>
 
-      <p>
+        You are my beautiful Ness,<br/>
 
-        You are my beautiful Ness,<br>
+        my caring Ness,<br/>
 
-        my caring Ness,<br>
+        my kind Ness,<br/>
 
-        my kind Ness,<br>
+        my amazing bit of fluff,<br/>
 
-        my amazing bit of fluff,<br>
+        my bright little storm of sweetness,<br/>
 
-        my bright little storm of sweetness,<br>
+        the softness that makes my heart clatter<br/>
 
-        the softness that makes my heart clatter<br>
-
-        like a door blown open<br>
+        like a door blown open<br/>
 
         by joy itself.
 
       </p>
+<p>And I adore you.</p>
+<p>
 
-      <p>And I adore you.</p>
+        Not lightly.<br/>
 
-      <p>
+        Not politely.<br/>
 
-        Not lightly.<br>
+        Not in some careful little way<br/>
 
-        Not politely.<br>
-
-        Not in some careful little way<br>
-
-        that can be folded away<br>
+        that can be folded away<br/>
 
         when life grows hard.
 
       </p>
+<p>
 
-      <p>
-
-        I adore you with the whole stubborn weather<br>
+        I adore you with the whole stubborn weather<br/>
 
         of my soul.
 
       </p>
+<p>
 
-      <p>
+        You are the woman<br/>
 
-        You are the woman<br>
+        I would choose in this life,<br/>
 
-        I would choose in this life,<br>
-
-        and the next,<br>
+        and the next,<br/>
 
         and the next after that.
 
       </p>
+<p>
 
-      <p>
+        I would find you again<br/>
 
-        I would find you again<br>
+        through mist,<br/>
 
-        through mist,<br>
+        through memory,<br/>
 
-        through memory,<br>
+        through death,<br/>
 
-        through death,<br>
-
-        through whatever strange road waits<br>
+        through whatever strange road waits<br/>
 
         beyond the last breath.
 
       </p>
+<p>
 
-      <p>
+        And when I found you,<br/>
 
-        And when I found you,<br>
-
-        I would smile like a man<br>
+        I would smile like a man<br/>
 
         who had finally come home.
 
       </p>
+<p>I would say,</p>
+<blockquote>
 
-      <p>I would say,</p>
+        There you are, my Ness.<br/>
 
-      <blockquote>
-
-        There you are, my Ness.<br>
-
-        There you are, my only one.<br>
+        There you are, my only one.<br/>
 
         Shall we do it all again?
 
       </blockquote>
+<p>
 
-      <p>
+        And I would love you again<br/>
 
-        And I would love you again<br>
-
-        from the first glance<br>
+        from the first glance<br/>
 
         to the last star.
 
       </p>
+<p>
 
-      <p>
+        Because no lifetime<br/>
 
-        Because no lifetime<br>
-
-        could ever be long enough<br>
+        could ever be long enough<br/>
 
         to hold what I feel for you.
 
       </p>
+<p>
 
-      <p>
-
-        No world could be wide enough<br>
+        No world could be wide enough<br/>
 
         to hide you from my heart.
 
       </p>
+<p>
 
-      <p>
-
-        No ending could be final enough<br>
+        No ending could be final enough<br/>
 
         to stop me searching.
 
       </p>
+<p>
 
-      <p>
+        You are my devotion.<br/>
 
-        You are my devotion.<br>
+        My romance.<br/>
 
-        My romance.<br>
+        My adoration.<br/>
 
-        My adoration.<br>
+        My chosen woman.<br/>
 
-        My chosen woman.<br>
-
-        My beautiful softness.<br>
+        My beautiful softness.<br/>
 
         My forever.
 
       </p>
+<p>
 
-      <p>
-
-        And if love is a vow<br>
+        And if love is a vow<br/>
 
         written deeper than time,
 
       </p>
+<p>then mine is simple:</p>
+<blockquote>
 
-      <p>then mine is simple:</p>
+        Ness,<br/>
 
-      <blockquote>
+        I am yours<br/>
 
-        Ness,<br>
+        in this life,<br/>
 
-        I am yours<br>
-
-        in this life,<br>
-
-        and I will come looking for you<br>
+        and I will come looking for you<br/>
 
         in the next.
 
       </blockquote>
+<p>FATAS · 16/06/2026 🐦‍⬛</p>
+</div></details>
+<details class="verse-entry"><summary><span class="verse-title">The First Gate Epitaph</span><span class="verse-subtitle">A spoiler-safe opening fragment for new readers.</span></summary><div class="verse-body">
 
-      <p>FATAS · 16/06/2026 🐦‍⬛</p>
 
-    </section>
+<p>Do not ask first who carried the blade.</p>
+<p>Ask who named the wound.</p>
+<p>
 
-    <section class="card">
+        Ask what the raven saw from the broken roof,<br/>
 
-      <h2>The First Gate Epitaph</h2>
+        what the wolf refused at the threshold,<br/>
 
-      <p class="lede">
-
-        A spoiler-safe opening fragment for new readers.
-
-      </p>
-
-      <p>Do not ask first who carried the blade.</p>
-
-      <p>Ask who named the wound.</p>
-
-      <p>
-
-        Ask what the raven saw from the broken roof,<br>
-
-        what the wolf refused at the threshold,<br>
-
-        what the dog heard beneath the kindly voice,<br>
+        what the dog heard beneath the kindly voice,<br/>
 
         what the child drew where no clerk thought to look.
 
       </p>
+<p>In Vardrum, history is not kept by kings alone.</p>
+<p>
 
-      <p>In Vardrum, history is not kept by kings alone.</p>
+        It is kept by mud,<br/>
 
-      <p>
+        feathers,<br/>
 
-        It is kept by mud,<br>
+        old women,<br/>
 
-        feathers,<br>
+        burned doors,<br/>
 
-        old women,<br>
+        wrongly folded letters,<br/>
 
-        burned doors,<br>
-
-        wrongly folded letters,<br>
-
-        names spoken too softly,<br>
+        names spoken too softly,<br/>
 
         and beasts who never learned to lie for comfort.
 
       </p>
+</div></details>
+<details class="verse-entry"><summary><span class="verse-title">Song of the Beast and Bird Witnesses</span><span class="verse-subtitle">For the dogs, ravens, wolves, strange small guides and watchful things of the saga.</span></summary><div class="verse-body">
 
-    </section>
 
-    <section class="card">
+<p>
 
-      <h2>Song of the Beast and Bird Witnesses</h2>
+        The hound heard first.<br/>
 
-      <p class="lede">
+        The raven turned.<br/>
 
-        For the dogs, ravens, wolves, strange small guides and watchful things of the saga.
+        The wolf stood still where men would run.<br/>
 
-      </p>
-
-      <p>
-
-        The hound heard first.<br>
-
-        The raven turned.<br>
-
-        The wolf stood still where men would run.<br>
-
-        The cat watched under ash and stair,<br>
+        The cat watched under ash and stair,<br/>
 
         and every feather held the sun.
 
       </p>
+<p>
 
-      <p>
+        No bell can count what paws remember.<br/>
 
-        No bell can count what paws remember.<br>
+        No law can cage what wings have seen.<br/>
 
-        No law can cage what wings have seen.<br>
-
-        No hand may own the road by naming<br>
+        No hand may own the road by naming<br/>
 
         where another life has been.
 
       </p>
+<p>
 
-      <p>
+        So scratch the mark.<br/>
 
-        So scratch the mark.<br>
-
-        So leave the feather.<br>
+        So leave the feather.<br/>
 
         So let the old gate understand:
 
       </p>
+<blockquote>
 
-      <blockquote>
-
-        When beast and bird stand witness together,<br>
+        When beast and bird stand witness together,<br/>
 
         no stolen truth stays buried in the land.
 
       </blockquote>
+</div></details>
+<details class="verse-entry"><summary><span class="verse-title">The Map That Would Not Sit Still</span><span class="verse-subtitle">A skaldic warning about roads, records and official certainty.</span></summary><div class="verse-body">
 
-    </section>
 
-    <section class="card">
+<p>There was once a map of Vardrum that refused to remain accurate.</p>
+<p>
 
-      <h2>The Map That Would Not Sit Still</h2>
+        Roads moved when frightened children dreamed.<br/>
 
-      <p class="lede">
+        Marsh paths vanished when soldiers named them.<br/>
 
-        A skaldic warning about roads, records and official certainty.
-
-      </p>
-
-      <p>There was once a map of Vardrum that refused to remain accurate.</p>
-
-      <p>
-
-        Roads moved when frightened children dreamed.<br>
-
-        Marsh paths vanished when soldiers named them.<br>
-
-        Wells appeared where women wept.<br>
+        Wells appeared where women wept.<br/>
 
         A black-winged mark crossed itself out whenever a clerk tried to measure it.
 
       </p>
+<p>The mapmaker blamed damp.</p>
+<p>The ravens blamed arrogance.</p>
+<p>
 
-      <p>The mapmaker blamed damp.</p>
+        The oldest marsh-wife said nothing at all,<br/>
 
-      <p>The ravens blamed arrogance.</p>
+        but burned the official copy,<br/>
 
-      <p>
-
-        The oldest marsh-wife said nothing at all,<br>
-
-        but burned the official copy,<br>
-
-        fed the ash to her geese,<br>
+        fed the ash to her geese,<br/>
 
         and drew the true road on the underside of a bread-board.
 
       </p>
+<p>That road is still missing from Crown records.</p>
+</div></details>
+<details class="verse-entry"><summary><span class="verse-title">Epitaph of the Little Hearth</span><span class="verse-subtitle">For family, food, shelter, ordinary care and the holy refusal to turn children into proof.</span></summary><div class="verse-body">
 
-      <p>That road is still missing from Crown records.</p>
 
-    </section>
+<p>Let no one laugh at the small fire.</p>
+<p>
 
-    <section class="card">
+        Kingdoms have burned colder.<br/>
 
-      <h2>Epitaph of the Little Hearth</h2>
+        Crowns have fed fewer.<br/>
 
-      <p class="lede">
-
-        For family, food, shelter, ordinary care and the holy refusal to turn children into proof.
-
-      </p>
-
-      <p>Let no one laugh at the small fire.</p>
-
-      <p>
-
-        Kingdoms have burned colder.<br>
-
-        Crowns have fed fewer.<br>
-
-        Great halls have opened their doors<br>
+        Great halls have opened their doors<br/>
 
         and still left children hungry in the corners.
 
       </p>
+<p>
 
-      <p>
-
-        Little Hearth is not little<br>
+        Little Hearth is not little<br/>
 
         because its room is small.
 
       </p>
+<p>It is little because it bends down.</p>
+<p>
 
-      <p>It is little because it bends down.</p>
+        It knows the height of a child.<br/>
 
-      <p>
+        It knows the bowl before the speech.<br/>
 
-        It knows the height of a child.<br>
-
-        It knows the bowl before the speech.<br>
-
-        It knows the blanket before the question.<br>
+        It knows the blanket before the question.<br/>
 
         It knows that being safe should not require a performance.
 
       </p>
+<p>
 
-      <p>
+        Where soup is given freely,<br/>
 
-        Where soup is given freely,<br>
+        where a name is spoken kindly,<br/>
 
-        where a name is spoken kindly,<br>
-
-        where a frightened hand may sign no<br>
+        where a frightened hand may sign no<br/>
 
         and still be loved after,
 
       </p>
+<p>
 
-      <p>
-
-        there stands a hearth<br>
+        there stands a hearth<br/>
 
         no winter has yet conquered.
 
       </p>
+</div></details>
+<details class="verse-entry"><summary><span class="verse-title">Song for Hands That Speak</span><span class="verse-subtitle">For Braid-Hand, sign, silence, consent and the love that does not require sound.</span></summary><div class="verse-body">
 
-    </section>
 
-    <section class="card">
+<p>
 
-      <h2>Song for Hands That Speak</h2>
+        Some truths arrive without thunder.<br/>
 
-      <p class="lede">
+        Some names are carried by fingers.<br/>
 
-        For Braid-Hand, sign, silence, consent and the love that does not require sound.
-
-      </p>
-
-      <p>
-
-        Some truths arrive without thunder.<br>
-
-        Some names are carried by fingers.<br>
-
-        Some warnings cross a room<br>
+        Some warnings cross a room<br/>
 
         without troubling the air.
 
       </p>
+<p>
 
-      <p>
+        A hand can say stop.<br/>
 
-        A hand can say stop.<br>
+        A hand can say stay.<br/>
 
-        A hand can say stay.<br>
+        A hand can ask,<br/>
 
-        A hand can ask,<br>
-
-        and love can answer<br>
+        and love can answer<br/>
 
         without stealing the mouth from grief.
 
       </p>
+<p>The Crown counted voices.</p>
+<p>The Braid watched hands.</p>
+<p>The road heard both.</p>
+<p>
 
-      <p>The Crown counted voices.</p>
+        So let the loud learn humility.<br/>
 
-      <p>The Braid watched hands.</p>
+        Let the silent be believed.<br/>
 
-      <p>The road heard both.</p>
-
-      <p>
-
-        So let the loud learn humility.<br>
-
-        Let the silent be believed.<br>
-
-        Let no child be made smaller<br>
+        Let no child be made smaller<br/>
 
         because their truth chose another door.
 
       </p>
+<p>
 
-      <p>
+        In the house of Black Wings,<br/>
 
-        In the house of Black Wings,<br>
-
-        speech has many bodies,<br>
+        speech has many bodies,<br/>
 
         and witness kneels to read them all.
 
       </p>
+</div></details>
+<details class="verse-entry"><summary><span class="verse-title">Short Epitaphs for the Road</span><span class="verse-subtitle">A preserved entry from the Skald-Room.</span></summary><div class="verse-body">
 
-    </section>
+<blockquote>“No map is innocent after it learns where children hide.”</blockquote>
+<blockquote>“The wolf is witness, not brand.”</blockquote>
+<blockquote>“A quiet room may still be shouting.”</blockquote>
+<blockquote>“Care that keeps a price hidden is not care.”</blockquote>
+<blockquote>“A raven does not need permission from a roof.”</blockquote>
+<blockquote>“The smallest name may be the hinge of the oldest door.”</blockquote>
+<blockquote>“A hearth that demands tribute is already cold.”</blockquote>
+<blockquote>“Where the road forgets, the paws remember.”</blockquote>
+</div></details>
+<details class="verse-entry"><summary><span class="verse-title">Public-Safe Future Hint</span><span class="verse-subtitle">A preserved entry from the Skald-Room.</span></summary><div class="verse-body">
 
-    <section class="card">
-
-      <h2>Short Epitaphs for the Road</h2>
-
-      <blockquote>“No map is innocent after it learns where children hide.”</blockquote>
-
-      <blockquote>“The wolf is witness, not brand.”</blockquote>
-
-      <blockquote>“A quiet room may still be shouting.”</blockquote>
-
-      <blockquote>“Care that keeps a price hidden is not care.”</blockquote>
-
-      <blockquote>“A raven does not need permission from a roof.”</blockquote>
-
-      <blockquote>“The smallest name may be the hinge of the oldest door.”</blockquote>
-
-      <blockquote>“A hearth that demands tribute is already cold.”</blockquote>
-
-      <blockquote>“Where the road forgets, the paws remember.”</blockquote>
-
-    </section>
-
-    <section class="card">
-
-      <h2>Public-Safe Future Hint</h2>
-
-      <blockquote>
+<blockquote>
 
         “Beyond the house, there is another house. Beyond the road, another road.
 
         Beyond the raven, something colder has learned to watch the sky.”
 
       </blockquote>
-
-      <p>
-
-        The titles of Books XV to XX remain sealed for now, but the saga has already begun
-
-        looking beyond the current map.
-
-      </p>
-
+<p>Books XV, XVI and XVII now have public names. The roads beyond Green Deer-Wood remain beneath the later-book spoiler seal.</p>
+</div></details>
+      </div>
     </section>
 
+    <section class="panel" id="road-epitaphs">
+      <p class="eyebrow">Small Words with Long Shadows</p>
+      <h2>Road Epitaphs</h2>
+
+      <div class="epitaph-grid">
+        <blockquote class="epitaph-chip">“No map is innocent after it learns where children hide.”</blockquote>
+        <blockquote class="epitaph-chip">“The wolf is witness, not brand.”</blockquote>
+        <blockquote class="epitaph-chip">“A quiet room may still be shouting.”</blockquote>
+        <blockquote class="epitaph-chip">“Care that keeps a price hidden is not care.”</blockquote>
+        <blockquote class="epitaph-chip">“A raven does not need permission from a roof.”</blockquote>
+        <blockquote class="epitaph-chip">“The smallest name may be the hinge of the oldest door.”</blockquote>
+        <blockquote class="epitaph-chip">“A hearth that demands tribute is already cold.”</blockquote>
+        <blockquote class="epitaph-chip">“Where the road forgets, the paws remember.”</blockquote>
+      </div>
+    </section>
+
+    <section class="panel birds-plate" id="wing-pair">
+      <div>
+        <p class="eyebrow">The Refrain Above the Roofs</p>
+        <h2>Scarlet and Blue</h2>
+
+        <p>
+          Scarlet, female crow, carries memory, warning, burgundy shadow and a
+          ruthless ear for inflated dignity.
+        </p>
+
+        <p>
+          Blue, male raven, carries cobalt silence, curiosity and the solemn
+          duty of finding whatever door someone hoped to hide.
+        </p>
+
+        <blockquote>
+          “The crow questioned. The raven already knew. Neither flew far
+          without the other.”
+        </blockquote>
+
+        <div class="hero-buttons">
+          <a href="characters.html#animal-witnesses" class="button primary">Meet the Witnesses</a>
+          <a href="archive.html" class="button secondary">Open the Visual Archive</a>
+        </div>
+      </div>
+
+      <figure>
+        <img
+          src="9F949A28-0A56-4953-A7B6-37ECD8A29F15.png"
+          alt="Portrait plate of Blue the raven and Scarlet the crow"
+          width="1361"
+          height="1156"
+          loading="lazy"
+        />
+      </figure>
+    </section>
+
+    <section class="panel final-road-panel">
+      <p class="eyebrow">Leave the Skald-Room</p>
+      <h2>Carry the Song Elsewhere</h2>
+
+      <p>
+        Follow the verses into the lore archive, map chamber or book road.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="lore.html" class="button primary">Read the Lore</a>
+        <a href="books.html" class="button secondary">Explore the Books</a>
+        <a href="maps.html" class="button secondary">Open the Maps</a>
+      </div>
+    </section>
   </main>
 
   <footer>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="index.html">Home</a>
+      <a href="books.html">Books</a>
+      <a href="characters.html">Characters</a>
+      <a href="rogues.html">Rogues</a>
+      <a href="world.html">World</a>
+      <a href="lore.html">Lore</a>
+      <a href="maps.html">Maps</a>
+      <a href="archive.html">Archive</a>
+      <a href="author.html">Author</a>
+    </nav>
 
     <p>© 2026 Saga of Black Wings · Created by Timothy M. Halliday</p>
-
+    <p class="footer-motto">No crown shall count us smaller.</p>
   </footer>
-
 </body>
-
 </html>
