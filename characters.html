@@ -180,24 +180,71 @@
       align-items: center;
     }
 
-    .character-plate figure {
-      margin: 0;
-    }
-
-    .character-plate img {
-      width: 100%;
-      max-height: 670px;
-      object-fit: cover;
-      border: 1px solid rgba(221, 182, 95, 0.35);
+    .forest-sigil {
+      display: grid;
+      min-height: 520px;
+      padding: clamp(1.25rem, 4vw, 2rem);
+      place-items: center;
+      background:
+        radial-gradient(circle at center, rgba(73, 122, 82, 0.24), transparent 55%),
+        linear-gradient(145deg, rgba(20, 34, 24, 0.98), rgba(7, 12, 9, 0.99));
+      border: 1px solid rgba(94, 150, 103, 0.5);
+      border-radius: 24px;
       box-shadow: var(--soft-shadow);
     }
 
-    .character-plate figcaption {
-      margin-top: 0.75rem;
-      color: var(--parchment-soft);
-      font-size: 0.82rem;
+    .forest-sigil svg {
+      width: min(100%, 430px);
+      height: auto;
+      overflow: visible;
+    }
+
+    .forest-sigil .sigil-ring {
+      fill: rgba(5, 8, 6, 0.58);
+      stroke: #8fb49a;
+      stroke-width: 7;
+    }
+
+    .forest-sigil .sigil-inner {
+      fill: none;
+      stroke: rgba(240, 210, 140, 0.58);
+      stroke-width: 3;
+    }
+
+    .forest-sigil .sigil-tree,
+    .forest-sigil .sigil-branch,
+    .forest-sigil .sigil-bear {
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .forest-sigil .sigil-tree,
+    .forest-sigil .sigil-branch {
+      stroke: #9dc4a7;
+      stroke-width: 8;
+    }
+
+    .forest-sigil .sigil-bear {
+      stroke: #f0d28c;
+      stroke-width: 7;
+    }
+
+    .forest-sigil .sigil-title {
+      fill: #fff0ce;
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-anchor: middle;
+    }
+
+    .forest-sigil .sigil-subtitle {
+      fill: #c9d9c8;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 18px;
       font-style: italic;
-      text-align: center;
+      text-anchor: middle;
     }
 
     .witness-gallery {
@@ -261,8 +308,9 @@
         margin: 0 auto;
       }
 
-      .character-plate figure {
+      .forest-sigil {
         width: min(100%, 560px);
+        min-height: 430px;
         margin: 0 auto;
       }
     }
@@ -568,18 +616,52 @@
     </section>
 
     <section class="panel character-plate" id="green-deer-wood">
-      <figure>
-        <img
-          src="IMG_5588.jpeg"
-          alt="A forest keeper kneeling beside a great bear"
-          width="1024"
-          height="1536"
-          loading="lazy"
-        />
-        <figcaption>
-          A keeper and a bear upon the road to Green Deer-Wood.
-        </figcaption>
-      </figure>
+      <div
+        class="forest-sigil"
+        role="img"
+        aria-label="Symbolic Green Deer-Wood seal showing a listening tree and the path of a great bear"
+      >
+        <svg viewBox="0 0 460 540" aria-hidden="true">
+          <circle class="sigil-ring" cx="230" cy="220" r="190" />
+          <circle class="sigil-inner" cx="230" cy="220" r="166" />
+
+          <path
+            class="sigil-tree"
+            d="M230 338 C222 286 228 246 230 204 C232 160 226 126 230 92"
+          />
+          <path
+            class="sigil-branch"
+            d="M230 178 C188 153 160 125 137 94
+               M230 170 C271 143 300 116 322 81
+               M230 225 C188 209 155 185 121 155
+               M230 218 C276 199 313 173 343 139"
+          />
+
+          <path
+            class="sigil-bear"
+            d="M135 337
+               C147 310 171 294 197 297
+               C215 276 250 274 271 296
+               C302 294 326 311 337 338
+               C325 353 309 363 291 367
+               C287 389 270 404 251 405
+               C235 405 222 396 213 383
+               C202 398 187 405 170 402
+               C151 398 139 382 139 363
+               C125 356 120 344 135 337 Z"
+          />
+          <path
+            class="sigil-bear"
+            d="M170 320 C164 304 169 288 180 278
+               M298 320 C304 304 299 288 288 278
+               M194 342 C207 351 219 354 230 354
+               C242 354 255 351 267 342"
+          />
+
+          <text class="sigil-title" x="230" y="465">GREEN DEER-WOOD</text>
+          <text class="sigil-subtitle" x="230" y="495">Listen · Heal · Protect · Cull Rot</text>
+        </svg>
+      </div>
 
       <div>
         <p class="eyebrow">The Forest Road</p>
