@@ -3,180 +3,745 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dedications | Saga of Black Wings</title>
-  <meta name="description" content="Dedications for The Saga of Black Wings by Timothy M. Halliday, honouring Vanessa, Stephanie, Maisie and Kian." />
+
+  <title>Dedications | The Saga of Black Wings</title>
+
+  <meta
+    name="description"
+    content="The dedications behind The Saga of Black Wings by Timothy M. Halliday, honouring Vanessa, Stephanie, Maisie and Kian."
+  />
+  <meta name="author" content="Timothy M. Halliday" />
+  <meta name="theme-color" content="#050608" />
+
+  <meta property="og:title" content="Dedications | The Saga of Black Wings" />
+  <meta
+    property="og:description"
+    content="For the love, belief, courage and remembrance that helped carry Black Wings into the world."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sagaofblackwings.com/dedications.html" />
+  <meta
+    property="og:image"
+    content="https://sagaofblackwings.com/AB854AAB-8F11-4453-B5D2-F5850178C570.png"
+  />
+  <meta
+    property="og:image:alt"
+    content="The living Black Wings crest surrounded by animal witnesses and flowers"
+  />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Dedications | The Saga of Black Wings" />
+  <meta
+    name="twitter:description"
+    content="The names and memories standing behind the long road of Black Wings."
+  />
+  <meta
+    name="twitter:image"
+    content="https://sagaofblackwings.com/AB854AAB-8F11-4453-B5D2-F5850178C570.png"
+  />
+
+  <link rel="canonical" href="https://sagaofblackwings.com/dedications.html" />
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .dedications-hero {
+      min-height: 75vh;
+      padding-top: 5.2rem;
+      padding-bottom: 5.2rem;
+      background:
+        radial-gradient(circle at 14% 18%, rgba(116, 37, 55, 0.24), transparent 29rem),
+        radial-gradient(circle at 88% 12%, rgba(221, 182, 95, 0.17), transparent 28rem),
+        linear-gradient(180deg, rgba(4, 5, 7, 0.97), rgba(11, 10, 12, 0.99));
+    }
+
+    .dedications-hero-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(270px, 0.72fr);
+      gap: clamp(2rem, 6vw, 5rem);
+      align-items: center;
+      width: min(100%, 1120px);
+      margin: 0 auto;
+    }
+
+    .dedications-hero .hero-text {
+      width: 100%;
+      text-align: left;
+    }
+
+    .dedications-hero .tagline,
+    .dedications-hero .hero-quote {
+      margin-left: 0;
+    }
+
+    .dedications-hero .hero-buttons {
+      justify-content: flex-start;
+    }
+
+    .dedications-crest {
+      margin: 0;
+      padding: 0.6rem;
+      background: rgba(5, 6, 8, 0.75);
+      border: 1px solid rgba(221, 182, 95, 0.42);
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .dedications-crest img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 19px;
+    }
+
+    .dedication-seal {
+      max-width: 900px;
+      margin: 1.5rem auto 0;
+      padding: 1rem 1.2rem;
+      color: var(--parchment-soft);
+      background: rgba(5, 6, 8, 0.42);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 12px 12px 0;
+    }
+
+    .dedication-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.7rem;
+      margin-top: 1.8rem;
+    }
+
+    .dedication-nav a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 0.55rem 0.9rem;
+      color: var(--parchment);
+      background: rgba(18, 21, 26, 0.84);
+      border: 1px solid rgba(221, 182, 95, 0.3);
+      border-radius: 999px;
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.67rem;
+      font-weight: 700;
+      letter-spacing: 0.052em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .dedication-nav a:hover {
+      color: #160f07;
+      background: var(--gold-bright);
+      border-color: var(--gold-bright);
+    }
+
+    .dedication-chamber {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(1.5rem, 5vw, 3rem);
+    }
+
+    .dedication-chamber::before {
+      content: "";
+      position: absolute;
+      top: -90px;
+      right: -80px;
+      width: 260px;
+      height: 260px;
+      pointer-events: none;
+      opacity: 0.5;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(221, 182, 95, 0.15), transparent 68%);
+    }
+
+    .dedication-heading {
+      display: grid;
+      grid-template-columns: 62px minmax(0, 1fr);
+      gap: 1rem;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .dedication-mark {
+      display: grid;
+      width: 62px;
+      height: 62px;
+      place-items: center;
+      color: var(--gold-bright);
+      background: rgba(5, 6, 8, 0.58);
+      border: 1px solid rgba(221, 182, 95, 0.34);
+      border-radius: 50%;
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 1.4rem;
+      font-weight: 800;
+    }
+
+    .dedication-heading .role {
+      margin-bottom: 0.3rem;
+    }
+
+    .dedication-heading h2 {
+      margin: 0;
+      text-align: left;
+    }
+
+    .dedication-copy {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .dedication-copy p {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1rem, 2.25vw, 1.12rem);
+      line-height: 1.85;
+    }
+
+    .dedication-copy blockquote {
+      margin-top: 1.8rem;
+      font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+    }
+
+    .vanessa-chamber {
+      border-color: rgba(116, 68, 83, 0.52);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(116, 68, 83, 0.18), transparent 22rem),
+        linear-gradient(145deg, rgba(31, 26, 30, 0.98), rgba(10, 12, 15, 0.99));
+    }
+
+    .stephanie-chamber {
+      border-color: rgba(74, 91, 132, 0.5);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(49, 93, 131, 0.17), transparent 22rem),
+        linear-gradient(145deg, rgba(23, 28, 34, 0.98), rgba(10, 12, 15, 0.99));
+    }
+
+    .maisie-chamber {
+      border-color: rgba(111, 82, 124, 0.52);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(111, 82, 124, 0.18), transparent 22rem),
+        linear-gradient(145deg, rgba(30, 27, 36, 0.98), rgba(10, 12, 15, 0.99));
+    }
+
+    .kian-chamber {
+      border-color: rgba(176, 81, 31, 0.54);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(176, 81, 31, 0.17), transparent 22rem),
+        linear-gradient(145deg, rgba(35, 26, 21, 0.98), rgba(10, 12, 15, 0.99));
+    }
+
+    .collective-panel {
+      text-align: center;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(221, 182, 95, 0.11), transparent 24rem),
+        linear-gradient(145deg, rgba(27, 25, 26, 0.98), rgba(10, 12, 15, 0.99));
+    }
+
+    .name-line {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.7rem;
+      margin: 1.7rem 0;
+    }
+
+    .name-line span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 0.6rem 1rem;
+      color: var(--gold-bright);
+      background: rgba(5, 6, 8, 0.54);
+      border: 1px solid rgba(221, 182, 95, 0.28);
+      border-radius: 999px;
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.055em;
+      text-transform: uppercase;
+    }
+
+    .memory-law-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem;
+      margin-top: 1.7rem;
+    }
+
+    .memory-law {
+      margin: 0;
+      padding: 1.1rem;
+      color: #eef0df;
+      background:
+        linear-gradient(135deg, rgba(49, 90, 69, 0.2), rgba(5, 6, 8, 0.52));
+      border: 1px solid rgba(83, 128, 94, 0.38);
+      border-radius: 14px;
+    }
+
+    .memory-law::before {
+      content: "◆";
+      margin-right: 0.55rem;
+      color: var(--gold);
+    }
+
+    .quiet-plate {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(270px, 0.88fr);
+      gap: clamp(1.5rem, 5vw, 3.2rem);
+      align-items: center;
+    }
+
+    .quiet-plate figure {
+      margin: 0;
+      padding: 0.55rem;
+      background: rgba(5, 6, 8, 0.5);
+      border: 1px solid rgba(221, 182, 95, 0.27);
+      border-radius: 18px;
+    }
+
+    .quiet-plate img {
+      width: 100%;
+      border-radius: 13px;
+    }
+
+    .quiet-plate figcaption {
+      padding: 0.75rem 0.3rem 0.2rem;
+      color: var(--parchment-soft);
+      font-size: 0.8rem;
+      font-style: italic;
+      text-align: center;
+    }
+
+    @media (max-width: 980px) {
+      .dedications-hero-layout,
+      .quiet-plate {
+        grid-template-columns: 1fr;
+      }
+
+      .dedications-hero .hero-text {
+        text-align: center;
+      }
+
+      .dedications-hero .tagline,
+      .dedications-hero .hero-quote {
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .dedications-hero .hero-buttons {
+        justify-content: center;
+      }
+
+      .dedications-crest,
+      .quiet-plate figure {
+        width: min(100%, 560px);
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .dedications-hero {
+        min-height: auto;
+      }
+
+      .dedication-nav {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .dedication-nav a {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .dedication-heading {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .dedication-mark {
+        margin: 0 auto;
+      }
+
+      .dedication-heading h2 {
+        text-align: center;
+      }
+
+      .memory-law-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Dedications for The Saga of Black Wings",
+    "url": "https://sagaofblackwings.com/dedications.html",
+    "description": "Dedications honouring Vanessa, Stephanie, Maisie and Kian.",
+    "author": {
+      "@type": "Person",
+      "name": "Timothy M. Halliday"
+    }
+  }
+  </script>
 </head>
+
 <body>
-<header class="page-hero">
-  <div class="hero-text">
-    <p class="eyebrow">The Names Behind the Wings</p>
-    <h1>Dedications</h1>
-    <p class="tagline">
-      For the people whose love, belief, courage and stubborn prodding helped carry
-      The Saga of Black Wings out of the locked room and into the world.
-    </p>
-<div class="hero-buttons">
-  <a href="index.html" class="button primary">Home</a>
-  <a href="author.html" class="button secondary">Author</a>
-</div>
-  </div>
-</header>
-<nav class="site-nav">
-  <a href="index.html">Home</a>
-  <a href="books.html">Books</a>
-  <a href="characters.html">Characters</a>
-  <a href="rogues.html">Rogues</a>
-  <a href="lore.html">World & Lore</a>
-  <a href="odes.html">Odes</a>
-  <a href="maps.html">Maps</a>
-  <a href="archive.html">Visual Archive</a>
-  <a href="author.html">Author</a>
-  <a href="dedications.html">Dedications</a>
-</nav>
-<main>
-  <section class="panel intro-panel">
-    <h2>Before the First Road</h2>
-<p>
-  Every saga has names written on the page. But some names stand behind the page.
-  They are the hands at the shoulder, the voices that say keep going, the eyes that
-  see the work before the world has learned how to look at it.
-</p>
-<p>
-  <em>The Saga of Black Wings</em> exists because imagination endured for decades,
-  but it reached the open world because love, belief, patience, pressure, humour
-  and faith refused to let it stay hidden forever.
-</p>
-<blockquote>
-  These dedications are for the people who helped turn a lifetime of private story into wings.
-</blockquote>
-  </section>
-  <section class="panel">
-    <h2>For Vanessa, My Beautiful Mrs, My Ness</h2>
-<p>
-  For Vanessa, my beautiful Mrs, my Ness, the woman whose love became hearth,
-  harbour, courage and road beneath my feet.
-</p>
-<p>
-  You believed in me when the books were still a private storm. You listened when
-  the world of Black Wings was too big to explain in a simple sentence. You gave me
-  patience, kindness, laughter, faith and the kind of love that makes a man braver
-  than he was before.
-</p>
-<p>
-  You did not merely encourage the saga. You helped make it possible. Your belief
-  stood beside the work before readers, publishers, search engines, websites or
-  polished pages knew it existed. You saw the heart of it. You saw me.
-</p>
-<p>
-  If Black Wings has warmth, it is because love taught it where the fire was.
-  If it has tenderness, it is because I have known yours. If it has a home at its
-  centre, then your name is written in the foundation.
-</p>
-<blockquote>
-  To Vanessa, my Ness, my beautiful Mrs: my love, my courage, my soft place in a hard world.
-  The wings opened because you believed they could.
-</blockquote>
-  </section>
-  <section class="panel">
-    <h2>For Stephanie, My Sister</h2>
-<p>
-  For my sister Stephanie, who pushed, prodded, believed, encouraged and would not
-  let the books remain only a secret thing carried quietly in the dark.
-</p>
-<p>
-  Some people support a dream politely. Stephanie did more than that. She nudged it.
-  Challenged it. Stood near it. Reminded me that stories are not meant to live
-  forever in silence when they have spent a lifetime gathering breath.
-</p>
-<p>
-  Her belief mattered. Her voice mattered. Her stubborn faith in the work helped
-  move the saga from private pages toward the world outside.
-</p>
-<p>
-  Black Wings is full of names that survive because someone refused to let them be
-  forgotten. This dedication is for one of the real voices who refused to let this
-  story stay hidden.
-</p>
-<blockquote>
-  To Stephanie: my sister, my prodder, my believer, my real-world witness.
-  Some roads open because someone loves you enough to keep pointing at the gate.
-</blockquote>
-  </section>
-  <section class="panel">
-    <h2>For Maisie, My Daughter</h2>
-<p>
-  For my daughter Maisie, whose belief, love and presence are woven into the heart
-  of why these books finally stepped into the light.
-</p>
-<p>
-  A father may carry stories for years, but it changes a thing when his child
-  believes those stories deserve to be seen. Maisie’s encouragement mattered more
-  than she may ever know. Her faith gave weight to the idea that Black Wings was
-  not only something I had made, but something worth sharing.
-</p>
-<p>
-  The saga is full of children who matter, not as symbols, not as proof, but as
-  living hearts with names, voices, humour, courage and futures of their own.
-  That truth has roots in real love.
-</p>
-<p>
-  To have my daughter believe in me is one of the great honours behind this work.
-  It is a quiet magic no system could count and no page could fully hold.
-</p>
-<blockquote>
-  To Maisie: my daughter, my heart, my reason to be braver.
-  Thank you for believing the wings were worth opening.
-</blockquote>
-  </section>
-  <section class="panel">
-    <h2>For Kian</h2>
-<p>
-  For Kian, Lucy’s nephew, a brave little boy who fought cancer with courage far
-  beyond what any child should ever have to carry.
-</p>
-<p>
-  Kian’s life mattered. His name matters. His memory matters. Though he passed
-  from this world, he has not passed out of love, out of remembrance, or out of
-  the hearts of those who carry him.
-</p>
-<p>
-  In <em>The Saga of Black Wings</em>, Kian’s memory lives on. Not as a shadow,
-  but as a light. Not as absence, but as presence. The saga remembers him in its
-  own language: flame, bell, courage, witness, tenderness and the truth that love
-  does not stop at the edge of death.
-</p>
-<p>
-  Some names become part of the world because they were imagined. Others become
-  part of it because they were loved. Kian is the second kind. The truer kind.
-</p>
-<blockquote>
-  For Kian: brave little light, remembered always.
-  In Black Wings, your name still rings.
-</blockquote>
-  </section>
-  <section class="panel">
-    <h2>For All Four</h2>
-<p>
-  To Vanessa, Stephanie, Maisie and Kian: this saga carries my name on the cover,
-  but it does not stand on my name alone.
-</p>
-<p>
-  It stands on love. It stands on belief. It stands on the people who pushed me
-  when I hesitated, lifted me when I doubted, laughed with me when the road was
-  strange, and reminded me that a lifetime of story deserved more than a closed door.
-</p>
-<p>
-  I wrote the books, but I did not reach this point alone. The wings opened because
-  you believed there was sky beyond the room.
-</p>
-<blockquote>
-  With all my love, gratitude and honour: this road is yours too.
-</blockquote>
-  </section>
-</main>
-<footer>
-  <p>© 2026 Saga of Black Wings · Created by Timothy M. Halliday</p>
-</footer>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="page-hero dedications-hero">
+    <div class="dedications-hero-layout">
+      <div class="hero-text">
+        <p class="eyebrow">The Names Behind the Wings</p>
+
+        <h1>Dedications</h1>
+
+        <p class="tagline">
+          For the people whose love, belief, courage and stubborn prodding
+          helped carry The Saga of Black Wings out of the locked room and into
+          the world.
+        </p>
+
+        <blockquote class="hero-quote">
+          “Some names are written in the book. Others are written beneath every page.”
+        </blockquote>
+
+        <div class="hero-buttons">
+          <a href="#before-the-road" class="button primary">Enter the Quiet Chamber</a>
+          <a href="author.html" class="button secondary">Meet the Author</a>
+          <a href="index.html" class="button secondary">Return Home</a>
+        </div>
+      </div>
+
+      <figure class="dedications-crest">
+        <img
+          src="AB854AAB-8F11-4453-B5D2-F5850178C570.png"
+          alt="Living Black Wings crest surrounded by animal witnesses and flowers"
+          width="1254"
+          height="1254"
+          fetchpriority="high"
+        />
+      </figure>
+    </div>
+  </header>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="books.html">Books</a>
+    <a href="characters.html">Characters</a>
+    <a href="rogues.html">Rogues</a>
+    <a href="world.html">World</a>
+    <a href="lore.html">Lore</a>
+    <a href="odes.html">Odes</a>
+    <a href="maps.html">Maps</a>
+    <a href="archive.html">Archive</a>
+    <a href="author.html">Author</a>
+    <a href="dedications.html" aria-current="page">Dedications</a>
+  </nav>
+
+  <main id="main-content">
+    <section class="panel intro-panel" id="before-the-road">
+      <p class="eyebrow">Before the First Road</p>
+      <h2>The Hands Behind the Page</h2>
+
+      <p>
+        Every saga has names written on the page. But some names stand behind
+        the page. They are the hands at the shoulder, the voices that say keep
+        going, and the eyes that see the work before the world has learned how
+        to look at it.
+      </p>
+
+      <p>
+        <em>The Saga of Black Wings</em> exists because imagination endured for
+        decades, but it reached the open world because love, belief, patience,
+        pressure, humour and faith refused to let it stay hidden forever.
+      </p>
+
+      <p class="dedication-seal">
+        These dedications are for the people who helped turn a lifetime of
+        private story into wings.
+      </p>
+
+      <nav class="dedication-nav" aria-label="Jump to individual dedications">
+        <a href="#vanessa">Vanessa</a>
+        <a href="#stephanie">Stephanie</a>
+        <a href="#maisie">Maisie</a>
+        <a href="#kian">Kian</a>
+        <a href="#all-four">For All Four</a>
+      </nav>
+    </section>
+
+    <section class="panel dedication-chamber vanessa-chamber" id="vanessa">
+      <div class="dedication-heading">
+        <div class="dedication-mark" aria-hidden="true">V</div>
+        <div>
+          <p class="role">My Beautiful Mrs · My Ness</p>
+          <h2>For Vanessa</h2>
+        </div>
+      </div>
+
+      <div class="dedication-copy">
+        <p>
+          For Vanessa, my beautiful Mrs, my Ness, the woman whose love became
+          hearth, harbour, courage and road beneath my feet.
+        </p>
+
+        <p>
+          You believed in me when the books were still a private storm. You
+          listened when the world of Black Wings was too big to explain in a
+          simple sentence. You gave me patience, kindness, laughter, faith and
+          the kind of love that makes a man braver than he was before.
+        </p>
+
+        <p>
+          You did not merely encourage the saga. You helped make it possible.
+          Your belief stood beside the work before readers, publishers, search
+          engines, websites or polished pages knew it existed. You saw the
+          heart of it. You saw me.
+        </p>
+
+        <p>
+          If Black Wings has warmth, it is because love taught it where the fire
+          was. If it has tenderness, it is because I have known yours. If it has
+          a home at its centre, then your name is written in the foundation.
+        </p>
+
+        <blockquote>
+          To Vanessa, my Ness, my beautiful Mrs: my love, my courage, my soft
+          place in a hard world. The wings opened because you believed they could.
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="panel dedication-chamber stephanie-chamber" id="stephanie">
+      <div class="dedication-heading">
+        <div class="dedication-mark" aria-hidden="true">S</div>
+        <div>
+          <p class="role">My Sister · My Real-World Witness</p>
+          <h2>For Stephanie</h2>
+        </div>
+      </div>
+
+      <div class="dedication-copy">
+        <p>
+          For my sister Stephanie, who pushed, prodded, believed, encouraged
+          and would not let the books remain only a secret thing carried quietly
+          in the dark.
+        </p>
+
+        <p>
+          Some people support a dream politely. Stephanie did more than that.
+          She nudged it. Challenged it. Stood near it. Reminded me that stories
+          are not meant to live forever in silence when they have spent a
+          lifetime gathering breath.
+        </p>
+
+        <p>
+          Her belief mattered. Her voice mattered. Her stubborn faith in the
+          work helped move the saga from private pages toward the world outside.
+        </p>
+
+        <p>
+          Black Wings is full of names that survive because someone refused to
+          let them be forgotten. This dedication is for one of the real voices
+          who refused to let this story stay hidden.
+        </p>
+
+        <blockquote>
+          To Stephanie: my sister, my prodder, my believer, my real-world
+          witness. Some roads open because someone loves you enough to keep
+          pointing at the gate.
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="panel dedication-chamber maisie-chamber" id="maisie">
+      <div class="dedication-heading">
+        <div class="dedication-mark" aria-hidden="true">M</div>
+        <div>
+          <p class="role">My Daughter · My Heart</p>
+          <h2>For Maisie</h2>
+        </div>
+      </div>
+
+      <div class="dedication-copy">
+        <p>
+          For my daughter Maisie, whose belief, love and presence are woven into
+          the heart of why these books finally stepped into the light.
+        </p>
+
+        <p>
+          A father may carry stories for years, but it changes a thing when his
+          child believes those stories deserve to be seen. Maisie’s
+          encouragement mattered more than she may ever know. Her faith gave
+          weight to the idea that Black Wings was not only something I had made,
+          but something worth sharing.
+        </p>
+
+        <p>
+          The saga is full of children who matter, not as symbols, not as proof,
+          but as living hearts with names, voices, humour, courage and futures
+          of their own. That truth has roots in real love.
+        </p>
+
+        <p>
+          To have my daughter believe in me is one of the great honours behind
+          this work. It is a quiet magic no system could count and no page could
+          fully hold.
+        </p>
+
+        <blockquote>
+          To Maisie: my daughter, my heart, my reason to be braver. Thank you
+          for believing the wings were worth opening.
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="panel dedication-chamber kian-chamber" id="kian">
+      <div class="dedication-heading">
+        <div class="dedication-mark" aria-hidden="true">K</div>
+        <div>
+          <p class="role">Brave Little Light · Remembered Always</p>
+          <h2>For Kian</h2>
+        </div>
+      </div>
+
+      <div class="dedication-copy">
+        <p>
+          For Kian, Lucy’s nephew, a brave little boy who fought cancer with
+          courage far beyond what any child should ever have to carry.
+        </p>
+
+        <p>
+          Kian’s life mattered. His name matters. His memory matters. Though he
+          passed from this world, he has not passed out of love, out of
+          remembrance or out of the hearts of those who carry him.
+        </p>
+
+        <p>
+          In <em>The Saga of Black Wings</em>, Kian’s memory lives on. Not as a
+          shadow, but as a light. Not as absence, but as presence. The saga
+          remembers him in its own language: flame, bell, courage, witness,
+          tenderness and the truth that love does not stop at the edge of death.
+        </p>
+
+        <p>
+          Some names become part of the world because they were imagined.
+          Others become part of it because they were loved. Kian is the second
+          kind. The truer kind.
+        </p>
+
+        <blockquote>
+          For Kian: brave little light, remembered always. In Black Wings, your
+          name still rings.
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="panel collective-panel" id="all-four">
+      <p class="eyebrow">For All Four</p>
+      <h2>The Wings Did Not Open Alone</h2>
+
+      <div class="name-line" aria-label="Dedication names">
+        <span>Vanessa</span>
+        <span>Stephanie</span>
+        <span>Maisie</span>
+        <span>Kian</span>
+      </div>
+
+      <p>
+        To Vanessa, Stephanie, Maisie and Kian: this saga carries my name on the
+        cover, but it does not stand on my name alone.
+      </p>
+
+      <p>
+        It stands on love. It stands on belief. It stands on the people who
+        pushed me when I hesitated, lifted me when I doubted, laughed with me
+        when the road was strange and reminded me that a lifetime of story
+        deserved more than a closed door.
+      </p>
+
+      <p>
+        I wrote the books, but I did not reach this point alone. The wings
+        opened because you believed there was sky beyond the room.
+      </p>
+
+      <blockquote>
+        With all my love, gratitude and honour: this road is yours too.
+      </blockquote>
+    </section>
+
+    <section class="panel quiet-plate">
+      <div>
+        <p class="eyebrow">The Memory Kept Beside the Road</p>
+        <h2>Love Is Part of the Archive</h2>
+
+        <p>
+          Black Wings remembers through hearth, name, feather, flame, song,
+          stubborn encouragement and the people who stayed near the work before
+          anyone else knew its roads.
+        </p>
+
+        <p>
+          These dedications are not an appendix to the saga. They are part of
+          the reason the saga found the courage to become public.
+        </p>
+
+        <div class="memory-law-grid">
+          <p class="memory-law">Belief can become a road beneath someone’s feet.</p>
+          <p class="memory-law">A remembered name remains part of the living world.</p>
+          <p class="memory-law">Love may carry a story without owning it.</p>
+          <p class="memory-law">Gratitude belongs where the work can see it.</p>
+        </div>
+      </div>
+
+      <figure>
+        <img
+          src="F8098CC8-B454-449C-B6F1-3623429B74A1.png"
+          alt="The Braid raven crest with the motto No Crown Shall Count Us Smaller"
+          width="1254"
+          height="1254"
+          loading="lazy"
+        />
+        <figcaption>
+          No crown shall count us smaller.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="panel final-road-panel">
+      <p class="eyebrow">Return to the Long Road</p>
+      <h2>Carry the Names with You</h2>
+
+      <p>
+        Return to the author’s story, the book road or the living heart of the
+        Braid.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="author.html" class="button primary">Return to the Author</a>
+        <a href="books.html" class="button secondary">Explore the Books</a>
+        <a href="characters.html" class="button secondary">Meet the Braid</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="index.html">Home</a>
+      <a href="books.html">Books</a>
+      <a href="characters.html">Characters</a>
+      <a href="rogues.html">Rogues</a>
+      <a href="world.html">World</a>
+      <a href="lore.html">Lore</a>
+      <a href="odes.html">Odes</a>
+      <a href="maps.html">Maps</a>
+      <a href="archive.html">Archive</a>
+      <a href="author.html">Author</a>
+    </nav>
+
+    <p>© 2026 Saga of Black Wings · Created by Timothy M. Halliday</p>
+    <p class="footer-motto">No crown shall count us smaller.</p>
+  </footer>
 </body>
 </html>
