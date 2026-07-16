@@ -1,1115 +1,764 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Saga of Black Wings | Timothy M. Halliday</title>
 
   <meta
-
     name="description"
-
     content="The official website of The Saga of Black Wings by Timothy M. Halliday. Enter a dark epic fantasy world of ravens, wolves, chosen family, ancient law and dangerous mercy."
-
   />
-
   <meta name="author" content="Timothy M. Halliday" />
-
   <meta name="theme-color" content="#050608" />
 
   <meta
-
     name="google-site-verification"
-
     content="1uTihbqP5mN3NeGrz_2YrQtcU2OR1KrVZ1eK5cvLFN4"
-
   />
 
-  <meta property="og:title" content="Saga of Black Wings" />
-
+  <meta property="og:title" content="The Saga of Black Wings" />
   <meta
-
     property="og:description"
-
-    content="Enter the world of Black Wings: ravens, wolves, chosen family, ancient law, dangerous mercy and love that refuses ownership."
-
+    content="Ravens, wolves, chosen family, ancient law, dangerous mercy and love that refuses ownership."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sagaofblackwings.com/" />
+  <meta
+    property="og:image"
+    content="https://sagaofblackwings.com/F8098CC8-B454-449C-B6F1-3623429B74A1.png"
+  />
+  <meta
+    property="og:image:alt"
+    content="The Braid crest from The Saga of Black Wings"
   />
 
-  <meta property="og:type" content="website" />
-
-  <meta property="og:url" content="https://sagaofblackwings.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Saga of Black Wings" />
+  <meta
+    name="twitter:description"
+    content="Enter Vardrum, where black wings witness, old roads remember and no crown may count the Braid smaller."
+  />
+  <meta
+    name="twitter:image"
+    content="https://sagaofblackwings.com/F8098CC8-B454-449C-B6F1-3623429B74A1.png"
+  />
 
   <link rel="canonical" href="https://sagaofblackwings.com/" />
-
   <link rel="stylesheet" href="style.css" />
 
+  <style>
+    .home-hero {
+      min-height: 90vh;
+      padding-top: 5.5rem;
+      padding-bottom: 5.5rem;
+    }
+
+    .home-hero-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+      gap: clamp(2rem, 6vw, 5rem);
+      align-items: center;
+      width: min(100%, 1180px);
+      margin: 0 auto;
+    }
+
+    .home-hero .hero-text {
+      width: 100%;
+      text-align: left;
+    }
+
+    .home-hero .tagline,
+    .home-hero .hero-quote {
+      margin-left: 0;
+    }
+
+    .home-hero .hero-buttons {
+      justify-content: flex-start;
+    }
+
+    .hero-crest {
+      position: relative;
+      margin: 0;
+      padding: 0.65rem;
+      background: rgba(5, 6, 8, 0.72);
+      border: 1px solid rgba(240, 210, 140, 0.45);
+      border-radius: 28px;
+      box-shadow: 0 28px 80px rgba(0, 0, 0, 0.62);
+      transform: rotate(1deg);
+    }
+
+    .hero-crest::before {
+      content: "";
+      position: absolute;
+      inset: -1.2rem;
+      z-index: -1;
+      background: radial-gradient(circle, rgba(221, 182, 95, 0.18), transparent 68%);
+      filter: blur(8px);
+    }
+
+    .hero-crest img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    .home-map-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .home-map-grid .book-card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .home-map-grid .button {
+      align-self: flex-start;
+      margin-top: auto;
+    }
+
+    .saga-status {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1.7rem;
+    }
+
+    .status-card {
+      padding: 1.25rem;
+      text-align: center;
+      background: rgba(5, 6, 8, 0.42);
+      border: 1px solid rgba(221, 182, 95, 0.24);
+      border-radius: 16px;
+    }
+
+    .status-card strong {
+      display: block;
+      margin-bottom: 0.35rem;
+      color: var(--gold-bright);
+      font-family: "Cinzel", Georgia, serif;
+      font-size: clamp(1.45rem, 3vw, 2.1rem);
+    }
+
+    .status-card span {
+      color: var(--parchment-soft);
+      font-size: 0.9rem;
+    }
+
+    .home-image-panel,
+    .home-author-panel {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+      gap: clamp(1.5rem, 4vw, 3rem);
+      align-items: center;
+    }
+
+    .home-image-panel figure,
+    .home-author-panel figure {
+      margin: 0;
+    }
+
+    .home-image-panel img,
+    .home-author-panel img {
+      width: 100%;
+      max-height: 560px;
+      object-fit: cover;
+      border: 1px solid rgba(221, 182, 95, 0.38);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .home-author-panel {
+      grid-template-columns: minmax(0, 1fr) minmax(230px, 350px);
+    }
+
+    .home-author-panel img {
+      aspect-ratio: 4 / 5;
+      object-position: center top;
+    }
+
+    .mini-note {
+      color: var(--parchment-soft);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 980px) {
+      .home-hero-layout,
+      .home-image-panel,
+      .home-author-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .home-hero .hero-text {
+        text-align: center;
+      }
+
+      .home-hero .tagline,
+      .home-hero .hero-quote {
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .home-hero .hero-buttons {
+        justify-content: center;
+      }
+
+      .hero-crest {
+        width: min(100%, 560px);
+        margin: 0 auto;
+        transform: none;
+      }
+
+      .home-map-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      .home-hero {
+        min-height: auto;
+      }
+
+      .home-map-grid,
+      .saga-status {
+        grid-template-columns: 1fr;
+      }
+
+      .home-map-grid .button {
+        align-self: stretch;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "The Saga of Black Wings",
+    "url": "https://sagaofblackwings.com/",
+    "description": "The official website of The Saga of Black Wings by Timothy M. Halliday.",
+    "author": {
+      "@type": "Person",
+      "name": "Timothy M. Halliday"
+    }
+  }
+  </script>
 </head>
 
 <body>
-
-  <a class="skip-link" href="#main-content">
-
-    Skip to main content
-
-  </a>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="page-hero home-hero">
+    <div class="home-hero-layout">
+      <div class="hero-text">
+        <p class="eyebrow">The Official Saga Map-Room</p>
 
-    <div class="hero-text">
+        <h1>The Saga of Black Wings</h1>
 
-      <p class="eyebrow">
+        <p class="tagline">
+          Ravens circle above forgotten roads. Wolves guard the hearth.
+          Ancient laws stir beneath the salt-marsh, and a wounded company
+          discovers that chosen family can become stronger than any crown.
+        </p>
 
-        The Official Saga Map-Room
+        <blockquote class="hero-quote">
+          “No crown shall count us smaller.”
+        </blockquote>
 
-      </p>
-
-      <h1>
-
-        The Saga of Black Wings
-
-      </h1>
-
-      <p class="tagline">
-
-        Ravens circle above forgotten roads. Wolves guard the hearth.
-
-        Ancient laws stir beneath the salt-marsh, and a wounded company
-
-        discovers that chosen family can become stronger than any crown.
-
-      </p>
-
-      <blockquote class="hero-quote">
-
-        “No crown shall count us smaller.”
-
-      </blockquote>
-
-      <div class="hero-buttons">
-
-        <a href="books.html" class="button primary">
-
-          Enter the Books
-
-        </a>
-
-        <a href="characters.html" class="button secondary">
-
-          Meet the Braid
-
-        </a>
-
-        <a href="lore.html" class="button secondary">
-
-          Explore the World
-
-        </a>
-
+        <div class="hero-buttons">
+          <a href="books.html" class="button primary">Enter the Books</a>
+          <a href="characters.html" class="button secondary">Meet the Braid</a>
+          <a href="world.html" class="button secondary">Enter Vardrum</a>
+        </div>
       </div>
 
+      <figure class="hero-crest">
+        <img
+          src="F8098CC8-B454-449C-B6F1-3623429B74A1.png"
+          alt="The Braid crest with a black raven and the motto No Crown Shall Count Us Smaller"
+          width="1254"
+          height="1254"
+          fetchpriority="high"
+        />
+      </figure>
     </div>
-
   </header>
 
   <nav class="site-nav" aria-label="Main navigation">
-
-    <a href="index.html" aria-current="page">
-
-      Home
-
-    </a>
-
-    <a href="books.html">
-
-      Books
-
-    </a>
-
-    <a href="characters.html">
-
-      Characters
-
-    </a>
-
-    <a href="rogues.html">
-
-      Rogues
-
-    </a>
-
-    <a href="world.html">
-
-      World
-
-    </a>
-
-    <a href="lore.html">
-
-      Lore
-
-    </a>
-
-    <a href="odes.html">
-
-      Odes
-
-    </a>
-
-    <a href="maps.html">
-
-      Maps
-
-    </a>
-
-    <a href="archive.html">
-
-      Archive
-
-    </a>
-
-    <a href="author.html">
-
-      Author
-
-    </a>
-
-    <a href="dedications.html">
-
-      Dedications
-
-    </a>
-
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="books.html">Books</a>
+    <a href="characters.html">Characters</a>
+    <a href="rogues.html">Rogues</a>
+    <a href="world.html">World</a>
+    <a href="lore.html">Lore</a>
+    <a href="odes.html">Odes</a>
+    <a href="maps.html">Maps</a>
+    <a href="archive.html">Archive</a>
+    <a href="author.html">Author</a>
+    <a href="dedications.html">Dedications</a>
   </nav>
 
   <main id="main-content">
-
     <section class="panel intro-panel">
-
-      <p class="eyebrow">
-
-        Welcome to Vardrum
-
-      </p>
-
-      <h2>
-
-        Where the Black Wings Gather
-
-      </h2>
+      <p class="eyebrow">Welcome to Vardrum</p>
+      <h2>Where the Black Wings Gather</h2>
 
       <p>
-
-        <em>The Saga of Black Wings</em> is a dark epic fantasy series
-
-        about people who refuse to remain owned, silenced, diminished
-
-        or named by those who would control them.
-
+        <em>The Saga of Black Wings</em> is a dark epic fantasy series about
+        people who refuse to remain owned, silenced, diminished or named by
+        those who would control them.
       </p>
 
       <p>
-
-        It is a world of ravens, wolves, hidden houses, salt roads,
-
-        ancient bargains, animal witnesses, dangerous mercy and
-
-        chosen family forged beneath pressure.
-
+        It is a world of ravens, wolves, hidden houses, salt roads, ancient
+        bargains, animal witnesses, dangerous mercy and chosen family forged
+        beneath pressure.
       </p>
 
       <p>
-
-        Here, love is not decoration. It is shelter, oath, witness,
-
-        rebellion and sometimes war.
-
+        Here, love is not decoration. It is shelter, oath, witness, rebellion
+        and sometimes war.
       </p>
 
       <blockquote>
-
         “A name remembered is a door the dark cannot fully close.”
-
       </blockquote>
-
     </section>
 
     <section class="panel">
+      <p class="eyebrow">Choose Your Road</p>
+      <h2>A Map of the Whole Website</h2>
 
-      <p class="eyebrow">
-
-        Choose Your Road
-
+      <p>
+        Begin anywhere. Every doorway below leads into a different chamber of
+        the saga, and every chamber leads back to the living Braid.
       </p>
 
-      <h2>
-
-        Explore the Saga
-
-      </h2>
-
-      <div class="book-grid home-path-grid">
-
+      <div class="book-grid home-map-grid">
         <article class="book-card featured-book">
-
-          <p class="book-number">
-
-            The Reading Road
-
-          </p>
-
-          <h3>
-
-            The Books
-
-          </h3>
-
+          <p class="book-number">The Reading Road</p>
+          <h3>Books</h3>
           <p>
-
-            Discover the saga from Book I onwards, with story
-
-            introductions, themes and glimpses of the roads still
-
-            being written.
-
+            Discover the saga from Book I onwards, with spoiler-safe story
+            introductions, themes and glimpses of the roads still being written.
           </p>
-
-          <a href="books.html" class="button primary">
-
-            Open the Books
-
-          </a>
-
+          <a href="books.html" class="button primary">Open the Books</a>
         </article>
 
         <article class="book-card">
-
-          <p class="book-number">
-
-            The Living Braid
-
-          </p>
-
-          <h3>
-
-            Characters
-
-          </h3>
-
+          <p class="book-number">The Living Braid</p>
+          <h3>Characters</h3>
           <p>
-
-            Meet the survivors, families, lovers, companions and
-
-            animal witnesses who carry the living heart of Black Wings.
-
+            Meet the survivors, lovers, families, companions and animal
+            witnesses who carry the living heart of Black Wings.
           </p>
-
-          <a href="characters.html" class="button secondary">
-
-            Meet the Characters
-
-          </a>
-
+          <a href="characters.html" class="button secondary">Meet the Characters</a>
         </article>
 
         <article class="book-card">
-
-          <p class="book-number">
-
-            The Roads Beyond
-
-          </p>
-
-          <h3>
-
-            World
-
-          </h3>
-
+          <p class="book-number">The Dark Names</p>
+          <h3>Rogues</h3>
           <p>
-
-            Walk through Vardrum, Witness Isle, the Salt-Marsh,
-
-            Green Deer-Wood and the lands beneath forgotten law.
-
+            Enter a spoiler-safe gallery of crowns, roots, false mercy, cold
+            houses, old hunger and the powers that make witness necessary.
           </p>
-
-          <a href="world.html" class="button secondary">
-
-            Enter the World
-
-          </a>
-
+          <a href="rogues.html" class="button secondary">Enter the Gallery</a>
         </article>
 
         <article class="book-card">
-
-          <p class="book-number">
-
-            The Remembered Words
-
-          </p>
-
-          <h3>
-
-            Lore
-
-          </h3>
-
+          <p class="book-number">The Roads Beyond</p>
+          <h3>World</h3>
           <p>
-
-            Discover old laws, witness marks, prayers, traditions,
-
-            warnings and fragments carried across generations.
-
+            Walk through Vardrum, Witness Isle, the Salt-Marsh, Green Deer-Wood
+            and the lands beneath forgotten law.
           </p>
-
-          <a href="lore.html" class="button secondary">
-
-            Read the Lore
-
-          </a>
-
+          <a href="world.html" class="button secondary">Enter the World</a>
         </article>
 
         <article class="book-card">
-
-          <p class="book-number">
-
-            The Witness Archive
-
-          </p>
-
-          <h3>
-
-            Odes and Songs
-
-          </h3>
-
+          <p class="book-number">The Remembered Words</p>
+          <h3>Lore</h3>
           <p>
-
-            Read odes, songs, epitaphs, prayer-leaves, beast verses
-
-            and fragments preserved beside the saga.
-
+            Discover old laws, witness marks, prayers, traditions, warnings and
+            fragments carried across generations.
           </p>
-
-          <a href="odes.html" class="button secondary">
-
-            Open the Odes
-
-          </a>
-
+          <a href="lore.html" class="button secondary">Read the Lore</a>
         </article>
 
         <article class="book-card">
-
-          <p class="book-number">
-
-            The Painted Road
-
-          </p>
-
-          <h3>
-
-            Maps and Art
-
-          </h3>
-
+          <p class="book-number">The Skald-Room</p>
+          <h3>Odes and Songs</h3>
           <p>
-
-            Explore maps, shields, witness marks, banners, animals
-
-            and images from across the Black Wings world.
-
+            Read odes, songs, epitaphs, prayer-leaves, beast verses and fragments
+            preserved beside the saga.
           </p>
-
-          <a href="maps.html" class="button secondary">
-
-            View the Maps
-
-          </a>
-
+          <a href="odes.html" class="button secondary">Open the Odes</a>
         </article>
 
+        <article class="book-card">
+          <p class="book-number">The Painted Road</p>
+          <h3>Maps</h3>
+          <p>
+            Follow the known roads, islands, marshes, woods and hidden places of
+            the Black Wings world.
+          </p>
+          <a href="maps.html" class="button secondary">Open the Maps</a>
+        </article>
+
+        <article class="book-card">
+          <p class="book-number">The Witness Hall</p>
+          <h3>Visual Archive</h3>
+          <p>
+            Explore crests, shields, banners, birds, beasts, spirit flame and
+            official visual references from across the saga.
+          </p>
+          <a href="archive.html" class="button secondary">Visit the Archive</a>
+        </article>
+
+        <article class="book-card">
+          <p class="book-number">Behind the Wings</p>
+          <h3>Author</h3>
+          <p>
+            Read about Timothy M. Halliday, writing as T.M.H, and the world he
+            has carried for around forty years.
+          </p>
+          <a href="author.html" class="button secondary">Meet the Author</a>
+        </article>
+
+        <article class="book-card">
+          <p class="book-number">The Names Behind the Page</p>
+          <h3>Dedications</h3>
+          <p>
+            Visit the quiet chamber for the people, animals, memories and acts of
+            belief standing behind the long road.
+          </p>
+          <a href="dedications.html" class="button secondary">Read the Dedications</a>
+        </article>
       </div>
-
     </section>
 
     <section class="panel">
-
-      <p class="eyebrow">
-
-        The Saga Shelf
-
-      </p>
-
-      <h2>
-
-        The Road Already Written
-
-      </h2>
+      <p class="eyebrow">The Saga Shelf</p>
+      <h2>The Road Already Written</h2>
 
       <p>
-
-        The main saga currently stretches from Book I through Book XV.
-
-        Work has also begun on Books XVI to XX, opening the next great
-
-        movement of the story.
-
+        The main saga currently stretches from Book I through Book XV. Work has
+        also begun on Books XVI to XX, opening the next great movement of the story.
       </p>
 
       <p>
-
-        These later books continue the roads of the Braid, its loves,
-
-        its animals, its old enemies and the living laws that refuse
-
-        to remain buried.
-
+        These later books continue the roads of the Braid, its loves, its animals,
+        its old enemies and the living laws that refuse to remain buried.
       </p>
 
-      <p>
+      <div class="saga-status" aria-label="Saga writing status">
+        <div class="status-card">
+          <strong>I–XV</strong>
+          <span>Main saga manuscripts</span>
+        </div>
 
-        The complete series is being prepared for publication.
+        <div class="status-card">
+          <strong>XVI–XX</strong>
+          <span>The next movement has begun</span>
+        </div>
 
-      </p>
-
-      <div class="hero-buttons">
-
-        <a href="books.html" class="button primary">
-
-          View the Saga Shelf
-
-        </a>
-
-      </div>
-
-    </section>
-
-    <section class="panel">
-
-      <p class="eyebrow">
-
-        The Heart of Black Wings
-
-      </p>
-
-      <h2>
-
-        The Braid
-
-      </h2>
-
-      <p>
-
-        The Braid is not a crown, bloodline or institution.
-
-        It is a living bond between people who choose one another
-
-        freely and continue choosing one another when the road turns cruel.
-
-      </p>
-
-      <p>
-
-        It holds warriors, survivors, lovers, children, families,
-
-        neighbours, beasts, birds, spirits and remembered names.
-
-      </p>
-
-      <div class="lore-list">
-
-        <span>FATAS and Ness</span>
-
-        <span>Cael and Brokan</span>
-
-        <span>Lucy and Jesse</span>
-
-        <span>Eldwyn and Ulrike</span>
-
-        <span>James and Maisie</span>
-
-        <span>Sarah and Craig</span>
-
-        <span>Josie, Katy and Jenny</span>
-
-        <span>Kian and Bella</span>
-
+        <div class="status-card">
+          <strong>One Braid</strong>
+          <span>Many roads, one living witness</span>
+        </div>
       </div>
 
       <div class="hero-buttons">
-
-        <a href="characters.html" class="button primary">
-
-          Meet the Braid
-
-        </a>
-
-        <a href="rogues.html" class="button secondary">
-
-          Enter the Rogues Gallery
-
-        </a>
-
+        <a href="books.html" class="button primary">View the Saga Shelf</a>
       </div>
-
     </section>
 
     <section class="panel">
+      <div class="home-image-panel">
+        <div>
+          <p class="eyebrow">The Heart of Black Wings</p>
+          <h2>The Braid</h2>
 
-      <p class="eyebrow">
+          <p>
+            The Braid is not a crown, bloodline or institution. It is a living
+            bond between people who choose one another freely and continue
+            choosing one another when the road turns cruel.
+          </p>
 
-        Those Who See
+          <p>
+            It holds warriors, survivors, lovers, children, families,
+            neighbours, beasts, birds, spirits and remembered names.
+          </p>
 
-      </p>
+          <div class="lore-list">
+            <span>FATAS and Ness</span>
+            <span>Cael and Brokan</span>
+            <span>Lucy and Jesse</span>
+            <span>Eldwyn and Ulrike</span>
+            <span>James and Maisie</span>
+            <span>Sarah and Craig</span>
+            <span>Josie, Katy and Jenny</span>
+            <span>Kian and Bella</span>
+          </div>
 
-      <h2>
+          <div class="hero-buttons">
+            <a href="characters.html" class="button primary">Meet the Braid</a>
+            <a href="rogues.html" class="button secondary">Enter the Rogues Gallery</a>
+          </div>
+        </div>
 
-        The Animal Witnesses
+        <figure>
+          <img
+            src="AB854AAB-8F11-4453-B5D2-F5850178C570.png"
+            alt="The full animal crest of The Saga of Black Wings"
+            width="1254"
+            height="1254"
+            loading="lazy"
+          />
+          <figcaption class="mini-note">All remember. All bear truth.</figcaption>
+        </figure>
+      </div>
+    </section>
 
-      </h2>
+    <section class="panel">
+      <p class="eyebrow">Those Who See</p>
+      <h2>The Animal Witnesses</h2>
 
       <p>
-
-        The animals of Black Wings are not ornaments standing at the
-
-        edge of human stories. They warn, judge, remember, protect,
-
-        interrupt and often understand the truth long before the people.
-
+        The animals of Black Wings are not ornaments standing at the edge of
+        human stories. They warn, judge, remember, protect, interrupt and often
+        understand the truth long before the people.
       </p>
 
       <div class="book-grid">
-
         <article class="character-card animal-card">
-
-          <p class="role">
-
-            Crow Witness
-
-          </p>
-
-          <h3>
-
-            Scarlet
-
-          </h3>
-
+          <p class="role">Crow Witness</p>
+          <h3>Scarlet</h3>
           <p>
-
-            Calm, sharp-eyed and seldom impressed. Scarlet watches
-
-            before deciding whether anyone deserves her trust.
-
+            Calm, sharp-eyed and seldom impressed. Scarlet watches before
+            deciding whether anyone deserves her trust.
           </p>
-
         </article>
 
         <article class="character-card animal-card">
-
-          <p class="role">
-
-            Raven Witness
-
-          </p>
-
-          <h3>
-
-            Blue
-
-          </h3>
-
+          <p class="role">Raven Witness</p>
+          <h3>Blue</h3>
           <p>
-
-            Inquisitive, iridescent and impossible to ignore.
-
-            Blue notices doors people hoped would remain hidden.
-
+            Inquisitive, iridescent and impossible to ignore. Blue notices doors
+            people hoped would remain hidden.
           </p>
-
         </article>
 
         <article class="character-card animal-card">
-
-          <p class="role">
-
-            Hearth Companions
-
-          </p>
-
-          <h3>
-
-            Mad, Benson and Hugo
-
-          </h3>
-
+          <p class="role">Hearth Companions</p>
+          <h3>Mad, Benson and Hugo</h3>
           <p>
-
-            Dogs of loyalty, instinct and stubborn courage.
-
-            Each carries a different kind of witness.
-
+            Dogs of loyalty, instinct and stubborn courage. Each carries a
+            different kind of witness.
           </p>
-
         </article>
 
         <article class="character-card spirit-card">
-
-          <p class="role">
-
-            Spirit Flame
-
-          </p>
-
-          <h3>
-
-            Bella’s Flame
-
-          </h3>
-
+          <p class="role">Spirit Flame</p>
+          <h3>Bella’s Flame</h3>
           <p>
-
-            A living light of courage, memory and refusal that burns
-
-            without becoming anyone’s possession.
-
+            A living light of courage, memory and refusal that burns without
+            becoming anyone’s possession.
           </p>
-
         </article>
-
       </div>
 
       <div class="hero-buttons">
-
-        <a href="archive.html" class="button primary">
-
-          Visit the Visual Archive
-
-        </a>
-
+        <a href="archive.html" class="button primary">Visit the Visual Archive</a>
       </div>
-
     </section>
 
     <section class="panel">
-
-      <p class="eyebrow">
-
-        The World Remembers
-
-      </p>
-
-      <h2>
-
-        Beyond the Hearth
-
-      </h2>
+      <p class="eyebrow">The World Remembers</p>
+      <h2>Beyond the Hearth</h2>
 
       <p>
-
-        Vardrum is not a painted backdrop. Its roads listen,
-
-        its marshes hold buried truth and its houses remember
-
-        everyone who crossed their thresholds.
-
+        Vardrum is not a painted backdrop. Its roads listen, its marshes hold
+        buried truth and its houses remember everyone who crossed their thresholds.
       </p>
 
       <div class="lore-list">
-
         <span>Vardrum</span>
-
         <span>Witness Isle</span>
-
         <span>The Salt-Marsh</span>
-
         <span>The Crown</span>
-
         <span>The Underroot</span>
-
         <span>The Agreement</span>
-
         <span>The Hidden Houses</span>
-
         <span>Skeld-Fell</span>
-
         <span>The Cold Roads North</span>
-
         <span>Green Deer-Wood</span>
-
       </div>
 
       <div class="hero-buttons">
-
-        <a href="world.html" class="button primary">
-
-          Enter the World
-
-        </a>
-
-        <a href="maps.html" class="button secondary">
-
-          Open the Maps
-
-        </a>
-
+        <a href="world.html" class="button primary">Enter the World</a>
+        <a href="maps.html" class="button secondary">Open the Maps</a>
+        <a href="lore.html" class="button secondary">Read the Lore</a>
       </div>
-
     </section>
 
     <section class="panel">
-
-      <p class="eyebrow">
-
-        Living Law
-
-      </p>
-
-      <h2>
-
-        The Law of the Road
-
-      </h2>
+      <p class="eyebrow">Living Law</p>
+      <h2>The Law of the Road</h2>
 
       <p>
-
-        These truths run beneath the saga, older and stronger than
-
-        the laws written by crowns.
-
+        These truths run beneath the saga, older and stronger than the laws
+        written by crowns.
       </p>
 
       <div class="lore-list law-list">
-
         <span>Care freely given is not ransom.</span>
-
         <span>Names belong to the named.</span>
-
         <span>Origin is not ownership.</span>
-
         <span>Desperation is not permission.</span>
-
         <span>Bloodline is witness, not claim.</span>
-
         <span>A child is never proof.</span>
-
         <span>Refusal is a living law.</span>
-
         <span>The Braid is offer, not net.</span>
-
       </div>
-
     </section>
 
     <section class="panel">
-
-      <p class="eyebrow">
-
-        Songs Beneath the Story
-
-      </p>
-
-      <h2>
-
-        Odes, Songs and Epitaphs
-
-      </h2>
+      <p class="eyebrow">Songs Beneath the Story</p>
+      <h2>Odes, Songs and Epitaphs</h2>
 
       <p>
-
-        Poetry within Black Wings carries record, warning, grief,
-
-        humour, folklore, remembrance and old magic.
-
+        Poetry within Black Wings carries record, warning, grief, humour,
+        folklore, remembrance and old magic.
       </p>
 
       <p>
-
-        The archive contains full odes, songs, short epitaphs,
-
-        prayer-leaves, beast verses and saga plates from across
-
-        the world.
-
+        The Skald-Room contains full odes, songs, short epitaphs, prayer-leaves,
+        beast verses and saga plates from across the world.
       </p>
 
       <blockquote>
-
         “Not all who witness speak with human tongues.”
-
       </blockquote>
 
       <div class="hero-buttons">
-
-        <a href="odes.html" class="button primary">
-
-          Read the Odes
-
-        </a>
-
+        <a href="odes.html" class="button primary">Read the Odes</a>
       </div>
-
     </section>
 
     <section class="panel">
-
-      <p class="eyebrow">
-
-        Behind the Wings
-
-      </p>
-
-      <h2>
-
-        Timothy M. Halliday
-
-      </h2>
-
-      <div class="author-panel">
-
+      <div class="home-author-panel">
         <div>
+          <p class="eyebrow">Behind the Wings</p>
+          <h2>Timothy M. Halliday</h2>
 
           <p>
-
             Timothy M. Halliday, writing as T.M.H, has carried
-
             <em>The Saga of Black Wings</em> for around forty years.
-
           </p>
 
           <p>
-
-            The saga grew from a lifetime of imagination, animals,
-
-            friendship, grief, humour, neighbours, houses, roads,
-
-            ravens, wolves, darkness and stubborn hope.
-
+            The saga grew from a lifetime of imagination, animals, friendship,
+            grief, humour, neighbours, houses, roads, ravens, wolves, darkness
+            and stubborn hope.
           </p>
 
           <p>
-
-            What began as a private world has become an expansive
-
-            fantasy saga built to remember the names and lives that
-
-            power would rather count as small.
-
+            What began as a private world has become an expansive fantasy saga
+            built to remember the names and lives that power would rather count
+            as small.
           </p>
 
-          <a href="author.html" class="button primary">
-
-            Read About the Author
-
-          </a>
-
+          <a href="author.html" class="button primary">Read About the Author</a>
         </div>
 
-        <img
-
-          src="tmh.png"
-
-          alt="Timothy M. Halliday, author of The Saga of Black Wings"
-
-          loading="lazy"
-
-        />
-
+        <figure>
+          <img
+            src="4BC7F1F3-A69C-4867-A3E3-8BFA8B22D55C.png"
+            alt="Timothy M. Halliday, author of The Saga of Black Wings"
+            width="1122"
+            height="1402"
+            loading="lazy"
+          />
+        </figure>
       </div>
-
     </section>
 
     <section class="panel">
-
-      <p class="eyebrow">
-
-        The Names Behind the Page
-
-      </p>
-
-      <h2>
-
-        Dedications
-
-      </h2>
+      <p class="eyebrow">The Names Behind the Page</p>
+      <h2>Dedications</h2>
 
       <p>
-
-        Some names stand behind every road in Black Wings.
-
-        Vanessa, Stephanie, Maisie and Kian are part of the living
-
-        heart behind the saga: love, courage, belief, memory and
-
-        the reason the books finally stepped beyond the locked room.
-
+        Some names stand behind every road in Black Wings. Vanessa, Stephanie,
+        Maisie and Kian are part of the living heart behind the saga: love,
+        courage, belief, memory and the reason the books finally stepped beyond
+        the locked room.
       </p>
 
       <div class="hero-buttons">
-
-        <a href="dedications.html" class="button primary">
-
-          Read the Dedications
-
-        </a>
-
+        <a href="dedications.html" class="button primary">Read the Dedications</a>
       </div>
-
     </section>
 
     <section class="panel enquiry-panel">
-
-      <p class="eyebrow">
-
-        Professional Contact
-
-      </p>
-
-      <h2>
-
-        Publishing and Representation Enquiries
-
-      </h2>
+      <p class="eyebrow">Professional Contact</p>
+      <h2>Publishing and Representation Enquiries</h2>
 
       <p>
-
-        <em>The Saga of Black Wings</em> is currently being prepared
-
-        for publication.
-
+        <em>The Saga of Black Wings</em> is currently being prepared for publication.
       </p>
 
       <p>
-
-        For publishing enquiries, representation interest or
-
-        professional contact:
-
+        For publishing enquiries, representation interest or professional contact:
       </p>
 
       <blockquote>
-
         <a href="mailto:Timothymhalliday@outlook.com">
-
           Timothymhalliday@outlook.com
-
         </a>
-
       </blockquote>
-
     </section>
 
     <section class="panel final-road-panel">
-
-      <p class="eyebrow">
-
-        Begin Anywhere
-
-      </p>
-
-      <h2>
-
-        Every Road Leads Deeper
-
-      </h2>
+      <p class="eyebrow">Begin Anywhere</p>
+      <h2>Every Road Leads Deeper</h2>
 
       <p>
-
-        Begin with the books, the Braid, the maps, the animals,
-
-        the odes or the old laws. Every doorway opens onto another.
-
+        Begin with the books, the Braid, the maps, the animals, the odes or the
+        old laws. Every doorway opens onto another.
       </p>
 
       <blockquote>
-
         “The map ends only where courage stops drawing.”
-
       </blockquote>
 
       <div class="hero-buttons">
-
-        <a href="books.html" class="button primary">
-
-          Begin the Saga
-
-        </a>
-
-        <a href="maps.html" class="button secondary">
-
-          Follow the Road
-
-        </a>
-
+        <a href="books.html" class="button primary">Begin the Saga</a>
+        <a href="maps.html" class="button secondary">Follow the Road</a>
       </div>
-
     </section>
-
   </main>
 
   <footer>
-
     <nav class="footer-nav" aria-label="Footer navigation">
-
-      <a href="books.html">
-
-        Books
-
-      </a>
-
-      <a href="characters.html">
-
-        Characters
-
-      </a>
-
-      <a href="world.html">
-
-        World
-
-      </a>
-
-      <a href="lore.html">
-
-        Lore
-
-      </a>
-
-      <a href="odes.html">
-
-        Odes
-
-      </a>
-
-      <a href="author.html">
-
-        Author
-
-      </a>
-
+      <a href="index.html">Home</a>
+      <a href="books.html">Books</a>
+      <a href="characters.html">Characters</a>
+      <a href="rogues.html">Rogues</a>
+      <a href="world.html">World</a>
+      <a href="lore.html">Lore</a>
+      <a href="odes.html">Odes</a>
+      <a href="maps.html">Maps</a>
+      <a href="archive.html">Archive</a>
+      <a href="author.html">Author</a>
+      <a href="dedications.html">Dedications</a>
     </nav>
 
-    <p>
-
-      © 2026 Saga of Black Wings · Created by Timothy M. Halliday
-
-    </p>
-
-    <p class="footer-motto">
-
-      No crown shall count us smaller.
-
-    </p>
-
+    <p>© 2026 Saga of Black Wings · Created by Timothy M. Halliday</p>
+    <p class="footer-motto">No crown shall count us smaller.</p>
   </footer>
-
 </body>
-
 </html>
