@@ -1,1471 +1,789 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Characters | Saga of Black Wings</title>
+  <title>Characters | The Saga of Black Wings</title>
 
   <meta
-
     name="description"
-
-    content="Meet the warriors, families, companions, lovers, animal witnesses and living bonds of The Saga of Black Wings by Timothy M. Halliday."
-
+    content="Meet the Braid, its families, companions, animal witnesses and future arrivals in The Saga of Black Wings by Timothy M. Halliday."
   />
-
   <meta name="author" content="Timothy M. Halliday" />
-
   <meta name="theme-color" content="#050608" />
 
-  <meta property="og:title" content="Characters | Saga of Black Wings" />
-
+  <meta property="og:title" content="Characters | The Saga of Black Wings" />
   <meta
-
     property="og:description"
-
-    content="Meet the Braid, its families, companions, animal witnesses and dangerous hearts."
-
+    content="Meet the living bonds, families, birds, beasts and spirit witnesses at the heart of Black Wings."
   />
-
   <meta property="og:type" content="website" />
-
+  <meta property="og:url" content="https://sagaofblackwings.com/characters.html" />
   <meta
-
-    property="og:url"
-
-    content="https://sagaofblackwings.com/characters.html"
-
+    property="og:image"
+    content="https://sagaofblackwings.com/509B190A-38D8-4332-9CC8-8CBF26956408.png"
+  />
+  <meta
+    property="og:image:alt"
+    content="The animal witnesses of The Saga of Black Wings"
   />
 
-  <link
-
-    rel="canonical"
-
-    href="https://sagaofblackwings.com/characters.html"
-
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Characters | The Saga of Black Wings" />
+  <meta
+    name="twitter:description"
+    content="Meet the Braid, its families, companions and animal witnesses."
+  />
+  <meta
+    name="twitter:image"
+    content="https://sagaofblackwings.com/509B190A-38D8-4332-9CC8-8CBF26956408.png"
   />
 
+  <link rel="canonical" href="https://sagaofblackwings.com/characters.html" />
   <link rel="stylesheet" href="style.css" />
 
+  <style>
+    .characters-hero {
+      min-height: 72vh;
+      padding-top: 5.2rem;
+      padding-bottom: 5.2rem;
+    }
+
+    .characters-hero-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(270px, 0.72fr);
+      gap: clamp(2rem, 6vw, 5rem);
+      align-items: center;
+      width: min(100%, 1120px);
+      margin: 0 auto;
+    }
+
+    .characters-hero .hero-text {
+      width: 100%;
+      text-align: left;
+    }
+
+    .characters-hero .tagline,
+    .characters-hero .hero-quote {
+      margin-left: 0;
+    }
+
+    .characters-hero .hero-buttons {
+      justify-content: flex-start;
+    }
+
+    .character-hero-art {
+      margin: 0;
+      padding: 0.6rem;
+      background: rgba(5, 6, 8, 0.72);
+      border: 1px solid rgba(240, 210, 140, 0.42);
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .character-hero-art img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 19px;
+    }
+
+    .spoiler-seal {
+      max-width: 850px;
+      margin: 1.5rem auto 0;
+      padding: 1rem 1.2rem;
+      color: var(--parchment-soft);
+      background: rgba(5, 6, 8, 0.38);
+      border-left: 3px solid var(--crimson);
+      border-radius: 0 12px 12px 0;
+    }
+
+    .hall-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.7rem;
+      margin-top: 1.8rem;
+    }
+
+    .hall-nav a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 0.55rem 0.9rem;
+      color: var(--parchment);
+      background: rgba(18, 21, 26, 0.84);
+      border: 1px solid rgba(221, 182, 95, 0.28);
+      border-radius: 999px;
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .hall-nav a:hover {
+      color: #130e07;
+      background: var(--gold-bright);
+      border-color: var(--gold-bright);
+    }
+
+    .bond-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .bond-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    .bond-card .bond-names {
+      margin-bottom: 0.8rem;
+      color: #fff0ce;
+      font-family: "Cinzel", Georgia, serif;
+      font-size: clamp(1.35rem, 2.5vw, 1.9rem);
+      line-height: 1.2;
+    }
+
+    .bond-card .bond-note {
+      margin-top: auto;
+      padding-top: 0.8rem;
+      color: var(--gold);
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.67rem;
+      font-weight: 800;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .family-card {
+      border-color: rgba(49, 90, 69, 0.55);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(49, 90, 69, 0.22), transparent 18rem),
+        linear-gradient(145deg, rgba(25, 35, 31, 0.96), rgba(12, 15, 16, 0.98));
+    }
+
+    .future-card {
+      border-color: rgba(96, 70, 111, 0.5);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(96, 70, 111, 0.24), transparent 18rem),
+        linear-gradient(145deg, rgba(30, 27, 38, 0.96), rgba(12, 13, 17, 0.98));
+    }
+
+    .character-plate {
+      display: grid;
+      grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.1fr);
+      gap: clamp(1.5rem, 5vw, 3.5rem);
+      align-items: center;
+    }
+
+    .character-plate figure {
+      margin: 0;
+    }
+
+    .character-plate img {
+      width: 100%;
+      max-height: 670px;
+      object-fit: cover;
+      border: 1px solid rgba(221, 182, 95, 0.35);
+      box-shadow: var(--soft-shadow);
+    }
+
+    .character-plate figcaption {
+      margin-top: 0.75rem;
+      color: var(--parchment-soft);
+      font-size: 0.82rem;
+      font-style: italic;
+      text-align: center;
+    }
+
+    .witness-gallery {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 1.3rem;
+      margin: 2rem 0;
+    }
+
+    .witness-gallery figure {
+      margin: 0;
+      padding: 0.55rem;
+      background: rgba(5, 6, 8, 0.5);
+      border: 1px solid rgba(221, 182, 95, 0.25);
+      border-radius: 18px;
+    }
+
+    .witness-gallery img {
+      width: 100%;
+      height: 100%;
+      min-height: 300px;
+      object-fit: cover;
+      border-radius: 13px;
+    }
+
+    .law-strip {
+      padding: 1.3rem;
+      margin-top: 1.5rem;
+      text-align: center;
+      background: rgba(5, 6, 8, 0.46);
+      border-top: 1px solid rgba(221, 182, 95, 0.28);
+      border-bottom: 1px solid rgba(221, 182, 95, 0.28);
+    }
+
+    .law-strip strong {
+      color: var(--gold-bright);
+    }
+
+    @media (max-width: 920px) {
+      .characters-hero-layout,
+      .character-plate {
+        grid-template-columns: 1fr;
+      }
+
+      .characters-hero .hero-text {
+        text-align: center;
+      }
+
+      .characters-hero .tagline,
+      .characters-hero .hero-quote {
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .characters-hero .hero-buttons {
+        justify-content: center;
+      }
+
+      .character-hero-art {
+        width: min(100%, 520px);
+        margin: 0 auto;
+      }
+
+      .character-plate figure {
+        width: min(100%, 560px);
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .characters-hero {
+        min-height: auto;
+      }
+
+      .bond-grid,
+      .witness-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .hall-nav {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .hall-nav a {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .witness-gallery img {
+        min-height: auto;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Characters of The Saga of Black Wings",
+    "url": "https://sagaofblackwings.com/characters.html",
+    "description": "A spoiler-safe guide to the central characters, families and animal witnesses of The Saga of Black Wings.",
+    "author": {
+      "@type": "Person",
+      "name": "Timothy M. Halliday"
+    }
+  }
+  </script>
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <a class="skip-link" href="#main-content">
+  <header class="page-hero characters-hero">
+    <div class="characters-hero-layout">
+      <div class="hero-text">
+        <p class="eyebrow">The Character Hall</p>
 
-    Skip to main content
+        <h1>The Names of Black Wings</h1>
 
-  </a>
+        <p class="tagline">
+          Warriors, survivors, lovers, children, neighbours, birds, beasts,
+          spirits and every living name no crown was permitted to make smaller.
+        </p>
 
-  <header class="page-hero">
+        <blockquote class="hero-quote">
+          “A name remembered is a door the dark cannot fully close.”
+        </blockquote>
 
-    <div class="hero-text">
-
-      <p class="eyebrow">
-
-        The Character Hall
-
-      </p>
-
-      <h1>
-
-        The Names of Black Wings
-
-      </h1>
-
-      <p class="tagline">
-
-        Warriors, survivors, lovers, children, neighbours,
-
-        birds, beasts, spirits and the living names no crown
-
-        was permitted to make smaller.
-
-      </p>
-
-      <blockquote class="hero-quote">
-
-        “A name remembered is a door the dark cannot fully close.”
-
-      </blockquote>
-
-      <div class="hero-buttons">
-
-        <a href="#the-braid" class="button primary">
-
-          Meet the Braid
-
-        </a>
-
-        <a href="rogues.html" class="button secondary">
-
-          Enter the Rogues Gallery
-
-        </a>
-
-        <a href="index.html" class="button secondary">
-
-          Return Home
-
-        </a>
-
+        <div class="hero-buttons">
+          <a href="#the-braid" class="button primary">Meet the Braid</a>
+          <a href="rogues.html" class="button secondary">Enter the Rogues Gallery</a>
+          <a href="index.html" class="button secondary">Return Home</a>
+        </div>
       </div>
 
+      <figure class="character-hero-art">
+        <img
+          src="AB854AAB-8F11-4453-B5D2-F5850178C570.png"
+          alt="Living Black Wings crest surrounded by animal witnesses"
+          width="1254"
+          height="1254"
+          fetchpriority="high"
+        />
+      </figure>
     </div>
-
   </header>
 
   <nav class="site-nav" aria-label="Main navigation">
-
     <a href="index.html">Home</a>
-
     <a href="books.html">Books</a>
-
     <a href="characters.html" aria-current="page">Characters</a>
-
     <a href="rogues.html">Rogues</a>
-
     <a href="world.html">World</a>
-
     <a href="lore.html">Lore</a>
-
     <a href="odes.html">Odes</a>
-
     <a href="maps.html">Maps</a>
-
     <a href="archive.html">Archive</a>
-
     <a href="author.html">Author</a>
-
     <a href="dedications.html">Dedications</a>
-
   </nav>
 
   <main id="main-content">
-
     <section class="panel intro-panel">
-
-      <p class="eyebrow">
-
-        Before the Names Begin
-
-      </p>
-
-      <h2>
-
-        The Living Heart of the Saga
-
-      </h2>
+      <p class="eyebrow">Before the Names Begin</p>
+      <h2>The Living Heart of the Saga</h2>
 
       <p>
-
-        <em>The Saga of Black Wings</em> is built from people
-
-        who survive, choose, remember and refuse.
-
+        <em>The Saga of Black Wings</em> is built from people who survive,
+        choose, remember and refuse. Some arrive carrying blades. Others arrive
+        carrying children, grief, secrets, medicine, food, feathers, scars or
+        old songs. Some never speak with human tongues at all.
       </p>
 
       <p>
-
-        Some arrive carrying blades. Some arrive carrying children,
-
-        grief, secrets, medicine, food, feathers, scars or old songs.
-
-        Some never speak with human tongues at all.
-
+        The Braid is not an institution, a bloodline or a command. It is a
+        freely chosen bond between lives that continue to stand beside one
+        another when standing becomes costly.
       </p>
 
-      <p>
-
-        This page is spoiler-safe. It offers names, bonds and flavour
-
-        without opening the saga’s locked doors too early.
-
+      <p class="spoiler-seal">
+        This hall is deliberately spoiler-safe. It reveals names, bonds and
+        flavour without opening the saga’s locked doors too early.
       </p>
 
+      <nav class="hall-nav" aria-label="Jump to character groups">
+        <a href="#the-braid">Central Bonds</a>
+        <a href="#hearth-families">Hearth Families</a>
+        <a href="#hidden-roads">Hidden Roads</a>
+        <a href="#green-deer-wood">Green Deer-Wood</a>
+        <a href="#animal-witnesses">Animal Witnesses</a>
+      </nav>
     </section>
 
     <section class="panel" id="the-braid">
-
-      <p class="eyebrow">
-
-        The Living Braid
-
-      </p>
-
-      <h2>
-
-        The Central Bonds
-
-      </h2>
+      <p class="eyebrow">The Living Braid</p>
+      <h2>The Central Bonds</h2>
 
       <p>
-
-        The Braid is not an institution, bloodline or command.
-
-        It is a freely chosen bond between lives that continue
-
-        to stand beside one another when standing becomes costly.
-
+        These relationships do not all bloom at once, nor do they follow one
+        pattern. Each bond carries its own pace, wounds, humour, danger and
+        language of care.
       </p>
 
-      <div class="book-grid">
-
-        <article class="character-card featured-book">
-
-          <p class="role">
-
-            Raven-Hearted Warrior
-
-          </p>
-
-          <h3>
-
-            FATAS
-
-          </h3>
-
+      <div class="book-grid bond-grid">
+        <article class="character-card featured-book bond-card">
+          <p class="role">Raven-Hearted Warrior and Quiet Keeper</p>
+          <h3 class="bond-names">FATAS and Ness</h3>
           <p>
-
-            Oath-bearer, survivor, wound-carrier and storm-centre
-
-            of the saga. His greatest strength is not conquest,
-
-            but the refusal to stop rising.
-
+            FATAS is an oath-bearer, survivor and storm-centre whose greatest
+            strength is his refusal to stop rising. Ness is the clear-eyed,
+            steadfast force who helps keep the Braid from unravelling without
+            claiming ownership of anyone’s road.
           </p>
-
+          <p class="bond-note">Endurance, honesty and the held Braid</p>
         </article>
 
-        <article class="character-card featured-book">
-
-          <p class="role">
-
-            Beloved and Fellow Traveller
-
-          </p>
-
-          <h3>
-
-            Ness
-
-          </h3>
-
+        <article class="character-card bond-card">
+          <p class="role">Crown-Threaded Survivor and Scarred Protector</p>
+          <h3 class="bond-names">Cael and Brokan</h3>
           <p>
-
-            Fierce, loving and clear-eyed. Ness does not arrive
-
-            as reward or rescue, but as a woman willing to walk
-
-            beside a wounded warrior without owning his road.
-
+            Cael is clever, dangerous and difficult to read. Brokan is powerful,
+            guarded and impossible to reduce to a simple judgement. Their road
+            tests whether loyalty freely chosen can outlive fear and command.
           </p>
-
+          <p class="bond-note">Pressure, trust and chosen loyalty</p>
         </article>
 
-        <article class="character-card">
-
-          <p class="role">
-
-            Crown-Threaded Survivor
-
-          </p>
-
-          <h3>
-
-            Cael
-
-          </h3>
-
+        <article class="character-card bond-card">
+          <p class="role">Courage and Road-Loyal Companionship</p>
+          <h3 class="bond-names">Lucy and Jesse</h3>
           <p>
-
-            Clever, dangerous and difficult to read.
-
-            Cael survives among hidden pressures while trying
-
-            to remain loyal to truths stronger than command.
-
+            Lucy carries warmth, memory and stubborn courage without allowing
+            softness to become weakness. Jesse is grounded and brave, standing
+            where friendship becomes action rather than promise.
           </p>
-
+          <p class="bond-note">Warmth, courage and action</p>
         </article>
 
-        <article class="character-card">
-
-          <p class="role">
-
-            Scarred Protector
-
-          </p>
-
-          <h3>
-
-            Brokan
-
-          </h3>
-
+        <article class="character-card bond-card">
+          <p class="role">Old Signs and Strong-Hearted Witness</p>
+          <h3 class="bond-names">Eldwyn and Ulrike</h3>
           <p>
-
-            Powerful, guarded and impossible to reduce to a simple
-
-            judgement. Beneath the scars stands a man learning
-
-            what freely chosen loyalty can become.
-
+            Eldwyn reads old knowledge while keeping mud on his boots. Ulrike
+            brings grit, honesty and the strength to look directly at what
+            others would rather leave unnamed.
           </p>
-
+          <p class="bond-note">Wisdom, grit and practical truth</p>
         </article>
 
-        <article class="character-card">
-
-          <p class="role">
-
-            Witness of Courage
-
-          </p>
-
-          <h3>
-
-            Lucy
-
-          </h3>
-
+        <article class="character-card bond-card">
+          <p class="role">Quiet Mystery and Future-Facing Courage</p>
+          <h3 class="bond-names">James and Maisie</h3>
           <p>
-
-            A presence of love, memory and stubborn courage.
-
-            Lucy carries warmth without allowing softness
-
-            to become weakness.
-
+            James is thoughtful, wounded and road-marked, carrying hidden
+            weight beneath a quiet manner. Maisie is a living thread of family,
+            refusal and future law, never merely someone waiting to be protected.
           </p>
-
+          <p class="bond-note">Memory, courage and the unwritten future</p>
         </article>
 
-        <article class="character-card">
-
-          <p class="role">
-
-            Road-Loyal Companion
-
-          </p>
-
-          <h3>
-
-            Jesse
-
-          </h3>
-
+        <article class="character-card bond-card">
+          <p class="role">The Wing-Pair</p>
+          <h3 class="bond-names">Scarlet and Blue</h3>
           <p>
-
-            Brave, grounded and loyal through difficult roads.
-
-            Jesse stands where friendship becomes action
-
-            rather than promise.
-
+            Scarlet, the female crow, watches with calm and garnet-shadowed
+            judgement. Blue, the male raven, is inquisitive, iridescent and
+            determined to notice every hidden door. Together they are witnesses,
+            interrupters and a refrain running through the Braid.
           </p>
-
+          <p class="bond-note">Feather, warning and witness</p>
         </article>
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Keeper of Signs
-
-          </p>
-
-          <h3>
-
-            Eldwyn
-
-          </h3>
-
-          <p>
-
-            Hearth-bound guide, reader of old knowledge and keeper
-
-            of practical truths. Eldwyn brings wisdom with mud
-
-            still on its boots.
-
-          </p>
-
-        </article>
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Strong-Hearted Witness
-
-          </p>
-
-          <h3>
-
-            Ulrike
-
-          </h3>
-
-          <p>
-
-            Loyal, sharp-minded and difficult to shake.
-
-            Ulrike brings grit, honesty and strength to the places
-
-            where others might look away.
-
-          </p>
-
-        </article>
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Quiet Mystery
-
-          </p>
-
-          <h3>
-
-            James
-
-          </h3>
-
-          <p>
-
-            Wounded, thoughtful and road-marked.
-
-            James carries hidden weight and one of the saga’s
-
-            most quietly important hearts.
-
-          </p>
-
-        </article>
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Fierce Heart of the Future
-
-          </p>
-
-          <h3>
-
-            Maisie
-
-          </h3>
-
-          <p>
-
-            Daughter, witness and living thread of family,
-
-            refusal and future law. Maisie is never merely
-
-            someone waiting to be protected.
-
-          </p>
-
-        </article>
-
       </div>
-
     </section>
 
-    <section class="panel">
+    <section class="panel" id="hearth-families">
+      <p class="eyebrow">Family Is a Living Verb</p>
+      <h2>Hearth and Family</h2>
 
-      <p class="eyebrow">
-
-        Family Is a Living Verb
-
-      </p>
-
-      <h2>
-
-        Hearth and Family
-
-      </h2>
-
-      <div class="book-grid">
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Mother and Hearth-Witness
-
-          </p>
-
-          <h3>
-
-            Sarah
-
-          </h3>
-
+      <div class="book-grid bond-grid">
+        <article class="character-card family-card bond-card">
+          <p class="role">Parents of Joey and Lily</p>
+          <h3 class="bond-names">Sarah and Craig</h3>
           <p>
-
-            A mother whose care is practical, fierce and grounded
-
-            in the daily work of keeping a family alive.
-
+            Sarah’s care is practical, fierce and grounded in the daily work of
+            keeping a family alive. Craig carries quiet strength, warmth and the
+            kind of ordinary courage that holds its ground without spectacle.
           </p>
-
+          <p>
+            Their children, Joey and Lily, carry curiosity, promise and the
+            future-facing law of a family that refuses to count them small.
+          </p>
+          <p class="bond-note">Sarah, Craig, Joey and Lily</p>
         </article>
 
-        <article class="character-card">
-
-          <p class="role">
-
-            Father and Steady Hand
-
-          </p>
-
-          <h3>
-
-            Craig
-
-          </h3>
-
+        <article class="character-card family-card bond-card">
+          <p class="role">Mother and Daughters</p>
+          <h3 class="bond-names">Josie, Katy and Jenny</h3>
           <p>
-
-            A family man of quiet strength, warmth and ordinary
-
-            courage. Craig stands as proof that gentleness
-
-            can hold its ground.
-
+            Josie is a mother and protector whose endurance is woven through
+            practical love. Katy and Jenny carry tenderness, courage and the
+            ordinary human warmth that keeps epic stories from becoming hollow.
           </p>
-
+          <p class="bond-note">Care, protection and future promise</p>
         </article>
 
-        <article class="character-card">
-
-          <p class="role">
-
-            Daughter of the Hearth
-
-          </p>
-
-          <h3>
-
-            Lily
-
-          </h3>
-
+        <article class="character-card spirit-card bond-card">
+          <p class="role">Bell-Light, Spirit Guide and Living Flame</p>
+          <h3 class="bond-names">Kian and Bella</h3>
           <p>
-
-            Bright, observant and woven into the future of the
-
-            living Braid. Her courage grows in the company
-
-            of those who refuse to count her small.
-
+            Kian is a brave remembered name whose courage continues to ring
+            through the saga. Bella is a presence of gentleness, memory and
+            guidance, while Bella’s Flame burns as a living symbol of courage
+            and refusal without becoming anyone’s possession.
           </p>
-
+          <p class="bond-note">Memory that still gives light</p>
         </article>
 
-        <article class="character-card">
-
-          <p class="role">
-
-            Son of the Hearth
-
-          </p>
-
-          <h3>
-
-            Joey
-
-          </h3>
-
+        <article class="character-card family-card bond-card">
+          <p class="role">Grounded Companion</p>
+          <h3 class="bond-names">Taff</h3>
           <p>
-
-            Child of Sarah and Craig, carrying curiosity,
-
-            courage and the future-facing law of the family.
-
+            A thread of humour, loyalty and practical warmth within the wider
+            world of the Braid. Taff helps keep great events tethered to the
+            human scale of food, weather, friendship and getting on with it.
           </p>
-
+          <p class="bond-note">Humour, loyalty and hearth sense</p>
         </article>
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Mother and Protector
-
-          </p>
-
-          <h3>
-
-            Josie
-
-          </h3>
-
-          <p>
-
-            Mother of Katy and Jenny, tied to love, care,
-
-            endurance and the grounded strength of family.
-
-          </p>
-
-        </article>
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Daughter and Future-Thread
-
-          </p>
-
-          <h3>
-
-            Katy
-
-          </h3>
-
-          <p>
-
-            A young life of courage, tenderness and future promise,
-
-            whose presence changes the shape of what comes next.
-
-          </p>
-
-        </article>
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Daughter and Hearth-Light
-
-          </p>
-
-          <h3>
-
-            Jenny
-
-          </h3>
-
-          <p>
-
-            Warm, human and deeply woven into the ordinary love
-
-            that keeps great stories from becoming hollow.
-
-          </p>
-
-        </article>
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Grounded Companion
-
-          </p>
-
-          <h3>
-
-            Taff
-
-          </h3>
-
-          <p>
-
-            A thread of humour, loyalty and practical warmth
-
-            within the wider world of the Braid.
-
-          </p>
-
-        </article>
-
       </div>
-
     </section>
 
-    <section class="panel">
-
-      <p class="eyebrow">
-
-        Fire, Spirit and Memory
-
-      </p>
-
-      <h2>
-
-        Kian and Bella
-
-      </h2>
+    <section class="panel" id="hidden-roads">
+      <p class="eyebrow">Scent, Road and Hidden Truth</p>
+      <h2>Those Who Read What Others Conceal</h2>
 
       <div class="book-grid">
-
-        <article class="character-card spirit-card">
-
-          <p class="role">
-
-            Bell-Light and Spirit Warrior
-
-          </p>
-
-          <h3>
-
-            Kian
-
-          </h3>
-
+        <article class="character-card future-card">
+          <p class="role">Scent-Bearer and Tracker</p>
+          <h3>Jórunn</h3>
           <p>
-
-            A brave remembered name whose courage continues
-
-            to echo through the saga. Small in years,
-
-            never small in meaning.
-
+            Sharp, instinctive and difficult to deceive. Jórunn reads scent,
+            old-road guilt and truths people hoped their bodies would hide.
           </p>
-
         </article>
 
-        <article class="character-card spirit-card">
-
-          <p class="role">
-
-            Spirit Guide
-
-          </p>
-
-          <h3>
-
-            Bella
-
-          </h3>
-
+        <article class="character-card future-card">
+          <p class="role">Watcher of Hidden Roads</p>
+          <h3>Elland</h3>
           <p>
-
-            A loving presence of gentleness, memory and guidance.
-
-            Bella’s light is warm, but never defenceless.
-
+            Keeper of signs, secrets and old warnings. Elland knows too much,
+            says too little and carries a history Jórunn may be able to read.
           </p>
-
         </article>
 
-        <article class="character-card spirit-card">
-
-          <p class="role">
-
-            Living Spirit Flame
-
-          </p>
-
-          <h3>
-
-            Bella’s Flame
-
-          </h3>
-
+        <article class="character-card future-card">
+          <p class="role">The Scent Woman</p>
+          <h3>Vanessa</h3>
           <p>
-
-            A sacred flame of courage, memory and refusal.
-
-            It burns beside the Braid without becoming
-
-            anyone’s possession.
-
+            Connected to scent, memory and truths carried beneath ordinary
+            notice. Her presence changes how the Braid reads the world around it.
           </p>
-
         </article>
-
-      </div>
-
-    </section>
-
-    <section class="panel">
-
-      <p class="eyebrow">
-
-        Scent, Road and Hidden Truth
-
-      </p>
-
-      <h2>
-
-        Those Who Read What Others Conceal
-
-      </h2>
-
-      <div class="book-grid">
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Scent-Bearer and Tracker
-
-          </p>
-
-          <h3>
-
-            Jórunn
-
-          </h3>
-
-          <p>
-
-            Sharp, instinctive and difficult to deceive.
-
-            Jórunn reads scent, old-road guilt and truths
-
-            people hoped their bodies would hide.
-
-          </p>
-
-        </article>
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Watcher of Hidden Roads
-
-          </p>
-
-          <h3>
-
-            Elland
-
-          </h3>
-
-          <p>
-
-            Keeper of signs, secrets and old warnings.
-
-            Elland knows too much, says too little and carries
-
-            a history Jórunn may be able to smell.
-
-          </p>
-
-        </article>
-
-        <article class="character-card">
-
-          <p class="role">
-
-            The Scent Woman
-
-          </p>
-
-          <h3>
-
-            Vanessa
-
-          </h3>
-
-          <p>
-
-            A woman connected to scent, memory and truths
-
-            carried beneath ordinary notice. Her presence changes
-
-            how the Braid reads the world around it.
-
-          </p>
-
-        </article>
-
-      </div>
-
-    </section>
-
-    <section class="panel">
-
-      <p class="eyebrow">
-
-        Green Deer-Wood
-
-      </p>
-
-      <h2>
-
-        The Forest Keeper
-
-      </h2>
-
-      <div class="book-grid">
-
-        <article class="character-card featured-book">
-
-          <p class="role">
-
-            Druid and Keeper of Living Law
-
-          </p>
-
-          <h3>
-
-            Kelda Veyrún
-
-          </h3>
-
-          <p>
-
-            A forest keeper of striking old-world beauty,
-
-            rain-dark hair, green-brown eyes and hidden authority.
-
-          </p>
-
-          <p>
-
-            Kelda listens before speaking, heals what can be healed,
-
-            cuts away rot and refuses to mistake mercy for weakness.
-
-          </p>
-
-        </article>
-
-        <article class="character-card animal-card">
-
-          <p class="role">
-
-            Witness-Bear
-
-          </p>
-
-          <h3>
-
-            The Great Bear
-
-          </h3>
-
-          <p>
-
-            A vast forest companion who arrives beside Kelda
-
-            and appears to recognise Jack, Mylo, Scarlet and Blue.
-
-          </p>
-
-          <p>
-
-            The bear carries the quiet weight of an older law.
-
-          </p>
-
-        </article>
-
-      </div>
-
-    </section>
-
-    <section class="panel">
-
-      <p class="eyebrow">
-
-        Black Wings Above
-
-      </p>
-
-      <h2>
-
-        The Bird Witnesses
-
-      </h2>
-
-      <p>
-
-        Scarlet and Blue are not decoration, mascots or heraldic
-
-        furniture. They judge, warn, interrupt and remember.
-
-      </p>
-
-      <div class="book-grid">
-
-        <article class="character-card animal-card">
-
-          <p class="role">
-
-            Female Crow Witness
-
-          </p>
-
-          <h3>
-
-            Scarlet
-
-          </h3>
-
-          <p>
-
-            Black-feathered with restrained burgundy and garnet.
-
-            Scarlet is sturdy, calm, observant and frequently
-
-            unimpressed by human foolishness.
-
-          </p>
-
-        </article>
-
-        <article class="character-card animal-card">
-
-          <p class="role">
-
-            Male Raven Witness
-
-          </p>
-
-          <h3>
-
-            Blue
-
-          </h3>
-
-          <p>
-
-            Slimmer, inquisitive and touched with cobalt-indigo
-
-            iridescence. Blue notices hidden doors, unusual scents
-
-            and trouble before anyone invites it inside.
-
-          </p>
-
-        </article>
-
-        <article class="character-card animal-card">
-
-          <p class="role">
-
-            Wing-Shadow Bird
-
-          </p>
-
-          <h3>
-
-            Dusk
-
-          </h3>
-
-          <p>
-
-            A dark, quiet bird-presence carried through shadow,
-
-            warning and the moments between daylight and night.
-
-          </p>
-
-        </article>
-
-      </div>
-
-    </section>
-
-    <section class="panel">
-
-      <p class="eyebrow">
-
-        The Hearth Pack
-
-      </p>
-
-      <h2>
-
-        Dogs, Wolves and the Cat Who Judges Them
-
-      </h2>
-
-      <div class="book-grid">
-
-        <article class="character-card animal-card">
-
-          <p class="role">
-
-            Mixed-Breed Dog
-
-          </p>
-
-          <h3>
-
-            Mad
-
-          </h3>
-
-          <p>
-
-            Loyal, instinctive and gloriously unwilling to respect
-
-            solemnity when solemnity has become ridiculous.
-
-          </p>
-
-        </article>
-
-        <article class="character-card animal-card">
-
-          <p class="role">
-
-            Brindle Dog
-
-          </p>
-
-          <h3>
-
-            Benson
-
-          </h3>
-
-          <p>
-
-            A grounded, dependable witness whose presence carries
-
-            the strength of an animal who knows where home is.
-
-          </p>
-
-        </article>
-
-        <article class="character-card animal-card">
-
-          <p class="role">
-
-            Black Dog
-
-          </p>
-
-          <h3>
-
-            Hugo
-
-          </h3>
-
-          <p>
-
-            Black-coated with white paws and pale ear tips.
-
-            Hugo brings loyalty, warmth and a watchful spirit
-
-            to the hearth.
-
-          </p>
-
-        </article>
-
-        <article class="character-card animal-card">
-
-          <p class="role">
-
-            Russet Dog
-
-          </p>
-
-          <h3>
-
-            Shane
-
-          </h3>
-
-          <p>
-
-            Red-coated, bright and full of road-energy.
-
-            Shane carries the restless courage of a dog
-
-            who would follow the Braid anywhere.
-
-          </p>
-
-        </article>
-
-        <article class="character-card animal-card">
-
-          <p class="role">
-
-            Sandy Siamese-Like Cat
-
-          </p>
-
-          <h3>
-
-            Mylo
-
-          </h3>
-
-          <p>
-
-            Clever, composed and magnificently unimpressed.
-
-            Mylo observes the larger animals with the confidence
-
-            of someone certain the house belongs to him.
-
-          </p>
-
-        </article>
-
-        <article class="character-card animal-card">
-
-          <p class="role">
-
-            Moor-Wolf
-
-          </p>
-
-          <h3>
-
-            Jack
-
-          </h3>
-
-          <p>
-
-            A wolf of shifting colour, old instinct and road-wisdom.
-
-            Jack belongs to the borderlands between beast,
-
-            witness and legend.
-
-          </p>
-
-        </article>
-
-      </div>
-
-    </section>
-
-    <section class="panel">
-
-      <p class="eyebrow">
-
-        Companions and Wider Threads
-
-      </p>
-
-      <h2>
-
-        More Names Within the Braid
-
-      </h2>
-
-      <div class="book-grid">
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Keeper of Courage
-
-          </p>
-
-          <h3>
-
-            Bella
-
-          </h3>
-
-          <p>
-
-            A living thread of kindness, spirit and protection
-
-            whose light continues through Kian and the Flame.
-
-          </p>
-
-        </article>
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Witness of Memory
-
-          </p>
-
-          <h3>
-
-            Maisie
-
-          </h3>
-
-          <p>
-
-            A future-facing presence whose courage matters
-
-            beyond any role others might try to assign her.
-
-          </p>
-
-        </article>
-
-        <article class="character-card">
-
-          <p class="role">
-
-            Traveller of the Wider Road
-
-          </p>
-
-          <h3>
-
-            The Unnamed Arrivals
-
-          </h3>
-
-          <p>
-
-            Not every strand has reached the Braid yet.
-
-            Some companions, lovers and witnesses remain beyond
-
-            the edge of the current map.
-
-          </p>
-
-        </article>
-
-      </div>
-
-    </section>
-
-    <section class="panel witness-intro">
-
-      <p class="eyebrow">
-
-        The Living Rule
-
-      </p>
-
-      <h2>
-
-        No One Is Owned Here
-
-      </h2>
-
-      <div class="lore-list law-list">
-
-        <span>Names belong to the named.</span>
-
-        <span>Care is not ransom.</span>
-
-        <span>Love is not ownership.</span>
-
-        <span>Blood is not command.</span>
-
-        <span>Children are never proof.</span>
-
-        <span>Refusal remains sacred.</span>
-
-        <span>The Braid is offer, not net.</span>
-
       </div>
 
       <blockquote>
-
-        “They were not bound because they were trapped.
-
-        They were bound because they stayed.”
-
+        “The body remembers roads the mouth has sworn never to name.”
       </blockquote>
+    </section>
 
+    <section class="panel character-plate" id="green-deer-wood">
+      <figure>
+        <img
+          src="IMG_5588.jpeg"
+          alt="A forest keeper kneeling beside a great bear"
+          width="1024"
+          height="1536"
+          loading="lazy"
+        />
+        <figcaption>
+          A keeper and a bear upon the road to Green Deer-Wood.
+        </figcaption>
+      </figure>
+
+      <div>
+        <p class="eyebrow">The Forest Road</p>
+        <h2>Kelda Veyrún</h2>
+
+        <p class="role">Druid and Keeper of Living Law</p>
+
+        <p>
+          Kelda is a forest keeper of striking old-world beauty, rain-dark hair,
+          green-brown eyes and quiet authority. Her strength is not ornamental.
+          She listens before speaking, heals what can be healed, protects
+          saplings, reads animal signs and cuts away rot when mercy can no
+          longer be mistaken for delay.
+        </p>
+
+        <h3>The Great Bear</h3>
+
+        <p>
+          Kelda arrives with an enormous bear whose silence carries the weight
+          of an older law. The animal appears to recognise Jack, Mylo, Scarlet
+          and Blue, opening a road toward mysteries the Braid has not yet named.
+        </p>
+
+        <p class="spoiler-seal">
+          Kelda and the bear belong to the bridge into Book XVII,
+          <em>Green Deer-Wood</em>.
+        </p>
+      </div>
+    </section>
+
+    <section class="panel" id="animal-witnesses">
+      <p class="eyebrow">Those Who See</p>
+      <h2>The Animal Witnesses</h2>
+
+      <p>
+        The animals of Black Wings are not mascots or ornaments. They warn,
+        judge, remember, protect, interrupt and often understand the truth
+        several chapters before the people do.
+      </p>
+
+      <div class="witness-gallery">
+        <figure>
+          <img
+            src="9F949A28-0A56-4953-A7B6-37ECD8A29F15.png"
+            alt="Portrait chart of Blue the raven and Scarlet the crow"
+            width="1361"
+            height="1156"
+            loading="lazy"
+          />
+        </figure>
+
+        <figure>
+          <img
+            src="509B190A-38D8-4332-9CC8-8CBF26956408.png"
+            alt="Illustrated chart of the Black Wings animal witnesses"
+            width="1536"
+            height="1024"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <div class="book-grid">
+        <article class="character-card animal-card">
+          <p class="role">Female Crow Witness</p>
+          <h3>Scarlet</h3>
+          <p>
+            Black-feathered with restrained burgundy and garnet. Scarlet is
+            sturdy, calm, observant and frequently unimpressed by human folly.
+          </p>
+        </article>
+
+        <article class="character-card animal-card">
+          <p class="role">Male Raven Witness</p>
+          <h3>Blue</h3>
+          <p>
+            Slimmer, inquisitive and touched with cobalt-indigo iridescence.
+            Blue notices unusual scents, hidden doors and trouble approaching.
+          </p>
+        </article>
+
+        <article class="character-card animal-card">
+          <p class="role">Mixed-Breed Dog</p>
+          <h3>Mad</h3>
+          <p>
+            Loyal, instinctive and gloriously unwilling to respect solemnity
+            when solemnity has become ridiculous.
+          </p>
+        </article>
+
+        <article class="character-card animal-card">
+          <p class="role">Brindle Dog</p>
+          <h3>Benson</h3>
+          <p>
+            Grounded and dependable, carrying the strength of an animal who
+            knows where home is and exactly who belongs there.
+          </p>
+        </article>
+
+        <article class="character-card animal-card">
+          <p class="role">Black Dog</p>
+          <h3>Hugo</h3>
+          <p>
+            Black-coated with white paws and pale ear tips. Hugo brings loyalty,
+            warmth and a watchful spirit to the hearth.
+          </p>
+        </article>
+
+        <article class="character-card animal-card">
+          <p class="role">Russet Dog</p>
+          <h3>Shane</h3>
+          <p>
+            Red-coated, bright and full of road-energy. Shane carries the
+            restless courage of a dog who would follow the Braid anywhere.
+          </p>
+        </article>
+
+        <article class="character-card animal-card">
+          <p class="role">Sandy Siamese-Like Cat</p>
+          <h3>Mylo</h3>
+          <p>
+            Clever, composed and magnificently unimpressed. Mylo watches larger
+            animals with the confidence of someone certain the house is his.
+          </p>
+        </article>
+
+        <article class="character-card animal-card">
+          <p class="role">Moor-Wolf</p>
+          <h3>Jack</h3>
+          <p>
+            A wolf of shifting colour, old instinct and road-wisdom, standing
+            at the border between beast, witness and legend.
+          </p>
+        </article>
+
+        <article class="character-card animal-card">
+          <p class="role">Wing-Shadow Bird</p>
+          <h3>Dusk</h3>
+          <p>
+            A dark, quiet bird-presence carried through shadow, warning and the
+            changing hour between daylight and night.
+          </p>
+        </article>
+
+        <article class="character-card spirit-card">
+          <p class="role">Living Spirit Flame</p>
+          <h3>Bella’s Flame</h3>
+          <p>
+            A sacred light of courage, memory and refusal, burning beside the
+            Braid without ever becoming a possession.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel">
+      <p class="eyebrow">The Living Rule</p>
+      <h2>No One Is Owned Here</h2>
+
+      <div class="law-strip">
+        <strong>Names belong to the named.</strong>
+        Care is not ransom. Love is not ownership. Blood is not command.
+        Children are never proof. Refusal remains sacred. The Braid is offer,
+        not net.
+      </div>
+
+      <blockquote>
+        “They were not bound because they were trapped. They were bound because
+        they stayed.”
+      </blockquote>
     </section>
 
     <section class="panel final-road-panel">
-
-      <p class="eyebrow">
-
-        The Other Side of the Hall
-
-      </p>
-
-      <h2>
-
-        Not Every Name Comes in Peace
-
-      </h2>
+      <p class="eyebrow">The Other Side of the Hall</p>
+      <h2>Not Every Name Comes in Peace</h2>
 
       <p>
-
-        The saga also contains manipulators, traitors,
-
-        collectors, false protectors and powers that believe
-
-        love can be turned into ownership.
-
+        The saga also contains manipulators, traitors, collectors, false
+        protectors and powers that believe love can be turned into ownership.
       </p>
 
       <div class="hero-buttons">
-
-        <a href="rogues.html" class="button primary">
-
-          Enter the Rogues Gallery
-
-        </a>
-
-        <a href="archive.html" class="button secondary">
-
-          View the Animal Archive
-
-        </a>
-
-        <a href="world.html" class="button secondary">
-
-          Explore the World
-
-        </a>
-
+        <a href="rogues.html" class="button primary">Enter the Rogues Gallery</a>
+        <a href="archive.html" class="button secondary">View the Animal Archive</a>
+        <a href="world.html" class="button secondary">Explore the World</a>
       </div>
-
     </section>
-
   </main>
 
   <footer>
-
     <nav class="footer-nav" aria-label="Footer navigation">
-
       <a href="index.html">Home</a>
-
       <a href="books.html">Books</a>
-
       <a href="rogues.html">Rogues</a>
-
       <a href="world.html">World</a>
-
+      <a href="lore.html">Lore</a>
       <a href="odes.html">Odes</a>
-
+      <a href="maps.html">Maps</a>
+      <a href="archive.html">Archive</a>
       <a href="author.html">Author</a>
-
     </nav>
 
-    <p>
-
-      © 2026 Saga of Black Wings · Created by Timothy M. Halliday
-
-    </p>
-
-    <p class="footer-motto">
-
-      No crown shall count us smaller.
-
-    </p>
-
+    <p>© 2026 Saga of Black Wings · Created by Timothy M. Halliday</p>
+    <p class="footer-motto">No crown shall count us smaller.</p>
   </footer>
-
 </body>
-
 </html>
