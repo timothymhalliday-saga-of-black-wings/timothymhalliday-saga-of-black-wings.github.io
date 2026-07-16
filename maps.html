@@ -3,132 +3,1112 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Maps | Saga of Black Wings</title>
-  <meta name="description" content="Spoiler-safe map-room for The Saga of Black Wings by Timothy M. Halliday, including Vardrum, Witness Isle, the Salt-Marsh, roads, houses, beast paths and the wider saga map." />
+
+  <title>Maps | The Saga of Black Wings</title>
+
+  <meta
+    name="description"
+    content="Open the spoiler-safe Map-Room of The Saga of Black Wings, with an illustrated public map of Vardrum, region routes, the saga road and animal witness paths."
+  />
+  <meta name="author" content="Timothy M. Halliday" />
+  <meta name="theme-color" content="#050608" />
+
+  <meta property="og:title" content="Maps | The Saga of Black Wings" />
+  <meta
+    property="og:description"
+    content="A living map of Vardrum, Witness Isle, the Salt-Marsh, Skeld-Fell, Green Deer-Wood and the roads beneath the saga."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sagaofblackwings.com/maps.html" />
+  <meta
+    property="og:image"
+    content="https://sagaofblackwings.com/3B43F815-45F1-4657-A898-C6782F8507E6.png"
+  />
+  <meta
+    property="og:image:alt"
+    content="Black raven crest bearing the motto No Crown Shall Count Us Smaller"
+  />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Maps | The Saga of Black Wings" />
+  <meta
+    name="twitter:description"
+    content="Enter the spoiler-safe Map-Room of Vardrum."
+  />
+  <meta
+    name="twitter:image"
+    content="https://sagaofblackwings.com/3B43F815-45F1-4657-A898-C6782F8507E6.png"
+  />
+
+  <link rel="canonical" href="https://sagaofblackwings.com/maps.html" />
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .maps-hero {
+      min-height: 74vh;
+      padding-top: 5.2rem;
+      padding-bottom: 5.2rem;
+      background:
+        radial-gradient(circle at 15% 15%, rgba(49, 93, 131, 0.23), transparent 29rem),
+        radial-gradient(circle at 86% 14%, rgba(49, 90, 69, 0.2), transparent 28rem),
+        linear-gradient(180deg, rgba(4, 5, 7, 0.97), rgba(10, 12, 14, 0.99));
+    }
+
+    .maps-hero-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(270px, 0.72fr);
+      gap: clamp(2rem, 6vw, 5rem);
+      align-items: center;
+      width: min(100%, 1120px);
+      margin: 0 auto;
+    }
+
+    .maps-hero .hero-text {
+      width: 100%;
+      text-align: left;
+    }
+
+    .maps-hero .tagline,
+    .maps-hero .hero-quote {
+      margin-left: 0;
+    }
+
+    .maps-hero .hero-buttons {
+      justify-content: flex-start;
+    }
+
+    .maps-crest {
+      margin: 0;
+      padding: 0.6rem;
+      background: rgba(5, 6, 8, 0.75);
+      border: 1px solid rgba(221, 182, 95, 0.4);
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .maps-crest img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 19px;
+    }
+
+    .map-seal {
+      max-width: 870px;
+      margin: 1.5rem auto 0;
+      padding: 1rem 1.2rem;
+      color: var(--parchment-soft);
+      background: rgba(5, 6, 8, 0.42);
+      border-left: 3px solid var(--blue);
+      border-radius: 0 12px 12px 0;
+    }
+
+    .map-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.7rem;
+      margin-top: 1.8rem;
+    }
+
+    .map-nav a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 0.55rem 0.9rem;
+      color: var(--parchment);
+      background: rgba(18, 21, 26, 0.84);
+      border: 1px solid rgba(49, 93, 131, 0.5);
+      border-radius: 999px;
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.67rem;
+      font-weight: 700;
+      letter-spacing: 0.052em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .map-nav a:hover {
+      color: #081017;
+      background: #8cb1cf;
+      border-color: #8cb1cf;
+    }
+
+    .map-board {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(0.55rem, 2vw, 1.1rem);
+      background:
+        radial-gradient(circle at 52% 42%, rgba(221, 182, 95, 0.08), transparent 29rem),
+        linear-gradient(145deg, rgba(18, 21, 23, 0.99), rgba(6, 8, 10, 0.99));
+      border: 1px solid rgba(221, 182, 95, 0.36);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .map-board::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.18;
+      background-image:
+        linear-gradient(rgba(240, 210, 140, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(240, 210, 140, 0.055) 1px, transparent 1px);
+      background-size: 44px 44px;
+    }
+
+    .map-board svg {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: auto;
+      min-height: 440px;
+    }
+
+    .map-board .land {
+      fill: #1a201e;
+      stroke: rgba(221, 182, 95, 0.42);
+      stroke-width: 3;
+    }
+
+    .map-board .island {
+      fill: #20252a;
+      stroke: rgba(240, 210, 140, 0.5);
+      stroke-width: 3;
+    }
+
+    .map-board .water-line,
+    .map-board .contour {
+      fill: none;
+      stroke: rgba(121, 161, 190, 0.17);
+      stroke-width: 2;
+    }
+
+    .map-board .contour {
+      stroke: rgba(221, 182, 95, 0.12);
+    }
+
+    .map-board .route {
+      fill: none;
+      stroke-linecap: round;
+      stroke-width: 7;
+    }
+
+    .map-board .route-gold {
+      stroke: #d7b05b;
+    }
+
+    .map-board .route-water {
+      stroke: #557ea1;
+      stroke-dasharray: 11 12;
+    }
+
+    .map-board .route-forest {
+      stroke: #4f8967;
+    }
+
+    .map-board .route-crown {
+      stroke: #8c3540;
+    }
+
+    .map-board .route-root {
+      stroke: #6c586f;
+      stroke-dasharray: 4 10;
+    }
+
+    .map-board .node-ring {
+      fill: #090b0d;
+      stroke: #f0d28c;
+      stroke-width: 4;
+    }
+
+    .map-board .node-crown {
+      stroke: #b5515d;
+    }
+
+    .map-board .node-water {
+      stroke: #7baccd;
+    }
+
+    .map-board .node-forest {
+      stroke: #70a980;
+    }
+
+    .map-board .node-root {
+      stroke: #9c7aa8;
+    }
+
+    .map-board .node-north {
+      stroke: #c4d5df;
+    }
+
+    .map-board .place-name {
+      fill: #fff0ce;
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 26px;
+      font-weight: 800;
+      paint-order: stroke;
+      stroke: #050608;
+      stroke-width: 8px;
+      stroke-linejoin: round;
+    }
+
+    .map-board .place-sub {
+      fill: #d9ccb5;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 18px;
+      font-style: italic;
+      paint-order: stroke;
+      stroke: #050608;
+      stroke-width: 6px;
+      stroke-linejoin: round;
+    }
+
+    .map-board .compass {
+      fill: none;
+      stroke: rgba(240, 210, 140, 0.55);
+      stroke-width: 3;
+    }
+
+    .map-board .compass-text {
+      fill: #f0d28c;
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    .map-key {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 0.75rem;
+      margin-top: 1.2rem;
+    }
+
+    .key-item {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      min-height: 48px;
+      padding: 0.7rem 0.8rem;
+      color: var(--parchment-soft);
+      background: rgba(5, 6, 8, 0.48);
+      border: 1px solid rgba(221, 182, 95, 0.2);
+      border-radius: 12px;
+      font-size: 0.77rem;
+    }
+
+    .key-line {
+      flex: 0 0 34px;
+      height: 5px;
+      border-radius: 999px;
+    }
+
+    .key-gold {
+      background: #d7b05b;
+    }
+
+    .key-water {
+      background:
+        repeating-linear-gradient(
+          90deg,
+          #557ea1 0,
+          #557ea1 9px,
+          transparent 9px,
+          transparent 14px
+        );
+    }
+
+    .key-forest {
+      background: #4f8967;
+    }
+
+    .key-crown {
+      background: #8c3540;
+    }
+
+    .key-root {
+      background:
+        repeating-linear-gradient(
+          90deg,
+          #6c586f 0,
+          #6c586f 4px,
+          transparent 4px,
+          transparent 10px
+        );
+    }
+
+    .region-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .region-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    .region-card .map-note {
+      margin-top: auto;
+      padding-top: 0.8rem;
+      color: var(--gold);
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .region-card.isle {
+      border-color: rgba(221, 182, 95, 0.44);
+    }
+
+    .region-card.marsh {
+      border-color: rgba(81, 122, 116, 0.58);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(81, 122, 116, 0.2), transparent 17rem),
+        linear-gradient(145deg, rgba(22, 32, 32, 0.97), rgba(10, 13, 14, 0.99));
+    }
+
+    .region-card.crown {
+      border-color: rgba(159, 40, 55, 0.48);
+    }
+
+    .region-card.root {
+      border-color: rgba(96, 70, 111, 0.56);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(96, 70, 111, 0.21), transparent 17rem),
+        linear-gradient(145deg, rgba(30, 26, 36, 0.97), rgba(10, 12, 15, 0.99));
+    }
+
+    .region-card.north {
+      border-color: rgba(161, 180, 198, 0.44);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(190, 210, 225, 0.13), transparent 17rem),
+        linear-gradient(145deg, rgba(27, 31, 36, 0.97), rgba(9, 12, 15, 0.99));
+    }
+
+    .region-card.forest {
+      border-color: rgba(71, 122, 81, 0.64);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(71, 122, 81, 0.24), transparent 17rem),
+        linear-gradient(145deg, rgba(23, 37, 27, 0.97), rgba(9, 14, 11, 0.99));
+    }
+
+    .saga-road {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 0.8rem;
+      margin-top: 2rem;
+    }
+
+    .saga-road::before {
+      content: "";
+      position: absolute;
+      top: 35px;
+      right: 5%;
+      left: 5%;
+      height: 4px;
+      background:
+        linear-gradient(
+          90deg,
+          var(--gold-dark),
+          var(--gold),
+          var(--crimson),
+          var(--blue),
+          var(--forest),
+          var(--purple)
+        );
+      border-radius: 999px;
+    }
+
+    .road-stage {
+      position: relative;
+      z-index: 1;
+      padding: 0.2rem 0.35rem 1rem;
+      text-align: center;
+    }
+
+    .road-dot {
+      display: grid;
+      width: 70px;
+      height: 70px;
+      margin: 0 auto 1rem;
+      place-items: center;
+      color: #0d0a05;
+      background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+      border: 5px solid #0b0d11;
+      border-radius: 50%;
+      box-shadow: 0 0 0 1px rgba(221, 182, 95, 0.35);
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.75rem;
+      font-weight: 800;
+    }
+
+    .road-stage h3 {
+      margin-bottom: 0.45rem;
+      font-size: 1rem;
+    }
+
+    .road-stage p {
+      color: var(--parchment-soft);
+      font-size: 0.78rem;
+      line-height: 1.55;
+    }
+
+    .path-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem;
+      margin-top: 1.7rem;
+    }
+
+    .path-card {
+      margin: 0;
+      padding: 1.05rem;
+      color: var(--parchment-soft);
+      background: rgba(5, 6, 8, 0.48);
+      border: 1px solid rgba(221, 182, 95, 0.23);
+      border-radius: 14px;
+    }
+
+    .path-card strong {
+      color: var(--gold-bright);
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+    }
+
+    .mark-plate {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(270px, 0.86fr);
+      gap: clamp(1.5rem, 5vw, 3.3rem);
+      align-items: center;
+    }
+
+    .mark-plate figure {
+      margin: 0;
+      padding: 0.55rem;
+      background: rgba(5, 6, 8, 0.5);
+      border: 1px solid rgba(221, 182, 95, 0.27);
+      border-radius: 18px;
+    }
+
+    .mark-plate img {
+      width: 100%;
+      border-radius: 13px;
+    }
+
+    .map-law-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem;
+      margin-top: 1.7rem;
+    }
+
+    .map-law {
+      margin: 0;
+      padding: 1.1rem;
+      color: #eef0df;
+      background:
+        linear-gradient(135deg, rgba(49, 93, 131, 0.18), rgba(5, 6, 8, 0.52));
+      border: 1px solid rgba(92, 132, 164, 0.38);
+      border-radius: 14px;
+    }
+
+    .map-law::before {
+      content: "✦";
+      margin-right: 0.55rem;
+      color: var(--gold);
+    }
+
+    @media (max-width: 1040px) {
+      .maps-hero-layout,
+      .mark-plate {
+        grid-template-columns: 1fr;
+      }
+
+      .maps-hero .hero-text {
+        text-align: center;
+      }
+
+      .maps-hero .tagline,
+      .maps-hero .hero-quote {
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .maps-hero .hero-buttons {
+        justify-content: center;
+      }
+
+      .maps-crest,
+      .mark-plate figure {
+        width: min(100%, 560px);
+        margin: 0 auto;
+      }
+
+      .region-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .saga-road {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .saga-road::before {
+        display: none;
+      }
+
+      .map-key {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      .maps-hero {
+        min-height: auto;
+      }
+
+      .map-nav {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .map-nav a {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .map-board {
+        overflow-x: auto;
+      }
+
+      .map-board svg {
+        width: 900px;
+        max-width: none;
+        min-height: 580px;
+      }
+
+      .region-grid,
+      .saga-road,
+      .path-list,
+      .map-law-grid,
+      .map-key {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Maps of The Saga of Black Wings",
+    "url": "https://sagaofblackwings.com/maps.html",
+    "description": "The spoiler-safe Map-Room of Vardrum and The Saga of Black Wings.",
+    "author": {
+      "@type": "Person",
+      "name": "Timothy M. Halliday"
+    }
+  }
+  </script>
 </head>
+
 <body>
-<header class="page-hero">
-  <div class="hero-text">
-    <p class="eyebrow">The Map-Room</p>
-    <h1>Maps of Black Wings</h1>
-    <p class="tagline">
-      Roads, marshes, houses, witness places, beast paths, hidden routes and the living geography of Vardrum.
-    </p>
-<div class="hero-buttons">
-  <a href="index.html" class="button primary">Home</a>
-  <a href="lore.html" class="button secondary">World & Lore</a>
-</div>
-  </div>
-</header>
-<nav class="site-nav">
-  <a href="index.html">Home</a>
-  <a href="books.html">Books</a>
-  <a href="characters.html">Characters</a>
-  <a href="rogues.html">Rogues</a>
-  <a href="lore.html">World & Lore</a>
-  <a href="odes.html">Odes</a>
-  <a href="maps.html">Maps</a>
-  <a href="archive.html">Visual Archive</a>
-  <a href="author.html">Author</a>
-</nav>
-<main>
-  <section class="panel intro-panel">
-    <h2>The Map That Remembers</h2>
-    <p>
-      In <em>The Saga of Black Wings</em>, maps are never just drawings. Roads remember who crossed them.
-      Marshes hide those who need hiding. Houses keep breath. Wolves refuse unsafe paths.
-      Birds see what people miss.
-    </p>
-<p>
-  This is the safe public map-room. The real illustrated map images will be added later,
-  only when each picture file is confirmed working.
-</p>
-<blockquote>
-  “A map is not only where things are. Sometimes it is what survived being lost.”
-</blockquote>
-  </section>
-  <section class="panel">
-    <h2>Website Map</h2>
-    <div class="lore-list">
-      <span><strong><a href="books.html">Books</a></strong>: Books I to XIII, Book XIV in development, and the road toward Books XV to XX.</span>
-      <span><strong><a href="characters.html">Characters</a></strong>: the Braid, familia, children, animals, spirits, hidden kin and remembered names.</span>
-      <span><strong><a href="rogues.html">Rogues</a></strong>: crowns, roots, false mercy, bad law, northern threats and old wrongs.</span>
-      <span><strong><a href="lore.html">World & Lore</a></strong>: Vardrum, Witness Isle, the Salt-Marsh, the Underroot, the Agreement and House-law.</span>
-      <span><strong><a href="odes.html">Odes</a></strong>: songs, epitaphs, saga plates, mystery fragments and the old poetic law of Black Wings.</span>
-      <span><strong><a href="archive.html">Visual Archive</a></strong>: beast-witness art, shields, crests and future illustrated lore.</span>
-      <span><strong><a href="author.html">Author</a></strong>: Timothy M. Halliday, writing as T.M.H, and the forty-year making of the saga.</span>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="page-hero maps-hero">
+    <div class="maps-hero-layout">
+      <div class="hero-text">
+        <p class="eyebrow">The Map-Room</p>
+
+        <h1>Maps of Black Wings</h1>
+
+        <p class="tagline">
+          A spoiler-safe atlas of Vardrum, its roads, marshes, hidden houses,
+          forest paths, northern reaches and journeys beneath the visible world.
+        </p>
+
+        <blockquote class="hero-quote">
+          “A map is not only where things are. Sometimes it is what survived being lost.”
+        </blockquote>
+
+        <div class="hero-buttons">
+          <a href="#vardrum-map" class="button primary">Open the Vardrum Map</a>
+          <a href="world.html" class="button secondary">Explore the World</a>
+          <a href="index.html" class="button secondary">Return Home</a>
+        </div>
+      </div>
+
+      <figure class="maps-crest">
+        <img
+          src="3B43F815-45F1-4657-A898-C6782F8507E6.png"
+          alt="Black raven crest bearing the motto No Crown Shall Count Us Smaller"
+          width="1122"
+          height="1402"
+          fetchpriority="high"
+        />
+      </figure>
     </div>
-  </section>
-  <section class="panel">
-    <h2>The World Map</h2>
-    <div class="lore-list">
-      <span><strong>Vardrum</strong>: the living country beneath the wings.</span>
-      <span><strong>Witness Isle</strong>: sanctuary, refusal, child-law, hearth, beast-witness and chosen family.</span>
-      <span><strong>The Salt-Marsh</strong>: road, refuge, danger, mud-law, bird-flight and old survival memory.</span>
-      <span><strong>The Crown Roads</strong>: routes of authority, paper, custody, soldiers and official lies.</span>
-      <span><strong>The Underroot</strong>: buried network, old druid hunger and root-memory beneath the visible world.</span>
-      <span><strong>The House</strong>: blood, childhood, locked rooms, origin and the question of ownership.</span>
-      <span><strong>Skeld-Fell</strong>: cold northern pressure, hidden kin, ransom logic and roads beyond the familiar map.</span>
-    </div>
-  </section>
-  <section class="panel">
-    <h2>The Saga Road</h2>
-    <div class="lore-list">
-      <span><strong>Books I to IV</strong>: first roads, Crown pressure, salt, thorns, witness and the unmaking of old authority.</span>
-      <span><strong>Books V to VIII</strong>: the Root-war, buried hunger, severance, last roots and names that refuse to be owned.</span>
-      <span><strong>Books IX to XII</strong>: the world after root, quiet pressure, ash agreements and the living law of refusal.</span>
-      <span><strong>Book XIII</strong>: the House, childhood, origin, memory and the raven brought home.</span>
-      <span><strong>Book XIV</strong>: the northern road, hidden kin, beast-law, cold hearths and the house beyond the house.</span>
-      <span><strong>Books XV to XX</strong>: titles sealed for now, but the road is already open beyond the current map.</span>
-    </div>
-  </section>
-  <section class="panel">
-    <h2>Beast and Bird Paths</h2>
-    <div class="lore-list">
-      <span><strong>Mad</strong>: chaos-path, wrong-paw alarm and comic truth.</span>
-      <span><strong>Benson</strong>: loyalty-road, memory and protection.</span>
-      <span><strong>Hugo</strong>: noise, humour, heart and the breaking-open of dark rooms.</span>
-      <span><strong>Blue</strong>: insult-flight, warning, witness and feathered judgement.</span>
-      <span><strong>Scarlet</strong>: red-winged scout, defiance and road-sight.</span>
-      <span><strong>Dusk</strong>: shadow-flight, watcher path and dusk-coloured memory.</span>
-      <span><strong>Jack</strong>: Moor-Wolf judgement, northern line and wolf-law beyond branding.</span>
-      <span><strong>Shane</strong>: old dog loyalty, found-home and the scratch at the door.</span>
-      <span><strong>Mylo</strong>: impossible small guide and mystery road.</span>
-      <span><strong>Glimra</strong>: unseen Salt-Marsh Sabre-Leopard, walking where the eye fails.</span>
-    </div>
-  </section>
-  <section class="panel">
-    <h2>Illustrated Maps Coming Carefully</h2>
-    <p>
-      The visual maps and plates will be added slowly, only when the image files are confirmed working.
-      No broken boxes. No false roads. No picture-goblins.
-    </p>
-<div class="lore-list">
-  <span>Master Map of Vardrum</span>
-  <span>The Long Road of Black Wings</span>
-  <span>Witness Isle and the Salt-Marsh</span>
-  <span>The House That Raised the Raven</span>
-  <span>The Road Home from Witness Isle</span>
-  <span>Book XII Salt-Marsh routes</span>
-  <span>Book XIV Northern Road</span>
-  <span>Beast and Bird Witness plate</span>
-</div>
-  </section>
-  <section class="panel">
-    <h2>Map-Room Law</h2>
-    <div class="lore-list">
-      <span>No map owns the feet that cross it.</span>
-      <span>No road is safe because a clerk drew it clean.</span>
-      <span>The marsh remembers what soldiers misname.</span>
-      <span>A hidden path is not empty.</span>
-      <span>Where the road forgets, the paws remember.</span>
-      <span>The map ends only where courage stops drawing.</span>
-    </div>
-  </section>
-</main>
-<footer>
-  <p>© 2026 Saga of Black Wings · Created by Timothy M. Halliday</p>
-</footer>
+  </header>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="books.html">Books</a>
+    <a href="characters.html">Characters</a>
+    <a href="rogues.html">Rogues</a>
+    <a href="world.html">World</a>
+    <a href="lore.html">Lore</a>
+    <a href="odes.html">Odes</a>
+    <a href="maps.html" aria-current="page">Maps</a>
+    <a href="archive.html">Archive</a>
+    <a href="author.html">Author</a>
+    <a href="dedications.html">Dedications</a>
+  </nav>
+
+  <main id="main-content">
+    <section class="panel intro-panel">
+      <p class="eyebrow">The Map That Remembers</p>
+      <h2>Every Road Carries Witness</h2>
+
+      <p>
+        Geography in <em>The Saga of Black Wings</em> is never empty scenery.
+        Roads remember pursuit and rescue. Marshes hide those who need hiding.
+        Houses keep breath. Forests read footsteps. Animals know when a path has
+        become unsafe.
+      </p>
+
+      <p>
+        The public map below is drawn entirely inside this webpage. It does not
+        rely on a separate picture file, so it will remain visible on your iPad,
+        phone and computer without broken image boxes.
+      </p>
+
+      <p class="map-seal">
+        The atlas is intentionally spoiler-safe. Distances and exact borders are
+        impressionistic, preserving the saga’s deeper routes for the books.
+      </p>
+
+      <nav class="map-nav" aria-label="Jump to map sections">
+        <a href="#vardrum-map">Vardrum Map</a>
+        <a href="#region-atlas">Region Atlas</a>
+        <a href="#saga-road">Saga Road</a>
+        <a href="#witness-paths">Witness Paths</a>
+        <a href="#map-marks">Map Marks</a>
+        <a href="#map-law">Map-Room Law</a>
+      </nav>
+    </section>
+
+    <section class="panel" id="vardrum-map">
+      <p class="eyebrow">Public Atlas Plate</p>
+      <h2>Vardrum and the Known Roads</h2>
+
+      <p>
+        North sits at the top. The lines show the character of a route rather
+        than an exact measured distance.
+      </p>
+
+      <div class="map-board">
+        <svg
+          viewBox="0 0 1000 650"
+          role="img"
+          aria-labelledby="vardrum-map-title vardrum-map-description"
+        >
+          <title id="vardrum-map-title">Spoiler-safe public map of Vardrum</title>
+          <desc id="vardrum-map-description">
+            An illustrated map connecting the Crown Lands, Witness Isle,
+            Salt-Marsh, Hidden Houses, Skeld-Fell, Green Deer-Wood and the
+            Underroot with different coloured routes.
+          </desc>
+
+          <defs>
+            <filter id="mapGlow" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="5" result="blur" />
+              <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
+
+          <path
+            class="land"
+            d="M105,120 C180,70 310,76 390,105 C480,48 635,65 710,118
+               C805,110 914,180 910,278 C958,370 895,455 814,478
+               C765,572 634,603 530,556 C440,610 312,567 270,502
+               C172,500 92,432 105,345 C40,275 50,178 105,120 Z"
+          />
+
+          <path
+            class="island"
+            d="M318,300 C348,272 402,276 428,313
+               C449,350 422,394 377,399
+               C334,402 300,367 304,333
+               C305,320 310,309 318,300 Z"
+          />
+
+          <path class="water-line" d="M70,238 C188,217 240,249 300,304" />
+          <path class="water-line" d="M70,270 C190,248 244,280 304,329" />
+          <path class="water-line" d="M75,302 C195,282 248,310 304,354" />
+
+          <path class="contour" d="M128,160 C240,115 360,130 425,163" />
+          <path class="contour" d="M600,112 C724,91 833,143 868,219" />
+          <path class="contour" d="M664,493 C740,523 811,496 850,444" />
+          <path class="contour" d="M164,421 C210,456 248,462 286,448" />
+
+          <path class="route route-crown" d="M190,235 C250,250 290,281 332,314" />
+          <path class="route route-water" d="M368,350 C318,390 274,425 236,474" />
+          <path class="route route-gold" d="M410,320 C510,245 600,192 690,170" />
+          <path class="route route-gold" d="M690,170 C650,117 592,89 528,86" />
+          <path class="route route-forest" d="M415,350 C530,345 648,338 760,330" />
+          <path class="route route-root" d="M402,382 C486,436 548,492 614,540" />
+          <path class="route route-root" d="M758,360 C710,425 668,476 622,535" />
+          <path class="route route-crown" d="M215,252 C310,330 420,430 590,530" />
+
+          <g filter="url(#mapGlow)">
+            <circle class="node-ring node-crown" cx="182" cy="222" r="18" />
+            <circle class="node-ring node-water" cx="374" cy="340" r="18" />
+            <circle class="node-ring node-water" cx="226" cy="484" r="18" />
+            <circle class="node-ring" cx="706" cy="166" r="18" />
+            <circle class="node-ring node-north" cx="524" cy="82" r="18" />
+            <circle class="node-ring node-forest" cx="772" cy="328" r="18" />
+            <circle class="node-ring node-root" cx="620" cy="544" r="18" />
+          </g>
+
+          <text class="place-name" x="95" y="196">Crown Lands</text>
+          <text class="place-sub" x="98" y="220">ink, custody and command</text>
+
+          <text class="place-name" x="300" y="438">Witness Isle</text>
+          <text class="place-sub" x="303" y="462">hearth, refuge and refusal</text>
+
+          <text class="place-name" x="118" y="522">Salt-Marsh</text>
+          <text class="place-sub" x="120" y="546">reed roads and tide memory</text>
+
+          <text class="place-name" x="660" y="130">Hidden Houses</text>
+          <text class="place-sub" x="662" y="154">thresholds and inheritance</text>
+
+          <text class="place-name" x="450" y="46">Skeld-Fell</text>
+          <text class="place-sub" x="452" y="70">the cold northern road</text>
+
+          <text class="place-name" x="718" y="292">Green Deer-Wood</text>
+          <text class="place-sub" x="720" y="316">forest law and old roots</text>
+
+          <text class="place-name" x="553" y="588">The Underroot</text>
+          <text class="place-sub" x="555" y="612">roads beneath roads</text>
+
+          <g transform="translate(888 70)">
+            <circle class="compass" cx="0" cy="0" r="36" />
+            <path class="compass" d="M0,-50 L8,-12 L0,-19 L-8,-12 Z" />
+            <path class="compass" d="M0,50 L8,12 L0,19 L-8,12 Z" />
+            <path class="compass" d="M-50,0 L-12,8 L-19,0 L-12,-8 Z" />
+            <path class="compass" d="M50,0 L12,8 L19,0 L12,-8 Z" />
+            <text class="compass-text" x="-8" y="-60">N</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="map-key" aria-label="Map key">
+        <div class="key-item">
+          <span class="key-line key-gold" aria-hidden="true"></span>
+          Open road
+        </div>
+        <div class="key-item">
+          <span class="key-line key-water" aria-hidden="true"></span>
+          Water or marsh crossing
+        </div>
+        <div class="key-item">
+          <span class="key-line key-forest" aria-hidden="true"></span>
+          Forest path
+        </div>
+        <div class="key-item">
+          <span class="key-line key-crown" aria-hidden="true"></span>
+          Crown-controlled road
+        </div>
+        <div class="key-item">
+          <span class="key-line key-root" aria-hidden="true"></span>
+          Underroot passage
+        </div>
+      </div>
+
+      <blockquote>
+        “The mapmaker blamed damp. The ravens blamed arrogance.”
+      </blockquote>
+    </section>
+
+    <section class="panel" id="region-atlas">
+      <p class="eyebrow">Reading the Known Lands</p>
+      <h2>Region Atlas</h2>
+
+      <div class="book-grid region-grid">
+        <article class="book-card region-card isle featured-book">
+          <p class="book-number">Central Refuge</p>
+          <h3>Witness Isle</h3>
+          <p>
+            Hearth, shore watch, animal grounds, the Garden of Names and a
+            living law that measures refuge by whether the frightened may leave.
+          </p>
+          <p class="map-note">The centre of chosen belonging</p>
+        </article>
+
+        <article class="book-card region-card marsh">
+          <p class="book-number">South-Western Reaches</p>
+          <h3>The Salt-Marsh</h3>
+          <p>
+            Reed paths, black water, tidal roads, harvest song and routes that
+            reveal themselves only when weather and water permit.
+          </p>
+          <p class="map-note">The road moves with the tide</p>
+        </article>
+
+        <article class="book-card region-card crown">
+          <p class="book-number">Western Authority</p>
+          <h3>The Crown Lands</h3>
+          <p>
+            Official roads, clerk houses, custody halls and carefully worded
+            systems attempting to turn passage into permission.
+          </p>
+          <p class="map-note">Paper with iron beneath it</p>
+        </article>
+
+        <article class="book-card region-card root">
+          <p class="book-number">Beneath Vardrum</p>
+          <h3>The Underroot</h3>
+          <p>
+            Buried chambers, root-memory and passages connecting places that
+            appear separate upon the surface.
+          </p>
+          <p class="map-note">The hidden road below</p>
+        </article>
+
+        <article class="book-card region-card north">
+          <p class="book-number">Northern Heights</p>
+          <h3>Skeld-Fell</h3>
+          <p>
+            Mountain passes, cold hearths, ransom roads and weather carrying an
+            older silence beneath the snow.
+          </p>
+          <p class="map-note">Beyond the last easy fire</p>
+        </article>
+
+        <article class="book-card region-card forest">
+          <p class="book-number">Eastern Forest</p>
+          <h3>Green Deer-Wood</h3>
+          <p>
+            Listening groves, animal paths, keeper law, the witness-bear line
+            and roots that should not have begun speaking again.
+          </p>
+          <p class="map-note">The forest chooses how it is crossed</p>
+        </article>
+      </div>
+
+      <div class="hero-buttons">
+        <a href="world.html" class="button primary">Read the Full World Guide</a>
+        <a href="lore.html" class="button secondary">Study the Living Law</a>
+      </div>
+    </section>
+
+    <section class="panel" id="saga-road">
+      <p class="eyebrow">The Long Narrative Road</p>
+      <h2>Books I to XX</h2>
+
+      <p>
+        This road shows the great movements of the saga without revealing its
+        locked events.
+      </p>
+
+      <div class="saga-road">
+        <article class="road-stage">
+          <div class="road-dot">I–IV</div>
+          <h3>First Reckonings</h3>
+          <p>Crown pressure, salt, thorns and the first breaking of old authority.</p>
+        </article>
+
+        <article class="road-stage">
+          <div class="road-dot">V–VIII</div>
+          <h3>Root Wars</h3>
+          <p>Buried hunger, rising roots, severance and the final root-road.</p>
+        </article>
+
+        <article class="road-stage">
+          <div class="road-dot">IX–XII</div>
+          <h3>Quieting World</h3>
+          <p>Life after root, ash agreements and the living law of refusal.</p>
+        </article>
+
+        <article class="road-stage">
+          <div class="road-dot">XIII–XV</div>
+          <h3>House and Braid</h3>
+          <p>Remembering houses, farther thresholds and the gathered living Braid.</p>
+        </article>
+
+        <article class="road-stage">
+          <div class="road-dot">XVI–XVII</div>
+          <h3>Love and Forest</h3>
+          <p>The Braid: Part II, then the opening road into Green Deer-Wood.</p>
+        </article>
+
+        <article class="road-stage">
+          <div class="road-dot">XVIII–XX</div>
+          <h3>Roads Still Sealed</h3>
+          <p>Later mythic journeys held safely behind the manuscript spoiler seal.</p>
+        </article>
+      </div>
+
+      <div class="hero-buttons">
+        <a href="books.html" class="button primary">Explore Every Book</a>
+      </div>
+    </section>
+
+    <section class="panel" id="witness-paths">
+      <p class="eyebrow">Paws, Wings and Flame</p>
+      <h2>Animal Witness Paths</h2>
+
+      <p>
+        Animal routes do not always appear on human maps. They are read through
+        scent, feather, refusal, repeated return and the places a creature will
+        not cross.
+      </p>
+
+      <div class="path-list">
+        <p class="path-card">
+          <strong>Scarlet’s Feather-Path:</strong>
+          patient watch, side-warnings and calm judgement from roof, reed and gate.
+        </p>
+
+        <p class="path-card">
+          <strong>Blue’s Wing-Path:</strong>
+          curiosity, high watch and the discovery of doors someone hoped to hide.
+        </p>
+
+        <p class="path-card">
+          <strong>Mad’s Alarm-Path:</strong>
+          wrong-paw warnings, comic truth and chaos arriving exactly when solemnity needs puncturing.
+        </p>
+
+        <p class="path-card">
+          <strong>Benson’s Hearth-Road:</strong>
+          loyalty, memory and the dependable return toward those he recognises as family.
+        </p>
+
+        <p class="path-card">
+          <strong>Hugo’s Home-Path:</strong>
+          warmth, noise, white-tipped paws and the breaking-open of dark rooms.
+        </p>
+
+        <p class="path-card">
+          <strong>Shane’s Russet Road:</strong>
+          bright movement, found-home and the courage to follow the Braid onward.
+        </p>
+
+        <p class="path-card">
+          <strong>Mylo’s Small Road:</strong>
+          quiet observation, impossible confidence and routes no larger creature thought to notice.
+        </p>
+
+        <p class="path-card">
+          <strong>Jack’s Moor-Wolf Line:</strong>
+          shifting colour, old instinct and judgement at the edge of human law.
+        </p>
+
+        <p class="path-card">
+          <strong>Dusk’s Shadow-Flight:</strong>
+          the changing hour, hidden warning and movement carried between light and night.
+        </p>
+
+        <p class="path-card">
+          <strong>Bella’s Flame-Road:</strong>
+          courage, memory and a living spirit-light that cannot be owned.
+        </p>
+      </div>
+
+      <blockquote>
+        “Where the road forgets, the paws remember.”
+      </blockquote>
+    </section>
+
+    <section class="panel mark-plate" id="map-marks">
+      <div>
+        <p class="eyebrow">Marks Placed Beside the Road</p>
+        <h2>Witness-Marks in the Map-Room</h2>
+
+        <p>
+          Map-makers of Vardrum use fictional Witness-Marks to show warning,
+          animal passage, changing marsh paths, remembered names and roads that
+          must never be treated as Crown property.
+        </p>
+
+        <p>
+          A map mark does not command the traveller. It offers knowledge, and
+          the traveller remains free to choose.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="lore.html#witness-marks" class="button primary">Study Every Mark</a>
+          <a href="characters.html#animal-witnesses" class="button secondary">Meet the Witnesses</a>
+        </div>
+      </div>
+
+      <figure>
+        <img
+          src="2BBF05BA-25CC-4628-A950-B1068F109A6E.png"
+          alt="Black Wings fictional Witness-Marks archive plate"
+          width="1024"
+          height="1536"
+          loading="lazy"
+        />
+      </figure>
+    </section>
+
+    <section class="panel" id="map-law">
+      <p class="eyebrow">Rules of the Map-Room</p>
+      <h2>Map-Room Law</h2>
+
+      <div class="map-law-grid">
+        <p class="map-law">No map owns the feet that cross it.</p>
+        <p class="map-law">No road is safe because a clerk drew it clean.</p>
+        <p class="map-law">The marsh remembers what soldiers misname.</p>
+        <p class="map-law">A hidden path is not an empty path.</p>
+        <p class="map-law">An animal refusal belongs on the map.</p>
+        <p class="map-law">A house is not safe merely because it has a roof.</p>
+        <p class="map-law">The Underroot is never shown as harmless ground.</p>
+        <p class="map-law">The map ends only where courage stops drawing.</p>
+      </div>
+    </section>
+
+    <section class="panel final-road-panel">
+      <p class="eyebrow">Leave the Map-Room</p>
+      <h2>Choose the Next Road</h2>
+
+      <p>
+        Follow the map into the world guide, the remembered lore or the books
+        themselves.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="world.html" class="button primary">Explore the World</a>
+        <a href="lore.html" class="button secondary">Read the Lore</a>
+        <a href="books.html" class="button secondary">Follow the Book Road</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="index.html">Home</a>
+      <a href="books.html">Books</a>
+      <a href="characters.html">Characters</a>
+      <a href="rogues.html">Rogues</a>
+      <a href="world.html">World</a>
+      <a href="lore.html">Lore</a>
+      <a href="odes.html">Odes</a>
+      <a href="archive.html">Archive</a>
+      <a href="author.html">Author</a>
+    </nav>
+
+    <p>© 2026 Saga of Black Wings · Created by Timothy M. Halliday</p>
+    <p class="footer-motto">No crown shall count us smaller.</p>
+  </footer>
 </body>
 </html>
