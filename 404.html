@@ -1,333 +1,246 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta charset="UTF-8">
+  <title>Lost Road | The Saga of Black Wings</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="This road could not be found within The Saga of Black Wings. Return to the official homepage, books, characters, world, maps or archive."
+  />
+  <meta name="author" content="Timothy M. Halliday" />
+  <meta name="theme-color" content="#050608" />
+  <meta name="robots" content="noindex, follow" />
 
-  <title>Page Not Found | Saga of Black Wings</title>
-
-  <meta name="description" content="Page not found on The Saga of Black Wings official website.">
+  <link rel="stylesheet" href="style.css" />
 
   <style>
-
     body {
-
-      margin: 0;
-
-      background: #080808;
-
-      color: #f2eadf;
-
-      font-family: Georgia, "Times New Roman", serif;
-
-      line-height: 1.7;
-
+      min-height: 100vh;
     }
 
-    header {
-
-      background: #111111;
-
-      border-bottom: 1px solid #c9a45c;
-
-      padding: 22px;
-
-      text-align: center;
-
-    }
-
-    header h1 {
-
-      margin: 0;
-
-      color: #c9a45c;
-
-      letter-spacing: 2px;
-
-      text-transform: uppercase;
-
-      font-size: 30px;
-
-    }
-
-    nav {
-
-      margin-top: 15px;
-
-    }
-
-    nav a {
-
-      color: #f2eadf;
-
-      text-decoration: none;
-
-      margin: 0 10px;
-
-      font-size: 15px;
-
-      text-transform: uppercase;
-
-      letter-spacing: 1px;
-
-    }
-
-    nav a:hover {
-
-      color: #c9a45c;
-
-    }
-
-    .hero {
-
-      min-height: 70vh;
-
-      padding: 90px 20px;
-
-      text-align: center;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
+    .lost-road {
+      display: grid;
+      min-height: 78vh;
+      padding: clamp(3.5rem, 10vw, 7rem) 1.25rem;
+      place-items: center;
       background:
-
-        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.92)),
-
-        radial-gradient(circle at top, #4d1111, #080808 65%);
-
+        radial-gradient(circle at 18% 18%, rgba(49, 93, 131, 0.22), transparent 28rem),
+        radial-gradient(circle at 84% 16%, rgba(116, 37, 55, 0.2), transparent 27rem),
+        linear-gradient(180deg, rgba(4, 5, 7, 0.97), rgba(9, 11, 14, 0.99));
     }
 
-    .box {
-
-      max-width: 850px;
-
-      background: #141414;
-
-      border: 1px solid rgba(201, 164, 92, 0.45);
-
-      border-radius: 18px;
-
-      padding: 42px 30px;
-
-      box-shadow: 0 0 35px rgba(0,0,0,0.35);
-
+    .lost-road-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(250px, 0.68fr);
+      gap: clamp(2rem, 6vw, 4rem);
+      align-items: center;
+      width: min(100%, 1060px);
+      padding: clamp(1.6rem, 5vw, 3.2rem);
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 95% 5%, rgba(221, 182, 95, 0.1), transparent 21rem),
+        linear-gradient(145deg, rgba(26, 26, 29, 0.98), rgba(9, 11, 14, 0.99));
+      border: 1px solid rgba(221, 182, 95, 0.36);
+      border-radius: 26px;
+      box-shadow: var(--shadow);
     }
 
-    .number {
-
-      color: #c9a45c;
-
-      font-size: 82px;
-
-      line-height: 1;
-
-      margin-bottom: 10px;
-
-      letter-spacing: 4px;
-
+    .error-number {
+      margin: 0 0 0.45rem;
+      color: var(--gold-bright);
+      font-family: "Cinzel", Georgia, serif;
+      font-size: clamp(4rem, 12vw, 8rem);
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      line-height: 0.9;
+      text-shadow: 0 0 28px rgba(221, 182, 95, 0.2);
     }
 
-    h2 {
-
-      color: #c9a45c;
-
-      font-size: 40px;
-
-      margin: 0 0 18px;
-
-      text-transform: uppercase;
-
-      letter-spacing: 2px;
-
-    }
-
-    p {
-
-      font-size: 19px;
-
-      color: #ddd0bd;
-
-      margin-bottom: 18px;
-
-    }
-
-    .quote {
-
-      border-left: 4px solid #c9a45c;
-
-      padding: 18px 22px;
-
-      background: rgba(201, 164, 92, 0.08);
-
-      color: #f2eadf;
-
-      font-size: 21px;
-
-      margin: 28px auto;
-
+    .lost-road-card h1 {
+      margin-bottom: 1rem;
+      color: #fff0ce;
+      font-size: clamp(2rem, 6vw, 4rem);
       text-align: left;
-
-      max-width: 650px;
-
     }
 
-    .button {
-
-      display: inline-block;
-
-      background: #c9a45c;
-
-      color: #080808;
-
-      padding: 12px 22px;
-
-      margin-top: 10px;
-
-      text-decoration: none;
-
-      border-radius: 999px;
-
-      font-weight: bold;
-
-      letter-spacing: 1px;
-
-      text-transform: uppercase;
-
-      font-size: 14px;
-
+    .lost-road-card .tagline {
+      max-width: 700px;
+      margin: 0 0 1.2rem;
+      color: var(--parchment);
+      font-size: clamp(1.05rem, 2.4vw, 1.28rem);
     }
 
-    .button:hover {
-
-      background: #f2eadf;
-
+    .lost-road-card blockquote {
+      max-width: 700px;
+      margin: 1.5rem 0;
+      text-align: left;
     }
 
-    footer {
+    .lost-road-card .hero-buttons {
+      justify-content: flex-start;
+      margin-top: 1.4rem;
+    }
 
+    .raven-panel {
+      margin: 0;
+      padding: 0.6rem;
+      background: rgba(5, 6, 8, 0.66);
+      border: 1px solid rgba(221, 182, 95, 0.3);
+      border-radius: 22px;
+      box-shadow: var(--soft-shadow);
+    }
+
+    .raven-panel img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+
+    .raven-panel figcaption {
+      padding: 0.75rem 0.35rem 0.2rem;
+      color: var(--parchment-soft);
+      font-size: 0.8rem;
+      font-style: italic;
       text-align: center;
-
-      background: #111111;
-
-      border-top: 1px solid #c9a45c;
-
-      padding: 25px;
-
-      color: #b9aa93;
-
-      font-size: 14px;
-
     }
 
-    @media (max-width: 700px) {
-
-      nav a {
-
-        display: inline-block;
-
-        margin: 6px 8px;
-
-      }
-
-      .number {
-
-        font-size: 60px;
-
-      }
-
-      h2 {
-
-        font-size: 30px;
-
-      }
-
-      .box {
-
-        padding: 30px 22px;
-
-      }
-
+    .lost-road-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.65rem;
+      padding: 1.2rem;
+      background: rgba(5, 6, 8, 0.94);
+      border-top: 1px solid rgba(221, 182, 95, 0.24);
+      border-bottom: 1px solid rgba(221, 182, 95, 0.24);
     }
 
+    .lost-road-nav a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 0.55rem 0.9rem;
+      color: var(--parchment);
+      background: rgba(18, 21, 26, 0.84);
+      border: 1px solid rgba(221, 182, 95, 0.25);
+      border-radius: 999px;
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.055em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .lost-road-nav a:hover {
+      color: #160f07;
+      background: var(--gold-bright);
+      border-color: var(--gold-bright);
+    }
+
+    @media (max-width: 850px) {
+      .lost-road-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .lost-road-card h1,
+      .lost-road-card blockquote {
+        text-align: center;
+      }
+
+      .lost-road-card .hero-buttons {
+        justify-content: center;
+      }
+
+      .raven-panel {
+        width: min(100%, 480px);
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .lost-road-nav {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .lost-road-nav a {
+        justify-content: center;
+        width: 100%;
+      }
+    }
   </style>
-
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <header>
+  <main id="main-content">
+    <section class="lost-road">
+      <div class="lost-road-card">
+        <div>
+          <p class="eyebrow">The Map Has Gone Quiet</p>
+          <p class="error-number" aria-label="Error 404">404</p>
 
-    <h1>Saga of Black Wings</h1>
+          <h1>This Road Was Not Found</h1>
 
-    <nav>
+          <p class="tagline">
+            The page may have moved, the address may contain a small mistake,
+            or a raven may have carried the signpost somewhere more interesting.
+          </p>
 
-      <a href="index.html">Home</a>
+          <blockquote>
+            “The map ends only where courage stops drawing.”
+          </blockquote>
 
-      <a href="books.html">Books</a>
+          <p>
+            Nothing has been lost from the saga. Choose a working doorway below
+            and the road will open again.
+          </p>
 
-      <a href="characters.html">Characters</a>
+          <div class="hero-buttons">
+            <a href="index.html" class="button primary">Return Home</a>
+            <a href="books.html" class="button secondary">Open the Books</a>
+            <a href="maps.html" class="button secondary">Open the Maps</a>
+          </div>
+        </div>
 
-      <a href="world.html">World &amp; Law</a>
-
-      <a href="odes.html">Odes &amp; Songs</a>
-
-      <a href="maps.html">Maps</a>
-
-      <a href="author.html">Author</a>
-
-    </nav>
-
-  </header>
-
-  <div class="hero">
-
-    <div class="box">
-
-      <div class="number">404</div>
-
-      <h2>The Road Is Missing</h2>
-
-      <p>
-
-        This page has wandered into the marsh, slipped behind an old door,
-
-        or been carried off by a suspiciously smug crow.
-
-      </p>
-
-      <div class="quote">
-
-        Not every missing road is lost. Some are waiting for the right foot.
-
+        <figure class="raven-panel">
+          <img
+            src="92B5CDC8-3C87-426D-9C13-A4BE908193FC.png"
+            alt="A black raven flying through a pale sky"
+            width="1122"
+            height="1402"
+          />
+          <figcaption>
+            The raven has seen the correct road. It is merely being dramatic.
+          </figcaption>
+        </figure>
       </div>
+    </section>
 
-      <p>
-
-        Return to the main road and continue exploring
-
-        <em>The Saga of Black Wings</em>.
-
-      </p>
-
-      <a class="button" href="index.html">Return Home</a>
-
-    </div>
-
-  </div>
+    <nav class="lost-road-nav" aria-label="Website navigation">
+      <a href="index.html">Home</a>
+      <a href="books.html">Books</a>
+      <a href="characters.html">Characters</a>
+      <a href="world.html">World</a>
+      <a href="lore.html">Lore</a>
+      <a href="odes.html">Odes</a>
+      <a href="maps.html">Maps</a>
+      <a href="archive.html">Archive</a>
+      <a href="author.html">Author</a>
+      <a href="dedications.html">Dedications</a>
+    </nav>
+  </main>
 
   <footer>
-
-    © 2026 Saga of Black Wings · Created by Timothy M. Halliday
-
+    <p>© 2026 Saga of Black Wings · Created by Timothy M. Halliday</p>
+    <p class="footer-motto">No crown shall count us smaller.</p>
   </footer>
-
 </body>
-
 </html>
