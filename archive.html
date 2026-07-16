@@ -4,323 +4,1051 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Visual Archive | Saga of Black Wings</title>
+  <title>Visual Archive | The Saga of Black Wings</title>
 
   <meta
     name="description"
-    content="The visual archive of The Saga of Black Wings, including the Witness Archive, canon creature standards, crests, banners, ravens, beast-witnesses and saga artwork."
+    content="Explore the official visual archive of The Saga of Black Wings: crests, shields, banners, ravens, animal witnesses, Witness-Marks, song plates and author portraits."
+  />
+  <meta name="author" content="Timothy M. Halliday" />
+  <meta name="theme-color" content="#050608" />
+
+  <meta property="og:title" content="Visual Archive | The Saga of Black Wings" />
+  <meta
+    property="og:description"
+    content="Crests, shields, ravens, beasts, Witness-Marks and remembered artwork from the roads of Vardrum."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sagaofblackwings.com/archive.html" />
+  <meta
+    property="og:image"
+    content="https://sagaofblackwings.com/AB854AAB-8F11-4453-B5D2-F5850178C570.png"
+  />
+  <meta
+    property="og:image:alt"
+    content="The living animal crest of The Saga of Black Wings"
   />
 
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Visual Archive | The Saga of Black Wings" />
+  <meta
+    name="twitter:description"
+    content="Enter the visual Witness Hall of Black Wings."
+  />
+  <meta
+    name="twitter:image"
+    content="https://sagaofblackwings.com/AB854AAB-8F11-4453-B5D2-F5850178C570.png"
+  />
+
+  <link rel="canonical" href="https://sagaofblackwings.com/archive.html" />
   <link rel="stylesheet" href="style.css" />
 
   <style>
-    .archive-figure {
-      margin: 1.5rem 0 0;
-      border: 1px solid rgba(230, 191, 118, 0.42);
-      border-radius: 18px;
-      overflow: hidden;
-      background: rgba(0, 0, 0, 0.25);
-      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+    .archive-hero {
+      min-height: 74vh;
+      padding-top: 5.2rem;
+      padding-bottom: 5.2rem;
+      background:
+        radial-gradient(circle at 14% 18%, rgba(116, 37, 55, 0.22), transparent 29rem),
+        radial-gradient(circle at 88% 12%, rgba(221, 182, 95, 0.16), transparent 28rem),
+        linear-gradient(180deg, rgba(4, 5, 7, 0.97), rgba(11, 10, 12, 0.99));
     }
 
-    .archive-figure img {
-      display: block;
+    .archive-hero-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(270px, 0.72fr);
+      gap: clamp(2rem, 6vw, 5rem);
+      align-items: center;
+      width: min(100%, 1120px);
+      margin: 0 auto;
+    }
+
+    .archive-hero .hero-text {
       width: 100%;
-      height: auto;
+      text-align: left;
     }
 
-    .archive-figure figcaption {
-      padding: 1rem;
-      border-top: 1px solid rgba(230, 191, 118, 0.3);
-      font-size: 0.95rem;
-      opacity: 0.92;
+    .archive-hero .tagline,
+    .archive-hero .hero-quote {
+      margin-left: 0;
     }
 
-    .archive-note {
-      font-size: 0.95rem;
-      opacity: 0.9;
+    .archive-hero .hero-buttons {
+      justify-content: flex-start;
     }
 
-    .witness-intro {
-      padding: 1rem;
-      border-left: 4px solid rgba(230, 191, 118, 0.78);
-      background: rgba(230, 191, 118, 0.08);
-      border-radius: 12px;
-      margin: 1rem 0;
+    .archive-hero-art {
+      margin: 0;
+      padding: 0.6rem;
+      background: rgba(5, 6, 8, 0.75);
+      border: 1px solid rgba(221, 182, 95, 0.4);
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .archive-hero-art img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 19px;
+    }
+
+    .archive-seal {
+      max-width: 900px;
+      margin: 1.5rem auto 0;
+      padding: 1rem 1.2rem;
+      color: var(--parchment-soft);
+      background: rgba(5, 6, 8, 0.42);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 12px 12px 0;
+    }
+
+    .archive-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.7rem;
+      margin-top: 1.8rem;
+    }
+
+    .archive-nav a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 0.55rem 0.9rem;
+      color: var(--parchment);
+      background: rgba(18, 21, 26, 0.84);
+      border: 1px solid rgba(221, 182, 95, 0.3);
+      border-radius: 999px;
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.67rem;
+      font-weight: 700;
+      letter-spacing: 0.052em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .archive-nav a:hover {
+      color: #160f07;
+      background: var(--gold-bright);
+      border-color: var(--gold-bright);
+    }
+
+    .canon-notice {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: 1rem;
+      align-items: start;
+      max-width: 900px;
+      margin: 1.5rem auto 0;
+      padding: 1.2rem;
+      color: var(--parchment-soft);
+      background:
+        linear-gradient(135deg, rgba(49, 90, 69, 0.2), rgba(5, 6, 8, 0.52));
+      border: 1px solid rgba(83, 128, 94, 0.4);
+      border-radius: 15px;
+    }
+
+    .canon-notice .notice-mark {
+      display: grid;
+      width: 48px;
+      height: 48px;
+      place-items: center;
+      color: var(--gold-bright);
+      background: rgba(5, 6, 8, 0.58);
+      border: 1px solid rgba(221, 182, 95, 0.3);
+      border-radius: 50%;
+      font-size: 1.2rem;
+    }
+
+    .canon-notice strong {
+      display: block;
+      margin-bottom: 0.35rem;
+      color: var(--gold-bright);
+      font-family: "Cinzel", Georgia, serif;
+      letter-spacing: 0.04em;
+    }
+
+    .feature-plate {
+      margin: 1.7rem 0 0;
+      overflow: hidden;
+      background: rgba(5, 6, 8, 0.48);
+      border: 1px solid rgba(221, 182, 95, 0.33);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .feature-plate a,
+    .gallery-card a,
+    .portrait-card a {
+      display: block;
+    }
+
+    .feature-plate img {
+      width: 100%;
+      max-height: 840px;
+      object-fit: contain;
+      background: #080a0d;
+    }
+
+    .feature-plate figcaption {
+      padding: 1.15rem;
+      color: var(--parchment-soft);
+      border-top: 1px solid rgba(221, 182, 95, 0.2);
+    }
+
+    .feature-plate figcaption strong {
+      display: block;
+      margin-bottom: 0.35rem;
+      color: var(--gold-bright);
+      font-family: "Cinzel", Georgia, serif;
+    }
+
+    .tap-note {
+      margin-top: 0.9rem;
+      color: var(--parchment-soft);
+      font-size: 0.82rem;
+      font-style: italic;
+      text-align: center;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.2rem;
+      margin-top: 1.7rem;
+    }
+
+    .gallery-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      overflow: hidden;
+      background:
+        linear-gradient(145deg, rgba(27, 25, 26, 0.98), rgba(10, 12, 15, 0.99));
+      border: 1px solid rgba(221, 182, 95, 0.26);
+      border-radius: 18px;
+      box-shadow: var(--soft-shadow);
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: clamp(280px, 42vw, 520px);
+      object-fit: contain;
+      background: #080a0d;
+    }
+
+    .gallery-card .gallery-copy {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: 1.15rem;
+      border-top: 1px solid rgba(221, 182, 95, 0.18);
+    }
+
+    .gallery-card h3 {
+      margin-bottom: 0.55rem;
+      color: #fff0ce;
+    }
+
+    .gallery-card p {
+      color: var(--parchment-soft);
+    }
+
+    .gallery-card .archive-label {
+      margin-top: auto;
+      padding-top: 0.75rem;
+      color: var(--gold);
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.64rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .crest-card {
+      border-color: rgba(221, 182, 95, 0.38);
+    }
+
+    .bird-card {
+      border-color: rgba(74, 91, 132, 0.55);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(49, 93, 131, 0.17), transparent 17rem),
+        linear-gradient(145deg, rgba(23, 28, 34, 0.98), rgba(10, 12, 15, 0.99));
+    }
+
+    .memory-card {
+      border-color: rgba(121, 90, 76, 0.5);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(121, 90, 76, 0.16), transparent 17rem),
+        linear-gradient(145deg, rgba(31, 27, 24, 0.98), rgba(10, 12, 15, 0.99));
+    }
+
+    .marks-card {
+      border-color: rgba(96, 70, 111, 0.54);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(96, 70, 111, 0.19), transparent 17rem),
+        linear-gradient(145deg, rgba(30, 26, 36, 0.98), rgba(10, 12, 15, 0.99));
+    }
+
+    .song-card {
+      border-color: rgba(81, 122, 116, 0.54);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(81, 122, 116, 0.17), transparent 17rem),
+        linear-gradient(145deg, rgba(22, 31, 31, 0.98), rgba(10, 12, 15, 0.99));
+    }
+
+    .portrait-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.2rem;
+      margin-top: 1.7rem;
+    }
+
+    .portrait-card {
+      overflow: hidden;
+      background: rgba(5, 6, 8, 0.5);
+      border: 1px solid rgba(221, 182, 95, 0.28);
+      border-radius: 18px;
+      box-shadow: var(--soft-shadow);
+    }
+
+    .portrait-card img {
+      width: 100%;
+      height: clamp(390px, 54vw, 680px);
+      object-fit: contain;
+      background: #080a0d;
+    }
+
+    .portrait-card .portrait-copy {
+      padding: 1.1rem;
+      border-top: 1px solid rgba(221, 182, 95, 0.18);
+      text-align: center;
+    }
+
+    .portrait-card h3 {
+      margin-bottom: 0.45rem;
+      color: #fff0ce;
+    }
+
+    .archive-law-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem;
+      margin-top: 1.7rem;
+    }
+
+    .archive-law {
+      margin: 0;
+      padding: 1.1rem;
+      color: #eef0df;
+      background:
+        linear-gradient(135deg, rgba(49, 90, 69, 0.2), rgba(5, 6, 8, 0.52));
+      border: 1px solid rgba(83, 128, 94, 0.38);
+      border-radius: 14px;
+    }
+
+    .archive-law::before {
+      content: "◆";
+      margin-right: 0.55rem;
+      color: var(--gold);
+    }
+
+    @media (max-width: 980px) {
+      .archive-hero-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .archive-hero .hero-text {
+        text-align: center;
+      }
+
+      .archive-hero .tagline,
+      .archive-hero .hero-quote {
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .archive-hero .hero-buttons {
+        justify-content: center;
+      }
+
+      .archive-hero-art {
+        width: min(100%, 560px);
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .archive-hero {
+        min-height: auto;
+      }
+
+      .archive-nav {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .archive-nav a {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .gallery-grid,
+      .portrait-grid,
+      .archive-law-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .canon-notice {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .canon-notice .notice-mark {
+        margin: 0 auto;
+      }
+
+      .gallery-card img {
+        height: auto;
+        max-height: 650px;
+      }
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Visual Archive of The Saga of Black Wings",
+    "url": "https://sagaofblackwings.com/archive.html",
+    "description": "Crests, shields, banners, ravens, beasts, Witness-Marks, songs and portrait artwork from The Saga of Black Wings.",
+    "author": {
+      "@type": "Person",
+      "name": "Timothy M. Halliday"
+    }
+  }
+  </script>
 </head>
 
 <body>
-  <header class="hero">
-    <p class="eyebrow">Visual Archive</p>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <h1>Crests, Ravens and Witness-Images</h1>
+  <header class="page-hero archive-hero">
+    <div class="archive-hero-layout">
+      <div class="hero-text">
+        <p class="eyebrow">The Visual Witness Hall</p>
 
-    <p class="hero-text">
-      A living gallery of Black Wings artwork: ravens, beast-witnesses,
-      banners, crests, book shields, family emblems and visual fragments
-      from the roads of Vardrum.
-    </p>
+        <h1>The Black Wings Archive</h1>
 
-    <div class="hero-actions">
-      <a href="books.html">The Books</a>
-      <a href="characters.html">Characters</a>
-      <a href="lore.html">World &amp; Lore</a>
-    </div>
-
-    <nav class="site-nav" aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="books.html">Books</a>
-      <a href="characters.html">Characters</a>
-      <a href="rogues.html">Rogues</a>
-      <a href="lore.html">World &amp; Lore</a>
-      <a href="odes.html">Odes</a>
-      <a href="maps.html">Maps</a>
-      <a href="archive.html">Visual Archive</a>
-      <a href="author.html">Author</a>
-      <a href="dedications.html">Dedications</a>
-    </nav>
-  </header>
-
-  <main class="page-shell">
-    <section class="card">
-      <h2>The Archive Opens</h2>
-
-      <p>
-        This archive gathers the visual language of The Saga of Black Wings:
-        raven-shadow, old gold, dark flowers, beast-witnesses, oath banners,
-        family signs, marsh-law, refusal, love, grief, humour and the living
-        symbols of the saga.
-      </p>
-
-      <blockquote>
-        “A symbol is a door. A crest is a promise nailed where forgetting cannot reach.”
-      </blockquote>
-    </section>
-
-    <section class="card">
-      <h2>The Witness Archive</h2>
-
-      <h3>Canon Creature Standards of the Braid</h3>
-
-      <div class="witness-intro">
-        <p>
-          They are not pets. They are not symbols. They are witnesses.
-          Each carries memory. Each holds a role. Each serves the truth
-          in their own way.
+        <p class="tagline">
+          Crests, shields, ravens, beasts, spirit flame, Witness-Marks,
+          remembered plates and the painted language of Vardrum.
         </p>
+
+        <blockquote class="hero-quote">
+          “A symbol is a door. A crest is a promise nailed where forgetting cannot reach.”
+        </blockquote>
+
+        <div class="hero-buttons">
+          <a href="#witness-archive" class="button primary">Enter the Gallery</a>
+          <a href="characters.html" class="button secondary">Meet the Witnesses</a>
+          <a href="index.html" class="button secondary">Return Home</a>
+        </div>
       </div>
 
-      <p>
-        Every creature within <em>The Saga of Black Wings</em> carries witness
-        in its own fashion. They are companions, protectors, guides, hunters,
-        comforters and keepers of memory.
-      </p>
-
-      <p>
-        They are never ornaments and never decorations. They belong to the
-        House as surely as any person who walks its roads.
-      </p>
-
-      <figure class="archive-figure">
+      <figure class="archive-hero-art">
         <img
-       src="509B190A-38D8-4332-9CC8-8CBF26956408.png"
-          alt="The Witness Archive canon creature standards of the Braid, including Blue, Scarlet, Dusk, Jack, Mylo, Shane, Hugo, Benson, Mad and Bella's Flame."
+          src="AB854AAB-8F11-4453-B5D2-F5850178C570.png"
+          alt="Living Black Wings crest surrounded by animal witnesses and flowers"
+          width="1254"
+          height="1254"
+          fetchpriority="high"
         />
+      </figure>
+    </div>
+  </header>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="books.html">Books</a>
+    <a href="characters.html">Characters</a>
+    <a href="rogues.html">Rogues</a>
+    <a href="world.html">World</a>
+    <a href="lore.html">Lore</a>
+    <a href="odes.html">Odes</a>
+    <a href="maps.html">Maps</a>
+    <a href="archive.html" aria-current="page">Archive</a>
+    <a href="author.html">Author</a>
+    <a href="dedications.html">Dedications</a>
+  </nav>
+
+  <main id="main-content">
+    <section class="panel intro-panel">
+      <p class="eyebrow">The Archive Opens</p>
+      <h2>Artwork That Remembers</h2>
+
+      <p>
+        This hall gathers the visual language of <em>The Saga of Black Wings</em>:
+        raven-shadow, old gold, dark flowers, beast-witnesses, family signs,
+        shield systems, marsh lore, refusal, love, grief and the living symbols
+        of the Braid.
+      </p>
+
+      <p>
+        Tap any artwork to open its full-size file. Return with the browser’s
+        back arrow when you have finished looking.
+      </p>
+
+      <div class="canon-notice">
+        <div class="notice-mark" aria-hidden="true">W</div>
+        <div>
+          <strong>Archive Canon Note</strong>
+          The newest written canon and approved character notes always take
+          priority. Some older visual plates preserve earlier wording or concept
+          labels and are kept here as part of the saga’s creative history.
+        </div>
+      </div>
+
+      <nav class="archive-nav" aria-label="Jump to archive collections">
+        <a href="#witness-archive">Witness Archive</a>
+        <a href="#crests-shields">Crests and Shields</a>
+        <a href="#ravens">Ravens</a>
+        <a href="#memory-plates">Memory Plates</a>
+        <a href="#marks-song">Marks and Song</a>
+        <a href="#author-portraits">Author Portraits</a>
+      </nav>
+    </section>
+
+    <section class="panel" id="witness-archive">
+      <p class="eyebrow">Fur, Feather and Flame</p>
+      <h2>The Witness Archive</h2>
+
+      <p>
+        The creatures of Black Wings are companions, protectors, guides,
+        interrupters and keepers of memory. They are never ornaments standing
+        outside the human story.
+      </p>
+
+      <figure class="feature-plate">
+        <a
+          href="509B190A-38D8-4332-9CC8-8CBF26956408.png"
+          target="_blank"
+          rel="noopener"
+          aria-label="Open the wide Witness Archive plate at full size"
+        >
+          <img
+            src="509B190A-38D8-4332-9CC8-8CBF26956408.png"
+            alt="Wide archive plate containing Black Wings animal witness artwork"
+            width="1536"
+            height="1024"
+            loading="eager"
+          />
+        </a>
 
         <figcaption>
-          The Witness Archive: Canon Creature Standards of the Braid, Version 1.0.
+          <strong>The Wide Witness Archive Plate</strong>
+          Blue, Scarlet, Dusk, Jack, Mylo, Shane, Hugo, Benson, Mad and
+          Bella’s Flame gathered with early archive wording and linked artwork.
         </figcaption>
       </figure>
 
-      <p class="archive-note">
-        This archive plate serves as the official visual reference for the
-        creatures of the saga. Future illustrations, book artwork and
-        commissioned paintings should follow these canonical standards so
-        every appearance remains faithful throughout the world of Vardrum.
-      </p>
+      <p class="tap-note">Tap the plate to inspect the full-size artwork.</p>
+
+      <div class="gallery-grid">
+        <article class="gallery-card bird-card">
+          <a
+            href="9E5D5B73-30EB-41A1-A102-76F22C7B3D4E.png"
+            target="_blank"
+            rel="noopener"
+            aria-label="Open the Beast and Bird Witnesses plate at full size"
+          >
+            <img
+              src="9E5D5B73-30EB-41A1-A102-76F22C7B3D4E.png"
+              alt="Sepia archive plate of beast and bird witnesses"
+              width="1122"
+              height="1402"
+              loading="lazy"
+            />
+          </a>
+          <div class="gallery-copy">
+            <h3>Beast and Bird Witnesses</h3>
+            <p>
+              A folklore-style plate presenting the wider animal company as
+              witnesses rather than decoration.
+            </p>
+            <p class="archive-label">Archive folklore plate</p>
+          </div>
+        </article>
+
+        <article class="gallery-card crest-card">
+          <a
+            href="D9B1A5F9-10C0-4BBB-9B3F-5A591F28BCA5.png"
+            target="_blank"
+            rel="noopener"
+            aria-label="Open the Braid Witness Banner at full size"
+          >
+            <img
+              src="D9B1A5F9-10C0-4BBB-9B3F-5A591F28BCA5.png"
+              alt="Black and gold Braid witness banner with animal emblems"
+              width="1086"
+              height="1448"
+              loading="lazy"
+            />
+          </a>
+          <div class="gallery-copy">
+            <h3>The Braid Witness Banner</h3>
+            <p>
+              A hanging banner built around the oath: Witness, Refusal, Beside.
+            </p>
+            <p class="archive-label">Braid banner</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" id="crests-shields">
+      <p class="eyebrow">Oath, House and Book Road</p>
+      <h2>Crests and Shields</h2>
+
+      <div class="gallery-grid">
+        <article class="gallery-card crest-card">
+          <a
+            href="F8098CC8-B454-449C-B6F1-3623429B74A1.png"
+            target="_blank"
+            rel="noopener"
+            aria-label="Open the Braid raven crest at full size"
+          >
+            <img
+              src="F8098CC8-B454-449C-B6F1-3623429B74A1.png"
+              alt="The Braid crest with a raven in flight and the motto No Crown Shall Count Us Smaller"
+              width="1254"
+              height="1254"
+              loading="lazy"
+            />
+          </a>
+          <div class="gallery-copy">
+            <h3>The Braid Raven Crest</h3>
+            <p>
+              Raven in flight, antique gold, black wings and the central oath:
+              No Crown Shall Count Us Smaller.
+            </p>
+            <p class="archive-label">Primary Braid crest</p>
+          </div>
+        </article>
+
+        <article class="gallery-card crest-card">
+          <a
+            href="3B43F815-45F1-4657-A898-C6782F8507E6.png"
+            target="_blank"
+            rel="noopener"
+            aria-label="Open the tall Braid crest at full size"
+          >
+            <img
+              src="3B43F815-45F1-4657-A898-C6782F8507E6.png"
+              alt="Tall Black Wings Braid crest with raven and gold knotwork"
+              width="1122"
+              height="1402"
+              loading="lazy"
+            />
+          </a>
+          <div class="gallery-copy">
+            <h3>The Tall Braid Crest</h3>
+            <p>
+              A vertical heraldic version suited to banners, book plates and
+              narrow display spaces.
+            </p>
+            <p class="archive-label">Archive crest variation</p>
+          </div>
+        </article>
+
+        <article class="gallery-card crest-card">
+          <a
+            href="2E247B5E-FCF7-44FD-9900-DEBF4CB652D4.png"
+            target="_blank"
+            rel="noopener"
+            aria-label="Open the fifteen-book shield system at full size"
+          >
+            <img
+              src="2E247B5E-FCF7-44FD-9900-DEBF4CB652D4.png"
+              alt="Fifteen-book crest and shield system for The Saga of Black Wings"
+              width="1402"
+              height="1122"
+              loading="lazy"
+            />
+          </a>
+          <div class="gallery-copy">
+            <h3>The Fifteen-Book Shield System</h3>
+            <p>
+              A heraldic road through the first fifteen books, carrying knot,
+              crown, root, house, refusal and Braid imagery.
+            </p>
+            <p class="archive-label">Books I to XV</p>
+          </div>
+        </article>
+
+        <article class="gallery-card crest-card">
+          <a
+            href="AB854AAB-8F11-4453-B5D2-F5850178C570.png"
+            target="_blank"
+            rel="noopener"
+            aria-label="Open the living animal crest at full size"
+          >
+            <img
+              src="AB854AAB-8F11-4453-B5D2-F5850178C570.png"
+              alt="Living Black Wings crest with raven, dogs, flowers and spirit flame"
+              width="1254"
+              height="1254"
+              loading="lazy"
+            />
+          </a>
+          <div class="gallery-copy">
+            <h3>The Living Animal Crest</h3>
+            <p>
+              Raven, hearth animals, dark flowers and spirit flame gathered
+              around the living identity of Black Wings.
+            </p>
+            <p class="archive-label">Living crest</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" id="ravens">
+      <p class="eyebrow">The Wing-Pair and the Open Sky</p>
+      <h2>Ravens and Crows</h2>
+
+      <div class="gallery-grid">
+        <article class="gallery-card bird-card">
+          <a
+            href="522AABA1-2FB5-4B6A-96F3-ED27C6EA35EC.png"
+            target="_blank"
+            rel="noopener"
+            aria-label="Open Scarlet's portrait at full size"
+          >
+            <img
+              src="522AABA1-2FB5-4B6A-96F3-ED27C6EA35EC.png"
+              alt="Watercolour portrait of Scarlet the crow with restrained crimson feathers"
+              width="1198"
+              height="1313"
+              loading="lazy"
+            />
+          </a>
+          <div class="gallery-copy">
+            <h3>Scarlet</h3>
+            <p>
+              Female crow witness: black, sturdy, calm and touched with
+              restrained burgundy and garnet.
+            </p>
+            <p class="archive-label">Crow portrait</p>
+          </div>
+        </article>
+
+        <article class="gallery-card bird-card">
+          <a
+            href="7259661F-E789-46D2-8BA2-57D65730C5E0.png"
+            target="_blank"
+            rel="noopener"
+            aria-label="Open Blue's portrait at full size"
+          >
+            <img
+              src="7259661F-E789-46D2-8BA2-57D65730C5E0.png"
+              alt="Watercolour portrait of Blue the raven with cobalt and indigo iridescence"
+              width="1216"
+              height="1293"
+              loading="lazy"
+            />
+          </a>
+          <div class="gallery-copy">
+            <h3>Blue</h3>
+            <p>
+              Male raven witness: slimmer, inquisitive and carrying cobalt-blue
+              iridescence across black feathers.
+            </p>
+            <p class="archive-label">Raven portrait</p>
+          </div>
+        </article>
+
+        <article class="gallery-card bird-card">
+          <a
+            href="9F949A28-0A56-4953-A7B6-37ECD8A29F15.png"
+            target="_blank"
+            rel="noopener"
+            aria-label="Open the Scarlet and Blue wing-pair plate at full size"
+          >
+            <img
+              src="9F949A28-0A56-4953-A7B6-37ECD8A29F15.png"
+              alt="Paired archive portrait of Blue the raven and Scarlet the crow"
+              width="1361"
+              height="1156"
+              loading="lazy"
+            />
+          </a>
+          <div class="gallery-copy">
+            <h3>The Wing-Pair</h3>
+            <p>
+              Blue and Scarlet presented together as bonded animal witnesses,
+              one inquisitive and one calmly judging.
+            </p>
+            <p class="archive-label">Book XVI wing-pair plate</p>
+          </div>
+        </article>
+
+        <article class="gallery-card bird-card">
+          <a
+            href="92B5CDC8-3C87-426D-9C13-A4BE908193FC.png"
+            target="_blank"
+            rel="noopener"
+            aria-label="Open the raven in flight photograph at full size"
+          >
+            <img
+              src="92B5CDC8-3C87-426D-9C13-A4BE908193FC.png"
+              alt="Black raven in flight against a pale sky"
+              width="1122"
+              height="1402"
+              loading="lazy"
+            />
+          </a>
+          <div class="gallery-copy">
+            <h3>Raven in Flight</h3>
+            <p>
+              A stark black-winged study carrying the archive line:
+              the wing does not ask the road for permission.
+            </p>
+            <p class="archive-label">Flight study</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" id="memory-plates">
+      <p class="eyebrow">Quiet Witness</p>
+      <h2>Memory Plates</h2>
+
+      <div class="gallery-grid">
+        <article class="gallery-card memory-card">
+          <a
+            href="IMG_5588.jpeg"
+            target="_blank"
+            rel="noopener"
+            aria-label="Open the Maisie and Bella pencil plate at full size"
+          >
+            <img
+              src="IMG_5588.jpeg"
+              alt="Pencil-style illustration of Maisie kneeling beside Bella with the words Pain breeds pain"
+              width="1024"
+              height="1536"
+              loading="lazy"
+            />
+          </a>
+          <div class="gallery-copy">
+            <h3>Pain Breeds Pain</h3>
+            <p>
+              A quiet pencil plate of Maisie and Bella, carrying tenderness,
+              recognition and the warning that untreated hurt travels onward.
+            </p>
+            <p class="archive-label">Maisie and Bella</p>
+          </div>
+        </article>
+
+        <article class="gallery-card memory-card">
+          <a
+            href="56C39F73-84BB-4C92-B86C-A542E45A7FAB.png"
+            target="_blank"
+            rel="noopener"
+            aria-label="Open the tall Witness Archive poster at full size"
+          >
+            <img
+              src="56C39F73-84BB-4C92-B86C-A542E45A7FAB.png"
+              alt="Tall Black Wings witness archive poster containing creatures, crests and memory plates"
+              width="1149"
+              height="1369"
+              loading="lazy"
+            />
+          </a>
+          <div class="gallery-copy">
+            <h3>The Tall Witness Archive Poster</h3>
+            <p>
+              A collected poster preserving animal, crest, shield, memory and
+              archive concepts in one large visual document.
+            </p>
+            <p class="archive-label">Early archive edition</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" id="marks-song">
+      <p class="eyebrow">Signs and Remembered Music</p>
+      <h2>Witness-Marks and Song</h2>
+
+      <div class="gallery-grid">
+        <article class="gallery-card marks-card">
+          <a
+            href="2BBF05BA-25CC-4628-A950-B1068F109A6E.png"
+            target="_blank"
+            rel="noopener"
+            aria-label="Open the Black Wings Witness-Marks plate at full size"
+          >
+            <img
+              src="2BBF05BA-25CC-4628-A950-B1068F109A6E.png"
+              alt="Archive plate of fictional Black Wings Witness-Marks"
+              width="1024"
+              height="1536"
+              loading="lazy"
+            />
+          </a>
+          <div class="gallery-copy">
+            <h3>Black Wings Witness-Marks</h3>
+            <p>
+              An in-world plate of fictional signs for witness, road, animal,
+              spirit, place and remembered law.
+            </p>
+            <p class="archive-label">Fictional mark system</p>
+          </div>
+        </article>
+
+        <article class="gallery-card song-card">
+          <a
+            href="4BFA5717-5C1B-4135-8539-ECD4D79704B2.png"
+            target="_blank"
+            rel="noopener"
+            aria-label="Open the Where the Salt Reeds Grow song plate at full size"
+          >
+            <img
+              src="4BFA5717-5C1B-4135-8539-ECD4D79704B2.png"
+              alt="Where the Salt Reeds Grow lyric and chord plate by Timothy M. Halliday"
+              width="1055"
+              height="1491"
+              loading="lazy"
+            />
+          </a>
+          <div class="gallery-copy">
+            <h3>Where the Salt Reeds Grow</h3>
+            <p>
+              The full Salt-Marsh harvest-song plate with lyrics, chords and
+              keeper notes.
+            </p>
+            <p class="archive-label">Song by Timothy M. Halliday</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="hero-buttons">
+        <a href="lore.html#witness-marks" class="button primary">Read the Mark Lore</a>
+        <a href="odes.html#salt-reed-song" class="button secondary">Enter the Skald-Room</a>
+      </div>
+    </section>
+
+    <section class="panel" id="author-portraits">
+      <p class="eyebrow">Behind the Wings</p>
+      <h2>Author Portraits</h2>
+
+      <div class="portrait-grid">
+        <article class="portrait-card">
+          <a
+            href="4BC7F1F3-A69C-4867-A3E3-8BFA8B22D55C.png"
+            target="_blank"
+            rel="noopener"
+            aria-label="Open the Black Wings author portrait at full size"
+          >
+            <img
+              src="4BC7F1F3-A69C-4867-A3E3-8BFA8B22D55C.png"
+              alt="Black Wings author portrait with raven, dark clothing, runes and firelight"
+              width="1122"
+              height="1402"
+              loading="lazy"
+            />
+          </a>
+          <div class="portrait-copy">
+            <h3>The Black Wings Portrait</h3>
+            <p>
+              A saga-styled author study with raven, dark hall, old-road
+              clothing and visible marks.
+            </p>
+          </div>
+        </article>
+
+        <article class="portrait-card">
+          <a
+            href="B867CB65-51D1-4FD9-8756-A006F869B5A0.png"
+            target="_blank"
+            rel="noopener"
+            aria-label="Open the author photograph at full size"
+          >
+            <img
+              src="B867CB65-51D1-4FD9-8756-A006F869B5A0.png"
+              alt="Professional author portrait against a dark blue background"
+              width="1122"
+              height="1402"
+              loading="lazy"
+            />
+          </a>
+          <div class="portrait-copy">
+            <h3>The Author Photograph</h3>
+            <p>
+              A clean portrait for biography, professional contact and
+              publishing material.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <div class="hero-buttons">
+        <a href="author.html" class="button primary">Read About the Author</a>
+      </div>
+    </section>
+
+    <section class="panel">
+      <p class="eyebrow">The Law of the Witness Hall</p>
+      <h2>How This Archive Is Kept</h2>
+
+      <div class="archive-law-grid">
+        <p class="archive-law">Written canon outranks an older picture label.</p>
+        <p class="archive-law">Animals are presented as witnesses, never ornaments.</p>
+        <p class="archive-law">Older concept plates remain clearly identified.</p>
+        <p class="archive-law">No broken placeholder is treated as finished artwork.</p>
+        <p class="archive-law">Every image receives a useful text description.</p>
+        <p class="archive-law">New plates are added carefully, one true file at a time.</p>
+      </div>
 
       <blockquote>
         “We remember them. They remember us. Together, we keep the long road honest.”
       </blockquote>
     </section>
 
-    <section class="card">
-      <h2>The Fifteen Book Shield System</h2>
+    <section class="panel final-road-panel">
+      <p class="eyebrow">Leave the Witness Hall</p>
+      <h2>Follow the Image into the Story</h2>
 
       <p>
-        A full crest-system poster for the first fifteen books of
-        The Saga of Black Wings: thirteen completed roads, the House Beyond
-        the House, and the Braid rising beyond it.
+        Carry the crests, marks, birds and beasts into the Character Hall,
+        Skald-Room or book road.
       </p>
 
-      <p>
-        Each shield carries a book’s heart: road, knot, crown, root,
-        severing, agreement, refusal, house and witness.
-      </p>
-
-      <figure class="archive-figure">
-        <img
-          src="2E247B5E-FCF7-44FD-9900-DEBF4CB652D4.png"
-          alt="The FATAS-Ness Saga Crest System showing fifteen book shields for The Saga of Black Wings."
-        />
-
-        <figcaption>
-          The Fifteen Book Shield System: one house, fifteen stories, endless witness.
-        </figcaption>
-      </figure>
-    </section>
-
-    <section class="card">
-      <h2>The Braid Crest</h2>
-
-      <p>
-        A major emblem for the Braid, carrying the raven in flight,
-        old knotwork, dark wings, marsh-reeds, antique gold and the oath-motto:
-      </p>
-
-      <blockquote>
-        No Crown Shall Count Us Smaller
-      </blockquote>
-
-      <figure class="archive-figure">
-        <img
-          src="3B43F815-45F1-4657-A898-C6782F8507E6.png"
-          alt="The Braid crest with raven, dark wings, knotwork and the motto No Crown Shall Count Us Smaller."
-        />
-
-        <figcaption>
-          The Braid crest: oath, refusal, witness and black-winged memory.
-        </figcaption>
-      </figure>
-    </section>
-
-    <section class="card">
-      <h2>The Braid Witness Banner</h2>
-
-      <p>
-        The Braid witness banner gathers the animal witnesses around
-        the central oath: Witness, Refusal, Beside.
-      </p>
-
-      <p>
-        Mylo is the sandy tan Siamese-like cat. Shane is the red salt-hound.
-        Bella burns at the centre as spirit-witness. No beast here is ornament.
-        Every one carries memory.
-      </p>
-
-      <figure class="archive-figure">
-        <img
-          src="D9B1A5F9-10C0-4BBB-9B3F-5A591F28BCA5.png"
-          alt="The Braid witness banner showing Scarlet, Blue, Mad, Jack, Dusk, Benson, Hugo, Mylo, Shane and Bella."
-        />
-
-        <figcaption>
-          The Braid Witness Banner: Witness · Refusal · Beside.
-        </figcaption>
-      </figure>
-    </section>
-
-    <section class="card">
-      <h2>Raven in Flight</h2>
-
-      <p>
-        A black-winged flight plate drawn from the living world:
-        stark, simple and watchful.
-      </p>
-
-      <figure class="archive-figure">
-        <img
-          src="92B5CDC8-3C87-426D-9C13-A4BE908193FC.png"
-          alt="Black raven in flight against a pale sky."
-        />
-
-        <figcaption>
-          “The wing does not ask the road for permission.”
-        </figcaption>
-      </figure>
-    </section>
-
-    <section class="card">
-      <h2>Pain Breeds Pain</h2>
-
-      <p>
-        Maisie and Bella in a quiet witness plate: a moment of gentleness,
-        recognition and the hard truth that hurt must be understood before
-        it is passed on.
-      </p>
-
-      <figure class="archive-figure">
-        <img
-          src="IMG_5588.jpeg"
-          alt="Pencil-style plate of Maisie and Bella with the words Pain breeds pain."
-        />
-
-        <figcaption>
-          “Pain breeds pain.” — Maisie &amp; Bella
-        </figcaption>
-      </figure>
-    </section>
-
-    <section class="card">
-      <h2>Beast and Bird Witnesses</h2>
-
-      <p>
-        The animals of Black Wings are never decoration. They watch, warn,
-        object, hunt, comfort, carry messages and often know the truth
-        before the humans admit it.
-      </p>
-
-      <figure class="archive-figure">
-        <img
-          src="9E5D5B73-30EB-41A1-A102-76F22C7B3D4E.png"
-          alt="Beast and bird witnesses of The Saga of Black Wings."
-        />
-
-        <figcaption>
-          Witnesses, not ornaments.
-        </figcaption>
-      </figure>
-    </section>
-
-    <section class="card">
-      <h2>The Full Animal Crest</h2>
-
-      <p>
-        A fuller heraldic plate for the animal witnesses of the saga:
-        fur, feather, flame and memory bound together in dark gold.
-      </p>
-
-      <figure class="archive-figure">
-        <img
-          src="AB854AAB-8F11-4453-B5D2-F5850178C570.png"
-          alt="Full animal crest for The Saga of Black Wings."
-        />
-
-        <figcaption>
-          All remember. All bear truth.
-        </figcaption>
-      </figure>
-    </section>
-
-    <section class="card">
-      <h2>More Plates Coming</h2>
-
-      <p>
-        More images will be added carefully, one at a time, using their
-        exact filenames so the archive stays clean and nothing breaks.
-      </p>
-
-      <p class="archive-note">
-        Future additions may include individual canon portraits for Blue,
-        Scarlet, Dusk, Jack, Mylo, Shane, Hugo, Benson, Mad and Bella’s Flame.
-      </p>
+      <div class="hero-buttons">
+        <a href="characters.html" class="button primary">Meet the Characters</a>
+        <a href="odes.html" class="button secondary">Read the Odes</a>
+        <a href="books.html" class="button secondary">Explore the Books</a>
+      </div>
     </section>
   </main>
 
   <footer>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="index.html">Home</a>
+      <a href="books.html">Books</a>
+      <a href="characters.html">Characters</a>
+      <a href="rogues.html">Rogues</a>
+      <a href="world.html">World</a>
+      <a href="lore.html">Lore</a>
+      <a href="odes.html">Odes</a>
+      <a href="maps.html">Maps</a>
+      <a href="author.html">Author</a>
+    </nav>
+
     <p>© 2026 Saga of Black Wings · Created by Timothy M. Halliday</p>
+    <p class="footer-motto">No crown shall count us smaller.</p>
   </footer>
 </body>
 </html>
