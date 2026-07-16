@@ -1,889 +1,642 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Books | Saga of Black Wings</title>
+  <title>Books | The Saga of Black Wings</title>
 
   <meta
-
     name="description"
-
-    content="Explore the books of The Saga of Black Wings by Timothy M. Halliday, a dark epic fantasy series of ravens, wolves, chosen family, ancient law and living refusal."
-
+    content="Explore Books I to XV of The Saga of Black Wings by Timothy M. Halliday and glimpse the later road now opening through Books XVI to XX."
   />
-
   <meta name="author" content="Timothy M. Halliday" />
-
   <meta name="theme-color" content="#050608" />
 
-  <meta property="og:title" content="Books | Saga of Black Wings" />
-
+  <meta property="og:title" content="Books | The Saga of Black Wings" />
   <meta
-
     property="og:description"
-
-    content="Discover the books and unfolding roads of The Saga of Black Wings."
-
+    content="Fifteen books already stand within the manuscript, while the roads of Books XVI to XX continue to open."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sagaofblackwings.com/books.html" />
+  <meta
+    property="og:image"
+    content="https://sagaofblackwings.com/F8098CC8-B454-449C-B6F1-3623429B74A1.png"
+  />
+  <meta
+    property="og:image:alt"
+    content="The Braid raven crest from The Saga of Black Wings"
   />
 
-  <meta property="og:type" content="website" />
-
-  <meta property="og:url" content="https://sagaofblackwings.com/books.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Books | The Saga of Black Wings" />
+  <meta
+    name="twitter:description"
+    content="Follow the saga from Book I through Book XV and glimpse the roads opening through Books XVI to XX."
+  />
+  <meta
+    name="twitter:image"
+    content="https://sagaofblackwings.com/F8098CC8-B454-449C-B6F1-3623429B74A1.png"
+  />
 
   <link rel="canonical" href="https://sagaofblackwings.com/books.html" />
-
   <link rel="stylesheet" href="style.css" />
 
+  <style>
+    .books-hero {
+      min-height: 72vh;
+      padding-top: 5.2rem;
+      padding-bottom: 5.2rem;
+    }
+
+    .books-hero-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.65fr);
+      gap: clamp(2rem, 6vw, 5rem);
+      align-items: center;
+      width: min(100%, 1120px);
+      margin: 0 auto;
+    }
+
+    .books-hero .hero-text {
+      width: 100%;
+      text-align: left;
+    }
+
+    .books-hero .tagline,
+    .books-hero .hero-quote {
+      margin-left: 0;
+    }
+
+    .books-hero .hero-buttons {
+      justify-content: flex-start;
+    }
+
+    .books-crest {
+      margin: 0;
+      padding: 0.6rem;
+      background: rgba(5, 6, 8, 0.72);
+      border: 1px solid rgba(240, 210, 140, 0.42);
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .books-crest img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 19px;
+    }
+
+    .saga-counter {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .counter-card {
+      padding: 1.25rem 1rem;
+      text-align: center;
+      background: rgba(5, 6, 8, 0.43);
+      border: 1px solid rgba(221, 182, 95, 0.25);
+      border-radius: 16px;
+    }
+
+    .counter-card strong {
+      display: block;
+      margin-bottom: 0.35rem;
+      color: var(--gold-bright);
+      font-family: "Cinzel", Georgia, serif;
+      font-size: clamp(1.45rem, 3vw, 2.1rem);
+    }
+
+    .counter-card span {
+      color: var(--parchment-soft);
+      font-size: 0.88rem;
+    }
+
+    .book-road-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.7rem;
+      margin-top: 1.6rem;
+    }
+
+    .book-road-nav a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 0.55rem 0.9rem;
+      color: var(--parchment);
+      background: rgba(18, 21, 26, 0.84);
+      border: 1px solid rgba(221, 182, 95, 0.28);
+      border-radius: 999px;
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .book-road-nav a:hover {
+      color: #130e07;
+      background: var(--gold-bright);
+      border-color: var(--gold-bright);
+    }
+
+    .book-card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .book-card .book-state {
+      margin-top: auto;
+      padding-top: 0.8rem;
+      color: var(--gold);
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .book-card blockquote {
+      margin: 1rem 0 0;
+      padding: 1rem 0.65rem;
+      font-size: 0.92rem;
+    }
+
+    .future-road {
+      background:
+        radial-gradient(circle at 85% 5%, rgba(49, 90, 69, 0.22), transparent 24rem),
+        linear-gradient(145deg, rgba(24, 33, 29, 0.98), rgba(10, 12, 15, 0.99));
+    }
+
+    .spoiler-seal {
+      max-width: 820px;
+      margin: 1.5rem auto 0;
+      padding: 1rem 1.2rem;
+      color: var(--parchment-soft);
+      background: rgba(5, 6, 8, 0.38);
+      border-left: 3px solid var(--crimson);
+      border-radius: 0 12px 12px 0;
+    }
+
+    @media (max-width: 920px) {
+      .books-hero-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .books-hero .hero-text {
+        text-align: center;
+      }
+
+      .books-hero .tagline,
+      .books-hero .hero-quote {
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .books-hero .hero-buttons {
+        justify-content: center;
+      }
+
+      .books-crest {
+        width: min(100%, 500px);
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .books-hero {
+        min-height: auto;
+      }
+
+      .saga-counter {
+        grid-template-columns: 1fr;
+      }
+
+      .book-road-nav {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .book-road-nav a {
+        justify-content: center;
+        width: 100%;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Books of The Saga of Black Wings",
+    "url": "https://sagaofblackwings.com/books.html",
+    "description": "The official book guide for The Saga of Black Wings by Timothy M. Halliday.",
+    "author": {
+      "@type": "Person",
+      "name": "Timothy M. Halliday"
+    }
+  }
+  </script>
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <a class="skip-link" href="#main-content">
+  <header class="page-hero books-hero">
+    <div class="books-hero-layout">
+      <div class="hero-text">
+        <p class="eyebrow">The Saga Shelf</p>
 
-    Skip to main content
+        <h1>Books of Black Wings</h1>
 
-  </a>
+        <p class="tagline">
+          Fifteen books already stand within the manuscript, while the roads
+          of Books XVI to XX continue to open.
+        </p>
 
-  <header class="page-hero">
+        <blockquote class="hero-quote">
+          “A book is a road that remembers every footstep.”
+        </blockquote>
 
-    <div class="hero-text">
-
-      <p class="eyebrow">
-
-        The Saga Shelf
-
-      </p>
-
-      <h1>
-
-        Books of Black Wings
-
-      </h1>
-
-      <p class="tagline">
-
-        Fifteen books already stand within the manuscript,
-
-        while the roads of Books XVI to XX continue to open.
-
-      </p>
-
-      <blockquote class="hero-quote">
-
-        “A book is a road that remembers every footstep.”
-
-      </blockquote>
-
-      <div class="hero-buttons">
-
-        <a href="#saga-books" class="button primary">
-
-          Explore the Books
-
-        </a>
-
-        <a href="index.html" class="button secondary">
-
-          Return Home
-
-        </a>
-
+        <div class="hero-buttons">
+          <a href="#saga-books" class="button primary">Explore the Books</a>
+          <a href="index.html" class="button secondary">Return Home</a>
+        </div>
       </div>
 
+      <figure class="books-crest">
+        <img
+          src="F8098CC8-B454-449C-B6F1-3623429B74A1.png"
+          alt="The Braid raven crest with the motto No Crown Shall Count Us Smaller"
+          width="1254"
+          height="1254"
+          fetchpriority="high"
+        />
+      </figure>
     </div>
-
   </header>
 
   <nav class="site-nav" aria-label="Main navigation">
-
     <a href="index.html">Home</a>
-
     <a href="books.html" aria-current="page">Books</a>
-
     <a href="characters.html">Characters</a>
-
     <a href="rogues.html">Rogues</a>
-
     <a href="world.html">World</a>
-
     <a href="lore.html">Lore</a>
-
     <a href="odes.html">Odes</a>
-
     <a href="maps.html">Maps</a>
-
     <a href="archive.html">Archive</a>
-
     <a href="author.html">Author</a>
-
     <a href="dedications.html">Dedications</a>
-
   </nav>
 
   <main id="main-content">
-
     <section class="panel intro-panel">
-
-      <p class="eyebrow">
-
-        The Long Road
-
-      </p>
-
-      <h2>
-
-        The Saga So Far
-
-      </h2>
+      <p class="eyebrow">The Long Road</p>
+      <h2>The Saga So Far</h2>
 
       <p>
-
-        <em>The Saga of Black Wings</em> is a long-form dark epic
-
-        fantasy series shaped by ravens, wolves, salt-marsh roads,
-
-        old houses, buried law, chosen family and love that refuses
-
-        ownership.
-
+        <em>The Saga of Black Wings</em> is a long-form dark epic fantasy
+        series shaped by ravens, wolves, salt-marsh roads, old houses,
+        buried law, chosen family and love that refuses ownership.
       </p>
 
       <p>
-
-        Fifteen books already exist within the manuscript.
-
-        Work has also begun on Books XVI to XX, carrying the saga
-
-        into new lands, deeper bonds and older dangers.
-
+        Books I to XV already exist within the manuscript. Work is also active
+        across the later arc, Books XIV to XX, as those volumes are expanded,
+        refined and carried forward into the next great movement of the story.
       </p>
 
-      <p>
-
-        The introductions below remain deliberately spoiler-safe.
-
-        The locked doors stay locked until readers reach them.
-
+      <p class="spoiler-seal">
+        The introductions below are deliberately spoiler-safe. The locked
+        doors remain locked until readers reach them.
       </p>
 
+      <div class="saga-counter" aria-label="Saga progress">
+        <div class="counter-card">
+          <strong>15</strong>
+          <span>Books in manuscript</span>
+        </div>
+
+        <div class="counter-card">
+          <strong>XIV–XX</strong>
+          <span>Active later-book road</span>
+        </div>
+
+        <div class="counter-card">
+          <strong>1</strong>
+          <span>Living saga</span>
+        </div>
+      </div>
+
+      <nav class="book-road-nav" aria-label="Jump to book groups">
+        <a href="#books-one-four">Books I–IV</a>
+        <a href="#books-five-eight">Books V–VIII</a>
+        <a href="#books-nine-twelve">Books IX–XII</a>
+        <a href="#books-thirteen-fifteen">Books XIII–XV</a>
+        <a href="#books-sixteen-twenty">Books XVI–XX</a>
+      </nav>
     </section>
 
     <section class="panel" id="saga-books">
-
-      <p class="eyebrow">
-
-        Books I to IV
-
-      </p>
-
-      <h2>
-
-        The First Reckonings
-
-      </h2>
-
-      <div class="book-grid">
-
-        <article class="book-card featured-book">
-
-          <p class="book-number">
-
-            Book I
-
-          </p>
-
-          <h3>
-
-            Saga of Black Wings
-
-          </h3>
-
-          <p>
-
-            The first road opens beneath black wings.
-
-            Wounded lives begin to gather, old powers take notice
-
-            and a family starts forming where no crown intended one.
-
-          </p>
-
-        </article>
-
-        <article class="book-card">
-
-          <p class="book-number">
-
-            Book II
-
-          </p>
-
-          <h3>
-
-            The Reckoner’s Knot
-
-          </h3>
-
-          <p>
-
-            Debt, law and witness tighten around the living.
-
-            The cost of being counted by hostile hands becomes
-
-            impossible to ignore.
-
-          </p>
-
-        </article>
-
-        <article class="book-card">
-
-          <p class="book-number">
-
-            Book III
-
-          </p>
-
-          <h3>
-
-            The Crown of Thorns and Salt
-
-          </h3>
-
-          <p>
-
-            Crown pressure deepens across road, house and family.
-
-            Power learns to hide inside procedure, silence and fear.
-
-          </p>
-
-        </article>
-
-        <article class="book-card">
-
-          <p class="book-number">
-
-            Book IV
-
-          </p>
-
-          <h3>
-
-            The Crown Unmade
-
-          </h3>
-
-          <p>
-
-            Old truths begin breaking through the foundations
-
-            of power as living refusal answers the Crown.
-
-          </p>
-
-        </article>
-
-      </div>
-
-    </section>
-
-    <section class="panel">
-
-      <p class="eyebrow">
-
-        Books V to VIII
-
-      </p>
-
-      <h2>
-
-        The Root Wars
-
-      </h2>
-
-      <div class="book-grid">
-
-        <article class="book-card">
-
-          <p class="book-number">
-
-            Book V
-
-          </p>
-
-          <h3>
-
-            The War of the Underroot
-
-          </h3>
-
-          <p>
-
-            Something ancient stirs beneath the known world.
-
-            Roots carry memory, hunger and laws that were never
-
-            properly buried.
-
-          </p>
-
-        </article>
-
-        <article class="book-card">
-
-          <p class="book-number">
-
-            Book VI
-
-          </p>
-
-          <h3>
-
-            The Rising Root
-
-          </h3>
-
-          <p>
-
-            The buried conflict rises into open ground.
-
-            Those above must decide what they will protect,
-
-            surrender or become.
-
-          </p>
-
-        </article>
-
-        <article class="book-card">
-
-          <p class="book-number">
-
-            Book VII
-
-          </p>
-
-          <h3>
-
-            The Severing War
-
-          </h3>
-
-          <p>
-
-            Bonds, roads and loyalties are cut apart.
-
-            Survival demands choices that cannot be made cleanly.
-
-          </p>
-
-        </article>
-
-        <article class="book-card">
-
-          <p class="book-number">
-
-            Book VIII
-
-          </p>
-
-          <h3>
-
-            The Last Root
-
-          </h3>
-
-          <p>
-
-            The oldest root reaches its final reckoning.
-
-            What remains must learn how to live without the world
-
-            it once depended upon.
-
-          </p>
-
-        </article>
-
-      </div>
-
-    </section>
-
-    <section class="panel">
-
-      <p class="eyebrow">
-
-        Books IX to XII
-
-      </p>
-
-      <h2>
-
-        The Quieting World
-
-      </h2>
-
-      <div class="book-grid">
-
-        <article class="book-card">
-
-          <p class="book-number">
-
-            Book IX
-
-          </p>
-
-          <h3>
-
-            The World Without Root
-
-          </h3>
-
-          <p>
-
-            Victory leaves an unfamiliar silence.
-
-            The survivors must discover whether freedom can endure
-
-            after the force holding the world together is gone.
-
-          </p>
-
-        </article>
-
-        <article class="book-card">
-
-          <p class="book-number">
-
-            Book X
-
-          </p>
-
-          <h3>
-
-            The Quieting World
-
-          </h3>
-
-          <p>
-
-            Peace arrives unevenly.
-
-            Beneath its surface, old wounds, hidden bargains and
-
-            unspoken names continue to move.
-
-          </p>
-
-        </article>
-
-        <article class="book-card">
-
-          <p class="book-number">
-
-            Book XI
-
-          </p>
-
-          <h3>
-
-            The Agreement of Ash
-
-          </h3>
-
-          <p>
-
-            New promises are written over old ruin.
-
-            Every agreement carries memory, and every peace has
-
-            someone watching its edges.
-
-          </p>
-
-        </article>
-
-        <article class="book-card">
-
-          <p class="book-number">
-
-            Book XII
-
-          </p>
-
-          <h3>
-
-            The Last Refusal
-
-          </h3>
-
-          <p>
-
-            One final demand reaches the people who have already
-
-            surrendered too much. Their answer changes what refusal
-
-            can mean.
-
-          </p>
-
-        </article>
-
-      </div>
-
-    </section>
-
-    <section class="panel">
-
-      <p class="eyebrow">
-
-        Books XIII to XV
-
-      </p>
-
-      <h2>
-
-        Houses, Ravens and the Braid
-
-      </h2>
-
-      <div class="book-grid">
-
-        <article class="book-card">
-
-          <p class="book-number">
-
-            Book XIII
-
-          </p>
-
-          <h3>
-
-            The House That Raised the Raven
-
-          </h3>
-
-          <p>
-
-            A house becomes witness, shelter and inheritance.
-
-            The past returns through rooms that remember every name
-
-            once spoken inside them.
-
-          </p>
-
-        </article>
-
-        <article class="book-card">
-
-          <p class="book-number">
-
-            Book XIV
-
-          </p>
-
-          <h3>
-
-            The House Beyond the House
-
-          </h3>
-
-          <p>
-
-            Beyond the familiar hearth lies another threshold.
-
-            The family must cross it without allowing the road
-
-            to decide who they are.
-
-          </p>
-
-        </article>
-
-        <article class="book-card featured-book">
-
-          <p class="book-number">
-
-            Book XV
-
-          </p>
-
-          <h3>
-
-            The Braid
-
-          </h3>
-
-          <p>
-
-            The scattered strands gather.
-
-            Love, friendship, witness and survival become a living
-
-            bond that no crown can own or measure.
-
-          </p>
-
-          <blockquote>
-
-            “No crown shall count us smaller.”
-
-          </blockquote>
-
-        </article>
-
-      </div>
-
-    </section>
-
-    <section class="panel">
-
-      <p class="eyebrow">
-
-        The Next Roads
-
-      </p>
-
-      <h2>
-
-        Books XVI to XX
-
-      </h2>
+      <p class="eyebrow">The Reading Road</p>
+      <h2>Begin at the First Wingbeat</h2>
 
       <p>
+        The saga grows through several great movements, but the road begins
+        with Book I. Each volume changes the meaning of what came before,
+        while the Braid slowly gathers its people, creatures, memories and laws.
+      </p>
+    </section>
 
-        Work has begun on the next movement of the saga.
+    <section class="panel" id="books-one-four">
+      <p class="eyebrow">Books I to IV</p>
+      <h2>The First Reckonings</h2>
 
-        These books carry the Braid into new lands, older folklore,
+      <div class="book-grid">
+        <article class="book-card featured-book">
+          <p class="book-number">Book I</p>
+          <h3>Saga of Black Wings</h3>
+          <p>
+            The first road opens beneath black wings. Wounded lives begin to
+            gather, old powers take notice and a family starts forming where
+            no crown intended one.
+          </p>
+          <p class="book-state">The first threshold</p>
+        </article>
 
-        deeper romance and dangers rooted far beyond the Crown.
+        <article class="book-card">
+          <p class="book-number">Book II</p>
+          <h3>The Reckoner’s Knot</h3>
+          <p>
+            Debt, law and witness tighten around the living. The cost of being
+            counted by hostile hands becomes impossible to ignore.
+          </p>
+          <p class="book-state">The knot tightens</p>
+        </article>
 
+        <article class="book-card">
+          <p class="book-number">Book III</p>
+          <h3>The Crown of Thorns and Salt</h3>
+          <p>
+            Crown pressure deepens across road, house and family. Power learns
+            to hide inside procedure, silence and fear.
+          </p>
+          <p class="book-state">The Crown closes in</p>
+        </article>
+
+        <article class="book-card">
+          <p class="book-number">Book IV</p>
+          <h3>The Crown Unmade</h3>
+          <p>
+            Old truths begin breaking through the foundations of power as
+            living refusal answers the Crown.
+          </p>
+          <p class="book-state">The first breaking</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" id="books-five-eight">
+      <p class="eyebrow">Books V to VIII</p>
+      <h2>The Root Wars</h2>
+
+      <div class="book-grid">
+        <article class="book-card">
+          <p class="book-number">Book V</p>
+          <h3>The War of the Underroot</h3>
+          <p>
+            Something ancient stirs beneath the known world. Roots carry
+            memory, hunger and laws that were never properly buried.
+          </p>
+          <p class="book-state">The buried war</p>
+        </article>
+
+        <article class="book-card">
+          <p class="book-number">Book VI</p>
+          <h3>The Rising Root</h3>
+          <p>
+            The buried conflict rises into open ground. Those above must decide
+            what they will protect, surrender or become.
+          </p>
+          <p class="book-state">The root rises</p>
+        </article>
+
+        <article class="book-card">
+          <p class="book-number">Book VII</p>
+          <h3>The Severing War</h3>
+          <p>
+            Bonds, roads and loyalties are cut apart. Survival demands choices
+            that cannot be made cleanly.
+          </p>
+          <p class="book-state">The severing</p>
+        </article>
+
+        <article class="book-card">
+          <p class="book-number">Book VIII</p>
+          <h3>The Last Root</h3>
+          <p>
+            The oldest root reaches its final reckoning. What remains must
+            learn how to live without the world it once depended upon.
+          </p>
+          <p class="book-state">The last root</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" id="books-nine-twelve">
+      <p class="eyebrow">Books IX to XII</p>
+      <h2>The Quieting World</h2>
+
+      <div class="book-grid">
+        <article class="book-card">
+          <p class="book-number">Book IX</p>
+          <h3>The World Without Root</h3>
+          <p>
+            Victory leaves an unfamiliar silence. The survivors must discover
+            whether freedom can endure after the force holding the world
+            together is gone.
+          </p>
+          <p class="book-state">After the root</p>
+        </article>
+
+        <article class="book-card">
+          <p class="book-number">Book X</p>
+          <h3>The Quieting World</h3>
+          <p>
+            Peace arrives unevenly. Beneath its surface, old wounds, hidden
+            bargains and unspoken names continue to move.
+          </p>
+          <p class="book-state">The uneasy peace</p>
+        </article>
+
+        <article class="book-card">
+          <p class="book-number">Book XI</p>
+          <h3>The Agreement of Ash</h3>
+          <p>
+            New promises are written over old ruin. Every agreement carries
+            memory, and every peace has someone watching its edges.
+          </p>
+          <p class="book-state">The ash agreement</p>
+        </article>
+
+        <article class="book-card">
+          <p class="book-number">Book XII</p>
+          <h3>The Last Refusal</h3>
+          <p>
+            One final demand reaches the people who have already surrendered
+            too much. Their answer changes what refusal can mean.
+          </p>
+          <p class="book-state">The living no</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" id="books-thirteen-fifteen">
+      <p class="eyebrow">Books XIII to XV</p>
+      <h2>Houses, Ravens and the Braid</h2>
+
+      <div class="book-grid">
+        <article class="book-card">
+          <p class="book-number">Book XIII</p>
+          <h3>The House That Raised the Raven</h3>
+          <p>
+            A house becomes witness, shelter and inheritance. The past returns
+            through rooms that remember every name once spoken inside them.
+          </p>
+          <p class="book-state">The remembering house</p>
+        </article>
+
+        <article class="book-card">
+          <p class="book-number">Book XIV</p>
+          <h3>The House Beyond the House</h3>
+          <p>
+            Beyond the familiar hearth lies another threshold. The family must
+            cross it without allowing the road to decide who they are.
+          </p>
+          <p class="book-state">The farther threshold</p>
+        </article>
+
+        <article class="book-card featured-book">
+          <p class="book-number">Book XV</p>
+          <h3>The Braid</h3>
+          <p>
+            The scattered strands gather. Love, friendship, witness and
+            survival become a living bond that no crown can own or measure.
+          </p>
+          <blockquote>“No crown shall count us smaller.”</blockquote>
+          <p class="book-state">The living Braid</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel future-road" id="books-sixteen-twenty">
+      <p class="eyebrow">The Next Roads</p>
+      <h2>Books XVI to XX</h2>
+
+      <p>
+        The next movement carries the Braid into deeper love, stranger
+        folklore, living forest law, old-road guilt and dangers rooted far
+        beyond the Crown. Some titles are now spoken aloud. Others remain
+        beneath the map until their proper hour.
       </p>
 
       <div class="book-grid">
-
         <article class="book-card featured-book">
-
-          <p class="book-number">
-
-            Book XVI
-
-          </p>
-
-          <h3>
-
-            The Braid: Part II
-
-          </h3>
-
+          <p class="book-number">Book XVI</p>
+          <h3>The Braid: Part II</h3>
           <p>
-
-            The living Braid grows through love, disaster,
-
-            reunion and the stubborn work of remaining beside
-
-            one another.
-
+            The living Braid grows through love, disaster, reunion and the
+            stubborn work of remaining beside one another.
           </p>
-
-          <p class="quote">
-
-            The loves that would not be counted.
-
-          </p>
-
+          <p class="quote">The loves that would not be counted.</p>
+          <p class="book-state">In active expansion</p>
         </article>
 
         <article class="book-card">
-
-          <p class="book-number">
-
-            Book XVII
-
-          </p>
-
-          <h3>
-
-            Green Deer-Wood
-
-          </h3>
-
+          <p class="book-number">Book XVII</p>
+          <h3>Green Deer-Wood</h3>
           <p>
-
-            A forest keeper arrives with a great bear and knowledge
-
-            of roots that should have remained silent.
-
+            A forest keeper arrives with a great bear and knowledge of roots
+            that should have remained silent.
           </p>
-
+          <p class="book-state">The forest road opens</p>
         </article>
 
         <article class="book-card">
-
-          <p class="book-number">
-
-            Books XVIII to XX
-
-          </p>
-
-          <h3>
-
-            Roads Yet Opening
-
-          </h3>
-
+          <p class="book-number">Books XVIII to XX</p>
+          <h3>Roads Yet Opening</h3>
           <p>
-
-            The later books are already stirring beneath the map.
-
-            Their names and deepest truths remain inside the archive
-
-            until the proper road reaches them.
-
+            The later books are already stirring beneath the map. Their names
+            and deepest truths remain inside the archive until the proper road
+            reaches them.
           </p>
-
+          <p class="book-state">Held behind the spoiler seal</p>
         </article>
-
       </div>
-
     </section>
 
     <section class="panel">
-
-      <p class="eyebrow">
-
-        What Lives Inside the Saga
-
-      </p>
-
-      <h2>
-
-        More Than One Kind of Story
-
-      </h2>
+      <p class="eyebrow">What Lives Inside the Saga</p>
+      <h2>More Than One Kind of Story</h2>
 
       <div class="lore-list">
-
         <span>Dark Epic Fantasy</span>
-
         <span>Chosen Family</span>
-
         <span>Slow-Burn Romance</span>
-
         <span>Animal Witnesses</span>
-
         <span>Ancient Law</span>
-
         <span>Folklore</span>
-
         <span>Odes and Songs</span>
-
         <span>Hidden Houses</span>
-
         <span>Ravens and Wolves</span>
-
         <span>Dangerous Mercy</span>
-
       </div>
 
       <blockquote>
-
-        “The story does not ask who was born important.
-
-        It asks who remained when remaining became difficult.”
-
+        “The story does not ask who was born important. It asks who remained
+        when remaining became difficult.”
       </blockquote>
-
     </section>
 
     <section class="panel final-road-panel">
-
-      <p class="eyebrow">
-
-        Continue Exploring
-
-      </p>
-
-      <h2>
-
-        Follow the Living Threads
-
-      </h2>
+      <p class="eyebrow">Continue Exploring</p>
+      <h2>Follow the Living Threads</h2>
 
       <p>
-
-        Meet the people, animals, houses and old laws moving
-
-        through the books.
-
+        Meet the people, animals, houses and old laws moving through the books.
       </p>
 
       <div class="hero-buttons">
-
-        <a href="characters.html" class="button primary">
-
-          Meet the Characters
-
-        </a>
-
-        <a href="world.html" class="button secondary">
-
-          Explore the World
-
-        </a>
-
-        <a href="odes.html" class="button secondary">
-
-          Read the Odes
-
-        </a>
-
+        <a href="characters.html" class="button primary">Meet the Characters</a>
+        <a href="world.html" class="button secondary">Explore the World</a>
+        <a href="odes.html" class="button secondary">Read the Odes</a>
       </div>
-
     </section>
-
   </main>
 
   <footer>
-
     <nav class="footer-nav" aria-label="Footer navigation">
-
       <a href="index.html">Home</a>
-
       <a href="characters.html">Characters</a>
-
       <a href="world.html">World</a>
-
       <a href="lore.html">Lore</a>
-
       <a href="odes.html">Odes</a>
-
+      <a href="maps.html">Maps</a>
+      <a href="archive.html">Archive</a>
       <a href="author.html">Author</a>
-
     </nav>
 
-    <p>
-
-      © 2026 Saga of Black Wings · Created by Timothy M. Halliday
-
-    </p>
-
-    <p class="footer-motto">
-
-      No crown shall count us smaller.
-
-    </p>
-
+    <p>© 2026 Saga of Black Wings · Created by Timothy M. Halliday</p>
+    <p class="footer-motto">No crown shall count us smaller.</p>
   </footer>
-
 </body>
-
 </html>
