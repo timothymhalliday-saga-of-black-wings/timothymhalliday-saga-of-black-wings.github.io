@@ -179,6 +179,40 @@
       object-position: center top;
     }
 
+    .viking-home-panel {
+      background:
+        radial-gradient(circle at 92% 8%, rgba(221, 182, 95, 0.13), transparent 23rem),
+        radial-gradient(circle at 8% 90%, rgba(49, 93, 131, 0.15), transparent 22rem),
+        linear-gradient(145deg, rgba(26, 25, 27, 0.98), rgba(9, 11, 14, 0.99));
+      border-color: rgba(221, 182, 95, 0.42);
+    }
+
+    .viking-home-portrait {
+      overflow: hidden;
+      padding: 0.5rem;
+      background: rgba(5, 6, 8, 0.58);
+      border: 1px solid rgba(221, 182, 95, 0.36);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .viking-home-portrait img {
+      max-height: 640px;
+      object-fit: contain;
+      background: #080a0d;
+      border: 0;
+      border-radius: 14px;
+      box-shadow: none;
+    }
+
+    .viking-home-portrait figcaption {
+      padding: 0.75rem 0.35rem 0.2rem;
+      color: var(--parchment-soft);
+      font-size: 0.82rem;
+      font-style: italic;
+      text-align: center;
+    }
+
     .mini-note {
       color: var(--parchment-soft);
       font-size: 0.9rem;
@@ -649,10 +683,10 @@
       </div>
     </section>
 
-    <section class="panel">
+    <section class="panel viking-home-panel">
       <div class="home-author-panel">
         <div>
-          <p class="eyebrow">Behind the Wings</p>
+          <p class="eyebrow">The Man Who Walked Beside Ravens</p>
           <h2>Timothy M. Halliday</h2>
 
           <p>
@@ -661,28 +695,30 @@
           </p>
 
           <p>
-            The saga grew from a lifetime of imagination, animals, friendship,
-            grief, humour, neighbours, houses, roads, ravens, wolves, darkness
-            and stubborn hope.
+            The saga grew from ravens, wolves, old roads, strange laws,
+            difficult love, animal witnesses, darkness, humour and the stubborn
+            belief that no life should be counted smaller.
           </p>
 
           <p>
-            What began as a private world has become an expansive fantasy saga
-            built to remember the names and lives that power would rather count
-            as small.
+            The golden-eyed portrait carries the author into the visual language
+            of his own world: part bard, part road-witness, standing where the
+            ordinary life meets the mythic one.
           </p>
 
-          <a href="author.html" class="button primary">Read About the Author</a>
+          <div class="hero-buttons">
+            <a href="author.html" class="button primary">Enter the Author Hall</a>
+            <a href="archive.html#author-portraits" class="button secondary">See the Viking Gallery</a>
+          </div>
         </div>
 
-        <figure>
+        <figure class="viking-home-portrait">
           <img
-            src="4BC7F1F3-A69C-4867-A3E3-8BFA8B22D55C.png"
-            alt="Timothy M. Halliday, author of The Saga of Black Wings"
-            width="1122"
-            height="1402"
+            src="FBDC2E04-E0CF-487A-B8D1-BFC81CC3ADFB.png"
+            alt="Viking-fantasy portrait of Timothy M. Halliday with golden serpent eyes, raven and staff"
             loading="lazy"
           />
+          <figcaption>The Man Who Walked Beside Ravens.</figcaption>
         </figure>
       </div>
     </section>
