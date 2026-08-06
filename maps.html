@@ -647,6 +647,46 @@
       }
     }
 
+  
+    .public-atlas-figure {
+      margin: 1.4rem 0 0;
+      padding: clamp(0.45rem, 1.5vw, 0.8rem);
+      background:
+        linear-gradient(145deg, rgba(23, 20, 18, 0.98), rgba(7, 8, 10, 0.99));
+      border: 1px solid rgba(221, 182, 95, 0.44);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .public-atlas-figure a {
+      display: block;
+      overflow: hidden;
+      border-radius: 14px;
+    }
+
+    .public-atlas-figure img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .public-atlas-figure figcaption {
+      padding: 0.85rem 0.45rem 0.25rem;
+      color: var(--parchment-soft);
+      font-size: 0.82rem;
+      font-style: italic;
+      text-align: center;
+    }
+
+    .atlas-notice {
+      margin-top: 1rem;
+      padding: 0.9rem 1rem;
+      color: var(--parchment-soft);
+      background: rgba(5, 6, 8, 0.42);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 12px 12px 0;
+    }
+
   </style>
 
   <script type="application/ld+json">
@@ -729,9 +769,7 @@
       </p>
 
       <p>
-        The public map below is drawn entirely inside this webpage. It does not
-        rely on a separate picture file, so it will remain visible on your iPad,
-        phone and computer without broken image boxes.
+        The public atlas below now uses the proper parchment map of Vardrum, bringing the Map-Room into the same visual world as the books, shields and Cartographer’s Handbook.
       </p>
 
       <p class="map-seal">
@@ -825,137 +863,42 @@
 
     <section class="panel" id="vardrum-map">
       <p class="eyebrow">Public Atlas Plate</p>
-      <h2>Vardrum and the Known Roads</h2>
+      <h2>Vardrum Before the Journey</h2>
 
       <p>
-        North sits at the top. The lines show the character of a route rather
-        than an exact measured distance.
+        This is the proper public map of the known world: parchment, road,
+        water, mountain and forest, drawn in the same visual language as the
+        rest of Black Wings.
       </p>
 
-      <div class="map-board">
-        <svg
-          viewBox="0 0 1000 650"
-          role="img"
-          aria-labelledby="vardrum-map-title vardrum-map-description"
+      <p class="atlas-notice">
+        The public plate names only the broad regions and roads already opened
+        by the website. Later-book routes and deeper Green Deer-Wood secrets
+        remain behind the manuscript seal.
+      </p>
+
+      <figure class="public-atlas-figure">
+        <a
+          href="vardrum-public-atlas.jpg"
+          target="_blank"
+          rel="noopener"
+          aria-label="Open the public atlas of Vardrum at full size"
         >
-          <title id="vardrum-map-title">Spoiler-safe public map of Vardrum</title>
-          <desc id="vardrum-map-description">
-            An illustrated map connecting the Crown Lands, Witness Isle,
-            Salt-Marsh, Hidden Houses, Skeld-Fell, Green Deer-Wood and the
-            Underroot with different coloured routes.
-          </desc>
-
-          <defs>
-            <filter id="mapGlow" x="-30%" y="-30%" width="160%" height="160%">
-              <feGaussianBlur stdDeviation="5" result="blur" />
-              <feMerge>
-                <feMergeNode in="blur" />
-                <feMergeNode in="SourceGraphic" />
-              </feMerge>
-            </filter>
-          </defs>
-
-          <path
-            class="land"
-            d="M105,120 C180,70 310,76 390,105 C480,48 635,65 710,118
-               C805,110 914,180 910,278 C958,370 895,455 814,478
-               C765,572 634,603 530,556 C440,610 312,567 270,502
-               C172,500 92,432 105,345 C40,275 50,178 105,120 Z"
+          <img
+            src="vardrum-public-atlas.jpg"
+            alt="Parchment atlas map of Vardrum showing the broad known regions, roads, seas, mountains, marshes and Green Deer-Wood"
+            width="1536"
+            height="1024"
+            loading="lazy"
           />
-
-          <path
-            class="island"
-            d="M318,300 C348,272 402,276 428,313
-               C449,350 422,394 377,399
-               C334,402 300,367 304,333
-               C305,320 310,309 318,300 Z"
-          />
-
-          <path class="water-line" d="M70,238 C188,217 240,249 300,304" />
-          <path class="water-line" d="M70,270 C190,248 244,280 304,329" />
-          <path class="water-line" d="M75,302 C195,282 248,310 304,354" />
-
-          <path class="contour" d="M128,160 C240,115 360,130 425,163" />
-          <path class="contour" d="M600,112 C724,91 833,143 868,219" />
-          <path class="contour" d="M664,493 C740,523 811,496 850,444" />
-          <path class="contour" d="M164,421 C210,456 248,462 286,448" />
-
-          <path class="route route-crown" d="M190,235 C250,250 290,281 332,314" />
-          <path class="route route-water" d="M368,350 C318,390 274,425 236,474" />
-          <path class="route route-gold" d="M410,320 C510,245 600,192 690,170" />
-          <path class="route route-gold" d="M690,170 C650,117 592,89 528,86" />
-          <path class="route route-forest" d="M415,350 C530,345 648,338 760,330" />
-          <path class="route route-root" d="M402,382 C486,436 548,492 614,540" />
-          <path class="route route-root" d="M758,360 C710,425 668,476 622,535" />
-          <path class="route route-crown" d="M215,252 C310,330 420,430 590,530" />
-
-          <g filter="url(#mapGlow)">
-            <circle class="node-ring node-crown" cx="182" cy="222" r="18" />
-            <circle class="node-ring node-water" cx="374" cy="340" r="18" />
-            <circle class="node-ring node-water" cx="226" cy="484" r="18" />
-            <circle class="node-ring" cx="706" cy="166" r="18" />
-            <circle class="node-ring node-north" cx="524" cy="82" r="18" />
-            <circle class="node-ring node-forest" cx="772" cy="328" r="18" />
-            <circle class="node-ring node-root" cx="620" cy="544" r="18" />
-          </g>
-
-          <text class="place-name" x="95" y="196">Crown Lands</text>
-          <text class="place-sub" x="98" y="220">ink, custody and command</text>
-
-          <text class="place-name" x="300" y="438">Witness Isle</text>
-          <text class="place-sub" x="303" y="462">hearth, refuge and refusal</text>
-
-          <text class="place-name" x="118" y="522">Salt-Marsh</text>
-          <text class="place-sub" x="120" y="546">reed roads and tide memory</text>
-
-          <text class="place-name" x="660" y="130">Hidden Houses</text>
-          <text class="place-sub" x="662" y="154">thresholds and inheritance</text>
-
-          <text class="place-name" x="450" y="46">Skeld-Fell</text>
-          <text class="place-sub" x="452" y="70">the cold northern road</text>
-
-          <text class="place-name" x="718" y="292">Green Deer-Wood</text>
-          <text class="place-sub" x="720" y="316">forest law and old roots</text>
-
-          <text class="place-name" x="553" y="588">The Underroot</text>
-          <text class="place-sub" x="555" y="612">roads beneath roads</text>
-
-          <g transform="translate(888 70)">
-            <circle class="compass" cx="0" cy="0" r="36" />
-            <path class="compass" d="M0,-50 L8,-12 L0,-19 L-8,-12 Z" />
-            <path class="compass" d="M0,50 L8,12 L0,19 L-8,12 Z" />
-            <path class="compass" d="M-50,0 L-12,8 L-19,0 L-12,-8 Z" />
-            <path class="compass" d="M50,0 L12,8 L19,0 L12,-8 Z" />
-            <text class="compass-text" x="-8" y="-60">N</text>
-          </g>
-        </svg>
-      </div>
-
-      <div class="map-key" aria-label="Map key">
-        <div class="key-item">
-          <span class="key-line key-gold" aria-hidden="true"></span>
-          Open road
-        </div>
-        <div class="key-item">
-          <span class="key-line key-water" aria-hidden="true"></span>
-          Water or marsh crossing
-        </div>
-        <div class="key-item">
-          <span class="key-line key-forest" aria-hidden="true"></span>
-          Forest path
-        </div>
-        <div class="key-item">
-          <span class="key-line key-crown" aria-hidden="true"></span>
-          Crown-controlled road
-        </div>
-        <div class="key-item">
-          <span class="key-line key-root" aria-hidden="true"></span>
-          Underroot passage
-        </div>
-      </div>
+        </a>
+        <figcaption>
+          The Great Atlas of Black Wings · Plate I · The World Before the Journey
+        </figcaption>
+      </figure>
 
       <blockquote>
-        “The mapmaker blamed damp. The ravens blamed arrogance.”
+        “A good map does not show all things. It shows what must be remembered.”
       </blockquote>
     </section>
 
