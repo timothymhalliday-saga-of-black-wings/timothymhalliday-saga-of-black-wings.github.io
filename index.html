@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="The official website of The Saga of Black Wings by Timothy M. Halliday. Enter a dark epic fantasy world of ravens, wolves, chosen family, ancient law and dangerous mercy."
+    content="The official website of The Saga of Black Wings by Timothy M. Halliday. Begin with Book I: The Road That Would Not Kneel."
   />
   <meta name="author" content="Timothy M. Halliday" />
   <meta name="theme-color" content="#050608" />
@@ -265,6 +265,53 @@
         align-self: stretch;
       }
     }
+  
+    .first-book-panel {
+      display: grid;
+      grid-template-columns: minmax(220px, 0.68fr) minmax(0, 1.32fr);
+      gap: clamp(1.4rem, 4vw, 3rem);
+      align-items: center;
+      border-color: rgba(221, 182, 95, 0.48);
+      background:
+        radial-gradient(circle at 8% 8%, rgba(221, 182, 95, 0.14), transparent 22rem),
+        linear-gradient(145deg, rgba(26, 23, 23, 0.98), rgba(8, 10, 13, 0.99));
+    }
+
+    .first-book-panel figure {
+      margin: 0;
+      padding: 0.5rem;
+      background: rgba(5, 6, 8, 0.7);
+      border: 1px solid rgba(221, 182, 95, 0.4);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .first-book-panel img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 14px;
+    }
+
+    .first-book-panel figcaption {
+      padding: 0.7rem 0.3rem 0.15rem;
+      color: var(--parchment-soft);
+      font-size: 0.8rem;
+      font-style: italic;
+      text-align: center;
+    }
+
+    @media (max-width: 760px) {
+      .first-book-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .first-book-panel figure {
+        max-width: 410px;
+        margin-inline: auto;
+      }
+    }
+
   </style>
 
   <script type="application/ld+json">
@@ -360,6 +407,47 @@
       <blockquote>
         “A name remembered is a door the dark cannot fully close.”
       </blockquote>
+    </section>
+
+    <section class="panel first-book-panel" id="book-one">
+      <figure>
+        <a
+          href="book-one-road-that-would-not-kneel.jpg"
+          target="_blank"
+          rel="noopener"
+          aria-label="Open the Book I cover at full size"
+        >
+          <img
+            src="book-one-road-that-would-not-kneel.jpg"
+            alt="Front cover of Book I, The Road That Would Not Kneel"
+            width="715"
+            height="1024"
+            loading="lazy"
+          />
+        </a>
+        <figcaption>The first named road of Black Wings.</figcaption>
+      </figure>
+
+      <div>
+        <p class="eyebrow">Book I Has Taken Its Name</p>
+        <h2>The Road That Would Not Kneel</h2>
+
+        <p>
+          The first volume of <em>The Saga of Black Wings</em> now stands under
+          its full title. It begins the long journey beneath ravens, through
+          salt-marsh law, difficult mercy and the first gathering of the Braid.
+        </p>
+
+        <p>
+          The public doorway remains spoiler-safe. The road is named; what waits
+          upon it still belongs to the reader.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="books.html#book-one-road" class="button primary">Enter Book I</a>
+          <a href="maps.html" class="button secondary">Open the Map-Room</a>
+        </div>
+      </div>
     </section>
 
     <section class="panel">
