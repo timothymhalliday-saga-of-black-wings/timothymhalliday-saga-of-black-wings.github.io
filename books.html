@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="Explore Books I to XV of The Saga of Black Wings by Timothy M. Halliday and glimpse the later road now opening through Books XVI to XX."
+    content="Begin with Book I, The Road That Would Not Kneel, and follow The Saga of Black Wings through the later roads of Vardrum."
   />
   <meta name="author" content="Timothy M. Halliday" />
   <meta name="theme-color" content="#050608" />
@@ -16,7 +16,7 @@
   <meta property="og:title" content="Books | The Saga of Black Wings" />
   <meta
     property="og:description"
-    content="Fifteen books already stand within the manuscript, while the roads of Books XVI to XX continue to open."
+    content="Book I now bears its name: The Road That Would Not Kneel. Fifteen books already stand within the manuscript, while later roads continue to open."
   />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://sagaofblackwings.com/books.html" />
@@ -33,7 +33,7 @@
   <meta name="twitter:title" content="Books | The Saga of Black Wings" />
   <meta
     name="twitter:description"
-    content="Follow the saga from Book I through Book XV and glimpse the roads opening through Books XVI to XX."
+    content="Begin with The Road That Would Not Kneel and follow the saga through Book XV and the roads beyond."
   />
   <meta
     name="twitter:image"
@@ -230,6 +230,72 @@
         width: 100%;
       }
     }
+  
+    .book-one-showcase {
+      display: grid;
+      grid-template-columns: minmax(250px, 0.78fr) minmax(0, 1.22fr);
+      gap: clamp(1.4rem, 4vw, 3rem);
+      align-items: center;
+      border-color: rgba(221, 182, 95, 0.5);
+      background:
+        radial-gradient(circle at 12% 8%, rgba(221, 182, 95, 0.15), transparent 22rem),
+        linear-gradient(145deg, rgba(25, 23, 24, 0.98), rgba(8, 10, 13, 0.99));
+    }
+
+    .book-one-cover {
+      margin: 0;
+      padding: 0.55rem;
+      background: rgba(5, 6, 8, 0.72);
+      border: 1px solid rgba(221, 182, 95, 0.42);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .book-one-cover img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 14px;
+    }
+
+    .book-one-cover figcaption {
+      padding: 0.75rem 0.35rem 0.2rem;
+      color: var(--parchment-soft);
+      font-size: 0.8rem;
+      font-style: italic;
+      text-align: center;
+    }
+
+    .book-one-copy h2 {
+      margin-bottom: 0.45rem;
+    }
+
+    .book-one-kicker {
+      color: var(--gold);
+      font-size: 0.82rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .book-one-oath {
+      margin: 1.25rem 0;
+      padding-left: 1rem;
+      border-left: 3px solid rgba(221, 182, 95, 0.55);
+      color: var(--parchment-soft);
+      font-style: italic;
+    }
+
+    @media (max-width: 760px) {
+      .book-one-showcase {
+        grid-template-columns: 1fr;
+      }
+
+      .book-one-cover {
+        max-width: 430px;
+        margin-inline: auto;
+      }
+    }
+
   </style>
 
   <script type="application/ld+json">
@@ -258,8 +324,9 @@
         <h1>Books of Black Wings</h1>
 
         <p class="tagline">
-          Fifteen books already stand within the manuscript, while the roads
-          of Books XVI to XX continue to open.
+          Book I now bears its name: <strong>The Road That Would Not Kneel</strong>.
+          Fifteen books already stand within the manuscript, while the later
+          roads continue to open.
         </p>
 
         <blockquote class="hero-quote">
@@ -357,6 +424,51 @@
       </p>
     </section>
 
+    <section class="panel book-one-showcase" id="book-one-road">
+      <figure class="book-one-cover">
+        <a
+          href="book-one-road-that-would-not-kneel.jpg"
+          target="_blank"
+          rel="noopener"
+          aria-label="Open the Book I cover at full size"
+        >
+          <img
+            src="book-one-road-that-would-not-kneel.jpg"
+            alt="Front cover of Book I, The Road That Would Not Kneel, from The Saga of Black Wings"
+            width="715"
+            height="1024"
+            loading="lazy"
+          />
+        </a>
+        <figcaption>Book I · The first road beneath black wings.</figcaption>
+      </figure>
+
+      <div class="book-one-copy">
+        <p class="book-one-kicker">Book I · The Saga Begins</p>
+        <h2>The Road That Would Not Kneel</h2>
+
+        <p>
+          The first road opens beneath black wings. Wounded lives begin to
+          gather, old powers take notice, and a family starts forming where no
+          crown intended one.
+        </p>
+
+        <p>
+          This public introduction remains deliberately spoiler-safe. It names
+          the road, but leaves its locked doors inside the book.
+        </p>
+
+        <p class="book-one-oath">
+          “Every road remembers. Every oath has a price.”
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#books-one-four" class="button primary">Continue Through the Saga</a>
+          <a href="maps.html" class="button secondary">Enter the Map-Room</a>
+        </div>
+      </div>
+    </section>
+
     <section class="panel" id="books-one-four">
       <p class="eyebrow">Books I to IV</p>
       <h2>The First Reckonings</h2>
@@ -364,13 +476,13 @@
       <div class="book-grid">
         <article class="book-card featured-book">
           <p class="book-number">Book I</p>
-          <h3>Saga of Black Wings</h3>
+          <h3>The Road That Would Not Kneel</h3>
           <p>
             The first road opens beneath black wings. Wounded lives begin to
             gather, old powers take notice and a family starts forming where
             no crown intended one.
           </p>
-          <p class="book-state">The first threshold</p>
+          <p class="book-state">The road refuses the knee</p>
         </article>
 
         <article class="book-card">
