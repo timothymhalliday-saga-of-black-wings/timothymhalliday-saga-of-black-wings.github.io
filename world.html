@@ -200,80 +200,81 @@
       gap: clamp(1.5rem, 5vw, 3.5rem);
       align-items: center;
     }
-
-    .forest-world-sigil {
+    .green-deer-chamber {
       display: grid;
       min-height: 540px;
-      padding: clamp(1.25rem, 4vw, 2rem);
-      place-items: center;
+      padding: clamp(1.3rem, 4vw, 2rem);
+      align-content: space-between;
       background:
-        radial-gradient(circle at center, rgba(73, 122, 82, 0.25), transparent 55%),
-        linear-gradient(145deg, rgba(20, 34, 24, 0.98), rgba(7, 12, 9, 0.99));
+        radial-gradient(circle at 18% 18%, rgba(97, 141, 104, 0.2), transparent 15rem),
+        radial-gradient(circle at 85% 12%, rgba(221, 182, 95, 0.12), transparent 18rem),
+        linear-gradient(145deg, rgba(22, 34, 26, 0.98), rgba(8, 12, 10, 0.99));
       border: 1px solid rgba(94, 150, 103, 0.5);
       border-radius: 24px;
       box-shadow: var(--soft-shadow);
     }
 
-    .forest-world-sigil svg {
-      width: min(100%, 440px);
-      height: auto;
-      overflow: visible;
-    }
-
-    .forest-world-sigil .sigil-ring {
-      fill: rgba(5, 8, 6, 0.58);
-      stroke: #8fb49a;
-      stroke-width: 7;
-    }
-
-    .forest-world-sigil .sigil-inner {
-      fill: none;
-      stroke: rgba(240, 210, 140, 0.58);
-      stroke-width: 3;
-    }
-
-    .forest-world-sigil .sigil-tree,
-    .forest-world-sigil .sigil-branch,
-    .forest-world-sigil .sigil-bear,
-    .forest-world-sigil .sigil-road {
-      fill: none;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .forest-world-sigil .sigil-tree,
-    .forest-world-sigil .sigil-branch {
-      stroke: #9dc4a7;
-      stroke-width: 8;
-    }
-
-    .forest-world-sigil .sigil-bear {
-      stroke: #f0d28c;
-      stroke-width: 7;
-    }
-
-    .forest-world-sigil .sigil-road {
-      stroke: rgba(240, 210, 140, 0.52);
-      stroke-width: 5;
-      stroke-dasharray: 8 11;
-    }
-
-    .forest-world-sigil .sigil-title {
-      fill: #fff0ce;
+    .green-deer-chamber .chamber-kicker {
+      margin: 0 0 0.45rem;
+      color: #9dc4a7;
       font-family: "Cinzel", Georgia, serif;
-      font-size: 25px;
+      font-size: 0.8rem;
       font-weight: 800;
-      letter-spacing: 2px;
-      text-anchor: middle;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
     }
 
-    .forest-world-sigil .sigil-subtitle {
-      fill: #c9d9c8;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 18px;
-      font-style: italic;
-      text-anchor: middle;
+    .green-deer-chamber h3 {
+      margin: 0 0 0.7rem;
+      color: #fff0ce;
+      font-size: clamp(1.7rem, 3vw, 2.5rem);
     }
+
+    .green-deer-chamber p {
+      color: var(--parchment-soft);
+      line-height: 1.7;
+    }
+
+    .green-deer-laws {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin: 1rem 0 1.1rem;
+      padding: 0;
+      list-style: none;
+    }
+
+    .green-deer-laws li {
+      padding: 0.5rem 0.8rem;
+      color: #f1eedf;
+      background: rgba(5, 8, 6, 0.5);
+      border: 1px solid rgba(143, 180, 154, 0.34);
+      border-radius: 999px;
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .green-deer-chamber blockquote {
+      margin: 1.15rem 0 0;
+      padding-left: 1rem;
+      border-left: 3px solid rgba(221, 182, 95, 0.5);
+      color: var(--parchment);
+      text-align: left;
+    }
+
+    .green-deer-note {
+      margin-top: 1rem;
+      color: var(--gold);
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    
 
     .road-table {
       display: grid;
@@ -377,13 +378,13 @@
       }
 
       .world-crest,
-      .forest-world-sigil,
+      .green-deer-chamber,
       .mark-panel figure {
         width: min(100%, 560px);
         margin: 0 auto;
       }
 
-      .forest-world-sigil {
+      .green-deer-chamber {
         min-height: 440px;
       }
 
@@ -853,58 +854,28 @@
     </section>
 
     <section class="panel region-plate" id="green-deer-wood">
-      <div
-        class="forest-world-sigil"
-        role="img"
-        aria-label="Symbolic map seal of Green Deer-Wood showing a listening tree, a great bear and an old forest road"
-      >
-        <svg viewBox="0 0 470 560" aria-hidden="true">
-          <circle class="sigil-ring" cx="235" cy="225" r="195" />
-          <circle class="sigil-inner" cx="235" cy="225" r="169" />
+      <div class="green-deer-chamber" role="note" aria-label="Green Deer-Wood forest-law chamber">
+        <div>
+          <p class="chamber-kicker">The Deep Green</p>
+          <h3>Green Deer-Wood</h3>
+          <p>
+            Not a diagram. Not a machine. A listening forest with older manners
+            than crowns and a longer memory than roads.
+          </p>
+        </div>
 
-          <path
-            class="sigil-road"
-            d="M110 348 C155 330 187 335 222 361
-               C260 389 297 385 356 348"
-          />
+        <ul class="green-deer-laws" aria-label="The public laws of Green Deer-Wood">
+          <li>Listen First</li>
+          <li>Heal What Can Be Healed</li>
+          <li>Protect Saplings</li>
+          <li>Cull Rot</li>
+        </ul>
 
-          <path
-            class="sigil-tree"
-            d="M235 340 C227 286 233 244 235 202
-               C237 158 231 125 235 88"
-          />
-          <path
-            class="sigil-branch"
-            d="M235 176 C193 151 165 124 142 93
-               M235 168 C276 141 305 113 327 78
-               M235 223 C193 207 160 183 126 153
-               M235 216 C281 197 318 171 348 137"
-          />
+        <blockquote>
+          “A forest is not empty land. It is a law with roots.”
+        </blockquote>
 
-          <path
-            class="sigil-bear"
-            d="M139 342
-               C151 314 175 298 202 301
-               C220 280 255 278 276 300
-               C307 298 331 315 342 342
-               C330 357 314 367 296 371
-               C292 393 275 408 256 409
-               C240 409 227 400 218 387
-               C207 402 192 409 175 406
-               C156 402 144 386 144 367
-               C130 360 125 349 139 342 Z"
-          />
-          <path
-            class="sigil-bear"
-            d="M175 324 C169 308 174 292 185 282
-               M303 324 C309 308 304 292 293 282
-               M199 346 C212 355 224 358 235 358
-               C247 358 260 355 272 346"
-          />
-
-          <text class="sigil-title" x="235" y="480">GREEN DEER-WOOD</text>
-          <text class="sigil-subtitle" x="235" y="511">Old Forest Law · The Witness-Bear Road</text>
-        </svg>
+        <p class="green-deer-note">Old Forest Law · The Witness-Bear Road</p>
       </div>
 
       <div>
@@ -928,34 +899,11 @@
           mysteries waiting beyond Book XVI.
         </p>
 
-        <div class="book-grid">
-          <article class="book-card place-card forest-place-card featured-book">
-            <p class="book-number">Forest Heart</p>
-            <h3>The Green Roads</h3>
-            <p>
-              Paths shifting beneath leaf, rain, scent and animal memory.
-            </p>
-            <p class="place-note">The forest chooses how it is crossed</p>
-          </article>
-
-          <article class="book-card place-card forest-place-card">
-            <p class="book-number">Keeper Ground</p>
-            <h3>The Listening Groves</h3>
-            <p>
-              Places where silence is read as carefully as speech.
-            </p>
-            <p class="place-note">Attention before action</p>
-          </article>
-
-          <article class="book-card place-card forest-place-card">
-            <p class="book-number">Bear Law</p>
-            <h3>The Witness-Bear Paths</h3>
-            <p>
-              Ancient animal roads known through scent, memory and trust.
-            </p>
-            <p class="place-note">Older than the human map</p>
-          </article>
-        </div>
+        <p class="world-seal">
+          Green Deer-Wood should feel like the rest of Black Wings: old, human,
+          mythic and grounded. The public page now keeps the atmosphere without
+          pretending to be a strange laboratory map.
+        </p>
       </div>
     </section>
 
