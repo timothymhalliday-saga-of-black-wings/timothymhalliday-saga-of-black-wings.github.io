@@ -179,73 +179,80 @@
       gap: clamp(1.5rem, 5vw, 3.5rem);
       align-items: center;
     }
-
-    .forest-sigil {
+    .keeper-chamber {
       display: grid;
-      min-height: 520px;
-      padding: clamp(1.25rem, 4vw, 2rem);
-      place-items: center;
+      min-height: 510px;
+      padding: clamp(1.3rem, 4vw, 2rem);
+      align-content: space-between;
       background:
-        radial-gradient(circle at center, rgba(73, 122, 82, 0.24), transparent 55%),
-        linear-gradient(145deg, rgba(20, 34, 24, 0.98), rgba(7, 12, 9, 0.99));
-      border: 1px solid rgba(94, 150, 103, 0.5);
+        radial-gradient(circle at 18% 18%, rgba(96, 127, 111, 0.18), transparent 15rem),
+        radial-gradient(circle at 86% 12%, rgba(221, 182, 95, 0.12), transparent 18rem),
+        linear-gradient(145deg, rgba(24, 33, 29, 0.98), rgba(9, 12, 12, 0.99));
+      border: 1px solid rgba(144, 176, 159, 0.34);
       border-radius: 24px;
       box-shadow: var(--soft-shadow);
     }
 
-    .forest-sigil svg {
-      width: min(100%, 430px);
-      height: auto;
-      overflow: visible;
-    }
-
-    .forest-sigil .sigil-ring {
-      fill: rgba(5, 8, 6, 0.58);
-      stroke: #8fb49a;
-      stroke-width: 7;
-    }
-
-    .forest-sigil .sigil-inner {
-      fill: none;
-      stroke: rgba(240, 210, 140, 0.58);
-      stroke-width: 3;
-    }
-
-    .forest-sigil .sigil-tree,
-    .forest-sigil .sigil-branch,
-    .forest-sigil .sigil-bear {
-      fill: none;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .forest-sigil .sigil-tree,
-    .forest-sigil .sigil-branch {
-      stroke: #9dc4a7;
-      stroke-width: 8;
-    }
-
-    .forest-sigil .sigil-bear {
-      stroke: #f0d28c;
-      stroke-width: 7;
-    }
-
-    .forest-sigil .sigil-title {
-      fill: #fff0ce;
+    .keeper-chamber .chamber-kicker {
+      margin: 0 0 0.45rem;
+      color: #b0d0ba;
       font-family: "Cinzel", Georgia, serif;
-      font-size: 25px;
+      font-size: 0.8rem;
       font-weight: 800;
-      letter-spacing: 2px;
-      text-anchor: middle;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
     }
 
-    .forest-sigil .sigil-subtitle {
-      fill: #c9d9c8;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 18px;
-      font-style: italic;
-      text-anchor: middle;
+    .keeper-chamber h3 {
+      margin: 0 0 0.4rem;
+      color: #fff0ce;
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
     }
+
+    .keeper-chamber .keeper-role {
+      margin: 0 0 0.8rem;
+      color: var(--gold);
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .keeper-chamber p {
+      color: var(--parchment-soft);
+      line-height: 1.7;
+    }
+
+    .keeper-laws {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.65rem;
+      margin: 1rem 0 1.1rem;
+    }
+
+    .keeper-laws span {
+      display: block;
+      padding: 0.7rem 0.8rem;
+      color: #eef0df;
+      background: rgba(5, 8, 6, 0.46);
+      border: 1px solid rgba(143, 180, 154, 0.3);
+      border-radius: 14px;
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.055em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .keeper-chamber blockquote {
+      margin: 1rem 0 0;
+      padding-left: 1rem;
+      border-left: 3px solid rgba(221, 182, 95, 0.5);
+      color: var(--parchment);
+      text-align: left;
+    }
+    
 
     .witness-gallery {
       display: grid;
@@ -616,51 +623,29 @@
     </section>
 
     <section class="panel character-plate" id="green-deer-wood">
-      <div
-        class="forest-sigil"
-        role="img"
-        aria-label="Symbolic Green Deer-Wood seal showing a listening tree and the path of a great bear"
-      >
-        <svg viewBox="0 0 460 540" aria-hidden="true">
-          <circle class="sigil-ring" cx="230" cy="220" r="190" />
-          <circle class="sigil-inner" cx="230" cy="220" r="166" />
+      <div class="keeper-chamber" role="note" aria-label="Green Deer-Wood keeper chamber">
+        <div>
+          <p class="chamber-kicker">The Forest Road</p>
+          <h3>Kelda Veyrún</h3>
+          <p class="keeper-role">Druid and Keeper of Living Law</p>
 
-          <path
-            class="sigil-tree"
-            d="M230 338 C222 286 228 246 230 204 C232 160 226 126 230 92"
-          />
-          <path
-            class="sigil-branch"
-            d="M230 178 C188 153 160 125 137 94
-               M230 170 C271 143 300 116 322 81
-               M230 225 C188 209 155 185 121 155
-               M230 218 C276 199 313 173 343 139"
-          />
+          <p>
+            Green Deer-Wood needed something older, calmer and more believable
+            than a warped little experiment. Kelda’s road is not geometry. It is
+            weather, judgement, mercy and the patience to know when rot must go.
+          </p>
+        </div>
 
-          <path
-            class="sigil-bear"
-            d="M135 337
-               C147 310 171 294 197 297
-               C215 276 250 274 271 296
-               C302 294 326 311 337 338
-               C325 353 309 363 291 367
-               C287 389 270 404 251 405
-               C235 405 222 396 213 383
-               C202 398 187 405 170 402
-               C151 398 139 382 139 363
-               C125 356 120 344 135 337 Z"
-          />
-          <path
-            class="sigil-bear"
-            d="M170 320 C164 304 169 288 180 278
-               M298 320 C304 304 299 288 288 278
-               M194 342 C207 351 219 354 230 354
-               C242 354 255 351 267 342"
-          />
+        <div class="keeper-laws" aria-label="Kelda's public keeper laws">
+          <span>Listen</span>
+          <span>Heal</span>
+          <span>Protect</span>
+          <span>Cull Rot</span>
+        </div>
 
-          <text class="sigil-title" x="230" y="465">GREEN DEER-WOOD</text>
-          <text class="sigil-subtitle" x="230" y="495">Listen · Heal · Protect · Cull Rot</text>
-        </svg>
+        <blockquote>
+          “What can be healed should be healed. What will poison the wood must be cut away.”
+        </blockquote>
       </div>
 
       <div>
