@@ -599,6 +599,54 @@
         grid-template-columns: 1fr;
       }
     }
+  
+    .cartographer-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.4rem;
+    }
+
+    .cartographer-plate {
+      overflow: hidden;
+      background: rgba(9, 10, 12, 0.92);
+      border: 1px solid rgba(221, 182, 95, 0.38);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .cartographer-plate a {
+      display: block;
+      background: #08090b;
+    }
+
+    .cartographer-plate img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .cartographer-copy {
+      padding: 1rem 1.05rem 1.2rem;
+    }
+
+    .cartographer-copy h3 {
+      margin-top: 0;
+    }
+
+    .cartographer-status {
+      color: var(--gold);
+      font-size: 0.76rem;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 760px) {
+      .cartographer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
   </style>
 
   <script type="application/ld+json">
@@ -692,6 +740,7 @@
       </p>
 
       <nav class="map-nav" aria-label="Jump to map sections">
+        <a href="#cartographers-desk">Cartographer’s Desk</a>
         <a href="#vardrum-map">Vardrum Map</a>
         <a href="#region-atlas">Region Atlas</a>
         <a href="#saga-road">Saga Road</a>
@@ -699,6 +748,79 @@
         <a href="#map-marks">Map Marks</a>
         <a href="#map-law">Map-Room Law</a>
       </nav>
+    </section>
+
+    <section class="panel" id="cartographers-desk">
+      <p class="eyebrow">The Spoiler-Safe Visual Bible</p>
+      <h2>The Cartographer’s Desk</h2>
+
+      <p>
+        These public plates reveal how the maps of Black Wings are drawn, aged,
+        marked and read. They show the visual language of the world without
+        exposing hidden routes, future events or the locked geography of later
+        books.
+      </p>
+
+      <p class="map-seal">
+        Safe for the public archive: symbols, materials and standards only.
+        Detailed story maps remain behind the Map-Room door.
+      </p>
+
+      <div class="cartographer-grid">
+        <article class="cartographer-plate">
+          <a
+            href="cartographers-handbook-plate-one.jpg"
+            target="_blank"
+            rel="noopener"
+            aria-label="Open Cartographer's Handbook Plate I at full size"
+          >
+            <img
+              src="cartographers-handbook-plate-one.jpg"
+              alt="Saga of Black Wings Visual Bible, Cartographer's Handbook Plate I"
+              width="1536"
+              height="1024"
+              loading="lazy"
+            />
+          </a>
+          <div class="cartographer-copy">
+            <p class="cartographer-status">Public Visual Bible Plate</p>
+            <h3>Cartographer’s Handbook</h3>
+            <p>
+              Parchment, ink, compass law, landscape symbols, settlement marks,
+              roads, boundaries and the cartographer’s oath.
+            </p>
+          </div>
+        </article>
+
+        <article class="cartographer-plate">
+          <a
+            href="cartographers-handbook-official-standards.jpg"
+            target="_blank"
+            rel="noopener"
+            aria-label="Open Official Cartographic Standards Plate II at full size"
+          >
+            <img
+              src="cartographers-handbook-official-standards.jpg"
+              alt="Saga of Black Wings Visual Bible, Official Cartographic Standards Plate II"
+              width="1536"
+              height="1024"
+              loading="lazy"
+            />
+          </a>
+          <div class="cartographer-copy">
+            <p class="cartographer-status">Public Visual Bible Plate</p>
+            <h3>Official Standards</h3>
+            <p>
+              The agreed compass, terrain marks, settlement icons, map scale,
+              inks, borders and the five recognised map forms.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <blockquote>
+        “A good map does not show all things. It shows what must be remembered.”
+      </blockquote>
     </section>
 
     <section class="panel" id="vardrum-map">
