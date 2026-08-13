@@ -431,6 +431,135 @@
         grid-template-columns: 1fr;
       }
     }
+  
+    .sealed-ember-panel {
+      border-color: rgba(221, 182, 95, 0.42);
+      background:
+        radial-gradient(circle at 88% 12%, rgba(221, 182, 95, 0.11), transparent 22rem),
+        radial-gradient(circle at 12% 90%, rgba(111, 53, 38, 0.16), transparent 21rem),
+        linear-gradient(145deg, rgba(23, 21, 21, 0.98), rgba(8, 10, 12, 0.99));
+    }
+
+    .ember-intro {
+      max-width: 820px;
+      color: var(--parchment-soft);
+    }
+
+    .ember-box {
+      margin-top: 1.4rem;
+      overflow: hidden;
+      background: rgba(5, 6, 8, 0.62);
+      border: 1px solid rgba(221, 182, 95, 0.34);
+      border-radius: 18px;
+    }
+
+    .ember-box summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      min-height: 78px;
+      padding: 1rem 1.15rem;
+      color: #fff0ce;
+      cursor: pointer;
+      font-family: "Cinzel", Georgia, serif;
+      font-size: clamp(1rem, 2.2vw, 1.25rem);
+      font-weight: 800;
+      letter-spacing: 0.035em;
+      list-style: none;
+    }
+
+    .ember-box summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .ember-box summary::after {
+      content: "OPEN";
+      flex: 0 0 auto;
+      padding: 0.38rem 0.62rem;
+      color: var(--gold);
+      background: rgba(221, 182, 95, 0.08);
+      border: 1px solid rgba(221, 182, 95, 0.28);
+      border-radius: 999px;
+      font-size: 0.65rem;
+      letter-spacing: 0.13em;
+    }
+
+    .ember-box[open] summary::after {
+      content: "SEALED";
+    }
+
+    .ember-box summary:hover {
+      background: rgba(221, 182, 95, 0.05);
+    }
+
+    .ember-inner {
+      padding: 0 1.2rem 1.35rem;
+      border-top: 1px solid rgba(221, 182, 95, 0.2);
+    }
+
+    .ember-inner .ember-warning {
+      margin: 1rem 0;
+      color: var(--gold);
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .ember-inner p {
+      line-height: 1.78;
+    }
+
+    .ember-fragment {
+      margin: 1.25rem 0;
+      padding: 1.05rem 1.15rem;
+      color: #fff0ce;
+      background: rgba(221, 182, 95, 0.06);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 12px 12px 0;
+      font-family: "Cinzel", Georgia, serif;
+      font-style: italic;
+    }
+
+    .ember-chain {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.75rem;
+      margin: 1.2rem 0;
+    }
+
+    .ember-chain span {
+      display: block;
+      padding: 0.8rem 0.7rem;
+      color: var(--parchment);
+      background: rgba(17, 20, 22, 0.9);
+      border: 1px solid rgba(221, 182, 95, 0.22);
+      border-radius: 12px;
+      text-align: center;
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.76rem;
+      font-weight: 700;
+    }
+
+    .ember-last-line {
+      margin-top: 1.3rem;
+      color: var(--parchment);
+      font-style: italic;
+    }
+
+    @media (max-width: 680px) {
+      .ember-chain {
+        grid-template-columns: 1fr;
+      }
+
+      .ember-box summary {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
   </style>
 
   <script type="application/ld+json">
@@ -534,6 +663,7 @@
         <a href="#prayer-leaf">Prayer-Leaf</a>
         <a href="#animal-warning">Animal Warnings</a>
         <a href="#marsh-customs">Marsh Customs</a>
+        <a href="#sealed-ember">The Sealed Ember</a>
         <a href="#forest-law">Forest Law</a>
         <a href="#house-lore">House-Lore</a>
         <a href="#old-warnings">Old Warnings</a>
@@ -851,6 +981,77 @@
         <a href="odes.html" class="button primary">Read the Salt-Reed Song</a>
         <a href="world.html#salt-marsh" class="button secondary">Visit the Salt-Marsh</a>
       </div>
+    </section>
+
+    <section class="panel sealed-ember-panel" id="sealed-ember">
+      <p class="eyebrow">A Sealed Fragment of Vardrum</p>
+      <h2>The Sealed Ember</h2>
+
+      <p class="ember-intro">
+        Some knowledge in Vardrum is not forbidden. It is simply waiting for
+        the reader who cannot resist opening the box.
+      </p>
+
+      <details class="ember-box">
+        <summary>
+          Hearth-Soothe · Open the sealed origin fragment
+        </summary>
+
+        <div class="ember-inner">
+          <p class="ember-warning">
+            Minor lore ahead · no plot revelation
+          </p>
+
+          <p>
+            Long before Hearth-Soothe had a name, an old fragment attributed to
+            Bremner RedBonce suggested that scent could reach somewhere deeper
+            than thought.
+          </p>
+
+          <p>
+            Not perfume. Not ordinary medicine. Not a recipe that could simply
+            be copied. Something stranger: the possibility that smoke, herb,
+            resin, earth and memory might help a frightened or grieving person
+            find their way back toward something known.
+          </p>
+
+          <p class="ember-fragment">
+            “Never make the scent of the flower. Make the scent of the person
+            remembering it.”
+          </p>
+
+          <p>
+            Elland spent years trying to understand what the fragment meant.
+            Eventually he realised the ingredients were never the whole secret.
+            What mattered was the person for whom the scent was made, and the
+            memory carried inside it.
+          </p>
+
+          <p>
+            The craft that grew from that understanding became known as
+            <strong>Hearth-Soothe</strong>: not the art of replacing memory,
+            but of helping a soul recognise its own hearth again.
+          </p>
+
+          <div class="ember-chain" aria-label="The surviving Hearth-Soothe tradition">
+            <span>Bremner · The First Ember</span>
+            <span>Elland · The Naming</span>
+            <span>Eldwyn · The Trusted Pupil</span>
+          </div>
+
+          <p>
+            The knowledge was never made common. Anything capable of comforting
+            memory could become dangerous in the wrong hands. Later tradition
+            remembers Elland and Eldwyn among the very few said to have
+            understood the completed craft.
+          </p>
+
+          <p class="ember-last-line">
+            One question remains sealed: Bremner may have found the first ember,
+            but nobody knows who, or what, showed him where to look.
+          </p>
+        </div>
+      </details>
     </section>
 
     <section class="panel forest-panel" id="forest-law">
