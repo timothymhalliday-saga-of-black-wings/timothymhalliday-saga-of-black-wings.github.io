@@ -414,6 +414,84 @@
         max-height: 650px;
       }
     }
+  
+    .sketch-book-panel {
+      border-color: rgba(182, 144, 91, 0.52);
+      background:
+        radial-gradient(circle at 92% 6%, rgba(221, 182, 95, 0.12), transparent 24rem),
+        linear-gradient(145deg, rgba(24, 21, 18, 0.98), rgba(9, 10, 11, 0.99));
+    }
+
+    .sketch-book-intro {
+      max-width: 880px;
+      color: var(--parchment-soft);
+    }
+
+    .sketch-book-note {
+      margin: 1rem 0 1.4rem;
+      padding: 0.95rem 1.05rem;
+      color: #f2e5c5;
+      background: rgba(103, 75, 43, 0.14);
+      border-left: 3px solid rgba(221, 182, 95, 0.58);
+      border-radius: 0 12px 12px 0;
+      font-style: italic;
+    }
+
+    .sketch-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.1rem;
+      margin-top: 1.25rem;
+    }
+
+    .sketch-card {
+      overflow: hidden;
+      background: rgba(7, 8, 9, 0.92);
+      border: 1px solid rgba(182, 144, 91, 0.32);
+      border-radius: 17px;
+    }
+
+    .sketch-card a {
+      display: block;
+      background: #08090a;
+    }
+
+    .sketch-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .sketch-copy {
+      padding: 1rem 1.05rem 1.15rem;
+    }
+
+    .sketch-copy h3 {
+      margin: 0 0 0.45rem;
+      color: #fff0ce;
+    }
+
+    .sketch-copy p {
+      margin-bottom: 0;
+      color: var(--parchment-soft);
+    }
+
+    .sketch-label {
+      margin-top: 0.75rem !important;
+      color: var(--gold) !important;
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 760px) {
+      .sketch-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
   </style>
 
   <script type="application/ld+json">
@@ -516,6 +594,7 @@
         <a href="#ravens">Ravens</a>
         <a href="#memory-plates">Memory Plates</a>
         <a href="#marks-song">Marks and Song</a>
+        <a href="#elland-sketch-book">Elland’s Sketch-Book</a>
         <a href="#author-portraits">Author Portraits</a>
       </nav>
     </section>
@@ -940,12 +1019,166 @@
       </div>
     </section>
 
+    <section class="panel sketch-book-panel" id="elland-sketch-book">
+      <p class="eyebrow">Loose Pages from the Road</p>
+      <h2>Fragments from Elland’s Sketch-Book</h2>
+
+      <p class="sketch-book-intro">
+        Pencil studies, road-notes and half-finished observations attributed to
+        Elland from the early Black Wings road. They are presented without
+        explanation so that the drawings can keep some of their secrets.
+      </p>
+
+      <p class="sketch-book-note">
+        “Some are accurate. Some are memory. Elland never said which.”
+      </p>
+
+      <div class="sketch-grid">
+        <article class="sketch-card">
+          <a
+            href="elland-sketch-causeway.png"
+            target="_blank"
+            rel="noopener"
+            aria-label="Open The Causeway Before Rain sketch at full size"
+          >
+            <img
+              src="elland-sketch-causeway.png"
+              alt="Sepia pencil-style Black Wings sketch: A low marsh road disappearing into distance beneath black wings."
+              width="1122"
+              height="1402"
+              loading="lazy"
+            />
+          </a>
+          <div class="sketch-copy">
+            <h3>The Causeway Before Rain</h3>
+            <p>A low marsh road disappearing into distance beneath black wings.</p>
+            <p class="sketch-label">Attributed to Elland’s road-book</p>
+          </div>
+        </article>
+
+        <article class="sketch-card">
+          <a
+            href="elland-sketch-moon-road.png"
+            target="_blank"
+            rel="noopener"
+            aria-label="Open The Road Under the Moon sketch at full size"
+          >
+            <img
+              src="elland-sketch-moon-road.png"
+              alt="Sepia pencil-style Black Wings sketch: A narrow raised road crossing open water beneath a pale moon."
+              width="1122"
+              height="1402"
+              loading="lazy"
+            />
+          </a>
+          <div class="sketch-copy">
+            <h3>The Road Under the Moon</h3>
+            <p>A narrow raised road crossing open water beneath a pale moon.</p>
+            <p class="sketch-label">Attributed to Elland’s road-book</p>
+          </div>
+        </article>
+
+        <article class="sketch-card">
+          <a
+            href="elland-sketch-reed-chapel.png"
+            target="_blank"
+            rel="noopener"
+            aria-label="Open The Reed Chapel sketch at full size"
+          >
+            <img
+              src="elland-sketch-reed-chapel.png"
+              alt="Sepia pencil-style Black Wings sketch: A small marsh chapel reached by a path that looks less certain than the building."
+              width="1122"
+              height="1402"
+              loading="lazy"
+            />
+          </a>
+          <div class="sketch-copy">
+            <h3>The Reed Chapel</h3>
+            <p>A small marsh chapel reached by a path that looks less certain than the building.</p>
+            <p class="sketch-label">Attributed to Elland’s road-book</p>
+          </div>
+        </article>
+
+        <article class="sketch-card">
+          <a
+            href="elland-sketch-watchtower.png"
+            target="_blank"
+            rel="noopener"
+            aria-label="Open The Broken Watchtower sketch at full size"
+          >
+            <img
+              src="elland-sketch-watchtower.png"
+              alt="Sepia pencil-style Black Wings sketch: A weathered tower standing where road, water and storm meet."
+              width="1122"
+              height="1402"
+              loading="lazy"
+            />
+          </a>
+          <div class="sketch-copy">
+            <h3>The Broken Watchtower</h3>
+            <p>A weathered tower standing where road, water and storm meet.</p>
+            <p class="sketch-label">Attributed to Elland’s road-book</p>
+          </div>
+        </article>
+
+        <article class="sketch-card">
+          <a
+            href="elland-sketch-old-marker.png"
+            target="_blank"
+            rel="noopener"
+            aria-label="Open The Old Marker Road sketch at full size"
+          >
+            <img
+              src="elland-sketch-old-marker.png"
+              alt="Sepia pencil-style Black Wings sketch: Two black witnesses beside an ancient marker and a road half-lost to water."
+              width="1122"
+              height="1402"
+              loading="lazy"
+            />
+          </a>
+          <div class="sketch-copy">
+            <h3>The Old Marker Road</h3>
+            <p>Two black witnesses beside an ancient marker and a road half-lost to water.</p>
+            <p class="sketch-label">Attributed to Elland’s road-book</p>
+          </div>
+        </article>
+
+        <article class="sketch-card">
+          <a
+            href="elland-sketch-unnamed-wood.png"
+            target="_blank"
+            rel="noopener"
+            aria-label="Open The Road Elland Refused to Name sketch at full size"
+          >
+            <img
+              src="elland-sketch-unnamed-wood.png"
+              alt="Sepia pencil-style Black Wings sketch: A woodland path, old stones and one patient black witness. No location recorded."
+              width="1122"
+              height="1402"
+              loading="lazy"
+            />
+          </a>
+          <div class="sketch-copy">
+            <h3>The Road Elland Refused to Name</h3>
+            <p>A woodland path, old stones and one patient black witness. No location recorded.</p>
+            <p class="sketch-label">Attributed to Elland’s road-book</p>
+          </div>
+        </article>
+      </div>
+
+      <blockquote>
+        “A traveller who sketches the road twice has usually noticed something
+        the road hoped he had missed.”
+      </blockquote>
+    </section>
+
     <section class="panel" id="author-portraits">
       <p class="eyebrow">Behind the Wings</p>
       <h2>Author Portraits</h2>
       <p>
         The archive keeps both the solemn portraits and the occasional bit of
-        marsh-born mischief.
+        marsh-born humour.
       </p>
 
       <div class="portrait-grid">
