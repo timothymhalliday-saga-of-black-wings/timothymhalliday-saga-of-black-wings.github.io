@@ -506,6 +506,59 @@
       font-style: italic;
     }
 
+  
+    .persona-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.2rem;
+      margin-top: 1.35rem;
+    }
+
+    .persona-card {
+      overflow: hidden;
+      background: rgba(7, 8, 10, 0.94);
+      border: 1px solid rgba(221, 182, 95, 0.34);
+      border-radius: 18px;
+      box-shadow: var(--soft-shadow);
+    }
+
+    .persona-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .persona-copy {
+      padding: 1rem 1.05rem 1.15rem;
+    }
+
+    .persona-copy h3 {
+      margin: 0 0 0.45rem;
+      color: #fff0ce;
+    }
+
+    .persona-copy p {
+      margin: 0;
+      color: var(--parchment-soft);
+      line-height: 1.7;
+    }
+
+    .persona-label {
+      margin-top: 0.75rem !important;
+      color: var(--gold) !important;
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 760px) {
+      .persona-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
   </style>
 
   <script type="application/ld+json">
@@ -606,6 +659,7 @@
       <nav class="author-nav" aria-label="Jump to author sections">
         <a href="#writing-life">Writing Life</a>
         <a href="#road-beneath-books">Road Beneath the Books</a>
+        <a href="#black-wings-personas">Black Wings Portraits</a>
         <a href="#saga-heart">Heart of the Saga</a>
         <a href="#working-method">Working Method</a>
         <a href="#portraits">Saga Portraits</a>
@@ -668,6 +722,69 @@
             <span>The next movement now opening</span>
           </div>
         </div>
+      </div>
+    </section>
+
+        <section class="panel" id="black-wings-personas">
+      <p class="eyebrow">The Author Through Black Wings</p>
+      <h2>Two Roads into the Same Storyteller</h2>
+
+      <p>
+        The professional portrait is Timothy M. Halliday the author. These two
+        images belong to the more playful visual language of Black Wings:
+        one mythic, one gloriously unwise.
+      </p>
+
+      <div class="persona-grid">
+        <article class="persona-card">
+          <a
+            href="timothy-black-wings-viking.jpg"
+            target="_blank"
+            rel="noopener"
+            aria-label="Open the Black Wings portrait at full size"
+          >
+            <img
+              src="timothy-black-wings-viking.jpg"
+              alt="Saga-styled portrait of Timothy M. Halliday with golden eyes and dark northern clothing"
+              width="1122"
+              height="1402"
+              loading="lazy"
+            />
+          </a>
+          <div class="persona-copy">
+            <h3>The Man Who Walked Beside Ravens</h3>
+            <p>
+              The mythic author portrait: part storyteller, part witness,
+              standing with one foot in the ordinary world and one in Vardrum.
+            </p>
+            <p class="persona-label">Black Wings portrait</p>
+          </div>
+        </article>
+
+        <article class="persona-card">
+          <a
+            href="timothy-marsh-wizard.jpg"
+            target="_blank"
+            rel="noopener"
+            aria-label="Open the Marsh-Wizard portrait at full size"
+          >
+            <img
+              src="timothy-marsh-wizard.jpg"
+              alt="Humorous Black Wings portrait of Timothy M. Halliday as the Marsh-Wizard of the Braid"
+              width="1148"
+              height="1370"
+              loading="lazy"
+            />
+          </a>
+          <div class="persona-copy">
+            <h3>The Marsh-Wizard of the Braid</h3>
+            <p>
+              Hat bent, pipe lit, judgement questionable. Proof that even the
+              Braid occasionally needs to laugh at itself.
+            </p>
+            <p class="persona-label">Black Wings oddity</p>
+          </div>
+        </article>
       </div>
     </section>
 
