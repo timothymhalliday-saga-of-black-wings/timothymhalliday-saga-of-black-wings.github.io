@@ -378,6 +378,26 @@
       border-radius: 13px;
     }
 
+
+    .bremner-entry {
+      border-color: rgba(71, 122, 81, 0.62);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(71, 122, 81, 0.18), transparent 22rem),
+        linear-gradient(145deg, rgba(22, 34, 26, 0.98), rgba(10, 12, 15, 0.99));
+    }
+
+    .bremner-ode .verse-space {
+      height: 0.8rem;
+    }
+
+    .bremner-ode .end-mark {
+      margin-top: 2rem;
+      color: var(--gold-bright);
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 1.35rem;
+      text-align: center;
+    }
+
     @media (max-width: 980px) {
       .odes-hero-layout,
       .song-feature,
@@ -432,118 +452,73 @@
       }
     }
 
-    .scroll-vault {
-      display: grid;
-      gap: 1.6rem;
+    /* Clean Scroll Vault addition */
+    .clean-scroll-vault {
+      margin-top: 2rem;
     }
 
-    .scroll-intro {
-      max-width: 920px;
-      margin: 0 auto;
-      color: var(--parchment-soft);
+    .clean-scroll-vault-intro {
+      max-width: 850px;
+      margin: 0 auto 2rem;
       text-align: center;
     }
 
-    .scroll-grid {
+    .clean-scroll-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1.15rem;
-      margin-top: 1rem;
+      gap: 1.5rem;
+      align-items: start;
+      margin-top: 1.5rem;
     }
 
-    .scroll-card {
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      min-height: 100%;
-      background: linear-gradient(145deg, rgba(27, 25, 26, 0.98), rgba(10, 12, 15, 0.99));
+    .clean-scroll {
+      margin: 0;
+      padding: 0.65rem;
+      background: rgba(5, 6, 8, 0.55);
       border: 1px solid rgba(221, 182, 95, 0.28);
       border-radius: 18px;
       box-shadow: var(--soft-shadow);
     }
 
-    .scroll-card figure {
-      margin: 0;
-      padding: 0.75rem;
-      background: rgba(5, 6, 8, 0.4);
-      border-bottom: 1px solid rgba(221, 182, 95, 0.14);
-    }
-
-    .scroll-card img {
+    .clean-scroll img {
+      display: block;
       width: 100%;
       height: auto;
-      display: block;
       border-radius: 12px;
     }
 
-    .scroll-card-body {
-      display: grid;
-      gap: 0.8rem;
-      padding: 1.2rem 1.2rem 1.3rem;
-      flex: 1;
-    }
-
-    .scroll-card h3 {
-      margin: 0;
-      color: #fff0ce;
-      font-size: clamp(1.15rem, 2.5vw, 1.55rem);
-    }
-
-    .scroll-card p {
-      margin: 0;
-    }
-
-    .scroll-note {
+    .clean-scroll figcaption {
+      padding: 0.85rem 0.35rem 0.25rem;
       color: var(--parchment-soft);
-      font-size: 0.86rem;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 0.9rem;
       font-style: italic;
-    }
-
-    .scroll-bard {
-      color: var(--gold);
-      font-family: "Cinzel", Georgia, serif;
-      font-size: 0.7rem;
-      font-weight: 800;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-    }
-
-    .scroll-seal {
-      position: relative;
-      justify-content: center;
+      line-height: 1.5;
       text-align: center;
-      background:
-        radial-gradient(circle at 50% 0%, rgba(221, 182, 95, 0.09), transparent 16rem),
-        linear-gradient(145deg, rgba(17, 18, 22, 0.98), rgba(8, 9, 11, 0.99));
     }
 
-    .scroll-seal::before {
-      content: "Opened with care";
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      width: 132px;
-      height: 132px;
-      margin: 0 auto 0.4rem;
-      color: #170f08;
-      background: radial-gradient(circle at 32% 28%, #f4d79a, var(--gold) 60%, #8a652c 100%);
-      border-radius: 50%;
-      box-shadow: 0 0 0 8px rgba(221, 182, 95, 0.08);
+    .clean-scroll-plate {
+      max-width: 920px;
+      margin: 2rem auto 0;
+    }
+
+    .clean-scroll-coming {
+      max-width: 850px;
+      margin: 2rem auto 0;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(221, 182, 95, 0.2);
+      color: var(--parchment-soft);
+      text-align: center;
+      line-height: 1.8;
+    }
+
+    .clean-scroll-coming strong {
+      color: var(--gold-bright);
       font-family: "Cinzel", Georgia, serif;
-      font-size: 0.74rem;
-      font-weight: 800;
-      line-height: 1.15;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
     }
 
-    .scroll-seal .scroll-note {
-      max-width: 28rem;
-      margin: 0 auto;
-    }
-
-    @media (max-width: 920px) {
-      .scroll-grid {
+    @media (max-width: 820px) {
+      .clean-scroll-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -642,12 +617,69 @@
 
       <nav class="skald-nav" aria-label="Jump to Skald-Room sections">
         <a href="#book-sixteen">Book XVI Shelf</a>
+<a href="#green-deer-notebooks">Green Deer-Wood Notebook</a>
         <a href="#salt-reed-song">Salt-Reed Song</a>
         <a href="#public-archive">Full Public Works</a>
+        <a href="#scroll-vault">Scroll Vault</a>
         <a href="#road-epitaphs">Road Epitaphs</a>
         <a href="#wing-pair">Wing-Pair</a>
       </nav>
     </section>
+
+
+    <section class="panel clean-scroll-vault" id="scroll-vault">
+      <p class="eyebrow">The Scroll Vault</p>
+      <h2>Odes Set Down in Parchment</h2>
+
+      <p class="clean-scroll-vault-intro">
+        Illustrated leaves from the Skald-Room, gathered here without disturbing
+        the full tap-to-open archive below.
+      </p>
+
+      <div class="clean-scroll-grid">
+        <figure class="clean-scroll">
+          <img
+            src="black_wings_over_witness_isle.png"
+            alt="Illustrated parchment scroll titled Black Wings Over Witness Isle"
+            loading="lazy"
+          />
+          <figcaption>
+            <strong>Black Wings Over Witness Isle</strong><br />
+            An illuminated leaf from the growing Black Wings scroll collection.
+          </figcaption>
+        </figure>
+
+        <figure class="clean-scroll">
+          <img
+            src="the_witness_fire_an_illuminated_marsh_saga.png"
+            alt="Illustrated parchment scroll titled The Witness Fire"
+            loading="lazy"
+          />
+          <figcaption>
+            <strong>The Witness Fire</strong><br />
+            Blue flame, marsh-road and witness-memory set down in parchment.
+          </figcaption>
+        </figure>
+      </div>
+
+      <figure class="clean-scroll clean-scroll-plate">
+        <img
+          src="scroll-collection-black-wings-witness-fire.png"
+          alt="Black Wings scroll collection plate"
+          loading="lazy"
+        />
+        <figcaption>
+          Two opened leaves from the Scroll Vault.
+        </figcaption>
+      </figure>
+
+      <p class="clean-scroll-coming">
+        <strong>Further leaves being prepared:</strong><br />
+        The Oath of Braid and Wing Â· The Witness and the Heart Â·
+        The Faithful Beside Them Â· When the Mists Rise Â· Until Every Road Kneels
+      </p>
+    </section>
+
 
     <section class="panel" id="book-sixteen">
       <p class="eyebrow">The Canon Shelf</p>
@@ -750,6 +782,200 @@
         </article>
       </div>
     </section>
+
+
+    <section class="panel" id="green-deer-notebooks">
+      <p class="eyebrow">From the Green Deer-Wood Notebooks</p>
+      <h2>A Figure Waiting Beyond the Current Road</h2>
+
+      <p>
+        Bremner Redbonce is an exploratory figure who has not yet entered the
+        manuscript. This ode is preserved here as a possible Green Deer-Wood
+        legend while his final place, history and chronology remain open.
+      </p>
+
+      <p class="archive-seal">
+        Provisional archive status: the ode is public, but Bremner is not yet
+        locked into book canon.
+      </p>
+
+      <div class="verse-stack">
+        <details class="verse-entry bremner-entry" open>
+          <summary>
+            <span class="verse-title">ODE OF Bremner Redbonce, WHO KEPT COMPANY WITH THE OLDEST WINDS</span>
+            <span class="verse-subtitle">Attributed to Bruhald Scarweary, Bard of the Northern Territory, who insisted that even the wind deserves someone to argue with.</span>
+          </summary>
+
+          <div class="verse-body bremner-ode">
+            <div class="verse-space" aria-hidden="true"></div>
+<p>Before the first hearth found fire,</p>
+<p>before the first king found a throne,</p>
+<p>before ravens learned that a manâs silence<br />
+could weigh more than his sword,</p>
+<p>there wandered one called Bremner Redbonce.</p>
+<p>No crown sought him.</p>
+<p>No temple chained him.</p>
+<p>No banner claimed him.</p>
+<p>The forests simply leaned closer<br />
+whenever he passed.</p>
+<p>The rivers altered their songs<br />
+so that they might remember his footsteps.</p>
+<p>Even mountains,<br />
+those proud old beasts of stone,<br />
+lowered their voices.</p>
+<p>For Bremner Redbonce did not command the world.</p>
+<p>He listened to it.</p>
+<div class="verse-space" aria-hidden="true"></div>
+<p>He learned the language<br />
+of snow before it became water.</p>
+<p>He knew the thousand names<br />
+of rain before clouds had chosen<br />
+which valley to bless.</p>
+<p>He could hear roots speaking<br />
+beneath frozen earth,</p>
+<p>could hear wolves deciding mercy,</p>
+<p>could hear ravens laughing<br />
+at the foolish certainty of men.</p>
+<p>And when he answered,</p>
+<p>he answered quietly.</p>
+<p>For the oldest wisdom<br />
+never needed to shout.</p>
+<div class="verse-space" aria-hidden="true"></div>
+<p>Many sought to make him king.</p>
+<p>He refused.</p>
+<p>Many begged him to become a god.</p>
+<p>He laughed.</p>
+<p>âI have seen enough gods,â<br />
+he said.</p>
+<p>âThey spend far too much time<br />
+telling rivers where they ought to flow.â</p>
+<div class="verse-space" aria-hidden="true"></div>
+<p>So he became something rarer.</p>
+<p>A companion.</p>
+<p>To beasts.</p>
+<p>To wanderers.</p>
+<p>To widows.</p>
+<p>To children who feared the dark.</p>
+<p>To old warriors who feared<br />
+the daylight after battle.</p>
+<p>He carried no judgement<br />
+that was not first weighed<br />
+against kindness.</p>
+<div class="verse-space" aria-hidden="true"></div>
+<p>The ravens found him first.</p>
+<p>Blue landed upon his shoulder<br />
+without invitation.</p>
+<p>Scarlet remained upon the branch above,<br />
+judging the arrangement.</p>
+<p>Blue declared,</p>
+<p>âHe smells like rain.â</p>
+<p>Scarlet answered,</p>
+<p>âHe smells like promises<br />
+that might actually be kept.â</p>
+<p>Thus both remained.</p>
+<p>Which, among ravens,<br />
+is considered extravagant praise.</p>
+<div class="verse-space" aria-hidden="true"></div>
+<p>The wolves walked beside him.</p>
+<p>The bears shared winter caves.</p>
+<p>The deer ceased fleeing<br />
+when his shadow crossed theirs.</p>
+<p>Even foxes,</p>
+<p>those cheerful thieves<br />
+who believe ownership<br />
+is merely a suggestion,</p>
+<p>returned what they had stolen.</p>
+<p>Mostly.</p>
+<div class="verse-space" aria-hidden="true"></div>
+<p>It is said that Bremner Redbonce carried<br />
+no sword of famous name.</p>
+<p>Instead,</p>
+<p>he carried an empty hand.</p>
+<p>When hatred arrived,</p>
+<p>it found no grip.</p>
+<p>When pride arrived,</p>
+<p>it found no mirror.</p>
+<p>When despair arrived,</p>
+<p>it discovered a fire<br />
+already waiting.</p>
+<p>Thus many battles<br />
+ended before steel<br />
+ever left its sheath.</p>
+<div class="verse-space" aria-hidden="true"></div>
+<p>There came a winter<br />
+that wished to become eternal.</p>
+<p>Trees cracked.</p>
+<p>Rivers slept beneath armour of ice.</p>
+<p>Birdsong vanished.</p>
+<p>Even hope grew tired.</p>
+<p>Bremner Redbonce climbed the highest ridge.</p>
+<p>He spoke no spell.</p>
+<p>He sang no enchantment.</p>
+<p>He merely remembered<br />
+every spring<br />
+that had ever come before.</p>
+<p>The earth remembered with him.</p>
+<p>Snow began to melt.</p>
+<p>Not because winter had been defeated,</p>
+<p>but because memory<br />
+proved stronger than forgetting.</p>
+<div class="verse-space" aria-hidden="true"></div>
+<p>The old ones say<br />
+that when the Braid was still<br />
+only an idea<br />
+waiting for brave hearts,</p>
+<p>it was Bremner Redbonce<br />
+who first whispered<br />
+into the listening wind,</p>
+<p>âMake room.</p>
+<p>Do not build walls.</p>
+<p>Build welcome.â</p>
+<p>The wind carried those words<br />
+far beyond his lifetime.</p>
+<p>Some still hear them.</p>
+<p>Most simply call them home.</p>
+<div class="verse-space" aria-hidden="true"></div>
+<h3>THE REFRAIN OF BREMNER REDBONCE</h3>
+<p>Not every hero<br />
+must conquer.</p>
+<p>Not every guardian<br />
+must command.</p>
+<p>Some simply remain.</p>
+<p>Some simply listen.</p>
+<p>Some become the place<br />
+where frightened hearts<br />
+remember they are no longer alone.</p>
+<div class="verse-space" aria-hidden="true"></div>
+<p>When at last<br />
+his own road ended,</p>
+<p>no monument was raised.</p>
+<p>No fortress bore his name.</p>
+<p>The wind required none.</p>
+<p>The forests remembered.</p>
+<p>The rivers continued speaking.</p>
+<p>The ravens still searched<br />
+for travellers<br />
+whose hearts sounded<br />
+a little like his.</p>
+<p>And sometimes,</p>
+<p>when the fire burns low,</p>
+<p>and the night becomes wonderfully quiet,</p>
+<p>one may hear leaves<br />
+moving though there is no breeze.</p>
+<p>The old folk smile then.</p>
+<p>They never ask<br />
+whether Bremner Redbonce has returned.</p>
+<p>They merely set another place<br />
+beside the fire.</p>
+<p>For some guests<br />
+never truly leave.</p>
+<p class="end-mark">â</p>
+<div class="verse-space" aria-hidden="true"></div>
+          </div>
+        </details>
+      </div>
+    </section>
+
 
     <section class="panel song-feature" id="salt-reed-song">
       <figure>
@@ -1962,114 +2188,6 @@
       </blockquote>
 <p>Books XV, XVI and XVII now have public names. The roads beyond Green Deer-Wood remain beneath the later-book spoiler seal.</p>
 </div></details>
-      </div>
-    </section>
-
-
-    <section class="panel" id="scroll-collection">
-      <p class="eyebrow">The Scroll Vault</p>
-      <h2>The Scroll Collection of Salmon Two-Arses Twelve-Pints</h2>
-
-      <div class="scroll-vault">
-        <p class="scroll-intro">
-          A gathering of public-safe ode scrolls from the Skald-Room. Some are fully opened.
-          Others remain sealed a little longer, so visitors may choose mystery before revelation.
-        </p>
-
-        <div class="scroll-grid">
-          <article class="scroll-card">
-            <figure>
-              <img
-                src="black_wings_over_witness_isle.png"
-                alt="Illustrated parchment scroll titled Black Wings Over Witness Isle"
-                width="1120"
-                height="1450"
-                loading="lazy"
-              />
-            </figure>
-            <div class="scroll-card-body">
-              <h3>Black Wings Over Witness Isle</h3>
-              <p>
-                Blue and Scarlet wheel above the isle while the warning passes below:
-                the Braid is watching.
-              </p>
-              <p class="scroll-bard">Bard: Salmon Two-Arses Twelve-Pints</p>
-              <p class="scroll-note">Public ode scroll Â· safe to open</p>
-            </div>
-          </article>
-
-          <article class="scroll-card">
-            <figure>
-              <img
-                src="the_witness_fire_an_illuminated_marsh_saga.png"
-                alt="Illustrated parchment scroll titled The Witness Fire"
-                width="1120"
-                height="1450"
-                loading="lazy"
-              />
-            </figure>
-            <div class="scroll-card-body">
-              <h3>The Witness Fire</h3>
-              <p>
-                A road-ode of marsh, memory, ravens and a blue flame that walks the reed.
-              </p>
-              <p class="scroll-bard">Bard: Bremner Redbonce</p>
-              <p class="scroll-note">Public ode scroll Â· safe to open</p>
-            </div>
-          </article>
-
-          <article class="scroll-card scroll-seal">
-            <div class="scroll-card-body">
-              <h3>The Oath of Braid and Wing</h3>
-              <p>
-                FATAS. Ness. The faithful beside them. Witness Isle beneath weather, oath and love.
-              </p>
-              <p class="scroll-bard">Bard: Salmon Two-Arses Twelve-Pints</p>
-              <p class="scroll-note">
-                Sealed for now: a mystery-box ode waiting for its final illustrated scroll.
-              </p>
-            </div>
-          </article>
-
-          <article class="scroll-card scroll-seal">
-            <div class="scroll-card-body">
-              <h3>The Faithful Beside Them</h3>
-              <p>
-                A roll-call of the companions and witnesses who walk beside the house of Black Wings.
-              </p>
-              <p class="scroll-bard">Bard: Salmon Two-Arses Twelve-Pints</p>
-              <p class="scroll-note">
-                Temporarily sealed while the canon-clean animal scroll is prepared for the Archive.
-              </p>
-            </div>
-          </article>
-
-          <article class="scroll-card scroll-seal">
-            <div class="scroll-card-body">
-              <h3>When the Mists Rise</h3>
-              <p>
-                The marsh begins to breathe, the drowned grass stirs, and old warnings wake before dawn.
-              </p>
-              <p class="scroll-bard">Bard: Salmon Two-Arses Twelve-Pints</p>
-              <p class="scroll-note">
-                Sealed for now: held back as part of the growing public scroll collection.
-              </p>
-            </div>
-          </article>
-
-          <article class="scroll-card scroll-seal">
-            <div class="scroll-card-body">
-              <h3>Until Every Road Kneels</h3>
-              <p>
-                A final oath-scroll of defiance, road-memory and the will that refuses to bow.
-              </p>
-              <p class="scroll-bard">Bard: Salmon Two-Arses Twelve-Pints</p>
-              <p class="scroll-note">
-                Sealed for now: title revealed, full scroll to follow when the vault grows.
-              </p>
-            </div>
-          </article>
-        </div>
       </div>
     </section>
 
