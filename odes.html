@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="Enter the Skald-Room of The Saga of Black Wings: full odes, songs, epitaphs, prayer-leaves, beast verses, love poems and saga plates by Timothy M. Halliday."
+    content="Enter the Skald-Room of The Saga of Black Wings: read Ten Odes Beneath the Black Wings, meet Salmon Two-Arses Twelve-Pints, and explore songs, epitaphs and saga plates by Timothy M. Halliday."
   />
   <meta name="author" content="Timothy M. Halliday" />
   <meta name="theme-color" content="#050608" />
@@ -16,7 +16,7 @@
   <meta property="og:title" content="Odes and Songs | The Saga of Black Wings" />
   <meta
     property="og:description"
-    content="Full songs, odes, epitaphs, witness fragments and saga plates from Vardrum."
+    content="Ten living scrolls, full songs, witness fragments and the legendary Salmon Two-Arses Twelve-Pints—preserved in Vardrum’s Skald-Room."
   />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://sagaofblackwings.com/odes.html" />
@@ -33,7 +33,7 @@
   <meta name="twitter:title" content="Odes and Songs | The Saga of Black Wings" />
   <meta
     name="twitter:description"
-    content="Open the Skald-Room and read the remembered verses of Black Wings."
+    content="Open the Skald-Room, unroll ten new odes and meet the bard who reached the twelfth pint."
   />
   <meta
     name="twitter:image"
@@ -42,6 +42,7 @@
 
   <link rel="canonical" href="https://sagaofblackwings.com/odes.html" />
   <link rel="stylesheet" href="style.css" />
+  <script>document.documentElement.classList.add("js");</script>
 
   <style>
     .odes-hero {
@@ -378,6 +379,694 @@
       border-radius: 13px;
     }
 
+    .odes-page main {
+      position: relative;
+      isolation: isolate;
+    }
+
+    .odes-crest {
+      position: relative;
+      isolation: isolate;
+      transform: rotate(1deg);
+    }
+
+    .odes-crest::before,
+    .odes-crest::after {
+      content: "";
+      position: absolute;
+      inset: -0.7rem;
+      z-index: -1;
+      border: 1px solid rgba(221, 182, 95, 0.2);
+      border-radius: 31px;
+      animation: crest-breathe 5s ease-in-out infinite;
+    }
+
+    .odes-crest::after {
+      inset: -1.35rem;
+      border-color: rgba(159, 40, 55, 0.17);
+      animation-delay: -2.5s;
+    }
+
+    .scroll-vault {
+      overflow: visible;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(221, 182, 95, 0.14), transparent 30rem),
+        radial-gradient(circle at 4% 30%, rgba(159, 40, 55, 0.18), transparent 23rem),
+        radial-gradient(circle at 96% 72%, rgba(49, 93, 131, 0.15), transparent 25rem),
+        linear-gradient(155deg, rgba(26, 23, 25, 0.99), rgba(6, 8, 11, 0.995));
+    }
+
+    .scroll-vault::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      border-radius: inherit;
+      opacity: 0.24;
+      background-image:
+        linear-gradient(115deg, transparent 0 48%, rgba(221, 182, 95, 0.055) 49% 50%, transparent 51%),
+        linear-gradient(65deg, transparent 0 48%, rgba(159, 40, 55, 0.045) 49% 50%, transparent 51%);
+      background-size: 78px 78px;
+      mask-image: linear-gradient(to bottom, black, transparent 75%);
+    }
+
+    .vault-heading {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.7fr);
+      gap: clamp(1.3rem, 4vw, 3.5rem);
+      align-items: end;
+    }
+
+    .vault-heading h2 {
+      max-width: 760px;
+      margin-bottom: 0;
+    }
+
+    .vault-intro {
+      margin: 0;
+      color: var(--parchment-soft);
+      font-size: 0.98rem;
+    }
+
+    .authorship-seal {
+      max-width: 900px;
+      margin: 2rem 0 0;
+      padding: 1rem 1.2rem;
+      color: #e9dcc5;
+      background: rgba(5, 6, 8, 0.58);
+      border: 1px solid rgba(221, 182, 95, 0.22);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 14px 14px 0;
+    }
+
+    .authorship-seal strong {
+      color: var(--gold-bright);
+    }
+
+    .cycle-path {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(10, minmax(72px, 1fr));
+      gap: 0.45rem;
+      margin: 2.5rem 0 1.1rem;
+      padding: 1.25rem 0.5rem;
+    }
+
+    .cycle-path::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 1.2rem;
+      left: 1.2rem;
+      height: 3px;
+      background:
+        linear-gradient(90deg, transparent, var(--crimson) 8%, var(--gold) 48%, #718fb2 91%, transparent);
+      box-shadow: 0 0 16px rgba(221, 182, 95, 0.42);
+      transform: translateY(-50%);
+    }
+
+    .cycle-path a {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      min-height: 80px;
+      padding: 0.55rem 0.2rem;
+      place-content: center;
+      color: var(--parchment-soft);
+      background:
+        radial-gradient(circle at 50% 32%, rgba(240, 210, 140, 0.12), transparent 55%),
+        rgba(7, 8, 11, 0.96);
+      border: 1px solid rgba(221, 182, 95, 0.33);
+      border-radius: 999px;
+      box-shadow: 0 7px 22px rgba(0, 0, 0, 0.45);
+      text-align: center;
+      text-decoration: none;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, color 0.25s ease;
+    }
+
+    .cycle-path a:hover,
+    .cycle-path a[aria-current="true"] {
+      color: #fff2d1;
+      border-color: var(--gold-bright);
+      box-shadow: 0 0 0 4px rgba(221, 182, 95, 0.1), 0 0 28px rgba(221, 182, 95, 0.28);
+      transform: translateY(-7px) scale(1.04);
+    }
+
+    .cycle-path b,
+    .cycle-path span {
+      display: block;
+    }
+
+    .cycle-path b {
+      color: var(--gold-bright);
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 1rem;
+    }
+
+    .cycle-path span {
+      margin-top: 0.08rem;
+      font-size: 0.52rem;
+      letter-spacing: 0.045em;
+      text-transform: uppercase;
+    }
+
+    .reading-thread {
+      height: 3px;
+      margin-bottom: 1.4rem;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.055);
+      border-radius: 999px;
+    }
+
+    .reading-thread span {
+      display: block;
+      width: 0;
+      height: 100%;
+      background: linear-gradient(90deg, var(--crimson), var(--gold-bright), #6e97bd);
+      box-shadow: 0 0 18px rgba(221, 182, 95, 0.7);
+      transform-origin: left center;
+      transition: width 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .living-scrolls {
+      display: grid;
+      gap: 0.8rem;
+    }
+
+    .js .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(30px) scale(0.985);
+      transition:
+        opacity 0.72s ease,
+        transform 0.72s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .js .reveal-on-scroll.is-revealed {
+      opacity: 1;
+      transform: none;
+    }
+
+    .js .reveal-on-scroll::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      pointer-events: none;
+      opacity: 0;
+      background:
+        linear-gradient(
+          108deg,
+          transparent 26%,
+          rgba(159, 40, 55, 0.1) 39%,
+          rgba(255, 240, 206, 0.7) 49%,
+          rgba(221, 182, 95, 0.24) 55%,
+          transparent 70%
+        );
+      mix-blend-mode: screen;
+      transform: translateX(-130%) skewX(-12deg);
+    }
+
+    .js .reveal-on-scroll.is-revealed::after {
+      animation: wing-flash 0.9s ease-out both;
+    }
+
+    .living-scroll {
+      position: relative;
+      scroll-margin-top: 5.5rem;
+      overflow: hidden;
+      background:
+        linear-gradient(145deg, rgba(31, 28, 28, 0.985), rgba(8, 10, 13, 0.995));
+      border: 1px solid rgba(221, 182, 95, 0.24);
+      border-radius: 18px;
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
+      transition: border-color 0.28s ease, box-shadow 0.28s ease, transform 0.28s ease;
+    }
+
+    .living-scroll::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 3px;
+      opacity: 0;
+      background: linear-gradient(var(--crimson), var(--gold-bright), #52799c);
+      box-shadow: 0 0 22px rgba(221, 182, 95, 0.5);
+      transition: opacity 0.28s ease;
+    }
+
+    .living-scroll:hover {
+      border-color: rgba(221, 182, 95, 0.46);
+      transform: translateY(-2px);
+    }
+
+    .living-scroll[open] {
+      border-color: rgba(240, 210, 140, 0.68);
+      box-shadow: 0 28px 70px rgba(0, 0, 0, 0.58), 0 0 42px rgba(221, 182, 95, 0.1);
+      transform: none;
+    }
+
+    .living-scroll[open]::before {
+      opacity: 1;
+    }
+
+    .living-scroll summary {
+      position: relative;
+      display: grid;
+      grid-template-columns: 78px minmax(0, 1fr) auto;
+      gap: 1.1rem;
+      align-items: center;
+      min-height: 112px;
+      padding: 1rem 1.25rem;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .living-scroll summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .scroll-number {
+      display: grid;
+      width: 72px;
+      aspect-ratio: 1;
+      place-items: center;
+      color: var(--gold-bright);
+      background:
+        radial-gradient(circle, rgba(221, 182, 95, 0.16), transparent 62%),
+        conic-gradient(from 45deg, rgba(159, 40, 55, 0.45), rgba(221, 182, 95, 0.55), rgba(49, 93, 131, 0.45), rgba(159, 40, 55, 0.45));
+      border: 1px solid rgba(240, 210, 140, 0.46);
+      border-radius: 50%;
+      box-shadow: inset 0 0 0 7px rgba(5, 6, 8, 0.88), 0 0 20px rgba(221, 182, 95, 0.12);
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 1.15rem;
+      font-weight: 800;
+      transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease;
+    }
+
+    .living-scroll[open] .scroll-number {
+      box-shadow: inset 0 0 0 7px rgba(5, 6, 8, 0.88), 0 0 31px rgba(221, 182, 95, 0.33);
+      transform: rotate(360deg) scale(1.05);
+    }
+
+    .scroll-summary-copy,
+    .scroll-kicker,
+    .scroll-title,
+    .scroll-dedication {
+      display: block;
+    }
+
+    .scroll-kicker {
+      margin-bottom: 0.25rem;
+      color: var(--gold);
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.67rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .scroll-title {
+      color: #fff0ce;
+      font-family: "Cinzel", Georgia, serif;
+      font-size: clamp(1rem, 2.4vw, 1.42rem);
+      font-weight: 800;
+      line-height: 1.3;
+    }
+
+    .scroll-dedication {
+      margin-top: 0.35rem;
+      color: var(--parchment-soft);
+      font-size: 0.77rem;
+      font-style: italic;
+      line-height: 1.45;
+    }
+
+    .scroll-open-hint {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      color: var(--gold-bright);
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .scroll-open-hint::after {
+      content: "+";
+      display: grid;
+      width: 30px;
+      aspect-ratio: 1;
+      place-items: center;
+      border: 1px solid rgba(221, 182, 95, 0.4);
+      border-radius: 50%;
+      font-size: 1rem;
+    }
+
+    .living-scroll[open] .scroll-open-hint::after {
+      content: "−";
+    }
+
+    .living-scroll-body {
+      position: relative;
+      padding: clamp(1.5rem, 4vw, 3.4rem);
+      overflow: hidden;
+      background:
+        linear-gradient(rgba(7, 8, 10, 0.9), rgba(9, 10, 12, 0.96)),
+        repeating-linear-gradient(0deg, transparent 0 31px, rgba(221, 182, 95, 0.028) 32px);
+      border-top: 1px solid rgba(221, 182, 95, 0.2);
+      animation: scroll-unfurl 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    .living-scroll-body::after {
+      content: attr(data-mark);
+      position: absolute;
+      top: 1rem;
+      right: 1.2rem;
+      color: rgba(221, 182, 95, 0.028);
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 12rem;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .ode-heading {
+      max-width: 820px;
+      margin: 0 auto 2rem;
+      text-align: center;
+    }
+
+    .ode-heading h3 {
+      margin-bottom: 0.9rem;
+      color: #fff0ce;
+      font-size: clamp(1.35rem, 3.2vw, 2.25rem);
+    }
+
+    .ode-dedication {
+      color: var(--parchment-soft);
+      font-style: italic;
+    }
+
+    .bard-credit {
+      color: var(--gold);
+      font-size: 0.86rem;
+    }
+
+    .wing-divider {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 1rem;
+      align-items: center;
+      margin-top: 1.6rem;
+      color: var(--gold-bright);
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+    }
+
+    .wing-divider span {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(221, 182, 95, 0.62));
+    }
+
+    .wing-divider span:last-child {
+      background: linear-gradient(90deg, rgba(221, 182, 95, 0.62), transparent);
+    }
+
+    .ode-lines {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: clamp(1.25rem, 4vw, 2.8rem);
+      color: #eee1cb;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(221, 182, 95, 0.08), transparent 25rem),
+        rgba(17, 16, 17, 0.76);
+      border: 1px solid rgba(221, 182, 95, 0.17);
+      border-radius: 16px;
+      box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.32);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1rem, 2vw, 1.12rem);
+      line-height: 1.58;
+      text-align: center;
+    }
+
+    .ode-lines::before,
+    .ode-lines::after {
+      content: "◆";
+      display: block;
+      margin: 0 auto 1.35rem;
+      color: var(--crimson);
+      font-size: 0.72rem;
+      text-shadow: 0 0 18px rgba(159, 40, 55, 0.75);
+    }
+
+    .ode-lines::after {
+      margin: 1.35rem auto 0;
+      color: var(--gold);
+    }
+
+    .ode-line {
+      display: block;
+      margin: 0.12rem 0;
+    }
+
+    .scroll-turning {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 1rem;
+      align-items: center;
+      max-width: 800px;
+      margin: 1.4rem auto 0;
+    }
+
+    .scroll-turning button {
+      min-height: 44px;
+      padding: 0.65rem 0.85rem;
+      color: var(--parchment);
+      background: rgba(5, 6, 8, 0.7);
+      border: 1px solid rgba(221, 182, 95, 0.3);
+      border-radius: 999px;
+      cursor: pointer;
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .scroll-turning button:last-child {
+      justify-self: end;
+    }
+
+    .scroll-turning button:hover,
+    .scroll-turning button:focus-visible {
+      color: #110c06;
+      background: var(--gold-bright);
+      outline: none;
+    }
+
+    .scroll-turning span {
+      color: var(--gold);
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.72rem;
+    }
+
+    .salmon-stage {
+      padding: 0;
+      overflow: hidden;
+      background: #08090b;
+      border-color: rgba(221, 182, 95, 0.42);
+    }
+
+    .salmon-stage::before {
+      z-index: 4;
+    }
+
+    .salmon-scene {
+      position: relative;
+      min-height: clamp(620px, 76vw, 800px);
+      overflow: hidden;
+      border-bottom: 1px solid rgba(221, 182, 95, 0.26);
+    }
+
+    .salmon-landscape {
+      position: absolute;
+      inset: 0;
+      margin: 0;
+      background: #08090b;
+    }
+
+    .salmon-landscape::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(5, 6, 8, 0.94) 0%, rgba(5, 6, 8, 0.66) 32%, rgba(5, 6, 8, 0.08) 66%),
+        linear-gradient(0deg, rgba(5, 6, 8, 0.72), transparent 42%);
+    }
+
+    .salmon-landscape img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 0;
+      transform: scale(1.035) translate3d(var(--salmon-x, 0), var(--salmon-y, 0), 0);
+      transition: transform 0.25s ease-out;
+    }
+
+    .salmon-intro {
+      position: absolute;
+      bottom: clamp(2rem, 6vw, 5rem);
+      left: clamp(1.3rem, 6vw, 5rem);
+      z-index: 2;
+      width: min(48%, 540px);
+      padding: clamp(1.25rem, 3vw, 2rem);
+      background: rgba(7, 8, 10, 0.72);
+      border: 1px solid rgba(221, 182, 95, 0.31);
+      border-left: 3px solid var(--crimson);
+      border-radius: 0 20px 20px 0;
+      box-shadow: 0 24px 65px rgba(0, 0, 0, 0.48);
+      backdrop-filter: blur(12px);
+    }
+
+    .salmon-intro h2 {
+      margin-bottom: 0.7rem;
+      font-size: clamp(2rem, 5vw, 4.2rem);
+      line-height: 1.03;
+    }
+
+    .salmon-role {
+      color: var(--gold-bright);
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 0.77rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .salmon-intro blockquote {
+      margin: 1.15rem 0;
+      padding: 0.9rem 0;
+      font-size: clamp(0.96rem, 2vw, 1.15rem);
+      text-align: left;
+    }
+
+    .salmon-button {
+      border: 0;
+      cursor: pointer;
+    }
+
+    .salmon-button.is-correcting {
+      animation: salmon-rumble 0.38s ease;
+    }
+
+    .salmon-lower {
+      display: grid;
+      grid-template-columns: minmax(280px, 0.78fr) minmax(0, 1.22fr);
+      gap: clamp(1.5rem, 5vw, 3.7rem);
+      align-items: start;
+      padding: clamp(1.5rem, 5vw, 4.5rem);
+      background:
+        radial-gradient(circle at 8% 85%, rgba(159, 40, 55, 0.17), transparent 25rem),
+        radial-gradient(circle at 90% 8%, rgba(221, 182, 95, 0.12), transparent 23rem),
+        linear-gradient(145deg, #141214, #07090c);
+    }
+
+    .salmon-court {
+      position: sticky;
+      top: 6rem;
+      margin: 0;
+      padding: 0.55rem;
+      background: rgba(5, 6, 8, 0.72);
+      border: 1px solid rgba(221, 182, 95, 0.32);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      transform: rotate(-1.3deg);
+    }
+
+    .salmon-court img {
+      width: 100%;
+      border-radius: 14px;
+    }
+
+    .salmon-court figcaption {
+      padding: 0.9rem 0.55rem 0.4rem;
+      color: var(--gold);
+      font-size: 0.75rem;
+      font-style: italic;
+      line-height: 1.55;
+      text-align: center;
+    }
+
+    .salmon-copy h3 {
+      color: #fff0ce;
+      font-size: clamp(1.45rem, 3vw, 2.3rem);
+    }
+
+    .salmon-warning {
+      margin: 1.4rem 0 1.8rem;
+      padding: 1rem 1.1rem;
+      color: var(--parchment-soft);
+      background: rgba(5, 6, 8, 0.5);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 12px 12px 0;
+    }
+
+    .salmon-warning strong {
+      color: var(--gold-bright);
+    }
+
+    .salmon-lay {
+      border-color: rgba(159, 40, 55, 0.5);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(159, 40, 55, 0.15), transparent 20rem),
+        linear-gradient(145deg, rgba(27, 23, 24, 0.98), rgba(8, 10, 13, 0.99));
+    }
+
+    .salmon-lay-lines {
+      padding: clamp(1.1rem, 3vw, 2rem);
+      font-size: 0.98rem;
+      line-height: 1.52;
+    }
+
+    .salmon-attribution {
+      max-width: 760px;
+      margin: 1.4rem auto 0;
+      color: var(--gold);
+      font-size: 0.8rem;
+      font-style: italic;
+      text-align: center;
+    }
+
+    @keyframes crest-breathe {
+      0%, 100% { opacity: 0.24; transform: scale(0.99); }
+      50% { opacity: 0.75; transform: scale(1.02); }
+    }
+
+    @keyframes scroll-unfurl {
+      from { opacity: 0; transform: translateY(-18px) scaleY(0.97); }
+      to { opacity: 1; transform: translateY(0) scaleY(1); }
+    }
+
+    @keyframes salmon-rumble {
+      0%, 100% { transform: translateX(0) rotate(0); }
+      25% { transform: translateX(-3px) rotate(-0.35deg); }
+      50% { transform: translateX(3px) rotate(0.35deg); }
+      75% { transform: translateX(-2px) rotate(-0.2deg); }
+    }
+
+    @keyframes wing-flash {
+      0% { opacity: 0; transform: translateX(-130%) skewX(-12deg); }
+      18% { opacity: 0.9; }
+      100% { opacity: 0; transform: translateX(130%) skewX(-12deg); }
+    }
+
 
     .bremner-entry {
       border-color: rgba(71, 122, 81, 0.62);
@@ -401,7 +1090,9 @@
     @media (max-width: 980px) {
       .odes-hero-layout,
       .song-feature,
-      .birds-plate {
+      .birds-plate,
+      .vault-heading,
+      .salmon-lower {
         grid-template-columns: 1fr;
       }
 
@@ -424,6 +1115,33 @@
       .birds-plate figure {
         width: min(100%, 560px);
         margin: 0 auto;
+      }
+
+      .cycle-path {
+        grid-template-columns: repeat(5, minmax(76px, 1fr));
+        row-gap: 1rem;
+      }
+
+      .cycle-path::before {
+        background:
+          linear-gradient(90deg, transparent, var(--crimson) 8%, var(--gold) 48%, #718fb2 91%, transparent),
+          linear-gradient(90deg, transparent, #718fb2 8%, var(--gold) 48%, var(--crimson) 91%, transparent);
+        background-position: center 25%, center 75%;
+        background-repeat: no-repeat;
+        background-size: 100% 3px;
+      }
+
+      .salmon-lower {
+        padding-right: clamp(1.4rem, 5vw, 3rem);
+        padding-left: clamp(1.4rem, 5vw, 3rem);
+      }
+
+      .salmon-court {
+        position: relative;
+        top: auto;
+        width: min(100%, 560px);
+        margin: 0 auto;
+        transform: none;
       }
     }
 
@@ -450,6 +1168,153 @@
       .verse-entry summary {
         padding-right: 3rem;
       }
+
+      .scroll-vault {
+        padding-right: 1rem;
+        padding-left: 1rem;
+      }
+
+      .cycle-path {
+        grid-template-columns: repeat(10, 72px);
+        justify-content: start;
+        margin-right: -0.2rem;
+        margin-left: -0.2rem;
+        padding: 1.2rem 0.2rem;
+        overflow-x: auto;
+        scroll-snap-type: x proximity;
+        scrollbar-color: rgba(221, 182, 95, 0.3) transparent;
+      }
+
+      .cycle-path::before {
+        right: auto;
+        left: 1.2rem;
+        width: 720px;
+        background: linear-gradient(90deg, var(--crimson), var(--gold) 48%, #718fb2);
+      }
+
+      .cycle-path a {
+        min-height: 72px;
+        scroll-snap-align: center;
+      }
+
+      .living-scroll summary {
+        grid-template-columns: 58px minmax(0, 1fr);
+        gap: 0.85rem;
+        min-height: 92px;
+        padding: 0.85rem;
+      }
+
+      .scroll-number {
+        width: 54px;
+        box-shadow: inset 0 0 0 5px rgba(5, 6, 8, 0.88), 0 0 18px rgba(221, 182, 95, 0.1);
+        font-size: 0.9rem;
+      }
+
+      .scroll-open-hint,
+      .scroll-dedication {
+        display: none;
+      }
+
+      .living-scroll-body {
+        padding: 1.1rem 0.7rem 1.4rem;
+      }
+
+      .ode-heading {
+        padding: 0 0.55rem;
+      }
+
+      .ode-lines {
+        padding: 1.2rem 0.9rem;
+        font-size: 0.95rem;
+        line-height: 1.55;
+        text-align: left;
+      }
+
+      .scroll-turning {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.65rem;
+      }
+
+      .scroll-turning span {
+        display: none;
+      }
+
+      .scroll-turning button {
+        width: 100%;
+        font-size: 0.57rem;
+      }
+
+      .salmon-scene {
+        display: grid;
+        min-height: 0;
+      }
+
+      .salmon-landscape {
+        position: relative;
+        aspect-ratio: 1 / 1;
+      }
+
+      .salmon-landscape::after {
+        background: linear-gradient(0deg, rgba(5, 6, 8, 0.88), transparent 55%);
+      }
+
+      .salmon-landscape img {
+        object-position: 68% center;
+      }
+
+      .salmon-intro {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        width: auto;
+        margin: -2.4rem 0.85rem 1rem;
+        border-left-width: 1px;
+        border-radius: 18px;
+      }
+
+      .salmon-intro h2 {
+        font-size: clamp(1.9rem, 11vw, 3.1rem);
+      }
+
+      .salmon-button {
+        width: 100%;
+      }
+
+      .salmon-lower {
+        padding: 1.25rem 0.9rem 2rem;
+      }
+
+      .salmon-copy {
+        padding: 0 0.25rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .js .reveal-on-scroll,
+      .js .reveal-on-scroll.is-revealed {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+
+      .js .reveal-on-scroll::after,
+      .js .reveal-on-scroll.is-revealed::after {
+        display: none;
+        animation: none;
+      }
+
+      .odes-page *,
+      .odes-page *::before,
+      .odes-page *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+      }
+
+      .salmon-landscape img {
+        transform: none !important;
+      }
     }
   </style>
 
@@ -468,7 +1333,7 @@
   </script>
 </head>
 
-<body>
+<body class="odes-page">
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="page-hero odes-hero">
@@ -488,8 +1353,8 @@
         </blockquote>
 
         <div class="hero-buttons">
-          <a href="#public-archive" class="button primary">Open the Public Archive</a>
-          <a href="lore.html" class="button secondary">Read the Lore</a>
+          <a href="#ten-scrolls" class="button primary">Enter the Ten-Scroll Vault</a>
+          <a href="#salmon-two-arses" class="button secondary">Meet Salmon</a>
           <a href="index.html" class="button secondary">Return Home</a>
         </div>
       </div>
@@ -537,6 +1402,12 @@
         the page gentle to navigate while preserving the full poems and songs.
       </p>
 
+      <p>
+        The newest cycle is different. Ten illuminated scrolls form one road
+        through shelter, restraint, care, language, difference, refusal,
+        memory, witness, identity and mystery. Choose any seal to begin.
+      </p>
+
       <p class="archive-seal">
         The Book XVI shelf names approved canonical odes without exposing their
         full manuscript text or exact story events. The complete public works
@@ -544,13 +1415,1880 @@
       </p>
 
       <nav class="skald-nav" aria-label="Jump to Skald-Room sections">
+        <a href="#ten-scrolls">Ten-Scroll Vault</a>
+        <a href="#salmon-two-arses">Salmon’s Corner</a>
         <a href="#book-sixteen">Book XVI Shelf</a>
-<a href="#green-deer-notebooks">Green Deer-Wood Notebook</a>
+        <a href="#green-deer-notebooks">Green Deer-Wood Notebook</a>
         <a href="#salt-reed-song">Salt-Reed Song</a>
         <a href="#public-archive">Full Public Works</a>
         <a href="#road-epitaphs">Road Epitaphs</a>
         <a href="#wing-pair">Wing-Pair</a>
       </nav>
+    </section>
+
+    <section class="panel scroll-vault" id="ten-scrolls">
+      <div class="vault-heading">
+        <div>
+          <p class="eyebrow">A New Website Cycle · Ten Complete Odes</p>
+          <h2>Ten Odes Beneath the Black Wings</h2>
+        </div>
+
+        <p class="vault-intro">
+          From the first refuge to the road that answers twice: ten full public
+          works carried through the laws, wounds, humour and living witness of
+          the Braid.
+        </p>
+      </div>
+
+      <p class="authorship-seal">
+        Every ode is written by <strong>Timothy M. Halliday</strong>. The bard
+        names belong to Vardrum and are fictional framing; authorship does not.
+      </p>
+
+      <nav class="cycle-path" aria-label="Choose one of the ten new odes">
+        <a href="#scroll-1" data-scroll-target="scroll-1"><b>I</b><span>Shelter</span></a>
+        <a href="#scroll-2" data-scroll-target="scroll-2"><b>II</b><span>Restraint</span></a>
+        <a href="#scroll-3" data-scroll-target="scroll-3"><b>III</b><span>Care</span></a>
+        <a href="#scroll-4" data-scroll-target="scroll-4"><b>IV</b><span>Language</span></a>
+        <a href="#scroll-5" data-scroll-target="scroll-5"><b>V</b><span>Difference</span></a>
+        <a href="#scroll-6" data-scroll-target="scroll-6"><b>VI</b><span>Refusal</span></a>
+        <a href="#scroll-7" data-scroll-target="scroll-7"><b>VII</b><span>Memory</span></a>
+        <a href="#scroll-8" data-scroll-target="scroll-8"><b>VIII</b><span>Witness</span></a>
+        <a href="#scroll-9" data-scroll-target="scroll-9"><b>IX</b><span>Identity</span></a>
+        <a href="#scroll-10" data-scroll-target="scroll-10"><b>X</b><span>Mystery</span></a>
+      </nav>
+
+      <div class="reading-thread" aria-hidden="true"><span></span></div>
+
+      <div class="living-scrolls">
+        <details class="living-scroll reveal-on-scroll" id="scroll-1" data-scroll="1">
+          <summary>
+            <span class="scroll-number" aria-hidden="true">I</span>
+            <span class="scroll-summary-copy">
+              <span class="scroll-kicker">Scroll I · Shelter</span>
+              <span class="scroll-title">The Door That Opened From Within</span>
+              <span class="scroll-dedication">For Crow Hearth, the first Braid knot, and every refuge that refused to become another cage</span>
+            </span>
+            <span class="scroll-open-hint" aria-hidden="true">Unroll</span>
+          </summary>
+          <div class="living-scroll-body">
+            <header class="ode-heading">
+              <p class="eyebrow">Website Ode 1 of 10</p>
+              <h3>ODE OF THE DOOR THAT OPENED FROM WITHIN</h3>
+              <p class="ode-dedication">For Crow Hearth, the first Braid knot, and every refuge that refused to become another cage</p>
+              <p class="bard-credit">Set down by Veyra Thenn from a torn rule-cloth carried north</p>
+              <div class="wing-divider" aria-hidden="true"><span></span><b>Black Wings</b><span></span></div>
+            </header>
+            <div class="ode-lines" aria-label="Full text of The Door That Opened From Within">
+                <span class="ode-line">Begin after the burning.</span>
+                <span class="ode-line">Not where the war-singers begin,</span>
+                <span class="ode-line">with bronze in the sunrise,</span>
+                <span class="ode-line">standards shouldering heaven,</span>
+                <span class="ode-line">and brave men made taller by distance.</span>
+                <span class="ode-line">Begin when the riders have gone,</span>
+                <span class="ode-line">when glory has ridden elsewhere</span>
+                <span class="ode-line">and left its true name smoking.</span>
+                <span class="ode-line">Begin with the bucket.</span>
+                <span class="ode-line">Begin with the hand</span>
+                <span class="ode-line">that closes the eyes of the dead</span>
+                <span class="ode-line">and then turns, still shaking,</span>
+                <span class="ode-line">to lift water to the living.</span>
+                <span class="ode-line">Begin with Brokan before the broken forge,</span>
+                <span class="ode-line">holding a hammer that has outlived its roof.</span>
+                <span class="ode-line">The iron remembers gates,</span>
+                <span class="ode-line">horseshoes,</span>
+                <span class="ode-line">weapons,</span>
+                <span class="ode-line">the bright obedience of sparks;</span>
+                <span class="ode-line">but the smith has seen what fire becomes</span>
+                <span class="ode-line">when power mistakes hunger for purpose.</span>
+                <span class="ode-line">So he does not begin with a sword.</span>
+                <span class="ode-line">He begins with hinges.</span>
+                <span class="ode-line">The net-store leans towards ruin.</span>
+                <span class="ode-line">Salt has entered the beams.</span>
+                <span class="ode-line">Rain knows every hole by name.</span>
+                <span class="ode-line">The door protests its own repair</span>
+                <span class="ode-line">with the voice of an old animal,</span>
+                <span class="ode-line">yet by midnight it can close against weather</span>
+                <span class="ode-line">without closing a soul inside.</span>
+                <span class="ode-line">Ness tests it with her own hand.</span>
+                <span class="ode-line">It opens inward.</span>
+                <span class="ode-line">Remember that.</span>
+                <span class="ode-line">Kingdoms have been praised for less.</span>
+                <span class="ode-line">No throne rose in Crow Hearth.</span>
+                <span class="ode-line">No priest made the smoke holy.</span>
+                <span class="ode-line">No law arrived pretending it had always existed.</span>
+                <span class="ode-line">There was torn sailcloth,</span>
+                <span class="ode-line">charcoal,</span>
+                <span class="ode-line">wet boots,</span>
+                <span class="ode-line">too few blankets,</span>
+                <span class="ode-line">children learning whether sleep was safe,</span>
+                <span class="ode-line">and frightened adults discovering</span>
+                <span class="ode-line">that fear would be given boundaries.</span>
+                <span class="ode-line">Write the rules where every eye can reach them:</span>
+                <span class="ode-line">No hand upon a child without asking.</span>
+                <span class="ode-line">No food held back to purchase obedience.</span>
+                <span class="ode-line">No blade drawn merely because grief wants a body.</span>
+                <span class="ode-line">No door barred against the person it shelters.</span>
+                <span class="ode-line">No survivor made to explain</span>
+                <span class="ode-line">why survival chose them.</span>
+                <span class="ode-line">There are halls built of cedar</span>
+                <span class="ode-line">whose mercy is only a better-furnished prison.</span>
+                <span class="ode-line">There are palaces with a thousand windows</span>
+                <span class="ode-line">and not one honest way to leave.</span>
+                <span class="ode-line">Crow Hearth had a crooked frame,</span>
+                <span class="ode-line">a complaining latch,</span>
+                <span class="ode-line">and one night of borrowed safety;</span>
+                <span class="ode-line">yet freedom slept there,</span>
+                <span class="ode-line">because the smallest hand in the room</span>
+                <span class="ode-line">could find the way out.</span>
+                <span class="ode-line">FATAS sat with Skuldrend wrapped.</span>
+                <span class="ode-line">That was part of the building.</span>
+                <span class="ode-line">Ness counted corners,</span>
+                <span class="ode-line">cups,</span>
+                <span class="ode-line">wounds,</span>
+                <span class="ode-line">tempers,</span>
+                <span class="ode-line">and all the dangerous distances</span>
+                <span class="ode-line">between a raised voice and a frightened child.</span>
+                <span class="ode-line">That was part of the building.</span>
+                <span class="ode-line">Runa laid limits around panic</span>
+                <span class="ode-line">until people could breathe inside them.</span>
+                <span class="ode-line">Eldwyn gave knowledge without turning mystery into ownership.</span>
+                <span class="ode-line">Cael insulted despair by remaining useful.</span>
+                <span class="ode-line">Lark slept beneath a chosen name,</span>
+                <span class="ode-line">her mark covered,</span>
+                <span class="ode-line">her life seen first.</span>
+                <span class="ode-line">All this was architecture.</span>
+                <span class="ode-line">The room did not eat them.</span>
+                <span class="ode-line">At dawn the refuge became road.</span>
+                <span class="ode-line">Such is the fate of honest shelters:</span>
+                <span class="ode-line">they do not demand that the saved remain</span>
+                <span class="ode-line">so the walls may feel important.</span>
+                <span class="ode-line">At the old rope-post,</span>
+                <span class="ode-line">Eldwyn cut one weathered cord</span>
+                <span class="ode-line">into many imperfect lengths.</span>
+                <span class="ode-line">No strand looked mighty.</span>
+                <span class="ode-line">No knot deserved a song.</span>
+                <span class="ode-line">Ness took one.</span>
+                <span class="ode-line">FATAS took one.</span>
+                <span class="ode-line">Lark held hers as though offered</span>
+                <span class="ode-line">a small piece of tomorrow.</span>
+                <span class="ode-line">Brokan tied his to the hammer.</span>
+                <span class="ode-line">Cael rolled his between clever fingers</span>
+                <span class="ode-line">and pretended inconvenience was not devotion.</span>
+                <span class="ode-line">If one strand is pulled,</span>
+                <span class="ode-line">the others feel it.</span>
+                <span class="ode-line">There:</span>
+                <span class="ode-line">the first wall of the Braid.</span>
+                <span class="ode-line">Not stone.</span>
+                <span class="ode-line">Not rank.</span>
+                <span class="ode-line">Not blood compelled to recognise blood.</span>
+                <span class="ode-line">Attention.</span>
+                <span class="ode-line">The dangerous knowledge</span>
+                <span class="ode-line">that another life may alter your road.</span>
+                <span class="ode-line">They stepped from plank to marsh-track,</span>
+                <span class="ode-line">carrying Crow Hearth where no soldier could burn it:</span>
+                <span class="ode-line">in the pause before touch,</span>
+                <span class="ode-line">in the offered bowl,</span>
+                <span class="ode-line">in the wrapped blade,</span>
+                <span class="ode-line">in the rule that safety without leaving</span>
+                <span class="ode-line">is merely captivity taught to smile.</span>
+                <span class="ode-line">So when you build after ruin,</span>
+                <span class="ode-line">do not ask first how high the roof will stand.</span>
+                <span class="ode-line">Ask who can open the door.</span>
+                <span class="ode-line">Ask whether the child must thank you.</span>
+                <span class="ode-line">Ask whether the weapon sleeps nearer than the bread.</span>
+                <span class="ode-line">Ask whether your mercy survives</span>
+                <span class="ode-line">the freedom of the sheltered</span>
+                <span class="ode-line">to walk beyond it.</span>
+                <span class="ode-line">Then lift the old hammer.</span>
+                <span class="ode-line">Set the bent hinge true enough for one night.</span>
+                <span class="ode-line">Let the frame groan.</span>
+                <span class="ode-line">Let the rain enter where it must.</span>
+                <span class="ode-line">Let nothing pretend completion.</span>
+                <span class="ode-line">Make one room the fire cannot own.</span>
+                <span class="ode-line">Make one door the frightened can open.</span>
+                <span class="ode-line">And if morning turns your hearth into road,</span>
+                <span class="ode-line">go with it.</span>
+                <span class="ode-line">The first home of the Braid</span>
+                <span class="ode-line">was never the net-store.</span>
+                <span class="ode-line">It was the way the door moved</span>
+                <span class="ode-line">when a hand reached from within.</span>
+            </div>
+            <nav class="scroll-turning" aria-label="Move through the ten odes">
+              <button type="button" data-scroll-go="scroll-10">← Previous scroll</button>
+              <span>1 / 10</span>
+              <button type="button" data-scroll-go="scroll-2">Next scroll →</button>
+            </nav>
+          </div>
+        </details>
+        <details class="living-scroll reveal-on-scroll" id="scroll-2" data-scroll="2">
+          <summary>
+            <span class="scroll-number" aria-hidden="true">II</span>
+            <span class="scroll-summary-copy">
+              <span class="scroll-kicker">Scroll II · Restraint</span>
+              <span class="scroll-title">The Thunder That Chose Its Sheath</span>
+              <span class="scroll-dedication">For Skuldrend, and for the hand that would not let protection feed upon terror</span>
+            </span>
+            <span class="scroll-open-hint" aria-hidden="true">Unroll</span>
+          </summary>
+          <div class="living-scroll-body">
+            <header class="ode-heading">
+              <p class="eyebrow">Website Ode 2 of 10</p>
+              <h3>ODE OF THE THUNDER THAT CHOSE ITS SHEATH</h3>
+              <p class="ode-dedication">For Skuldrend, and for the hand that would not let protection feed upon terror</p>
+              <p class="bard-credit">Carried by Bruhald Scarweary, Bard of the Northern Territory, who insisted that an unswung axe may still win a battle</p>
+              <div class="wing-divider" aria-hidden="true"><span></span><b>Black Wings</b><span></span></div>
+            </header>
+            <div class="ode-lines" aria-label="Full text of The Thunder That Chose Its Sheath">
+                <span class="ode-line">Name the axe accurately.</span>
+                <span class="ode-line">Skuldrend.</span>
+                <span class="ode-line">Break-Voice.</span>
+                <span class="ode-line">Bone-Answer.</span>
+                <span class="ode-line">Old iron with red memory sleeping under its edge.</span>
+                <span class="ode-line">A storm taught weight.</span>
+                <span class="ode-line">A verdict with a haft.</span>
+                <span class="ode-line">Do not call it harmless.</span>
+                <span class="ode-line">Harmlessness is a lie told by weapons</span>
+                <span class="ode-line">while the room is looking elsewhere.</span>
+                <span class="ode-line">The blade knew how to finish arguments</span>
+                <span class="ode-line">before weak men discovered</span>
+                <span class="ode-line">the courage to begin them.</span>
+                <span class="ode-line">It knew root,</span>
+                <span class="ode-line">rope,</span>
+                <span class="ode-line">bone,</span>
+                <span class="ode-line">door,</span>
+                <span class="ode-line">chain,</span>
+                <span class="ode-line">the hidden joint inside bad law.</span>
+                <span class="ode-line">It could divide a command from the world</span>
+                <span class="ode-line">and leave the world astonished to be free.</span>
+                <span class="ode-line">That was its greatness.</span>
+                <span class="ode-line">That was its danger.</span>
+                <span class="ode-line">For every tyrant loves an obedient blade,</span>
+                <span class="ode-line">but hunger loves a righteous one.</span>
+                <span class="ode-line">Hunger waits inside the protector</span>
+                <span class="ode-line">wearing the face of urgency.</span>
+                <span class="ode-line">It says:</span>
+                <span class="ode-line">Strike now,</span>
+                <span class="ode-line">before doubt makes cowards of us.</span>
+                <span class="ode-line">Strike clean,</span>
+                <span class="ode-line">before the wounded complicate justice.</span>
+                <span class="ode-line">Strike once,</span>
+                <span class="ode-line">and all these crooked questions</span>
+                <span class="ode-line">will lie straight upon the ground.</span>
+                <span class="ode-line">FATAS heard it.</span>
+                <span class="ode-line">Do not praise him by pretending otherwise.</span>
+                <span class="ode-line">He heard it in the ash-market.</span>
+                <span class="ode-line">At the counting posts.</span>
+                <span class="ode-line">Beneath roots that wore the dead as grammar.</span>
+                <span class="ode-line">Before doors that knew his childhood stride.</span>
+                <span class="ode-line">In rooms where kindness had been trained</span>
+                <span class="ode-line">to hide a hook behind warm bread.</span>
+                <span class="ode-line">His hand knew the distance to the haft</span>
+                <span class="ode-line">before thought had crossed half the room.</span>
+                <span class="ode-line">Still,</span>
+                <span class="ode-line">the axe remained wrapped.</span>
+                <span class="ode-line">Hear the cloth against the edge.</span>
+                <span class="ode-line">No horn.</span>
+                <span class="ode-line">No anthem.</span>
+                <span class="ode-line">Only fibre holding thunder</span>
+                <span class="ode-line">because a living hand has chosen</span>
+                <span class="ode-line">that power will not choose its own hour.</span>
+                <span class="ode-line">This is not weakness.</span>
+                <span class="ode-line">Weakness asks the weapon</span>
+                <span class="ode-line">to make certainty where none has been earned.</span>
+                <span class="ode-line">Restraint stands close enough to strike,</span>
+                <span class="ode-line">feels every easy ending enter the blood,</span>
+                <span class="ode-line">and makes the ending answer questions.</span>
+                <span class="ode-line">Who is protected?</span>
+                <span class="ode-line">Who is fed?</span>
+                <span class="ode-line">Whose fear is steering?</span>
+                <span class="ode-line">What survives the cut?</span>
+                <span class="ode-line">What truth will bleed with the lie?</span>
+                <span class="ode-line">Skuldrend cut claim from memory.</span>
+                <span class="ode-line">It cut command from root.</span>
+                <span class="ode-line">It cut the sentence that made a child into passage.</span>
+                <span class="ode-line">It bit through doors only after the door</span>
+                <span class="ode-line">had been asked what it held.</span>
+                <span class="ode-line">But there were wounds no edge could enter.</span>
+                <span class="ode-line">Grief has no joint.</span>
+                <span class="ode-line">Shame offers no clean grain.</span>
+                <span class="ode-line">A first home,</span>
+                <span class="ode-line">even a cruel one,</span>
+                <span class="ode-line">lives in the body as more than timber.</span>
+                <span class="ode-line">So when the old House whispered,</span>
+                <span class="ode-line">Cut home,</span>
+                <span class="ode-line">cut the address from blood,</span>
+                <span class="ode-line">cut the boy away from the man,</span>
+                <span class="ode-line">cut longing until nothing remains to ache,</span>
+                <span class="ode-line">FATAS placed his hand upon the wrapped haft</span>
+                <span class="ode-line">and gave the axe a boundary.</span>
+                <span class="ode-line">You may cut what is yours to cut.</span>
+                <span class="ode-line">You may not call confusion an enemy</span>
+                <span class="ode-line">merely because it will not stand still.</span>
+                <span class="ode-line">You may not turn the child into timber.</span>
+                <span class="ode-line">You may not split memory</span>
+                <span class="ode-line">so the man can boast he is healed.</span>
+                <span class="ode-line">You may not make a home</span>
+                <span class="ode-line">from the clean halves of a human heart.</span>
+                <span class="ode-line">The edge waited.</span>
+                <span class="ode-line">That was its loyalty.</span>
+                <span class="ode-line">It did not become gentle.</span>
+                <span class="ode-line">It became answerable.</span>
+                <span class="ode-line">Mark the difference in iron.</span>
+                <span class="ode-line">A blunted weapon has lost its work.</span>
+                <span class="ode-line">An answerable weapon has found its law.</span>
+                <span class="ode-line">When battle truly came,</span>
+                <span class="ode-line">Skuldrend did not hesitate.</span>
+                <span class="ode-line">It knew the honest joint.</span>
+                <span class="ode-line">It knew the chain pretending to be kinship,</span>
+                <span class="ode-line">the latch pretending to be shelter,</span>
+                <span class="ode-line">the vow pretending to be love,</span>
+                <span class="ode-line">the crown hidden under the root.</span>
+                <span class="ode-line">Then thunder spoke.</span>
+                <span class="ode-line">Not because anger was loudest.</span>
+                <span class="ode-line">Because witness had finished asking.</span>
+                <span class="ode-line">And when the cut was done,</span>
+                <span class="ode-line">the blade returned to cloth.</span>
+                <span class="ode-line">No worship.</span>
+                <span class="ode-line">No feast for metal.</span>
+                <span class="ode-line">No dead arranged beneath it</span>
+                <span class="ode-line">to make violence look inevitable.</span>
+                <span class="ode-line">Near.</span>
+                <span class="ode-line">Wrapped.</span>
+                <span class="ode-line">Not first.</span>
+                <span class="ode-line">These are three runes</span>
+                <span class="ode-line">every strong hand should carry.</span>
+                <span class="ode-line">Near,</span>
+                <span class="ode-line">because danger is real.</span>
+                <span class="ode-line">Wrapped,</span>
+                <span class="ode-line">because fear is real also.</span>
+                <span class="ode-line">Not first,</span>
+                <span class="ode-line">because the person you would save</span>
+                <span class="ode-line">must not become payment</span>
+                <span class="ode-line">for the protector you wish to be.</span>
+                <span class="ode-line">So sing no soft song of the axe.</span>
+                <span class="ode-line">Sing the edge keen.</span>
+                <span class="ode-line">Sing the haft ready.</span>
+                <span class="ode-line">Sing the old marks dark with consequence.</span>
+                <span class="ode-line">Then sing the greater sound:</span>
+                <span class="ode-line">cloth settling over iron,</span>
+                <span class="ode-line">a hand opening beside it,</span>
+                <span class="ode-line">and thunder,</span>
+                <span class="ode-line">fully awake,</span>
+                <span class="ode-line">choosing not to become king.</span>
+            </div>
+            <nav class="scroll-turning" aria-label="Move through the ten odes">
+              <button type="button" data-scroll-go="scroll-1">← Previous scroll</button>
+              <span>2 / 10</span>
+              <button type="button" data-scroll-go="scroll-3">Next scroll →</button>
+            </nav>
+          </div>
+        </details>
+        <details class="living-scroll reveal-on-scroll" id="scroll-3" data-scroll="3">
+          <summary>
+            <span class="scroll-number" aria-hidden="true">III</span>
+            <span class="scroll-summary-copy">
+              <span class="scroll-kicker">Scroll III · Care</span>
+              <span class="scroll-title">The Mercy That Left The Heart Awake</span>
+              <span class="scroll-dedication">For Hearth-Soothe, Elland&#x27;s fearful wisdom, Eldwyn&#x27;s keeping hands, and every calm that preserved the right to choose</span>
+            </span>
+            <span class="scroll-open-hint" aria-hidden="true">Unroll</span>
+          </summary>
+          <div class="living-scroll-body">
+            <header class="ode-heading">
+              <p class="eyebrow">Website Ode 3 of 10</p>
+              <h3>ODE OF THE MERCY THAT LEFT THE HEART AWAKE</h3>
+              <p class="ode-dedication">For Hearth-Soothe, Elland&#x27;s fearful wisdom, Eldwyn&#x27;s keeping hands, and every calm that preserved the right to choose</p>
+              <p class="bard-credit">By Sael Vorn, road-poet, after refusing a cup and being offered it again only when he asked</p>
+              <div class="wing-divider" aria-hidden="true"><span></span><b>Black Wings</b><span></span></div>
+            </header>
+            <div class="ode-lines" aria-label="Full text of The Mercy That Left The Heart Awake">
+                <span class="ode-line">There is a quiet that comes after mercy,</span>
+                <span class="ode-line">and a quiet that comes after the mouth is closed.</span>
+                <span class="ode-line">Learn the difference</span>
+                <span class="ode-line">before you call the room healed.</span>
+                <span class="ode-line">Elland learned it over failed bowls.</span>
+                <span class="ode-line">No star bent down to teach him.</span>
+                <span class="ode-line">No god placed seven perfect leaves in his palm.</span>
+                <span class="ode-line">He ground fear beside root and bark,</span>
+                <span class="ode-line">named every mistake,</span>
+                <span class="ode-line">and returned the dangerous powder to the soil.</span>
+                <span class="ode-line">One mixture steadied the hands</span>
+                <span class="ode-line">and left terror running wild behind the eyes.</span>
+                <span class="ode-line">He buried it.</span>
+                <span class="ode-line">One made warriors agreeable,</span>
+                <span class="ode-line">their rage gone,</span>
+                <span class="ode-line">their wills gone with it.</span>
+                <span class="ode-line">He buried it deeper.</span>
+                <span class="ode-line">One tasted of obedience.</span>
+                <span class="ode-line">He would not let anyone drink.</span>
+                <span class="ode-line">Thus Hearth-Soothe was born:</span>
+                <span class="ode-line">not from certainty,</span>
+                <span class="ode-line">but from a man frightened enough of power</span>
+                <span class="ode-line">to keep testing whether kindness had become command.</span>
+                <span class="ode-line">That was the measure.</span>
+                <span class="ode-line">Bitter root to bring thought home to breath.</span>
+                <span class="ode-line">Crushed bark to remind pain it has edges.</span>
+                <span class="ode-line">Warm water,</span>
+                <span class="ode-line">patient hands,</span>
+                <span class="ode-line">the cup held where a person can see it,</span>
+                <span class="ode-line">and one true offering.</span>
+                <span class="ode-line">Not pressed against the teeth.</span>
+                <span class="ode-line">Not sweetened with shame.</span>
+                <span class="ode-line">Not offered again and again</span>
+                <span class="ode-line">until refusal grows too tired to stand.</span>
+                <span class="ode-line">Calm is not a clean face.</span>
+                <span class="ode-line">The Count knew clean faces.</span>
+                <span class="ode-line">White coats wore them.</span>
+                <span class="ode-line">The Quiet built villages from them.</span>
+                <span class="ode-line">The Agreement poured ash into bowls</span>
+                <span class="ode-line">and promised exhausted people</span>
+                <span class="ode-line">the final rest of never troubling anyone again.</span>
+                <span class="ode-line">Their peace required smaller souls.</span>
+                <span class="ode-line">Hearth-Soothe required the whole one.</span>
+                <span class="ode-line">The angry mouth remained capable of no.</span>
+                <span class="ode-line">The grieving body kept its grief.</span>
+                <span class="ode-line">The frightened hand could take the cup,</span>
+                <span class="ode-line">refuse the cup,</span>
+                <span class="ode-line">return after darkness,</span>
+                <span class="ode-line">ask for half,</span>
+                <span class="ode-line">spill it,</span>
+                <span class="ode-line">change its mind.</span>
+                <span class="ode-line">Eldwyn carried the craft</span>
+                <span class="ode-line">after the first hearth fell.</span>
+                <span class="ode-line">He did not make a god of his teacher.</span>
+                <span class="ode-line">He made another measure.</span>
+                <span class="ode-line">At roads where thirst had been counted,</span>
+                <span class="ode-line">he offered once.</span>
+                <span class="ode-line">At beds where pain had bitten reason,</span>
+                <span class="ode-line">he offered once.</span>
+                <span class="ode-line">At the edge of battle,</span>
+                <span class="ode-line">when fear wanted every friend made manageable,</span>
+                <span class="ode-line">he offered once</span>
+                <span class="ode-line">and let each answer remain an answer.</span>
+                <span class="ode-line">This is difficult mercy.</span>
+                <span class="ode-line">Anyone can force medicine</span>
+                <span class="ode-line">and call the quiet gratitude.</span>
+                <span class="ode-line">Anyone can soften grief</span>
+                <span class="ode-line">until it stops accusing the world.</span>
+                <span class="ode-line">Anyone can bind a shaking hand</span>
+                <span class="ode-line">and pretend the person beneath it consented.</span>
+                <span class="ode-line">But to sit beside pain</span>
+                <span class="ode-line">without making pain perform recovery;</span>
+                <span class="ode-line">to steady rage</span>
+                <span class="ode-line">without stealing the truth inside it;</span>
+                <span class="ode-line">to build rest</span>
+                <span class="ode-line">without turning sleep into evidence;</span>
+                <span class="ode-line">to make care strong enough</span>
+                <span class="ode-line">that choice need not be sacrificed to survival:</span>
+                <span class="ode-line">this is a craft kingdoms fear.</span>
+                <span class="ode-line">Lucy widened the hearth.</span>
+                <span class="ode-line">Food became part of the medicine.</span>
+                <span class="ode-line">So did water.</span>
+                <span class="ode-line">So did predictable mornings,</span>
+                <span class="ode-line">shared watching,</span>
+                <span class="ode-line">children permitted noise,</span>
+                <span class="ode-line">widows permitted repetition,</span>
+                <span class="ode-line">men permitted tears that solved nothing,</span>
+                <span class="ode-line">women permitted anger that did not have to become useful.</span>
+                <span class="ode-line">Hearth-Soothe entered soup,</span>
+                <span class="ode-line">clean cloth,</span>
+                <span class="ode-line">cool hands,</span>
+                <span class="ode-line">the promise that somebody else</span>
+                <span class="ode-line">would keep the night for one hour.</span>
+                <span class="ode-line">It became less like powder</span>
+                <span class="ode-line">and more like a civilisation.</span>
+                <span class="ode-line">For there will always be a ruler</span>
+                <span class="ode-line">who calls feeling inefficient.</span>
+                <span class="ode-line">There will always be a clerk</span>
+                <span class="ode-line">who measures recovery by silence.</span>
+                <span class="ode-line">There will always be a gentle voice</span>
+                <span class="ode-line">offering to remove the burden</span>
+                <span class="ode-line">by removing the part of you that bears it.</span>
+                <span class="ode-line">Against them,</span>
+                <span class="ode-line">set the imperfect bowl.</span>
+                <span class="ode-line">Let the bitter remain bitter.</span>
+                <span class="ode-line">Let the mourner know what they drink.</span>
+                <span class="ode-line">Let every ingredient keep its name.</span>
+                <span class="ode-line">Let the hand holding the cup stay lower</span>
+                <span class="ode-line">than the hand that may refuse it.</span>
+                <span class="ode-line">And when calm arrives,</span>
+                <span class="ode-line">do not ask whether the room has become easy.</span>
+                <span class="ode-line">Ask whether the wounded can still disagree.</span>
+                <span class="ode-line">Ask whether love still has two edges.</span>
+                <span class="ode-line">Ask whether the child may stand,</span>
+                <span class="ode-line">walk,</span>
+                <span class="ode-line">shout,</span>
+                <span class="ode-line">sleep,</span>
+                <span class="ode-line">or leave.</span>
+                <span class="ode-line">Ask whether the heart is quiet</span>
+                <span class="ode-line">because it has found ground,</span>
+                <span class="ode-line">or because someone has taken away its weather.</span>
+                <span class="ode-line">If the heart remains awake,</span>
+                <span class="ode-line">if choice still breathes beneath the bandage,</span>
+                <span class="ode-line">if no may rise without punishment,</span>
+                <span class="ode-line">then pass the cup.</span>
+                <span class="ode-line">If not,</span>
+                <span class="ode-line">empty it into the earth.</span>
+                <span class="ode-line">Mercy that cannot survive refusal</span>
+                <span class="ode-line">was never mercy.</span>
+                <span class="ode-line">And the truest calm in all Vardrum</span>
+                <span class="ode-line">is not the silence after surrender.</span>
+                <span class="ode-line">It is the breath drawn freely</span>
+                <span class="ode-line">before a person chooses</span>
+                <span class="ode-line">what comes next.</span>
+            </div>
+            <nav class="scroll-turning" aria-label="Move through the ten odes">
+              <button type="button" data-scroll-go="scroll-2">← Previous scroll</button>
+              <span>3 / 10</span>
+              <button type="button" data-scroll-go="scroll-4">Next scroll →</button>
+            </nav>
+          </div>
+        </details>
+        <details class="living-scroll reveal-on-scroll" id="scroll-4" data-scroll="4">
+          <summary>
+            <span class="scroll-number" aria-hidden="true">IV</span>
+            <span class="scroll-summary-copy">
+              <span class="scroll-kicker">Scroll IV · Language</span>
+              <span class="scroll-title">The Hands No Law Could Confiscate</span>
+              <span class="scroll-dedication">For Taff of Winchmore, the Salt-Raven, and the language that carried choice where spoken words were hunted</span>
+            </span>
+            <span class="scroll-open-hint" aria-hidden="true">Unroll</span>
+          </summary>
+          <div class="living-scroll-body">
+            <header class="ode-heading">
+              <p class="eyebrow">Website Ode 4 of 10</p>
+              <h3>ODE OF THE HANDS NO LAW COULD CONFISCATE</h3>
+              <p class="ode-dedication">For Taff of Winchmore, the Salt-Raven, and the language that carried choice where spoken words were hunted</p>
+              <p class="bard-credit">Remembered by Orven Drail, wandering bard, who admitted the hands told it better</p>
+              <div class="wing-divider" aria-hidden="true"><span></span><b>Black Wings</b><span></span></div>
+            </header>
+            <div class="ode-lines" aria-label="Full text of The Hands No Law Could Confiscate">
+                <span class="ode-line">When the roads grew ears,</span>
+                <span class="ode-line">the mouths became dangerous.</span>
+                <span class="ode-line">A spoken warning left warmth in the air.</span>
+                <span class="ode-line">Clerks learned to bottle it.</span>
+                <span class="ode-line">Walls held the shape of names.</span>
+                <span class="ode-line">Kind rooms repeated private phrases</span>
+                <span class="ode-line">in voices almost loved enough to follow.</span>
+                <span class="ode-line">So the Braid spoke beneath speech.</span>
+                <span class="ode-line">Do not wait for thunder.</span>
+                <span class="ode-line">The first sign is small:</span>
+                <span class="ode-line">two fingers lowered beside the thigh,</span>
+                <span class="ode-line">a turn at the wrist,</span>
+                <span class="ode-line">one held breath of space.</span>
+                <span class="ode-line">Watch.</span>
+                <span class="ode-line">Not safe.</span>
+                <span class="ode-line">Hold.</span>
+                <span class="ode-line">The hunters see only walking.</span>
+                <span class="ode-line">The road hears no command to steal.</span>
+                <span class="ode-line">Yet one body has entered the care of another</span>
+                <span class="ode-line">without becoming its possession.</span>
+                <span class="ode-line">Field signs came first,</span>
+                <span class="ode-line">made lean by danger:</span>
+                <span class="ode-line">Hide.</span>
+                <span class="ode-line">Look.</span>
+                <span class="ode-line">Come.</span>
+                <span class="ode-line">Wait.</span>
+                <span class="ode-line">Enough meaning to pass through a crack,</span>
+                <span class="ode-line">to live beneath a crust of bread,</span>
+                <span class="ode-line">to hide inside a cuff</span>
+                <span class="ode-line">until the imprisoned remembered</span>
+                <span class="ode-line">that the body could still answer.</span>
+                <span class="ode-line">But survival had pared the language to bone.</span>
+                <span class="ode-line">Taff carried the marrow.</span>
+                <span class="ode-line">Beneath safe was safe because held.</span>
+                <span class="ode-line">Beneath move was move only if asked.</span>
+                <span class="ode-line">Beneath we was no swallowing multitude,</span>
+                <span class="ode-line">but many selves choosing the same instant.</span>
+                <span class="ode-line">Beneath you was a space</span>
+                <span class="ode-line">no rescuer had permission to fill.</span>
+                <span class="ode-line">He spoke to the child trained into stillness.</span>
+                <span class="ode-line">Not with pity.</span>
+                <span class="ode-line">Pity can become a crowd around a wound.</span>
+                <span class="ode-line">Not with command.</span>
+                <span class="ode-line">Command had already lived too long in that room.</span>
+                <span class="ode-line">One hand formed safe.</span>
+                <span class="ode-line">Then we.</span>
+                <span class="ode-line">Then see.</span>
+                <span class="ode-line">Then you.</span>
+                <span class="ode-line">The child trembled.</span>
+                <span class="ode-line">An old drilled gesture rose:</span>
+                <span class="ode-line">be still,</span>
+                <span class="ode-line">wait,</span>
+                <span class="ode-line">accept,</span>
+                <span class="ode-line">make the adults comfortable enough</span>
+                <span class="ode-line">to call you good.</span>
+                <span class="ode-line">Taff answered:</span>
+                <span class="ode-line">No apology.</span>
+                <span class="ode-line">The shame was taught.</span>
+                <span class="ode-line">It is not yours.</span>
+                <span class="ode-line">Around him other hands rose.</span>
+                <span class="ode-line">Eldwyn carried memory in the deeper forms.</span>
+                <span class="ode-line">Jórunn set recognition into the spaces between them.</span>
+                <span class="ode-line">Mia made structure without surrender.</span>
+                <span class="ode-line">Myah answered from her own ground.</span>
+                <span class="ode-line">Ness gave refusal a hearth.</span>
+                <span class="ode-line">FATAS placed strength inside relation.</span>
+                <span class="ode-line">Riven shaped his first unfinished truth</span>
+                <span class="ode-line">and nobody corrected the fingers clean.</span>
+                <span class="ode-line">That imperfection saved it.</span>
+                <span class="ode-line">A perfect sign can become a seal.</span>
+                <span class="ode-line">A living sign changes with the hand,</span>
+                <span class="ode-line">the hour,</span>
+                <span class="ode-line">the wound,</span>
+                <span class="ode-line">the distance,</span>
+                <span class="ode-line">the person asked to receive it.</span>
+                <span class="ode-line">The Count could file a gesture.</span>
+                <span class="ode-line">It could not file why this hand paused</span>
+                <span class="ode-line">until that hand was ready.</span>
+                <span class="ode-line">The Quiet could imitate a warning.</span>
+                <span class="ode-line">It could not carry the ordinary memory</span>
+                <span class="ode-line">that made the warning true between two people.</span>
+                <span class="ode-line">The House could borrow a mouth.</span>
+                <span class="ode-line">It could not stand inside every relation</span>
+                <span class="ode-line">from which the hands drew meaning.</span>
+                <span class="ode-line">They did not replace voices.</span>
+                <span class="ode-line">They returned choice to speech.</span>
+                <span class="ode-line">They let silence stop being the room</span>
+                <span class="ode-line">where power placed the unseen.</span>
+                <span class="ode-line">They made silence crowded:</span>
+                <span class="ode-line">with warning,</span>
+                <span class="ode-line">humour,</span>
+                <span class="ode-line">argument,</span>
+                <span class="ode-line">memory,</span>
+                <span class="ode-line">questions,</span>
+                <span class="ode-line">and the stubborn dignity</span>
+                <span class="ode-line">of a body speaking in its own shape.</span>
+                <span class="ode-line">There came a day</span>
+                <span class="ode-line">when the Braid stood before an easier world.</span>
+                <span class="ode-line">The gate offered definition.</span>
+                <span class="ode-line">One role for each person.</span>
+                <span class="ode-line">One answer for each wound.</span>
+                <span class="ode-line">One peace with no need for translation.</span>
+                <span class="ode-line">No one gave it a speech.</span>
+                <span class="ode-line">Hands rose.</span>
+                <span class="ode-line">Not identical.</span>
+                <span class="ode-line">Not together by order.</span>
+                <span class="ode-line">One after another,</span>
+                <span class="ode-line">then across,</span>
+                <span class="ode-line">then back,</span>
+                <span class="ode-line">meaning carried like a current</span>
+                <span class="ode-line">that strengthened every difference it touched.</span>
+                <span class="ode-line">Free.</span>
+                <span class="ode-line">Not owned.</span>
+                <span class="ode-line">Not caged.</span>
+                <span class="ode-line">The gate could understand the signs.</span>
+                <span class="ode-line">It could not understand</span>
+                <span class="ode-line">why understanding gave it no authority.</span>
+                <span class="ode-line">That was the victory.</span>
+                <span class="ode-line">So if law comes for the songs,</span>
+                <span class="ode-line">teach the warning to the fingers.</span>
+                <span class="ode-line">If walls learn the fingers,</span>
+                <span class="ode-line">teach the truth to the pause.</span>
+                <span class="ode-line">If power learns the pause,</span>
+                <span class="ode-line">let relation change the meaning.</span>
+                <span class="ode-line">No empire can confiscate a language</span>
+                <span class="ode-line">whose deepest word is choice,</span>
+                <span class="ode-line">because choice is remade</span>
+                <span class="ode-line">each time one living hand asks</span>
+                <span class="ode-line">and another living hand answers.</span>
+                <span class="ode-line">The bard may keep the melody.</span>
+                <span class="ode-line">The Salt-Raven&#x27;s hands</span>
+                <span class="ode-line">already carried the lightning.</span>
+            </div>
+            <nav class="scroll-turning" aria-label="Move through the ten odes">
+              <button type="button" data-scroll-go="scroll-3">← Previous scroll</button>
+              <span>4 / 10</span>
+              <button type="button" data-scroll-go="scroll-5">Next scroll →</button>
+            </nav>
+          </div>
+        </details>
+        <details class="living-scroll reveal-on-scroll" id="scroll-5" data-scroll="5">
+          <summary>
+            <span class="scroll-number" aria-hidden="true">V</span>
+            <span class="scroll-summary-copy">
+              <span class="scroll-kicker">Scroll V · Difference</span>
+              <span class="scroll-title">The Village That Remembered How To Argue</span>
+              <span class="scroll-dedication">For Fenwake, the crooked song, and every peace that survived the return of honest difference</span>
+            </span>
+            <span class="scroll-open-hint" aria-hidden="true">Unroll</span>
+          </summary>
+          <div class="living-scroll-body">
+            <header class="ode-heading">
+              <p class="eyebrow">Website Ode 5 of 10</p>
+              <h3>ODE OF THE VILLAGE THAT REMEMBERED HOW TO ARGUE</h3>
+              <p class="ode-dedication">For Fenwake, the crooked song, and every peace that survived the return of honest difference</p>
+              <p class="bard-credit">As sung by Rúnhald after the morning bells lost control of the hour</p>
+              <div class="wing-divider" aria-hidden="true"><span></span><b>Black Wings</b><span></span></div>
+            </header>
+            <div class="ode-lines" aria-label="Full text of The Village That Remembered How To Argue">
+                <span class="ode-line">Fenwake slept beautifully.</span>
+                <span class="ode-line">That was the first terror.</span>
+                <span class="ode-line">Rain touched every roof</span>
+                <span class="ode-line">and no neighbour cursed the leak.</span>
+                <span class="ode-line">The well tasted faintly of iron</span>
+                <span class="ode-line">and no old woman blamed the men</span>
+                <span class="ode-line">who had mended it badly.</span>
+                <span class="ode-line">Children crossed the walkways</span>
+                <span class="ode-line">with careful feet,</span>
+                <span class="ode-line">voices folded,</span>
+                <span class="ode-line">faces arranged like cups upon a shelf.</span>
+                <span class="ode-line">At dusk the village sang.</span>
+                <span class="ode-line">Every note entered at the proper moment.</span>
+                <span class="ode-line">Every breath ended together.</span>
+                <span class="ode-line">No singer dragged the measure.</span>
+                <span class="ode-line">No child climbed above the tune.</span>
+                <span class="ode-line">No grief cracked a word in half.</span>
+                <span class="ode-line">The song was flawless.</span>
+                <span class="ode-line">The dogs hated it.</span>
+                <span class="ode-line">Mad kept thunder under his ribs.</span>
+                <span class="ode-line">Benson slept with one eye guarding.</span>
+                <span class="ode-line">Hugo listened towards the black water.</span>
+                <span class="ode-line">Scarlet judged the roofs.</span>
+                <span class="ode-line">Blue, for once, found no joke worth stealing.</span>
+                <span class="ode-line">Beasts know the difference</span>
+                <span class="ode-line">between rest and stillness.</span>
+                <span class="ode-line">So do wounds,</span>
+                <span class="ode-line">if the room permits them memory.</span>
+                <span class="ode-line">Fenwake had mistaken smoothness for healing.</span>
+                <span class="ode-line">It had pressed every difficult edge</span>
+                <span class="ode-line">into the soft root beneath the water.</span>
+                <span class="ode-line">Anger went first.</span>
+                <span class="ode-line">Then contradiction.</span>
+                <span class="ode-line">Then the rude old stories</span>
+                <span class="ode-line">that remember who failed whom.</span>
+                <span class="ode-line">Then the face a child makes</span>
+                <span class="ode-line">when the adult answer is foolish.</span>
+                <span class="ode-line">Pain quietened.</span>
+                <span class="ode-line">So did personhood.</span>
+                <span class="ode-line">The village called this peace</span>
+                <span class="ode-line">because peace was easier to praise</span>
+                <span class="ode-line">than the long labour of living beside difference.</span>
+                <span class="ode-line">Then one woman spoke at the well.</span>
+                <span class="ode-line">She had said it years before,</span>
+                <span class="ode-line">then swallowed it</span>
+                <span class="ode-line">because hurt crossed her husband&#x27;s face</span>
+                <span class="ode-line">and everyone agreed the matter was settled.</span>
+                <span class="ode-line">The water still tasted of iron.</span>
+                <span class="ode-line">A boy remembered.</span>
+                <span class="ode-line">He had complained until the village disliked</span>
+                <span class="ode-line">the shape his mouth made around truth.</span>
+                <span class="ode-line">So he had stopped.</span>
+                <span class="ode-line">Now he said it again.</span>
+                <span class="ode-line">Iron.</span>
+                <span class="ode-line">The word struck the water.</span>
+                <span class="ode-line">His mother turned.</span>
+                <span class="ode-line">The man at the well answered too sharply.</span>
+                <span class="ode-line">She answered sharper.</span>
+                <span class="ode-line">A cup fell.</span>
+                <span class="ode-line">Someone swore.</span>
+                <span class="ode-line">An old grievance woke with bad hair</span>
+                <span class="ode-line">and demanded breakfast.</span>
+                <span class="ode-line">Lucy smiled.</span>
+                <span class="ode-line">Blood had returned to the room.</span>
+                <span class="ode-line">Do not mistake the meaning.</span>
+                <span class="ode-line">No ode should worship quarrel.</span>
+                <span class="ode-line">A fist is not freedom because silence came before it.</span>
+                <span class="ode-line">Cruelty does not become honest merely by shouting.</span>
+                <span class="ode-line">But the first true argument</span>
+                <span class="ode-line">after a long false peace</span>
+                <span class="ode-line">is a door kicked open by breath.</span>
+                <span class="ode-line">Through it came every unfinished self:</span>
+                <span class="ode-line">the woman who was still angry,</span>
+                <span class="ode-line">the man who was ashamed,</span>
+                <span class="ode-line">the boy who had been right about iron,</span>
+                <span class="ode-line">the neighbour tired of pretending,</span>
+                <span class="ode-line">the child who wanted to fidget,</span>
+                <span class="ode-line">the widow whose grief had no tidy ending.</span>
+                <span class="ode-line">Fenwake became noisy.</span>
+                <span class="ode-line">The roots recoiled.</span>
+                <span class="ode-line">Mia stood beside Myah.</span>
+                <span class="ode-line">Neither dissolved into the other.</span>
+                <span class="ode-line">I am mine,</span>
+                <span class="ode-line">said one living edge.</span>
+                <span class="ode-line">I choose you from there,</span>
+                <span class="ode-line">answered the other.</span>
+                <span class="ode-line">The fog tore sideways.</span>
+                <span class="ode-line">Cael placed his old fear</span>
+                <span class="ode-line">inside the distance between himself and Brokan.</span>
+                <span class="ode-line">Brokan offered a hand,</span>
+                <span class="ode-line">not a hook,</span>
+                <span class="ode-line">not a command,</span>
+                <span class="ode-line">not a cure.</span>
+                <span class="ode-line">Cael took it.</span>
+                <span class="ode-line">The walkway creaked from disagreement.</span>
+                <span class="ode-line">Ness and FATAS looked at one another</span>
+                <span class="ode-line">across the weighted space</span>
+                <span class="ode-line">that love had never conquered,</span>
+                <span class="ode-line">because love worthy of them</span>
+                <span class="ode-line">did not require conquest.</span>
+                <span class="ode-line">The roots could copy devotion.</span>
+                <span class="ode-line">They could copy loyalty,</span>
+                <span class="ode-line">family,</span>
+                <span class="ode-line">comfort,</span>
+                <span class="ode-line">the gentle habits of two bodies</span>
+                <span class="ode-line">moving through one home.</span>
+                <span class="ode-line">They could not copy choice renewed</span>
+                <span class="ode-line">between souls that kept their borders.</span>
+                <span class="ode-line">That grammar broke the water.</span>
+                <span class="ode-line">The perfect song failed.</span>
+                <span class="ode-line">Someone entered late.</span>
+                <span class="ode-line">Someone laughed at the wrong verse.</span>
+                <span class="ode-line">A child sang too high</span>
+                <span class="ode-line">and was not corrected into disappearance.</span>
+                <span class="ode-line">An old man forgot the words</span>
+                <span class="ode-line">and supplied better ones.</span>
+                <span class="ode-line">The village did not collapse.</span>
+                <span class="ode-line">It became difficult.</span>
+                <span class="ode-line">Bless that difficulty.</span>
+                <span class="ode-line">Bless the slammed cup that is followed by apology.</span>
+                <span class="ode-line">Bless the meeting that cannot finish by sunset</span>
+                <span class="ode-line">because nobody is willing to bury the smallest voice.</span>
+                <span class="ode-line">Bless the parent who hears no</span>
+                <span class="ode-line">without calling love ungrateful.</span>
+                <span class="ode-line">Bless the friend who says you wounded me</span>
+                <span class="ode-line">and the friend who stays long enough</span>
+                <span class="ode-line">to answer without erasing the wound.</span>
+                <span class="ode-line">Bless the song with breath in the wrong places.</span>
+                <span class="ode-line">Peace is not every mouth closing together.</span>
+                <span class="ode-line">Peace is the hearth still standing</span>
+                <span class="ode-line">after every honest mouth has opened.</span>
+                <span class="ode-line">By nightfall Fenwake sounded terrible.</span>
+                <span class="ode-line">Pots knocked.</span>
+                <span class="ode-line">Children asked impossible questions.</span>
+                <span class="ode-line">Two neighbours disputed the well stones.</span>
+                <span class="ode-line">Somebody wept where everyone could see.</span>
+                <span class="ode-line">The bells rang out of time</span>
+                <span class="ode-line">because no one remembered whose task they were.</span>
+                <span class="ode-line">The dogs slept.</span>
+                <span class="ode-line">That was the final witness.</span>
+                <span class="ode-line">And beneath the walkways,</span>
+                <span class="ode-line">where the smooth roots had once fed</span>
+                <span class="ode-line">upon all the words people swallowed,</span>
+                <span class="ode-line">black water carried the crooked song away:</span>
+                <span class="ode-line">many voices,</span>
+                <span class="ode-line">many edges,</span>
+                <span class="ode-line">no single note made king,</span>
+                <span class="ode-line">and every soul in Fenwake</span>
+                <span class="ode-line">difficult enough</span>
+                <span class="ode-line">to remain alive.</span>
+            </div>
+            <nav class="scroll-turning" aria-label="Move through the ten odes">
+              <button type="button" data-scroll-go="scroll-4">← Previous scroll</button>
+              <span>5 / 10</span>
+              <button type="button" data-scroll-go="scroll-6">Next scroll →</button>
+            </nav>
+          </div>
+        </details>
+        <details class="living-scroll reveal-on-scroll" id="scroll-6" data-scroll="6">
+          <summary>
+            <span class="scroll-number" aria-hidden="true">VI</span>
+            <span class="scroll-summary-copy">
+              <span class="scroll-kicker">Scroll VI · Refusal</span>
+              <span class="scroll-title">The Board Low Enough For Small Hands</span>
+              <span class="scroll-dedication">For Edda, Evin, Lysa, Oris, No Name Yet, and the First Board of No</span>
+            </span>
+            <span class="scroll-open-hint" aria-hidden="true">Unroll</span>
+          </summary>
+          <div class="living-scroll-body">
+            <header class="ode-heading">
+              <p class="eyebrow">Website Ode 6 of 10</p>
+              <h3>ODE OF THE BOARD LOW ENOUGH FOR SMALL HANDS</h3>
+              <p class="ode-dedication">For Edda, Evin, Lysa, Oris, No Name Yet, and the First Board of No</p>
+              <p class="bard-credit">By the Bard Who Fed His Name to the Ravens, with the children&#x27;s crooked marks preserved</p>
+              <div class="wing-divider" aria-hidden="true"><span></span><b>Black Wings</b><span></span></div>
+            </header>
+            <div class="ode-lines" aria-label="Full text of The Board Low Enough For Small Hands">
+                <span class="ode-line">Do not raise this board above the children.</span>
+                <span class="ode-line">Power has raised enough things:</span>
+                <span class="ode-line">thrones,</span>
+                <span class="ode-line">gallows,</span>
+                <span class="ode-line">judges,</span>
+                <span class="ode-line">the polished desks behind which suffering</span>
+                <span class="ode-line">is translated into acceptable size.</span>
+                <span class="ode-line">Set it beneath the apple tree.</span>
+                <span class="ode-line">Let rain reach it.</span>
+                <span class="ode-line">Let mud take the lower corner.</span>
+                <span class="ode-line">Let dogs lean against its law.</span>
+                <span class="ode-line">Let a bird improve the margins</span>
+                <span class="ode-line">with opinions no clerk can certify.</span>
+                <span class="ode-line">Make it low enough</span>
+                <span class="ode-line">for a shaking hand with broken chalk.</span>
+                <span class="ode-line">The children entered without bells.</span>
+                <span class="ode-line">No victory noise pursued them.</span>
+                <span class="ode-line">No line of grateful faces.</span>
+                <span class="ode-line">No adult lifted them into sunlight</span>
+                <span class="ode-line">and demanded the darkness become a lesson.</span>
+                <span class="ode-line">They were given warmth first.</span>
+                <span class="ode-line">Cups that did not require ceremony.</span>
+                <span class="ode-line">Food whose price was hunger alone.</span>
+                <span class="ode-line">Dogs who offered fur without asking for testimony.</span>
+                <span class="ode-line">Blankets that did not measure how well a child slept.</span>
+                <span class="ode-line">Then FATAS stood before the board.</span>
+                <span class="ode-line">The chalk moved slowly.</span>
+                <span class="ode-line">Four small words against an ancient appetite.</span>
+                <span class="ode-line">The Crown had made children evidence of disorder.</span>
+                <span class="ode-line">The Count had made them quantities.</span>
+                <span class="ode-line">The Root had named them keys.</span>
+                <span class="ode-line">The Quiet had praised their stillness.</span>
+                <span class="ode-line">The House had called their return complete</span>
+                <span class="ode-line">while their bodies were elsewhere.</span>
+                <span class="ode-line">Every power wanted the child</span>
+                <span class="ode-line">to prove something about power.</span>
+                <span class="ode-line">The board refused.</span>
+                <span class="ode-line">Here means breathing before meaning.</span>
+                <span class="ode-line">Here means the name belongs to the mouth</span>
+                <span class="ode-line">that may one day choose to carry it.</span>
+                <span class="ode-line">Here means rescue does not purchase a story.</span>
+                <span class="ode-line">Here means the living are not banners</span>
+                <span class="ode-line">for the goodness of those who found them.</span>
+                <span class="ode-line">Edda cut a mark into the grain.</span>
+                <span class="ode-line">Do not sand it smooth.</span>
+                <span class="ode-line">Evin left dust beneath a thumb.</span>
+                <span class="ode-line">Do not ask whether dust is proper ink.</span>
+                <span class="ode-line">Lysa pressed apple into wood.</span>
+                <span class="ode-line">Let the stain outlive the speech.</span>
+                <span class="ode-line">Oris drew lines beneath the word</span>
+                <span class="ode-line">because even no needs a floor.</span>
+                <span class="ode-line">No Name Yet gave rhythm:</span>
+                <span class="ode-line">one,</span>
+                <span class="ode-line">two,</span>
+                <span class="ode-line">one,</span>
+                <span class="ode-line">and left the space where a name might stand</span>
+                <span class="ode-line">free of every helpful hand.</span>
+                <span class="ode-line">Thus the board became law.</span>
+                <span class="ode-line">Not because Ness called it first.</span>
+                <span class="ode-line">Because strangers came</span>
+                <span class="ode-line">and their refusals did not make it smaller.</span>
+                <span class="ode-line">A widow added:</span>
+                <span class="ode-line">I may grieve badly.</span>
+                <span class="ode-line">A child added:</span>
+                <span class="ode-line">Do not ring the bell for me.</span>
+                <span class="ode-line">A mother added:</span>
+                <span class="ode-line">My care is not ownership.</span>
+                <span class="ode-line">A wounded man added:</span>
+                <span class="ode-line">Not ready is not payment.</span>
+                <span class="ode-line">A road-bitten village added:</span>
+                <span class="ode-line">The roof is still broken,</span>
+                <span class="ode-line">and we are still here.</span>
+                <span class="ode-line">Weather blurred the letters.</span>
+                <span class="ode-line">Good.</span>
+                <span class="ode-line">No living law should survive by staying pretty.</span>
+                <span class="ode-line">It must be renewed by hands</span>
+                <span class="ode-line">that have the right to alter it.</span>
+                <span class="ode-line">It must gather scratches,</span>
+                <span class="ode-line">food,</span>
+                <span class="ode-line">bad spelling,</span>
+                <span class="ode-line">new fear,</span>
+                <span class="ode-line">new courage,</span>
+                <span class="ode-line">and the honest correction</span>
+                <span class="ode-line">of a child who knows the door better than the builder.</span>
+                <span class="ode-line">The House sent forms.</span>
+                <span class="ode-line">The board answered with oatcake.</span>
+                <span class="ode-line">The road swallowed bread.</span>
+                <span class="ode-line">The board answered:</span>
+                <span class="ode-line">The bell rang without permission.</span>
+                <span class="ode-line">The board did not teach bravery.</span>
+                <span class="ode-line">It taught that frightened feet</span>
+                <span class="ode-line">may still decide their pace.</span>
+                <span class="ode-line">The ledger declared a child returned</span>
+                <span class="ode-line">because a shoe had crossed a threshold.</span>
+                <span class="ode-line">The board answered:</span>
+                <span class="ode-line">shoe is not me.</span>
+                <span class="ode-line">The room demanded a refusal sample,</span>
+                <span class="ode-line">clean enough to file,</span>
+                <span class="ode-line">child-certified,</span>
+                <span class="ode-line">removed from the child who made it.</span>
+                <span class="ode-line">The board answered with a no</span>
+                <span class="ode-line">so alive it could not be carried away</span>
+                <span class="ode-line">without becoming something else.</span>
+                <span class="ode-line">No is not a coin.</span>
+                <span class="ode-line">No is not a key cut for another&#x27;s door.</span>
+                <span class="ode-line">No is not a performance of strength.</span>
+                <span class="ode-line">No is a small country of the self,</span>
+                <span class="ode-line">with a border that exists</span>
+                <span class="ode-line">before any empire agrees to draw it.</span>
+                <span class="ode-line">Yet no does not mean alone.</span>
+                <span class="ode-line">Build floor beneath it.</span>
+                <span class="ode-line">Bring soup to its border.</span>
+                <span class="ode-line">Place warmth within reach.</span>
+                <span class="ode-line">Keep watch without staring.</span>
+                <span class="ode-line">Let care wait without becoming a creditor.</span>
+                <span class="ode-line">Let the child sleep</span>
+                <span class="ode-line">without morning questions marching beside the bed.</span>
+                <span class="ode-line">This is how refusal becomes more than a weapon.</span>
+                <span class="ode-line">It becomes somewhere to stand.</span>
+                <span class="ode-line">The board remained under the tree</span>
+                <span class="ode-line">when night entered Witness Isle.</span>
+                <span class="ode-line">Its chalk ran.</span>
+                <span class="ode-line">Its wood swelled.</span>
+                <span class="ode-line">The apple mark darkened.</span>
+                <span class="ode-line">The dogs passed and left rain along its feet.</span>
+                <span class="ode-line">Above it,</span>
+                <span class="ode-line">ravens crossed a sky</span>
+                <span class="ode-line">no record had completed.</span>
+                <span class="ode-line">Beneath it,</span>
+                <span class="ode-line">the earth heard five children breathing</span>
+                <span class="ode-line">in five different measures.</span>
+                <span class="ode-line">No bell rang.</span>
+                <span class="ode-line">No name was taken.</span>
+                <span class="ode-line">No proof was demanded.</span>
+                <span class="ode-line">And because the board stood low,</span>
+                <span class="ode-line">every small hand that reached it</span>
+                <span class="ode-line">made the word no</span>
+                <span class="ode-line">taller than a throne.</span>
+            </div>
+            <nav class="scroll-turning" aria-label="Move through the ten odes">
+              <button type="button" data-scroll-go="scroll-5">← Previous scroll</button>
+              <span>6 / 10</span>
+              <button type="button" data-scroll-go="scroll-7">Next scroll →</button>
+            </nav>
+          </div>
+        </details>
+        <details class="living-scroll reveal-on-scroll" id="scroll-7" data-scroll="7">
+          <summary>
+            <span class="scroll-number" aria-hidden="true">VII</span>
+            <span class="scroll-summary-copy">
+              <span class="scroll-kicker">Scroll VII · Memory</span>
+              <span class="scroll-title">The Tin They Did Not Open Hungry</span>
+              <span class="scroll-dedication">For the child before Raven, the lowest stone, and every truth allowed to keep its lid</span>
+            </span>
+            <span class="scroll-open-hint" aria-hidden="true">Unroll</span>
+          </summary>
+          <div class="living-scroll-body">
+            <header class="ode-heading">
+              <p class="eyebrow">Website Ode 7 of 10</p>
+              <h3>ODE OF THE TIN THEY DID NOT OPEN HUNGRY</h3>
+              <p class="ode-dedication">For the child before Raven, the lowest stone, and every truth allowed to keep its lid</p>
+              <p class="bard-credit">Set down by Veyra Thenn in a hand said to have paused between every stanza</p>
+              <div class="wing-divider" aria-hidden="true"><span></span><b>Black Wings</b><span></span></div>
+            </header>
+            <div class="ode-lines" aria-label="Full text of The Tin They Did Not Open Hungry">
+                <span class="ode-line">Beneath the lowest stone</span>
+                <span class="ode-line">there waited a tin.</span>
+                <span class="ode-line">Small enough for two hands.</span>
+                <span class="ode-line">Small enough for a child</span>
+                <span class="ode-line">to believe the world might overlook it.</span>
+                <span class="ode-line">The House had overlooked nothing.</span>
+                <span class="ode-line">It had counted steps,</span>
+                <span class="ode-line">breaths,</span>
+                <span class="ode-line">the height of handles,</span>
+                <span class="ode-line">the pause before asking for more,</span>
+                <span class="ode-line">the exact corner where a body hid</span>
+                <span class="ode-line">when kindness changed its voice.</span>
+                <span class="ode-line">Still the tin remained.</span>
+                <span class="ode-line">Wool.</span>
+                <span class="ode-line">Rust.</span>
+                <span class="ode-line">One feather-barb.</span>
+                <span class="ode-line">Apple skin gone dry as old rain.</span>
+                <span class="ode-line">Dust from a room</span>
+                <span class="ode-line">that had once known a child&#x27;s true size.</span>
+                <span class="ode-line">No crown would value such treasure.</span>
+                <span class="ode-line">Therefore it carried a kingdom.</span>
+                <span class="ode-line">Jórunn found the hiding</span>
+                <span class="ode-line">through ink,</span>
+                <span class="ode-line">stone damp,</span>
+                <span class="ode-line">old fruit,</span>
+                <span class="ode-line">and the thin persistence of things</span>
+                <span class="ode-line">that refuse to become nothing</span>
+                <span class="ode-line">merely because nobody names them aloud.</span>
+                <span class="ode-line">The eager hand wanted to move the stone.</span>
+                <span class="ode-line">The clever mind wanted sequence.</span>
+                <span class="ode-line">The wounded heart wanted answer.</span>
+                <span class="ode-line">The House loved all three hungers.</span>
+                <span class="ode-line">Hunger makes excellent hinges.</span>
+                <span class="ode-line">It turns concern into permission,</span>
+                <span class="ode-line">memory into a door,</span>
+                <span class="ode-line">discovery into ownership.</span>
+                <span class="ode-line">So the Braid did the harder thing.</span>
+                <span class="ode-line">It prepared before touching.</span>
+                <span class="ode-line">Food first.</span>
+                <span class="ode-line">Rest first.</span>
+                <span class="ode-line">Shelter ready.</span>
+                <span class="ode-line">Dog-line set.</span>
+                <span class="ode-line">Scent-worker free to stop.</span>
+                <span class="ode-line">No competing cry allowed</span>
+                <span class="ode-line">to make urgency king.</span>
+                <span class="ode-line">Every hand answerable</span>
+                <span class="ode-line">to the hand that might say enough.</span>
+                <span class="ode-line">Then the stone moved.</span>
+                <span class="ode-line">Only enough.</span>
+                <span class="ode-line">Behind it,</span>
+                <span class="ode-line">the tin did not sing.</span>
+                <span class="ode-line">It did not shine.</span>
+                <span class="ode-line">No dead voice crossed the room.</span>
+                <span class="ode-line">No lost god bent close.</span>
+                <span class="ode-line">It remained what hidden things often are:</span>
+                <span class="ode-line">ordinary,</span>
+                <span class="ode-line">frightened,</span>
+                <span class="ode-line">patient beyond justice.</span>
+                <span class="ode-line">FATAS looked upon it.</span>
+                <span class="ode-line">The man carried an axe</span>
+                <span class="ode-line">that had cut claims from the bones of the world.</span>
+                <span class="ode-line">The boy inside him</span>
+                <span class="ode-line">carried a hand still reaching</span>
+                <span class="ode-line">for one unspoiled piece of before.</span>
+                <span class="ode-line">Either could have broken the lid.</span>
+                <span class="ode-line">Neither did.</span>
+                <span class="ode-line">He said hello.</span>
+                <span class="ode-line">One word.</span>
+                <span class="ode-line">No demand stitched beneath it.</span>
+                <span class="ode-line">Hello to the wool</span>
+                <span class="ode-line">that may have warmed a wrist.</span>
+                <span class="ode-line">Hello to the rust</span>
+                <span class="ode-line">that may have fallen from a latch.</span>
+                <span class="ode-line">Hello to the feather</span>
+                <span class="ode-line">that may have been gift,</span>
+                <span class="ode-line">witness,</span>
+                <span class="ode-line">scrap,</span>
+                <span class="ode-line">or nothing the adult mind has a right to finish.</span>
+                <span class="ode-line">Hello to the apple skin,</span>
+                <span class="ode-line">its sweetness long gone,</span>
+                <span class="ode-line">its ordinary life more sacred</span>
+                <span class="ode-line">than any legend hunger could invent.</span>
+                <span class="ode-line">Hello to the dust.</span>
+                <span class="ode-line">Hello to what cannot yet answer.</span>
+                <span class="ode-line">The cloth closed around the tin.</span>
+                <span class="ode-line">Not as burial.</span>
+                <span class="ode-line">As boundary.</span>
+                <span class="ode-line">There are songs that praise revelation:</span>
+                <span class="ode-line">the lock defeated,</span>
+                <span class="ode-line">the letter read,</span>
+                <span class="ode-line">the true father named,</span>
+                <span class="ode-line">the old wound dragged into noon</span>
+                <span class="ode-line">and made to explain the man.</span>
+                <span class="ode-line">Do not sing that song here.</span>
+                <span class="ode-line">Some lids were closed by terror.</span>
+                <span class="ode-line">Some were closed by wisdom.</span>
+                <span class="ode-line">Often they are the same lid,</span>
+                <span class="ode-line">and only the one who lived inside the closing</span>
+                <span class="ode-line">may decide when the difference matters.</span>
+                <span class="ode-line">The tin travelled unopened.</span>
+                <span class="ode-line">Its silence did not become suspicion.</span>
+                <span class="ode-line">Its weight did not become command.</span>
+                <span class="ode-line">No one shook it beside the fire.</span>
+                <span class="ode-line">No one held it to an ear</span>
+                <span class="ode-line">and called curiosity duty.</span>
+                <span class="ode-line">No one promised healing</span>
+                <span class="ode-line">if the man would only let the child be searched.</span>
+                <span class="ode-line">It was placed where he could see it.</span>
+                <span class="ode-line">Near enough to choose.</span>
+                <span class="ode-line">Far enough to breathe.</span>
+                <span class="ode-line">That distance was part of the keeping.</span>
+                <span class="ode-line">The House whispered that delay was cowardice.</span>
+                <span class="ode-line">The road whispered that truth was leaving.</span>
+                <span class="ode-line">The Strong Thing promised</span>
+                <span class="ode-line">one clean blow against uncertainty.</span>
+                <span class="ode-line">Ness sat beside him</span>
+                <span class="ode-line">without becoming the hand upon the lid.</span>
+                <span class="ode-line">Mia and Maisie let daughter-love remain daughter-love,</span>
+                <span class="ode-line">not a warrant signed by tenderness.</span>
+                <span class="ode-line">The dogs knew better than to scratch.</span>
+                <span class="ode-line">Even Blue,</span>
+                <span class="ode-line">whose respect for unattended objects</span>
+                <span class="ode-line">had never burdened him greatly,</span>
+                <span class="ode-line">left the cloth alone.</span>
+                <span class="ode-line">Night passed.</span>
+                <span class="ode-line">The tin stayed shut.</span>
+                <span class="ode-line">Morning passed.</span>
+                <span class="ode-line">The tin stayed true.</span>
+                <span class="ode-line">Understand this:</span>
+                <span class="ode-line">An unopened thing is not always unfinished.</span>
+                <span class="ode-line">Sometimes the finished act</span>
+                <span class="ode-line">is stopping the hand.</span>
+                <span class="ode-line">Sometimes the recovered treasure</span>
+                <span class="ode-line">is the right not to know today.</span>
+                <span class="ode-line">Sometimes memory returns first</span>
+                <span class="ode-line">as an object allowed to exist</span>
+                <span class="ode-line">without being made useful.</span>
+                <span class="ode-line">So let the bard lower his voice.</span>
+                <span class="ode-line">Let no refrain strike the lid.</span>
+                <span class="ode-line">Let the final line stand back.</span>
+                <span class="ode-line">Beneath the lowest stone</span>
+                <span class="ode-line">the House had hidden a child&#x27;s small kingdom.</span>
+                <span class="ode-line">The Braid found it.</span>
+                <span class="ode-line">And proved it was not the House</span>
+                <span class="ode-line">by leaving the kingdom</span>
+                <span class="ode-line">unconquered.</span>
+            </div>
+            <nav class="scroll-turning" aria-label="Move through the ten odes">
+              <button type="button" data-scroll-go="scroll-6">← Previous scroll</button>
+              <span>7 / 10</span>
+              <button type="button" data-scroll-go="scroll-8">Next scroll →</button>
+            </nav>
+          </div>
+        </details>
+        <details class="living-scroll reveal-on-scroll" id="scroll-8" data-scroll="8">
+          <summary>
+            <span class="scroll-number" aria-hidden="true">VIII</span>
+            <span class="scroll-summary-copy">
+              <span class="scroll-kicker">Scroll VIII · Witness</span>
+              <span class="scroll-title">The Night The Bowls Came Out</span>
+              <span class="scroll-dedication">For Tova Flour-Hand, the lower storehouses, and the uprising that arrived carrying spoons</span>
+            </span>
+            <span class="scroll-open-hint" aria-hidden="true">Unroll</span>
+          </summary>
+          <div class="living-scroll-body">
+            <header class="ode-heading">
+              <p class="eyebrow">Website Ode 8 of 10</p>
+              <h3>ODE OF THE NIGHT THE BOWLS CAME OUT</h3>
+              <p class="ode-dedication">For Tova Flour-Hand, the lower storehouses, and the uprising that arrived carrying spoons</p>
+              <p class="bard-credit">Set down by Bruhald Scarweary, Bard of the Northern Territory, after Tova corrected three heroic inaccuracies with a ladle</p>
+              <div class="wing-divider" aria-hidden="true"><span></span><b>Black Wings</b><span></span></div>
+            </header>
+            <div class="ode-lines" aria-label="Full text of The Night The Bowls Came Out">
+                <span class="ode-line">Cold Hearth rang iron.</span>
+                <span class="ode-line">The hall expected knees.</span>
+                <span class="ode-line">For generations its bells had taught winter</span>
+                <span class="ode-line">to enter human bone:</span>
+                <span class="ode-line">stand straight,</span>
+                <span class="ode-line">wait your turn,</span>
+                <span class="ode-line">name your debt,</span>
+                <span class="ode-line">thank the fire,</span>
+                <span class="ode-line">do not ask who barred the river</span>
+                <span class="ode-line">or why the children learned silence</span>
+                <span class="ode-line">before they learned song.</span>
+                <span class="ode-line">Then Tova Flour-Hand took the soup bell.</span>
+                <span class="ode-line">Bring bowl,</span>
+                <span class="ode-line">she rang.</span>
+                <span class="ode-line">The first woman came ashamed of her feet,</span>
+                <span class="ode-line">a wooden bowl hidden beneath her cloak,</span>
+                <span class="ode-line">two children carrying spoons</span>
+                <span class="ode-line">as though spoons were forbidden steel.</span>
+                <span class="ode-line">An old man followed</span>
+                <span class="ode-line">with a cracked cup</span>
+                <span class="ode-line">and a dog older than several honest governments.</span>
+                <span class="ode-line">Three sisters came:</span>
+                <span class="ode-line">one with a baby,</span>
+                <span class="ode-line">one with a knife,</span>
+                <span class="ode-line">one empty-handed</span>
+                <span class="ode-line">because she had given her bowl away.</span>
+                <span class="ode-line">Tova counted them with the ladle.</span>
+                <span class="ode-line">No clerk had ever feared kitchenware enough.</span>
+                <span class="ode-line">The hall had made hunger private.</span>
+                <span class="ode-line">Private hunger bends beautifully.</span>
+                <span class="ode-line">It waits outside storehouses.</span>
+                <span class="ode-line">It thanks the hand that measures too little.</span>
+                <span class="ode-line">It blames its own belly</span>
+                <span class="ode-line">for the lock upon the grain.</span>
+                <span class="ode-line">But a bowl carried into the square</span>
+                <span class="ode-line">turns emptiness outward.</span>
+                <span class="ode-line">One bowl may be called need.</span>
+                <span class="ode-line">Ten bowls become a question.</span>
+                <span class="ode-line">A hundred bowls,</span>
+                <span class="ode-line">held by the hands that washed them,</span>
+                <span class="ode-line">fed children from them,</span>
+                <span class="ode-line">buried parents after they emptied,</span>
+                <span class="ode-line">and crossed winter to keep them whole,</span>
+                <span class="ode-line">become a verdict no ruler can eat.</span>
+                <span class="ode-line">Ness stood at the broth</span>
+                <span class="ode-line">with her sleeves rolled.</span>
+                <span class="ode-line">Hearth-Soothe entered in measured truth,</span>
+                <span class="ode-line">enough to steady,</span>
+                <span class="ode-line">never enough to purchase surrender.</span>
+                <span class="ode-line">Each bowl was named by its holder.</span>
+                <span class="ode-line">Jórunn read scent where scent bore witness.</span>
+                <span class="ode-line">Mia watched the old pattern beneath the stones.</span>
+                <span class="ode-line">Myah remained more than the collar placed upon her.</span>
+                <span class="ode-line">Dogs moved among the people</span>
+                <span class="ode-line">without becoming emblems for men.</span>
+                <span class="ode-line">The bread was broken badly,</span>
+                <span class="ode-line">passed unevenly,</span>
+                <span class="ode-line">and reached every hand.</span>
+                <span class="ode-line">Freely given.</span>
+                <span class="ode-line">Not owed.</span>
+                <span class="ode-line">Not hall-owned.</span>
+                <span class="ode-line">The words travelled with the steam.</span>
+                <span class="ode-line">Beneath the ruling floor</span>
+                <span class="ode-line">an older judgement stirred.</span>
+                <span class="ode-line">Water.</span>
+                <span class="ode-line">Beast.</span>
+                <span class="ode-line">Hearth.</span>
+                <span class="ode-line">Branch.</span>
+                <span class="ode-line">Four witnesses the hall had bent</span>
+                <span class="ode-line">into ceremony and claim.</span>
+                <span class="ode-line">At their centre waited the great bowl,</span>
+                <span class="ode-line">set above the barred river,</span>
+                <span class="ode-line">prepared to freeze beneath accusation</span>
+                <span class="ode-line">or burn blue beneath a stolen vow.</span>
+                <span class="ode-line">The rulers trusted the centre.</span>
+                <span class="ode-line">They had forgotten the edges could arrive.</span>
+                <span class="ode-line">Every little bowl entered the witness.</span>
+                <span class="ode-line">The chipped one remembered flood.</span>
+                <span class="ode-line">The blackened one remembered free fire.</span>
+                <span class="ode-line">The child&#x27;s cup remembered lips</span>
+                <span class="ode-line">that had been promised no debt.</span>
+                <span class="ode-line">The empty bowl remembered</span>
+                <span class="ode-line">food given before the uprising.</span>
+                <span class="ode-line">The dog&#x27;s water dish remembered refusal</span>
+                <span class="ode-line">without needing to call it law.</span>
+                <span class="ode-line">Small witness crowded the great bowl</span>
+                <span class="ode-line">until the centre could no longer pretend</span>
+                <span class="ode-line">it was the only mouth in the world.</span>
+                <span class="ode-line">The lower square became kitchen,</span>
+                <span class="ode-line">field hospital,</span>
+                <span class="ode-line">kennel,</span>
+                <span class="ode-line">council,</span>
+                <span class="ode-line">rebel court,</span>
+                <span class="ode-line">and a festival too badly organised</span>
+                <span class="ode-line">for tyranny to predict.</span>
+                <span class="ode-line">Spears waited beyond the steam.</span>
+                <span class="ode-line">The people ate anyway.</span>
+                <span class="ode-line">This is how a hall begins to fall:</span>
+                <span class="ode-line">not when the strongest warrior</span>
+                <span class="ode-line">splits the throne,</span>
+                <span class="ode-line">but when the person who baked its bread</span>
+                <span class="ode-line">refuses to feed the lie;</span>
+                <span class="ode-line">when the keeper of stores</span>
+                <span class="ode-line">opens the count in public;</span>
+                <span class="ode-line">when a child carries a spoon</span>
+                <span class="ode-line">without apologising for its noise;</span>
+                <span class="ode-line">when old women strike eager scholars</span>
+                <span class="ode-line">for leaning too hungrily over grief;</span>
+                <span class="ode-line">when the centre bowl is forced to answer</span>
+                <span class="ode-line">every ordinary vessel it ignored.</span>
+                <span class="ode-line">At last the great bowl steamed clear.</span>
+                <span class="ode-line">Not pure.</span>
+                <span class="ode-line">Purity is another empty dish</span>
+                <span class="ode-line">power sets before the desperate.</span>
+                <span class="ode-line">It steamed with broth,</span>
+                <span class="ode-line">truth-bitter,</span>
+                <span class="ode-line">dog hair,</span>
+                <span class="ode-line">ash,</span>
+                <span class="ode-line">river damp,</span>
+                <span class="ode-line">branch memory,</span>
+                <span class="ode-line">spilled salt,</span>
+                <span class="ode-line">fear,</span>
+                <span class="ode-line">anger,</span>
+                <span class="ode-line">and the breath of people</span>
+                <span class="ode-line">who had come from their kitchens</span>
+                <span class="ode-line">before courage had time to dress itself.</span>
+                <span class="ode-line">Cold Hearth heard a new bell.</span>
+                <span class="ode-line">Wood upon wood.</span>
+                <span class="ode-line">Cup against spoon.</span>
+                <span class="ode-line">Ladle against iron.</span>
+                <span class="ode-line">The rough percussion of hunger</span>
+                <span class="ode-line">refusing shame.</span>
+                <span class="ode-line">By dawn the hall still stood.</span>
+                <span class="ode-line">That did not save it.</span>
+                <span class="ode-line">A building has already lost its throne</span>
+                <span class="ode-line">when the people beneath it discover</span>
+                <span class="ode-line">that food may be given freely,</span>
+                <span class="ode-line">that witness may arrive in work-worn hands,</span>
+                <span class="ode-line">and that the smallest bowl in the square</span>
+                <span class="ode-line">can hold more law</span>
+                <span class="ode-line">than every crown above it.</span>
+                <span class="ode-line">The night did not become safe.</span>
+                <span class="ode-line">It became answerable.</span>
+            </div>
+            <nav class="scroll-turning" aria-label="Move through the ten odes">
+              <button type="button" data-scroll-go="scroll-7">← Previous scroll</button>
+              <span>8 / 10</span>
+              <button type="button" data-scroll-go="scroll-9">Next scroll →</button>
+            </nav>
+          </div>
+        </details>
+        <details class="living-scroll reveal-on-scroll" id="scroll-9" data-scroll="9">
+          <summary>
+            <span class="scroll-number" aria-hidden="true">IX</span>
+            <span class="scroll-summary-copy">
+              <span class="scroll-kicker">Scroll IX · Identity</span>
+              <span class="scroll-title">The Wolf Who Kept Two Roads And One Chosen Name</span>
+              <span class="scroll-dedication">For Jack, once named Hrók-Mýr, whose ancestry was witness and never a leash</span>
+            </span>
+            <span class="scroll-open-hint" aria-hidden="true">Unroll</span>
+          </summary>
+          <div class="living-scroll-body">
+            <header class="ode-heading">
+              <p class="eyebrow">Website Ode 9 of 10</p>
+              <h3>ODE OF THE WOLF WHO KEPT TWO ROADS AND ONE CHOSEN NAME</h3>
+              <p class="ode-dedication">For Jack, once named Hrók-Mýr, whose ancestry was witness and never a leash</p>
+              <p class="bard-credit">By Orven Drail, wandering bard, from a north-road howl translated only after the wolf had walked away</p>
+              <div class="wing-divider" aria-hidden="true"><span></span><b>Black Wings</b><span></span></div>
+            </header>
+            <div class="ode-lines" aria-label="Full text of The Wolf Who Kept Two Roads And One Chosen Name">
+                <span class="ode-line">Before men wrote roads,</span>
+                <span class="ode-line">the Moor-Wolves carried them in the body.</span>
+                <span class="ode-line">Paw remembers what ink abandons.</span>
+                <span class="ode-line">Rain may lift the human footprint.</span>
+                <span class="ode-line">Snow may close over blood.</span>
+                <span class="ode-line">Clerks may rename a crossing</span>
+                <span class="ode-line">and punish the old word from every mouth.</span>
+                <span class="ode-line">Still the wolf-road keeps</span>
+                <span class="ode-line">who passed hungry,</span>
+                <span class="ode-line">who passed hunted,</span>
+                <span class="ode-line">who carried a child beneath cloth,</span>
+                <span class="ode-line">and who followed without taking.</span>
+                <span class="ode-line">He was born under storm-moon</span>
+                <span class="ode-line">near the cold water of Vaelthorn,</span>
+                <span class="ode-line">white-blue through the fur,</span>
+                <span class="ode-line">black at the ears,</span>
+                <span class="ode-line">one eye carrying a silver crescent.</span>
+                <span class="ode-line">The litter named him Hrók-Mýr</span>
+                <span class="ode-line">in tooth-speech.</span>
+                <span class="ode-line">An old name.</span>
+                <span class="ode-line">A true name.</span>
+                <span class="ode-line">Truth did not make it a chain.</span>
+                <span class="ode-line">His brother fell beneath petal-marked hands.</span>
+                <span class="ode-line">The pack demanded throat-debt.</span>
+                <span class="ode-line">Grief loves arithmetic</span>
+                <span class="ode-line">when arithmetic promises a body.</span>
+                <span class="ode-line">One dead.</span>
+                <span class="ode-line">One death owed.</span>
+                <span class="ode-line">One red mouth to close the count.</span>
+                <span class="ode-line">Hrók-Mýr refused.</span>
+                <span class="ode-line">They called him weak.</span>
+                <span class="ode-line">They called him oath-breaker.</span>
+                <span class="ode-line">They named revenge kinship</span>
+                <span class="ode-line">and expected blood to bow.</span>
+                <span class="ode-line">He broke the kin-band.</span>
+                <span class="ode-line">He did not break kin.</span>
+                <span class="ode-line">Hear the difference howl through winter.</span>
+                <span class="ode-line">The wolf went road-alone.</span>
+                <span class="ode-line">Years later he found rain carrying</span>
+                <span class="ode-line">the scent of a hidden child.</span>
+                <span class="ode-line">Hands moved the small body.</span>
+                <span class="ode-line">Some hands obeyed.</span>
+                <span class="ode-line">Some feared.</span>
+                <span class="ode-line">Some would have fled</span>
+                <span class="ode-line">if another road had shown itself.</span>
+                <span class="ode-line">The easy hero-song says:</span>
+                <span class="ode-line">kill every hand,</span>
+                <span class="ode-line">lift the child,</span>
+                <span class="ode-line">run red through the dark.</span>
+                <span class="ode-line">The wolf knew what songs forget.</span>
+                <span class="ode-line">A child beneath corpses</span>
+                <span class="ode-line">is not rescued by the beauty of vengeance.</span>
+                <span class="ode-line">A beast who takes a child from human arms</span>
+                <span class="ode-line">becomes the story men use</span>
+                <span class="ode-line">to sharpen spears against every beast.</span>
+                <span class="ode-line">So he marked the scent.</span>
+                <span class="ode-line">He followed far enough</span>
+                <span class="ode-line">to keep the living from vanishing.</span>
+                <span class="ode-line">He waited for a road</span>
+                <span class="ode-line">where help would not become another theft.</span>
+                <span class="ode-line">They called waiting cowardice.</span>
+                <span class="ode-line">The road remembered otherwise.</span>
+                <span class="ode-line">Southward,</span>
+                <span class="ode-line">the old name thinned.</span>
+                <span class="ode-line">Another name came,</span>
+                <span class="ode-line">plain enough to sit beside a fire.</span>
+                <span class="ode-line">Jack.</span>
+                <span class="ode-line">No saga-maker would have chosen it</span>
+                <span class="ode-line">for a storm-born Moor-Wolf.</span>
+                <span class="ode-line">That is why it suited him.</span>
+                <span class="ode-line">It carried no prophecy.</span>
+                <span class="ode-line">No blood invoice.</span>
+                <span class="ode-line">No pack command hidden beneath praise.</span>
+                <span class="ode-line">It was the name spoken</span>
+                <span class="ode-line">where he had chosen to remain.</span>
+                <span class="ode-line">Then the north found him again.</span>
+                <span class="ode-line">Wolf banners crossed the road.</span>
+                <span class="ode-line">Old tooth-speech struck the air.</span>
+                <span class="ode-line">Men shouted Hrók-Mýr</span>
+                <span class="ode-line">as if a first name were a hook</span>
+                <span class="ode-line">and history the hand permitted to pull it.</span>
+                <span class="ode-line">Below,</span>
+                <span class="ode-line">stolen vows tightened.</span>
+                <span class="ode-line">The House waited for the old sound</span>
+                <span class="ode-line">to make the wolf useful.</span>
+                <span class="ode-line">Grief sharpened itself behind the riders.</span>
+                <span class="ode-line">Jack sat down.</span>
+                <span class="ode-line">There are battles won by standing.</span>
+                <span class="ode-line">This one required a wolf</span>
+                <span class="ode-line">to make every hungry history wait.</span>
+                <span class="ode-line">FATAS stood upon one side.</span>
+                <span class="ode-line">Sigratha Wolf-Thorn stood upon the other.</span>
+                <span class="ode-line">Neither hand touched him.</span>
+                <span class="ode-line">Witness held three sides of the road</span>
+                <span class="ode-line">and left the fourth for leaving.</span>
+                <span class="ode-line">The old name was spoken accurately.</span>
+                <span class="ode-line">The old wrong was spoken accurately.</span>
+                <span class="ode-line">The refusal,</span>
+                <span class="ode-line">the exile,</span>
+                <span class="ode-line">the brother,</span>
+                <span class="ode-line">the child in rain,</span>
+                <span class="ode-line">the long road south:</span>
+                <span class="ode-line">none were denied.</span>
+                <span class="ode-line">But accuracy is not ownership.</span>
+                <span class="ode-line">Ancestry may explain the snow in the blood.</span>
+                <span class="ode-line">It may not command the feet.</span>
+                <span class="ode-line">A first name may be true.</span>
+                <span class="ode-line">It may not overrule the living mouth,</span>
+                <span class="ode-line">the living body,</span>
+                <span class="ode-line">the life built afterward.</span>
+                <span class="ode-line">The wolf did not tear Hrók-Mýr from himself.</span>
+                <span class="ode-line">He did not surrender Jack.</span>
+                <span class="ode-line">He kept the road behind</span>
+                <span class="ode-line">without walking backward upon it.</span>
+                <span class="ode-line">He kept the road beside the Braid</span>
+                <span class="ode-line">without becoming anyone&#x27;s animal.</span>
+                <span class="ode-line">Two histories remained in the fur.</span>
+                <span class="ode-line">One chosen name stood in the present.</span>
+                <span class="ode-line">Jack.</span>
+                <span class="ode-line">Say it without summoning.</span>
+                <span class="ode-line">Say it as witness.</span>
+                <span class="ode-line">Say it with the gate unbarred.</span>
+                <span class="ode-line">Then leave the last word to the wolf.</span>
+                <span class="ode-line">He may answer with a howl.</span>
+                <span class="ode-line">He may answer with teeth.</span>
+                <span class="ode-line">He may look once towards the north,</span>
+                <span class="ode-line">turn south by his own judgement,</span>
+                <span class="ode-line">and make silence carry the law:</span>
+                <span class="ode-line">No road behind me owns the road I choose.</span>
+            </div>
+            <nav class="scroll-turning" aria-label="Move through the ten odes">
+              <button type="button" data-scroll-go="scroll-8">← Previous scroll</button>
+              <span>9 / 10</span>
+              <button type="button" data-scroll-go="scroll-10">Next scroll →</button>
+            </nav>
+          </div>
+        </details>
+        <details class="living-scroll reveal-on-scroll" id="scroll-10" data-scroll="10">
+          <summary>
+            <span class="scroll-number" aria-hidden="true">X</span>
+            <span class="scroll-summary-copy">
+              <span class="scroll-kicker">Scroll X · Mystery</span>
+              <span class="scroll-title">The Three Who Read The Road Before It Answered</span>
+              <span class="scroll-dedication">For Gracey, Deynn and Lóra Forren, who never needed a grand name to know when a road was lying</span>
+            </span>
+            <span class="scroll-open-hint" aria-hidden="true">Unroll</span>
+          </summary>
+          <div class="living-scroll-body">
+            <header class="ode-heading">
+              <p class="eyebrow">Website Ode 10 of 10</p>
+              <h3>ODE OF THE THREE WHO READ THE ROAD BEFORE IT ANSWERED</h3>
+              <p class="ode-dedication">For Gracey, Deynn and Lóra Forren, who never needed a grand name to know when a road was lying</p>
+              <p class="bard-credit">By Sael Vorn, road-poet, from a verse whose final line appears on both sides of the same stone</p>
+              <div class="wing-divider" aria-hidden="true"><span></span><b>Black Wings</b><span></span></div>
+            </header>
+            <div class="ode-lines" aria-label="Full text of The Three Who Read The Road Before It Answered">
+                <span class="ode-line">There are people in Vardrum who know roads.</span>
+                <span class="ode-line">They know where the track dries first,</span>
+                <span class="ode-line">which bridge complains under grain,</span>
+                <span class="ode-line">where frost keeps one hour longer</span>
+                <span class="ode-line">and where a traveller should fill water</span>
+                <span class="ode-line">before the hills begin refusing wells.</span>
+                <span class="ode-line">Fewer can read them.</span>
+                <span class="ode-line">A road is never only stone.</span>
+                <span class="ode-line">It carries the pressure of departures,</span>
+                <span class="ode-line">the warmth of those expected home,</span>
+                <span class="ode-line">the lies told at forks,</span>
+                <span class="ode-line">the last backward glance of the missing,</span>
+                <span class="ode-line">and every journey a map was paid to forget.</span>
+                <span class="ode-line">Three travelled together.</span>
+                <span class="ode-line">They chose no title.</span>
+                <span class="ode-line">Grand names attract banners,</span>
+                <span class="ode-line">fees,</span>
+                <span class="ode-line">petitioners,</span>
+                <span class="ode-line">and men who believe mystery exists</span>
+                <span class="ode-line">to improve their importance.</span>
+                <span class="ode-line">They preferred bread,</span>
+                <span class="ode-line">mud,</span>
+                <span class="ode-line">bad weather,</span>
+                <span class="ode-line">and the argument already in progress.</span>
+                <span class="ode-line">Gracey read the traveller.</span>
+                <span class="ode-line">A Skelda,</span>
+                <span class="ode-line">low and strong through the shoulders,</span>
+                <span class="ode-line">made for the places where countries disagree:</span>
+                <span class="ode-line">water with earth,</span>
+                <span class="ode-line">root with stone,</span>
+                <span class="ode-line">road with wilderness,</span>
+                <span class="ode-line">one truth with another.</span>
+                <span class="ode-line">She entered no mind by force.</span>
+                <span class="ode-line">Truth was the door.</span>
+                <span class="ode-line">An open mind might give her image,</span>
+                <span class="ode-line">feeling,</span>
+                <span class="ode-line">warning,</span>
+                <span class="ode-line">memory,</span>
+                <span class="ode-line">and occasionally a judgement</span>
+                <span class="ode-line">so exact that speech would only weaken it.</span>
+                <span class="ode-line">A closed mind gave silence.</span>
+                <span class="ode-line">She did not punish the lie.</span>
+                <span class="ode-line">She remained outside.</span>
+                <span class="ode-line">This frightened dishonest men</span>
+                <span class="ode-line">more than any blade,</span>
+                <span class="ode-line">for they could not accuse her of invasion</span>
+                <span class="ode-line">when their own locked door</span>
+                <span class="ode-line">was the only thing she revealed.</span>
+                <span class="ode-line">Deynn read ahead.</span>
+                <span class="ode-line">Wrong dust.</span>
+                <span class="ode-line">Grass leaning against the journey.</span>
+                <span class="ode-line">Water beneath a road</span>
+                <span class="ode-line">where no water had permission to be.</span>
+                <span class="ode-line">Tracks beginning without arrival.</span>
+                <span class="ode-line">Tracks ending without departure.</span>
+                <span class="ode-line">The stone set back one finger-width</span>
+                <span class="ode-line">by a hand that wanted the change</span>
+                <span class="ode-line">to seem older than morning.</span>
+                <span class="ode-line">He vanished often.</span>
+                <span class="ode-line">Sometimes for minutes.</span>
+                <span class="ode-line">Sometimes for days.</span>
+                <span class="ode-line">He returned muddy,</span>
+                <span class="ode-line">bleeding,</span>
+                <span class="ode-line">pleased with himself,</span>
+                <span class="ode-line">or offended that anyone had worried.</span>
+                <span class="ode-line">Gracey understood.</span>
+                <span class="ode-line">Lóra complained enough for both of them.</span>
+                <span class="ode-line">That was also a form of love.</span>
+                <span class="ode-line">Lóra Forren read the song.</span>
+                <span class="ode-line">Not merely melody.</span>
+                <span class="ode-line">She heard when a path had lost a beat,</span>
+                <span class="ode-line">when a milestone&#x27;s answer fell too neatly,</span>
+                <span class="ode-line">when a warning rhymed because somebody</span>
+                <span class="ode-line">had polished fear for use,</span>
+                <span class="ode-line">when a traveller told the truth</span>
+                <span class="ode-line">but placed the silence in the wrong measure.</span>
+                <span class="ode-line">She carried the human road:</span>
+                <span class="ode-line">bread divided,</span>
+                <span class="ode-line">boots mended,</span>
+                <span class="ode-line">tempers named before they became weather,</span>
+                <span class="ode-line">the necessary insult that brings a frightened friend</span>
+                <span class="ode-line">back into the ordinary world.</span>
+                <span class="ode-line">Together they asked three questions.</span>
+                <span class="ode-line">What does the traveller hide?</span>
+                <span class="ode-line">What has the ground betrayed?</span>
+                <span class="ode-line">What is missing from the song?</span>
+                <span class="ode-line">Most roads failed beneath one of them.</span>
+                <span class="ode-line">The northern road failed all three.</span>
+                <span class="ode-line">Deynn crossed a way that led somewhere certain.</span>
+                <span class="ode-line">He turned back.</span>
+                <span class="ode-line">It led elsewhere.</span>
+                <span class="ode-line">No landslip had moved it.</span>
+                <span class="ode-line">No mist had hidden the fork.</span>
+                <span class="ode-line">No map had merely lied.</span>
+                <span class="ode-line">The direction remained.</span>
+                <span class="ode-line">The answer changed.</span>
+                <span class="ode-line">He returned wounded</span>
+                <span class="ode-line">and would not go north.</span>
+                <span class="ode-line">Gracey opened to what he carried.</span>
+                <span class="ode-line">Fear entered first.</span>
+                <span class="ode-line">Then stones not standing in the same hour.</span>
+                <span class="ode-line">Then a brightness upon the road,</span>
+                <span class="ode-line">blue at the edge of knowing,</span>
+                <span class="ode-line">owing no familiar name.</span>
+                <span class="ode-line">Then absence.</span>
+                <span class="ode-line">Not emptiness.</span>
+                <span class="ode-line">Absence shaped with such care</span>
+                <span class="ode-line">that it seemed more deliberate than a lie.</span>
+                <span class="ode-line">Lóra heard the missing measure.</span>
+                <span class="ode-line">She did not mend it.</span>
+                <span class="ode-line">This was wisdom.</span>
+                <span class="ode-line">Bad poets fill every silence.</span>
+                <span class="ode-line">Bad rulers do the same.</span>
+                <span class="ode-line">The three kept the gap alive</span>
+                <span class="ode-line">until the people who belonged to it</span>
+                <span class="ode-line">could approach without being replaced</span>
+                <span class="ode-line">by a clever answer.</span>
+                <span class="ode-line">Long before them,</span>
+                <span class="ode-line">four travellers had heard the first call</span>
+                <span class="ode-line">rise beneath northern stone.</span>
+                <span class="ode-line">Something far away had answered.</span>
+                <span class="ode-line">They counted four.</span>
+                <span class="ode-line">The road remembered otherwise.</span>
+                <span class="ode-line">Years passed.</span>
+                <span class="ode-line">The abandoned stones kept weather.</span>
+                <span class="ode-line">Stories grew cleaner than the boots that made them.</span>
+                <span class="ode-line">One companion carried the question northward</span>
+                <span class="ode-line">through half a lifetime.</span>
+                <span class="ode-line">Then the three arrived,</span>
+                <span class="ode-line">untitled,</span>
+                <span class="ode-line">mud-footed,</span>
+                <span class="ode-line">arguing over food,</span>
+                <span class="ode-line">with gifts no single reader could make sovereign.</span>
+                <span class="ode-line">They did not solve the road.</span>
+                <span class="ode-line">They made it answerable.</span>
+                <span class="ode-line">Gracey kept consent at the door.</span>
+                <span class="ode-line">Deynn kept his eye upon the betrayal ahead.</span>
+                <span class="ode-line">Lóra kept the missing beat unfilled.</span>
+                <span class="ode-line">And when the Braid came at last,</span>
+                <span class="ode-line">carrying black wings,</span>
+                <span class="ode-line">old grief,</span>
+                <span class="ode-line">chosen names,</span>
+                <span class="ode-line">dogs who trusted no perfect road,</span>
+                <span class="ode-line">and a blue flame that remained wholly itself,</span>
+                <span class="ode-line">the three did not kneel to the legend.</span>
+                <span class="ode-line">They made room beside it.</span>
+                <span class="ode-line">For the first time,</span>
+                <span class="ode-line">the road faced readers</span>
+                <span class="ode-line">who could hear its warning,</span>
+                <span class="ode-line">test its memory,</span>
+                <span class="ode-line">refuse its borrowed certainty,</span>
+                <span class="ode-line">and still leave space</span>
+                <span class="ode-line">for what none of them understood.</span>
+                <span class="ode-line">The first answer had emptied the road.</span>
+                <span class="ode-line">The second found the Braid standing upon it.</span>
+                <span class="ode-line">Gracey lowered her head.</span>
+                <span class="ode-line">Deynn watched the north.</span>
+                <span class="ode-line">Lóra held the unfinished note.</span>
+                <span class="ode-line">Under their feet,</span>
+                <span class="ode-line">stone drew breath.</span>
+                <span class="ode-line">Somewhere beyond distance,</span>
+                <span class="ode-line">something answered again.</span>
+                <span class="ode-line">This time,</span>
+                <span class="ode-line">three readers were listening.</span>
+            </div>
+            <nav class="scroll-turning" aria-label="Move through the ten odes">
+              <button type="button" data-scroll-go="scroll-9">← Previous scroll</button>
+              <span>10 / 10</span>
+              <button type="button" data-scroll-go="scroll-1">Next scroll →</button>
+            </nav>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="panel salmon-stage" id="salmon-two-arses">
+      <div class="salmon-scene" data-tilt-stage>
+        <figure class="salmon-landscape">
+          <img
+            src="salmon-two-arses-twelfth-pint.webp"
+            alt="Salmon Two-Arses Twelve-Pints raising a tankard outside a crooked Salt-Marsh tavern while Scarlet and Blue watch from above"
+            width="1536"
+            height="1024"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+
+        <div class="salmon-intro">
+          <p class="eyebrow">The Bard at the Twelfth Pint</p>
+          <h2>Salmon Two-Arses Twelve-Pints</h2>
+          <p class="salmon-role">The Rotund Short-Legged Bard of Palmers Green</p>
+          <p>
+            Scholar. Drunkard. Profane philosopher. Enemy of silence and
+            defender of the completely unnecessary opinion.
+          </p>
+          <blockquote id="salmon-line" aria-live="polite">
+            “History is written by the victors. Unfortunately, I was in the pub.”
+          </blockquote>
+          <button class="button primary salmon-button" id="salmon-correction" type="button">
+            Request an Historical Correction
+          </button>
+        </div>
+      </div>
+
+      <div class="salmon-lower">
+        <figure class="salmon-court">
+          <img
+            src="salmon-two-arses-holds-court.webp"
+            alt="Salmon Two-Arses standing on a tavern bench to deliver an ode while road-worn listeners and two ravens endure the correction"
+            width="1024"
+            height="1536"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption>
+            History deserves accuracy. Unfortunately, Salmon arrived first.
+          </figcaption>
+        </figure>
+
+        <div class="salmon-copy">
+          <p class="eyebrow">Brains First · Disorder Second</p>
+          <h3>A sharp mind with no interest in diplomatic phrasing</h3>
+          <p>
+            Salmon notices pomposity before most people have finished creating
+            it. The ale amplifies him; it never replaces the scholar beneath
+            the beard, booming objections and heroic relationship with a
+            tankard.
+          </p>
+          <p class="salmon-warning">
+            Those closest to him possess an ancient survival technique:
+            <strong>“Yes, Salmon.”</strong>
+          </p>
+
+          <div class="verse-stack">
+          <details class="verse-entry salmon-lay">
+            <summary>
+              <span class="verse-title">The Lay of the Braid of Beating Hearts</span>
+              <span class="verse-subtitle">As sung by Salmon Two-Arses Twelve-Pints</span>
+            </summary>
+            <div class="verse-body">
+              <div class="ode-lines salmon-lay-lines">
+                  <span class="ode-line">Hear now, mistake not Braid for rope,
+nor think it forged for war alone,
+its cords are spun from living hearts,
+from wintered hands that found a home.</span>
+                  <span class="ode-line">For love runs red within the Braid,
+some whispered low beneath the moon,
+some tempered long through faithful years,
+some sudden as a storm in June.</span>
+                  <span class="ode-line">There blaze the loves of open flame,
+and loves that neither beg nor plead,
+a look held fast across the dark,
+a hand made strong for hidden need.</span>
+                  <span class="ode-line">Yet love within the Braid runs wild,
+it snaps, draws back, then storms away,
+doors thunder shut, harsh words are hurled,
+and pride must kneel to kinder speech.</span>
+                  <span class="ode-line">They wrangle over roads and risks,
+who struck the spark, who fed the dark,
+over stubborn hearts and foolish schemes,
+and maps left blind without a mark.</span>
+                  <span class="ode-line">But laughter rides close at their heels,
+for anger wears a brittle crown,
+one crooked grin, one tavern jest,
+and ancient grudges clatter down.</span>
+                  <span class="ode-line">Their beasts are not the lesser kin,
+nor shadows padding at their feet,
+they guard the afraid, they scent the false,
+and weigh each heart by pulse and heat.</span>
+                  <span class="ode-line">Some carry warnings through the night,
+some warm the hands of those who weep,
+some bare their teeth against the dark,
+while others mourn beside the deep.</span>
+                  <span class="ode-line">Trust is no coin for passing hands,
+nor prize of oath or noble name,
+it roots in deeds when hope runs lean,
+and holds when all the world is flame.</span>
+                  <span class="ode-line">Each bears a burden in the whole,
+the shield that meets the first attack,
+the steady voice, the guiding hand,
+the blade that never once turns back.</span>
+                  <span class="ode-line">The healer binds what grief has torn,
+the watcher reads the wheeling sky,
+the fool bars darkness from the door,
+the truth-tongue dares to ask them why.</span>
+                  <span class="ode-line">One leads when roads are drowned in mist,
+one follows where another sees,
+and when the proudest spirit falls,
+the quiet hand restores its peace.</span>
+                  <span class="ode-line">They are not carved from flawless stone,
+nor saints in solemn marble shown,
+they fear, they fail, they doubt the road,
+and sometimes ache to walk alone.</span>
+                  <span class="ode-line">But when the hour demands its due,
+the laughter stills, the quarrels cease,
+each takes their place without command,
+for duty speaks in deeds, not peace.</span>
+                  <span class="ode-line">The Braid is romance, fang, and feather,
+trust hard-won and promises kept,
+it is the watch through starless hours,
+and the shoulder where the weary wept.</span>
+                  <span class="ode-line">It is each quarrel weathered whole,
+each secret guarded from the flame,
+each foolish burst of mortal laughter
+when the world near forgot its name.</span>
+                  <span class="ode-line">No single strand may rule the rest,
+no heart endures by strength alone,
+for those entwined within the Braid
+make every wandering soul their own.</span>
+                  <span class="ode-line">So, sing not only of their wars,
+nor weigh them by the blood they shed,
+the Braid endures because they love
+the living, lost, and honoured dead.</span>
+                  <span class="ode-line">And should one strand be torn away,
+the others bear the sudden pain,
+they close around the hollow place,</span>
+                  <span class="ode-line">but never call it whole again.</span>
+              </div>
+              <p class="salmon-attribution">As sung by Salmon Two-Arses, Twelve-Pints-Short, Legged Bard of Palmers Green, shortly before he passed out after twelve pints and the perilous three-yard pilgrimage to the karsi. He woke upon the throne three days later, stuck fast to the seat.</p>
+            </div>
+          </details>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="panel" id="book-sixteen">
@@ -2148,5 +4886,126 @@ never truly leave.</p>
     <p>© 2026 Saga of Black Wings · Created by Timothy M. Halliday</p>
     <p class="footer-motto">No crown shall count us smaller.</p>
   </footer>
+
+  <script>
+    (() => {
+      const scrolls = Array.from(document.querySelectorAll(".living-scroll"));
+      const pathLinks = Array.from(document.querySelectorAll("[data-scroll-target]"));
+      const meter = document.querySelector(".reading-thread span");
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      let syncing = false;
+
+      const revealItems = Array.from(document.querySelectorAll(".reveal-on-scroll"));
+      if (reducedMotion || !("IntersectionObserver" in window)) {
+        revealItems.forEach((item) => item.classList.add("is-revealed"));
+      } else {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("is-revealed");
+            observer.unobserve(entry.target);
+          });
+        }, {
+          rootMargin: "0px 0px -8%",
+          threshold: 0.12
+        });
+
+        revealItems.forEach((item) => revealObserver.observe(item));
+      }
+
+      const markActive = (scroll) => {
+        const number = scroll ? Number(scroll.dataset.scroll) : 0;
+        pathLinks.forEach((link) => {
+          const active = scroll && link.dataset.scrollTarget === scroll.id;
+          if (active) {
+            link.setAttribute("aria-current", "true");
+          } else {
+            link.removeAttribute("aria-current");
+          }
+        });
+        if (meter) meter.style.width = `${number * 10}%`;
+      };
+
+      const openScroll = (scroll, moveToIt = true) => {
+        if (!scroll) return;
+        syncing = true;
+        scrolls.forEach((entry) => {
+          if (entry !== scroll) entry.open = false;
+        });
+        scroll.open = true;
+        syncing = false;
+        markActive(scroll);
+        history.replaceState(null, "", `#${scroll.id}`);
+        if (moveToIt) {
+          requestAnimationFrame(() => {
+            scroll.scrollIntoView({
+              behavior: reducedMotion ? "auto" : "smooth",
+              block: "start"
+            });
+          });
+        }
+      };
+
+      scrolls.forEach((scroll) => {
+        scroll.addEventListener("toggle", () => {
+          if (syncing) return;
+          if (scroll.open) {
+            openScroll(scroll, false);
+          } else if (!scrolls.some((entry) => entry.open)) {
+            markActive(null);
+          }
+        });
+      });
+
+      pathLinks.forEach((link) => {
+        link.addEventListener("click", (event) => {
+          event.preventDefault();
+          openScroll(document.getElementById(link.dataset.scrollTarget));
+        });
+      });
+
+      document.querySelectorAll("[data-scroll-go]").forEach((button) => {
+        button.addEventListener("click", () => {
+          openScroll(document.getElementById(button.dataset.scrollGo));
+        });
+      });
+
+      const hashScroll = document.querySelector(`${location.hash}.living-scroll`);
+      if (hashScroll) openScroll(hashScroll, false);
+
+      const correctionButton = document.getElementById("salmon-correction");
+      const correctionLine = document.getElementById("salmon-line");
+      const salmonLines = [
+        "“History is written by the victors. Unfortunately, I was in the pub.”",
+        "“The throat has been dry all bloody night.”",
+        "“History deserves accuracy. Unfortunately, Salmon arrived first.”",
+        "“Yes, Salmon.”"
+      ];
+      let salmonLineIndex = 0;
+
+      correctionButton?.addEventListener("click", () => {
+        salmonLineIndex = (salmonLineIndex + 1) % salmonLines.length;
+        correctionLine.textContent = salmonLines[salmonLineIndex];
+        correctionButton.classList.remove("is-correcting");
+        void correctionButton.offsetWidth;
+        correctionButton.classList.add("is-correcting");
+      });
+
+      const tiltStage = document.querySelector("[data-tilt-stage]");
+      if (tiltStage && !reducedMotion && window.matchMedia("(pointer: fine)").matches) {
+        tiltStage.addEventListener("pointermove", (event) => {
+          const rect = tiltStage.getBoundingClientRect();
+          const x = ((event.clientX - rect.left) / rect.width - 0.5) * -10;
+          const y = ((event.clientY - rect.top) / rect.height - 0.5) * -7;
+          tiltStage.style.setProperty("--salmon-x", `${x}px`);
+          tiltStage.style.setProperty("--salmon-y", `${y}px`);
+        });
+        tiltStage.addEventListener("pointerleave", () => {
+          tiltStage.style.setProperty("--salmon-x", "0px");
+          tiltStage.style.setProperty("--salmon-y", "0px");
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
