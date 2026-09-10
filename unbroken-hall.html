@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100d0a">
+  <title>Ten Odes of the Unbroken Hall | Saga of Black Wings</title>
+  <meta name="description" content="Ten lives, one long night, and the stories that refused to kneel. Enter the Unbroken Hall and raise each cup.">
+  <link rel="canonical" href="https://sagaofblackwings.com/unbroken-hall.html">
+  <link rel="stylesheet" href="unbroken-hall.css">
+  <script src="unbroken-hall.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#cups">Skip to the ten cups</a>
+
+  <header class="hero" id="top">
+    <img class="hero-art" src="unbroken-hall-salmon.webp" alt="Salmon Two-Arses stands upon a tavern table, raising a cup before the Unbroken Hall.">
+    <div class="hero-shade"></div>
+    <nav class="masthead" aria-label="Page navigation">
+      <a class="brand" href="index.html">Saga of Black Wings</a>
+      <a href="odes.html">Back to the Skald-Room</a>
+    </nav>
+    <div class="hero-copy">
+      <p class="eyebrow">The Long Night's Reckoning</p>
+      <h1>Ten Odes<br><span>of the Unbroken Hall</span></h1>
+      <p class="lede">Ten lives, one long night, and the stories that refused to kneel.</p>
+      <button class="enter" type="button" data-scroll="#invocation">Enter the Hall <span aria-hidden="true">↓</span></button>
+    </div>
+    <p class="credit">Told across the tavern tables by Salmon Two-Arses</p>
+  </header>
+
+  <main>
+    <section class="law" id="invocation" aria-labelledby="law-title">
+      <p class="eyebrow">The Tavern Law</p>
+      <h2 id="law-title">No life reduced to the clean shape of legend.</h2>
+      <p>No dead made useful. No lover made property. No daughter sung as half. No wound made golden merely because the bard fears blood.</p>
+      <button class="text-button" type="button" data-opening>Hear the opening invocation</button>
+    </section>
+
+    <nav class="cup-nav" aria-label="Choose a cup">
+      <span>Choose a cup</span>
+      <div id="cup-links"></div>
+    </nav>
+
+    <section class="cups" id="cups" aria-labelledby="cups-title">
+      <div class="section-heading">
+        <p class="eyebrow">The Order of Cups</p>
+        <h2 id="cups-title">Raise the cup. Read the whole life.</h2>
+      </div>
+      <div id="cup-grid" class="cup-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="closing" id="closing" aria-labelledby="closing-title">
+      <div class="closing-flame" aria-hidden="true"></div>
+      <p class="eyebrow">Closing of the Hall</p>
+      <h2 id="closing-title">The Last Cup Left Uncounted</h2>
+      <div id="closing-text" class="closing-text"></div>
+      <p class="witness">We know you were here.</p>
+      <a class="home-link" href="odes.html">Return to the Skald-Room</a>
+    </section>
+  </main>
+
+  <dialog id="reading-room" aria-labelledby="dialog-title">
+    <button class="close" type="button" aria-label="Close the ode">×</button>
+    <div class="dialog-art-wrap">
+      <img id="dialog-art" alt="">
+      <span id="dialog-number"></span>
+    </div>
+    <article class="dialog-copy">
+      <p id="dialog-cup" class="eyebrow"></p>
+      <h2 id="dialog-title"></h2>
+      <p id="dialog-dedication" class="dedication"></p>
+      <p id="dialog-bard" class="bard"></p>
+      <p id="dialog-refrain" class="refrain"></p>
+      <div id="dialog-body" class="ode-body"></div>
+      <p class="witness small">We know you were here.</p>
+    </article>
+  </dialog>
+
+  <dialog id="opening-room" aria-labelledby="opening-title">
+    <button class="close" type="button" aria-label="Close the opening invocation">×</button>
+    <article class="opening-copy">
+      <p class="eyebrow">Opening Invocation</p>
+      <h2 id="opening-title">The Bard Climbs the Table</h2>
+      <div id="opening-text" class="ode-body"></div>
+    </article>
+  </dialog>
+
+  <noscript><p class="noscript">This hall needs JavaScript to open the ten cups.</p></noscript>
+</body>
+</html>
