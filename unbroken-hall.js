@@ -8,6 +8,25 @@ function paragraph(text) {
   return p;
 }
 
+function showDialog(room) {
+  if (!room) return;
+
+  try {
+    if (typeof room.showModal === "function") {
+      if (!room.open) room.showModal();
+    } else {
+      room.setAttribute("open", "");
+      room.classList.add("dialog-fallback");
+    }
+  } catch {
+    room.setAttribute("open", "");
+    room.classList.add("dialog-fallback");
+  }
+
+  document.body.classList.add("modal-open");
+  room.scrollTop = 0;
+}
+
 function openOde(ode) {
   const room = document.querySelector("#reading-room");
   const art = document.querySelector("#dialog-art");
@@ -21,12 +40,24 @@ function openOde(ode) {
   document.querySelector("#dialog-refrain").textContent = ode.refrain;
   const body = document.querySelector("#dialog-body");
   body.replaceChildren(...ode.body.map(paragraph));
-  room.showModal();
-  room.scrollTop = 0;
+  showDialog(room);
 }
 
 function closeDialog(dialog) {
-  dialog.close();
+  if (!dialog) return;
+  if (typeof dialog.close === "function") {
+    try {
+      dialog.close();
+    } catch {
+      dialog.removeAttribute("open");
+    }
+  } else {
+    dialog.removeAttribute("open");
+  }
+  dialog.classList.remove("dialog-fallback");
+  if (!document.querySelector("dialog[open]")) {
+    document.body.classList.remove("modal-open");
+  }
 }
 
 function makeCup(ode) {
@@ -43,6 +74,16 @@ function makeCup(ode) {
   const number = document.createElement("span");
   number.className = "cup-number";
   number.textContent = roman[ode.number - 1];
+  art.tabIndex = 0;
+  art.setAttribute("role", "button");
+  art.setAttribute("aria-label", `Open ${ode.title}`);
+  art.addEventListener("click", () => openOde(ode));
+  art.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openOde(ode);
+    }
+  });
   art.append(image, number);
 
   const copy = document.createElement("div");
@@ -94,7 +135,7 @@ document.addEventListener("click", (event) => {
   if (scroll) document.querySelector(scroll.dataset.scroll)?.scrollIntoView();
 
   if (event.target.closest("[data-opening]")) {
-    document.querySelector("#opening-room").showModal();
+    showDialog(document.querySelector("#opening-room"));
   }
 
   const close = event.target.closest(".close");
@@ -102,13 +143,25 @@ document.addEventListener("click", (event) => {
 });
 
 document.querySelectorAll("dialog").forEach((dialog) => {
+  dialog.addEventListener("close", () => {
+    if (!document.querySelector("dialog[open]")) {
+      document.body.classList.remove("modal-open");
+    }
+  });
+
   dialog.addEventListener("click", (event) => {
     const box = dialog.getBoundingClientRect();
     const outside =
       event.clientX < box.left || event.clientX > box.right ||
       event.clientY < box.top || event.clientY > box.bottom;
-    if (outside) dialog.close();
+    if (outside) closeDialog(dialog);
   });
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeDialog(document.querySelector("dialog[open]"));
+  }
 });
 
 fetch("unbroken-hall-odes.json")
@@ -121,4 +174,3 @@ fetch("unbroken-hall-odes.json")
     document.querySelector("#cup-grid").textContent =
       "The hall is quiet for the moment. Please return shortly.";
   });
-

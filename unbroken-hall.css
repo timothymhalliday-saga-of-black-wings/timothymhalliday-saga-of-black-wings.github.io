@@ -28,6 +28,8 @@ body {
   line-height: 1.7;
 }
 
+body.modal-open { overflow: hidden; }
+
 button, a { font: inherit; }
 button { color: inherit; }
 a { color: inherit; }
@@ -252,6 +254,11 @@ h1 span {
   min-height: 35rem;
   box-shadow: var(--shadow);
   overflow: hidden;
+  cursor: pointer;
+}
+.cup-art:focus-visible {
+  outline: 3px solid var(--gold-pale);
+  outline-offset: 4px;
 }
 .cup-art::after {
   content: "";
@@ -389,6 +396,13 @@ dialog::backdrop {
   background: rgba(6,5,4,.88);
   backdrop-filter: blur(8px);
 }
+dialog.dialog-fallback[open] {
+  position: fixed;
+  inset: 1rem;
+  z-index: 1000;
+  margin: auto;
+  overflow: auto;
+}
 #reading-room[open] {
   display: grid;
   grid-template-columns: minmax(17rem, .72fr) minmax(0, 1.28fr);
@@ -494,7 +508,9 @@ dialog::backdrop {
   #reading-room[open] { display: block; }
   .dialog-art-wrap {
     position: relative;
-    height: 47svh;
+    height: 24svh;
+    min-height: 10rem;
+    max-height: 15rem;
   }
   .dialog-copy { padding: 2.6rem 1.35rem 4rem; }
   .close { right: 1.6rem; }
@@ -504,4 +520,3 @@ dialog::backdrop {
   html { scroll-behavior: auto; }
   .cup-art img { transition: none; }
 }
-
