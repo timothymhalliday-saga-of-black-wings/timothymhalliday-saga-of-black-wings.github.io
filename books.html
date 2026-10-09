@@ -22,11 +22,11 @@
   <meta property="og:url" content="https://sagaofblackwings.com/books.html" />
   <meta
     property="og:image"
-    content="https://sagaofblackwings.com/F8098CC8-B454-449C-B6F1-3623429B74A1.png"
+    content="https://sagaofblackwings.com/saga-I-XX-card-board.jpg"
   />
   <meta
     property="og:image:alt"
-    content="The Braid raven crest from The Saga of Black Wings"
+    content="The complete twenty-book shield road of The Saga of Black Wings"
   />
 
   <meta name="twitter:card" content="summary_large_image" />
@@ -37,7 +37,7 @@
   />
   <meta
     name="twitter:image"
-    content="https://sagaofblackwings.com/F8098CC8-B454-449C-B6F1-3623429B74A1.png"
+    content="https://sagaofblackwings.com/saga-I-XX-card-board.jpg"
   />
 
   <link rel="canonical" href="https://sagaofblackwings.com/books.html" />
@@ -162,6 +162,10 @@
       font-weight: 700;
       letter-spacing: 0.09em;
       text-transform: uppercase;
+    }
+
+    .book-card[id] {
+      scroll-margin-top: 6rem;
     }
 
     .book-card blockquote {
@@ -333,6 +337,17 @@
       border-radius: 1rem;
       box-shadow: inset 0 0 0 1px #1f2d2d, 0 0.8rem 2.2rem #0009;
       overflow: hidden;
+      text-decoration: none;
+      transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+    }
+
+    .saga-card:hover,
+    .saga-card:focus-visible {
+      color: #ead3a3;
+      border-color: #c99a51;
+      box-shadow: inset 0 0 0 1px #5b4426, 0 1rem 2.7rem #000c;
+      outline: none;
+      transform: translateY(-4px);
     }
 
     .saga-card__number {
@@ -405,6 +420,12 @@
 
       .saga-card__key {
         font-size: 0.54rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .saga-card {
+        transition: none;
       }
     }
 
@@ -544,26 +565,26 @@
       </p>
 
       <div class="saga-library__grid">
-        <article class="saga-card"><p class="saga-card__number">BOOK I</p><img class="saga-card__crest" src="book-01-crest.jpg" alt="Road through the mountains crest" loading="lazy" /><h3 class="saga-card__title">The Road That Would Not Kneel</h3><p class="saga-card__key">ROAD · WING · CHILD</p></article>
-        <article class="saga-card"><p class="saga-card__number">BOOK II</p><img class="saga-card__crest" src="book-02-crest.jpg" alt="Reckoner’s knot crest" loading="lazy" /><h3 class="saga-card__title">The Reckoner’s Knot</h3><p class="saga-card__key">KNOT · LAW · RECKONING</p></article>
-        <article class="saga-card"><p class="saga-card__number">BOOK III</p><img class="saga-card__crest" src="book-03-crest.jpg" alt="Crown, thorns and salt crest" loading="lazy" /><h3 class="saga-card__title">The Crown of Thorns and Salt</h3><p class="saga-card__key">CROWN · SALT · THORNS</p></article>
-        <article class="saga-card"><p class="saga-card__number">BOOK IV</p><img class="saga-card__crest" src="book-04-crest.jpg" alt="Broken crown crest" loading="lazy" /><h3 class="saga-card__title">The Crown Unmade</h3><p class="saga-card__key">BROKEN CROWN · MARSH LAW</p></article>
-        <article class="saga-card"><p class="saga-card__number">BOOK V</p><img class="saga-card__crest" src="book-05-crest.jpg" alt="Burning underroot crest" loading="lazy" /><h3 class="saga-card__title">The War of the Underroot</h3><p class="saga-card__key">ROOT · FIRE · BLOODLINE</p></article>
-        <article class="saga-card"><p class="saga-card__number">BOOK VI</p><img class="saga-card__crest" src="book-06-crest.png" alt="Rising root and tower crest" loading="lazy" /><h3 class="saga-card__title">The Rising Root</h3><p class="saga-card__key">ROOT · RISE · GATE</p></article>
-        <article class="saga-card"><p class="saga-card__number">BOOK VII</p><img class="saga-card__crest" src="book-07-crest.png" alt="Severing blade crest" loading="lazy" /><h3 class="saga-card__title">The Severing War</h3><p class="saga-card__key">SEVER · FRACTURE · TRUTH</p></article>
-        <article class="saga-card"><p class="saga-card__number">BOOK VIII</p><img class="saga-card__crest" src="book-08-crest.png" alt="Last root crest" loading="lazy" /><h3 class="saga-card__title">The Last Root</h3><p class="saga-card__key">LAST ROOT · TRUE NAME</p></article>
-        <article class="saga-card"><p class="saga-card__number">BOOK IX</p><img class="saga-card__crest" src="book-09-crest.png" alt="Eclipse and rootless road crest" loading="lazy" /><h3 class="saga-card__title">The World Without Root</h3><p class="saga-card__key">NO ROOT · WRONG TURNS</p></article>
-        <article class="saga-card"><p class="saga-card__number">BOOK X</p><img class="saga-card__crest" src="book-10-crest.png" alt="Quiet hearth crest" loading="lazy" /><h3 class="saga-card__title">The Quieting World</h3><p class="saga-card__key">SANCTUARY · HEARTH · ISLE</p></article>
-        <article class="saga-card"><p class="saga-card__number">BOOK XI</p><img class="saga-card__crest" src="book-11-crest.png" alt="Agreement ash crest" loading="lazy" /><h3 class="saga-card__title">The Agreement of Ash</h3><p class="saga-card__key">ASH · AGREEMENT · MERCY</p></article>
-        <article class="saga-card"><p class="saga-card__number">BOOK XII</p><img class="saga-card__crest" src="book-12-crest.png" alt="Raised refusal hand crest" loading="lazy" /><h3 class="saga-card__title">The Last Refusal</h3><p class="saga-card__key">REFUSAL · CHILD · ROAD</p></article>
-        <article class="saga-card"><p class="saga-card__number">BOOK XIII</p><img class="saga-card__crest" src="book-13-crest.png" alt="Raven house crest" loading="lazy" /><h3 class="saga-card__title">The House That Raised the Raven</h3><p class="saga-card__key">HOME · WOUND · RAVEN</p></article>
-        <article class="saga-card"><p class="saga-card__number">BOOK XIV</p><img class="saga-card__crest" src="book-14-crest.png" alt="Hidden house crest" loading="lazy" /><h3 class="saga-card__title">The House Beyond the House</h3><p class="saga-card__key">HIDDEN HOUSE · TRUTH · BLOODLINE</p></article>
-        <article class="saga-card"><p class="saga-card__number">BOOK XV</p><img class="saga-card__crest" src="book-15-crest.png" alt="Braid crest" loading="lazy" /><h3 class="saga-card__title">The Braid</h3><p class="saga-card__key">BRAID · OATH · ALL WHO STAND BESIDE</p></article>
-        <article class="saga-card"><p class="saga-card__number">BOOK XVI</p><img class="saga-card__crest" src="book-16-crest.png" alt="Chosen love and open hands crest" loading="lazy" /><h3 class="saga-card__title">The Braid: Part II — The Loves That Would Not Be Counted</h3><p class="saga-card__key">LOVE · CHOICE · NO COUNTING</p></article>
-        <article class="saga-card"><p class="saga-card__number">BOOK XVII</p><img class="saga-card__crest" src="book-17-crest.png" alt="Green Deer-Wood guardian crest" loading="lazy" /><h3 class="saga-card__title">Green Deer-Wood</h3><p class="saga-card__key">WOOD · GUARDIAN · HIDDEN PATH</p></article>
-        <article class="saga-card"><p class="saga-card__number">BOOK XVIII</p><img class="saga-card__crest" src="book-18-crest.png" alt="Twice-answering road crest" loading="lazy" /><h3 class="saga-card__title">The Road That Answered Twice</h3><p class="saga-card__key">TWO ROADS · ANSWER · RETURN</p></article>
-        <article class="saga-card"><p class="saga-card__number">BOOK XIX</p><img class="saga-card__crest" src="book-19-crest.png" alt="Last light on Witness Isle crest" loading="lazy" /><h3 class="saga-card__title">The Last Light of Witness Isle</h3><p class="saga-card__key">WITNESS · ISLE · LAST LIGHT</p></article>
-        <article class="saga-card"><p class="saga-card__number">BOOK XX</p><img class="saga-card__crest" src="book-20-crest.png" alt="Road arriving home at dawn crest" loading="lazy" /><h3 class="saga-card__title">The Road That Brought Us Home</h3><p class="saga-card__key">HOME · JOINING · DAWN</p></article>
+        <a class="saga-card" href="#book-1"><p class="saga-card__number">BOOK I</p><img class="saga-card__crest" src="book-01-crest.webp" alt="Road through the mountains crest" loading="lazy" /><h3 class="saga-card__title">The Road That Would Not Kneel</h3><p class="saga-card__key">ROAD · WING · CHILD</p></a>
+        <a class="saga-card" href="#book-2"><p class="saga-card__number">BOOK II</p><img class="saga-card__crest" src="book-02-crest.webp" alt="Reckoner’s knot crest" loading="lazy" /><h3 class="saga-card__title">The Reckoner’s Knot</h3><p class="saga-card__key">KNOT · LAW · RECKONING</p></a>
+        <a class="saga-card" href="#book-3"><p class="saga-card__number">BOOK III</p><img class="saga-card__crest" src="book-03-crest.webp" alt="Crown, thorns and salt crest" loading="lazy" /><h3 class="saga-card__title">The Crown of Thorns and Salt</h3><p class="saga-card__key">CROWN · SALT · THORNS</p></a>
+        <a class="saga-card" href="#book-4"><p class="saga-card__number">BOOK IV</p><img class="saga-card__crest" src="book-04-crest.webp" alt="Broken crown crest" loading="lazy" /><h3 class="saga-card__title">The Crown Unmade</h3><p class="saga-card__key">BROKEN CROWN · MARSH LAW</p></a>
+        <a class="saga-card" href="#book-5"><p class="saga-card__number">BOOK V</p><img class="saga-card__crest" src="book-05-crest.webp" alt="Burning underroot crest" loading="lazy" /><h3 class="saga-card__title">The War of the Underroot</h3><p class="saga-card__key">ROOT · FIRE · BLOODLINE</p></a>
+        <a class="saga-card" href="#book-6"><p class="saga-card__number">BOOK VI</p><img class="saga-card__crest" src="book-06-crest.webp" alt="Rising root and tower crest" loading="lazy" /><h3 class="saga-card__title">The Rising Root</h3><p class="saga-card__key">ROOT · RISE · GATE</p></a>
+        <a class="saga-card" href="#book-7"><p class="saga-card__number">BOOK VII</p><img class="saga-card__crest" src="book-07-crest.webp" alt="Severing blade crest" loading="lazy" /><h3 class="saga-card__title">The Severing War</h3><p class="saga-card__key">SEVER · FRACTURE · TRUTH</p></a>
+        <a class="saga-card" href="#book-8"><p class="saga-card__number">BOOK VIII</p><img class="saga-card__crest" src="book-08-crest.webp" alt="Last root crest" loading="lazy" /><h3 class="saga-card__title">The Last Root</h3><p class="saga-card__key">LAST ROOT · TRUE NAME</p></a>
+        <a class="saga-card" href="#book-9"><p class="saga-card__number">BOOK IX</p><img class="saga-card__crest" src="book-09-crest.webp" alt="Eclipse and rootless road crest" loading="lazy" /><h3 class="saga-card__title">The World Without Root</h3><p class="saga-card__key">NO ROOT · WRONG TURNS</p></a>
+        <a class="saga-card" href="#book-10"><p class="saga-card__number">BOOK X</p><img class="saga-card__crest" src="book-10-crest.webp" alt="Quiet hearth crest" loading="lazy" /><h3 class="saga-card__title">The Quieting World</h3><p class="saga-card__key">SANCTUARY · HEARTH · ISLE</p></a>
+        <a class="saga-card" href="#book-11"><p class="saga-card__number">BOOK XI</p><img class="saga-card__crest" src="book-11-crest.webp" alt="Agreement ash crest" loading="lazy" /><h3 class="saga-card__title">The Agreement of Ash</h3><p class="saga-card__key">ASH · AGREEMENT · MERCY</p></a>
+        <a class="saga-card" href="#book-12"><p class="saga-card__number">BOOK XII</p><img class="saga-card__crest" src="book-12-crest.webp" alt="Raised refusal hand crest" loading="lazy" /><h3 class="saga-card__title">The Last Refusal</h3><p class="saga-card__key">REFUSAL · CHILD · ROAD</p></a>
+        <a class="saga-card" href="#book-13"><p class="saga-card__number">BOOK XIII</p><img class="saga-card__crest" src="book-13-crest.webp" alt="Raven house crest" loading="lazy" /><h3 class="saga-card__title">The House That Raised the Raven</h3><p class="saga-card__key">HOME · WOUND · RAVEN</p></a>
+        <a class="saga-card" href="#book-14"><p class="saga-card__number">BOOK XIV</p><img class="saga-card__crest" src="book-14-crest.webp" alt="Hidden house crest" loading="lazy" /><h3 class="saga-card__title">The House Beyond the House</h3><p class="saga-card__key">HIDDEN HOUSE · TRUTH · BLOODLINE</p></a>
+        <a class="saga-card" href="#book-15"><p class="saga-card__number">BOOK XV</p><img class="saga-card__crest" src="book-15-crest.webp" alt="Braid crest" loading="lazy" /><h3 class="saga-card__title">The Braid</h3><p class="saga-card__key">BRAID · OATH · ALL WHO STAND BESIDE</p></a>
+        <a class="saga-card" href="#book-16"><p class="saga-card__number">BOOK XVI</p><img class="saga-card__crest" src="book-16-crest.webp" alt="Chosen love and open hands crest" loading="lazy" /><h3 class="saga-card__title">The Braid: Part II — The Loves That Would Not Be Counted</h3><p class="saga-card__key">LOVE · CHOICE · NO COUNTING</p></a>
+        <a class="saga-card" href="#book-17"><p class="saga-card__number">BOOK XVII</p><img class="saga-card__crest" src="book-17-crest.webp" alt="Green Deer-Wood guardian crest" loading="lazy" /><h3 class="saga-card__title">Green Deer-Wood</h3><p class="saga-card__key">WOOD · GUARDIAN · HIDDEN PATH</p></a>
+        <a class="saga-card" href="#book-18"><p class="saga-card__number">BOOK XVIII</p><img class="saga-card__crest" src="book-18-crest.webp" alt="Twice-answering road crest" loading="lazy" /><h3 class="saga-card__title">The Road That Answered Twice</h3><p class="saga-card__key">TWO ROADS · ANSWER · RETURN</p></a>
+        <a class="saga-card" href="#book-19"><p class="saga-card__number">BOOK XIX</p><img class="saga-card__crest" src="book-19-crest.webp" alt="Last light on Witness Isle crest" loading="lazy" /><h3 class="saga-card__title">The Last Light of Witness Isle</h3><p class="saga-card__key">WITNESS · ISLE · LAST LIGHT</p></a>
+        <a class="saga-card" href="#book-20"><p class="saga-card__number">BOOK XX</p><img class="saga-card__crest" src="book-20-crest.webp" alt="Road arriving home at dawn crest" loading="lazy" /><h3 class="saga-card__title">The Road That Brought Us Home</h3><p class="saga-card__key">HOME · JOINING · DAWN</p></a>
       </div>
     </section>
 
@@ -617,7 +638,7 @@
       <h2>The First Reckonings</h2>
 
       <div class="book-grid">
-        <article class="book-card featured-book">
+        <article class="book-card featured-book" id="book-1">
           <p class="book-number">Book I</p>
           <h3>The Road That Would Not Kneel</h3>
           <p>
@@ -628,7 +649,7 @@
           <p class="book-state">The road refuses the knee</p>
         </article>
 
-        <article class="book-card">
+        <article class="book-card" id="book-2">
           <p class="book-number">Book II</p>
           <h3>The Reckoner’s Knot</h3>
           <p>
@@ -638,7 +659,7 @@
           <p class="book-state">The knot tightens</p>
         </article>
 
-        <article class="book-card">
+        <article class="book-card" id="book-3">
           <p class="book-number">Book III</p>
           <h3>The Crown of Thorns and Salt</h3>
           <p>
@@ -648,7 +669,7 @@
           <p class="book-state">The Crown closes in</p>
         </article>
 
-        <article class="book-card">
+        <article class="book-card" id="book-4">
           <p class="book-number">Book IV</p>
           <h3>The Crown Unmade</h3>
           <p>
@@ -665,7 +686,7 @@
       <h2>The Root Wars</h2>
 
       <div class="book-grid">
-        <article class="book-card">
+        <article class="book-card" id="book-5">
           <p class="book-number">Book V</p>
           <h3>The War of the Underroot</h3>
           <p>
@@ -675,7 +696,7 @@
           <p class="book-state">The buried war</p>
         </article>
 
-        <article class="book-card">
+        <article class="book-card" id="book-6">
           <p class="book-number">Book VI</p>
           <h3>The Rising Root</h3>
           <p>
@@ -685,7 +706,7 @@
           <p class="book-state">The root rises</p>
         </article>
 
-        <article class="book-card">
+        <article class="book-card" id="book-7">
           <p class="book-number">Book VII</p>
           <h3>The Severing War</h3>
           <p>
@@ -695,7 +716,7 @@
           <p class="book-state">The severing</p>
         </article>
 
-        <article class="book-card">
+        <article class="book-card" id="book-8">
           <p class="book-number">Book VIII</p>
           <h3>The Last Root</h3>
           <p>
@@ -712,7 +733,7 @@
       <h2>The Quieting World</h2>
 
       <div class="book-grid">
-        <article class="book-card">
+        <article class="book-card" id="book-9">
           <p class="book-number">Book IX</p>
           <h3>The World Without Root</h3>
           <p>
@@ -723,7 +744,7 @@
           <p class="book-state">After the root</p>
         </article>
 
-        <article class="book-card">
+        <article class="book-card" id="book-10">
           <p class="book-number">Book X</p>
           <h3>The Quieting World</h3>
           <p>
@@ -733,7 +754,7 @@
           <p class="book-state">The uneasy peace</p>
         </article>
 
-        <article class="book-card">
+        <article class="book-card" id="book-11">
           <p class="book-number">Book XI</p>
           <h3>The Agreement of Ash</h3>
           <p>
@@ -743,7 +764,7 @@
           <p class="book-state">The ash agreement</p>
         </article>
 
-        <article class="book-card">
+        <article class="book-card" id="book-12">
           <p class="book-number">Book XII</p>
           <h3>The Last Refusal</h3>
           <p>
@@ -760,7 +781,7 @@
       <h2>Houses, Ravens and the Braid</h2>
 
       <div class="book-grid">
-        <article class="book-card">
+        <article class="book-card" id="book-13">
           <p class="book-number">Book XIII</p>
           <h3>The House That Raised the Raven</h3>
           <p>
@@ -770,7 +791,7 @@
           <p class="book-state">The remembering house</p>
         </article>
 
-        <article class="book-card">
+        <article class="book-card" id="book-14">
           <p class="book-number">Book XIV</p>
           <h3>The House Beyond the House</h3>
           <p>
@@ -780,7 +801,7 @@
           <p class="book-state">The farther threshold</p>
         </article>
 
-        <article class="book-card featured-book">
+        <article class="book-card featured-book" id="book-15">
           <p class="book-number">Book XV</p>
           <h3>The Braid</h3>
           <p>
@@ -805,7 +826,7 @@
       </p>
 
       <div class="book-grid">
-        <article class="book-card featured-book">
+        <article class="book-card featured-book" id="book-16">
           <p class="book-number">Book XVI</p>
           <h3>The Braid: Part II — The Loves That Would Not Be Counted</h3>
           <p>
@@ -816,7 +837,7 @@
           <p class="book-state">In active expansion</p>
         </article>
 
-        <article class="book-card">
+        <article class="book-card" id="book-17">
           <p class="book-number">Book XVII</p>
           <h3>Green Deer-Wood</h3>
           <p>
@@ -826,7 +847,7 @@
           <p class="book-state">The forest road opens</p>
         </article>
 
-        <article class="book-card">
+        <article class="book-card" id="book-18">
           <p class="book-number">Book XVIII</p>
           <h3>The Road That Answered Twice</h3>
           <p>
@@ -836,7 +857,7 @@
           <p class="book-state">The road answers</p>
         </article>
 
-        <article class="book-card">
+        <article class="book-card" id="book-19">
           <p class="book-number">Book XIX</p>
           <h3>The Last Light of Witness Isle</h3>
           <p>
@@ -846,7 +867,7 @@
           <p class="book-state">The last witness-light</p>
         </article>
 
-        <article class="book-card featured-book">
+        <article class="book-card featured-book" id="book-20">
           <p class="book-number">Book XX</p>
           <h3>The Road That Brought Us Home</h3>
           <p>
