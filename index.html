@@ -4,46 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Saga of Black Wings | Timothy M. Halliday</title>
-
-  <meta
-    name="description"
-    content="The official website of The Saga of Black Wings by Timothy M. Halliday. Begin with Book I: The Road That Would Not Kneel."
-  />
-  <meta name="author" content="Timothy M. Halliday" />
+  <title>The Saga of Black Wings | Timothy M Halliday</title>
+  <meta name="description" content="Enter Vardrum, the world of The Saga of Black Wings by Timothy M Halliday. Begin with The Road That Would Not Kneel and explore the twenty planned volumes and the individual Braid books." />
+  <meta name="author" content="Timothy M Halliday" />
   <meta name="theme-color" content="#050608" />
-
-  <meta
-    name="google-site-verification"
-    content="1uTihbqP5mN3NeGrz_2YrQtcU2OR1KrVZ1eK5cvLFN4"
-  />
+  <meta name="google-site-verification" content="1uTihbqP5mN3NeGrz_2YrQtcU2OR1KrVZ1eK5cvLFN4" />
 
   <meta property="og:title" content="The Saga of Black Wings" />
-  <meta
-    property="og:description"
-    content="Ravens, wolves, chosen family, ancient law, dangerous mercy and love that refuses ownership."
-  />
+  <meta property="og:description" content="Ravens, wolves, chosen family, ancient law, dangerous mercy and love that refuses ownership." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://sagaofblackwings.com/" />
-  <meta
-    property="og:image"
-    content="https://sagaofblackwings.com/F8098CC8-B454-449C-B6F1-3623429B74A1.png"
-  />
-  <meta
-    property="og:image:alt"
-    content="The Braid crest from The Saga of Black Wings"
-  />
+  <meta property="og:image" content="https://sagaofblackwings.com/F8098CC8-B454-449C-B6F1-3623429B74A1.png" />
+  <meta property="og:image:alt" content="The Braid crest from The Saga of Black Wings" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="The Saga of Black Wings" />
-  <meta
-    name="twitter:description"
-    content="Enter Vardrum, where black wings witness, old roads remember and no crown may count the Braid smaller."
-  />
-  <meta
-    name="twitter:image"
-    content="https://sagaofblackwings.com/F8098CC8-B454-449C-B6F1-3623429B74A1.png"
-  />
+  <meta name="twitter:description" content="Enter Vardrum, where black wings witness, old roads remember and no crown may count the Braid smaller." />
+  <meta name="twitter:image" content="https://sagaofblackwings.com/F8098CC8-B454-449C-B6F1-3623429B74A1.png" />
 
   <link rel="canonical" href="https://sagaofblackwings.com/" />
   <link rel="stylesheet" href="style.css" />
@@ -51,267 +28,114 @@
   <style>
     .home-hero {
       min-height: 90vh;
-      padding-top: 5.5rem;
-      padding-bottom: 5.5rem;
+      padding-block: clamp(2.5rem, 8vw, 5.5rem);
     }
 
     .home-hero-layout {
       display: grid;
-      grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
       gap: clamp(2rem, 6vw, 5rem);
       align-items: center;
       width: min(100%, 1180px);
-      margin: 0 auto;
+      margin-inline: auto;
     }
 
-    .home-hero .hero-text {
-      width: 100%;
-      text-align: left;
-    }
+    .home-hero .hero-text { width: 100%; text-align: left; }
+    .home-hero .tagline, .home-hero .hero-quote { margin-left: 0; }
+    .home-hero .hero-buttons { justify-content: flex-start; }
 
-    .home-hero .tagline,
-    .home-hero .hero-quote {
-      margin-left: 0;
-    }
-
-    .home-hero .hero-buttons {
-      justify-content: flex-start;
-    }
-
-    .hero-crest {
-      position: relative;
+    .hero-crest, .first-book-panel figure, .viking-home-portrait {
+      box-sizing: border-box;
       margin: 0;
-      padding: 0.65rem;
-      background: rgba(5, 6, 8, 0.72);
-      border: 1px solid rgba(240, 210, 140, 0.45);
-      border-radius: 28px;
-      box-shadow: 0 28px 80px rgba(0, 0, 0, 0.62);
-      transform: rotate(1deg);
+      padding: .6rem;
+      background: rgba(5, 6, 8, .72);
+      border: 1px solid rgba(240, 210, 140, .42);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
     }
 
-    .hero-crest::before {
-      content: "";
-      position: absolute;
-      inset: -1.2rem;
-      z-index: -1;
-      background: radial-gradient(circle, rgba(221, 182, 95, 0.18), transparent 68%);
-      filter: blur(8px);
-    }
-
-    .hero-crest img {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      border-radius: 20px;
-    }
-
-    .home-map-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .home-map-grid .book-card {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .home-map-grid .button {
-      align-self: flex-start;
-      margin-top: auto;
-    }
-
-    .saga-status {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1rem;
-      margin-top: 1.7rem;
-    }
-
-    .status-card {
-      padding: 1.25rem;
-      text-align: center;
-      background: rgba(5, 6, 8, 0.42);
-      border: 1px solid rgba(221, 182, 95, 0.24);
-      border-radius: 16px;
-    }
-
-    .status-card strong {
+    .hero-crest img, .first-book-panel img, .home-image-panel img,
+    .viking-home-portrait img {
       display: block;
-      margin-bottom: 0.35rem;
-      color: var(--gold-bright);
-      font-family: "Cinzel", Georgia, serif;
-      font-size: clamp(1.45rem, 3vw, 2.1rem);
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
     }
 
-    .status-card span {
-      color: var(--parchment-soft);
-      font-size: 0.9rem;
-    }
-
-    .home-image-panel,
-    .home-author-panel {
+    .first-book-panel, .home-image-panel, .home-author-panel {
       display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
       gap: clamp(1.5rem, 4vw, 3rem);
       align-items: center;
     }
 
-    .home-image-panel figure,
-    .home-author-panel figure {
-      margin: 0;
+    .first-book-panel {
+      grid-template-columns: minmax(0, 1.32fr) minmax(0, .68fr);
     }
 
-    .home-image-panel img,
-    .home-author-panel img {
-      width: 100%;
-      max-height: 560px;
-      object-fit: cover;
-      border: 1px solid rgba(221, 182, 95, 0.38);
-      border-radius: 20px;
-      box-shadow: var(--shadow);
-    }
+    .home-image-panel { grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); }
+    .home-author-panel { grid-template-columns: minmax(0, 1fr) minmax(0, 350px); }
+    .home-image-panel figure { margin: 0; }
+    .viking-home-portrait img { max-height: 640px; object-fit: contain; }
 
-    .home-author-panel {
-      grid-template-columns: minmax(0, 1fr) minmax(230px, 350px);
-    }
-
-    .home-author-panel img {
-      aspect-ratio: 4 / 5;
-      object-position: center top;
-    }
-
-    .viking-home-panel {
+    .first-book-panel, .viking-home-panel {
+      border-color: rgba(221, 182, 95, .45);
       background:
-        radial-gradient(circle at 92% 8%, rgba(221, 182, 95, 0.13), transparent 23rem),
-        radial-gradient(circle at 8% 90%, rgba(49, 93, 131, 0.15), transparent 22rem),
-        linear-gradient(145deg, rgba(26, 25, 27, 0.98), rgba(9, 11, 14, 0.99));
-      border-color: rgba(221, 182, 95, 0.42);
-    }
-
-    .viking-home-portrait {
-      overflow: hidden;
-      padding: 0.5rem;
-      background: rgba(5, 6, 8, 0.58);
-      border: 1px solid rgba(221, 182, 95, 0.36);
-      border-radius: 20px;
-      box-shadow: var(--shadow);
-    }
-
-    .viking-home-portrait img {
-      max-height: 640px;
-      object-fit: contain;
-      background: #080a0d;
-      border: 0;
-      border-radius: 14px;
-      box-shadow: none;
-    }
-
-    .viking-home-portrait figcaption {
-      padding: 0.75rem 0.35rem 0.2rem;
-      color: var(--parchment-soft);
-      font-size: 0.82rem;
-      font-style: italic;
-      text-align: center;
+        radial-gradient(circle at 8% 8%, rgba(221, 182, 95, .14), transparent 22rem),
+        linear-gradient(145deg, #1a1717, #080a0d);
     }
 
     .mini-note {
+      padding-top: .65rem;
       color: var(--parchment-soft);
-      font-size: 0.9rem;
-      text-align: center;
-    }
-
-    @media (max-width: 980px) {
-      .home-hero-layout,
-      .home-image-panel,
-      .home-author-panel {
-        grid-template-columns: 1fr;
-      }
-
-      .home-hero .hero-text {
-        text-align: center;
-      }
-
-      .home-hero .tagline,
-      .home-hero .hero-quote {
-        margin-right: auto;
-        margin-left: auto;
-      }
-
-      .home-hero .hero-buttons {
-        justify-content: center;
-      }
-
-      .hero-crest {
-        width: min(100%, 560px);
-        margin: 0 auto;
-        transform: none;
-      }
-
-      .home-map-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 720px) {
-      .home-hero {
-        min-height: auto;
-      }
-
-      .home-map-grid,
-      .saga-status {
-        grid-template-columns: 1fr;
-      }
-
-      .home-map-grid .button {
-        align-self: stretch;
-      }
-    }
-  
-    .first-book-panel {
-      display: grid;
-      grid-template-columns: minmax(220px, 0.68fr) minmax(0, 1.32fr);
-      gap: clamp(1.4rem, 4vw, 3rem);
-      align-items: center;
-      border-color: rgba(221, 182, 95, 0.48);
-      background:
-        radial-gradient(circle at 8% 8%, rgba(221, 182, 95, 0.14), transparent 22rem),
-        linear-gradient(145deg, rgba(26, 23, 23, 0.98), rgba(8, 10, 13, 0.99));
-    }
-
-    .first-book-panel figure {
-      margin: 0;
-      padding: 0.5rem;
-      background: rgba(5, 6, 8, 0.7);
-      border: 1px solid rgba(221, 182, 95, 0.4);
-      border-radius: 20px;
-      box-shadow: var(--shadow);
-    }
-
-    .first-book-panel img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 14px;
-    }
-
-    .first-book-panel figcaption {
-      padding: 0.7rem 0.3rem 0.15rem;
-      color: var(--parchment-soft);
-      font-size: 0.8rem;
+      font-size: .875rem;
       font-style: italic;
       text-align: center;
     }
 
-    @media (max-width: 760px) {
-      .first-book-panel {
-        grid-template-columns: 1fr;
-      }
-
-      .first-book-panel figure {
-        max-width: 410px;
-        margin-inline: auto;
-      }
+    .home-map-grid, .reading-paths {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
+    .home-map-grid .book-card, .reading-paths .book-card {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .home-map-grid .button, .reading-paths .button {
+      align-self: flex-start;
+      margin-top: auto;
+    }
+
+    #book-one, #reading-paths, #braid-books, #forgotten-roads {
+      scroll-margin-top: 6rem;
+    }
+
+    @media (max-width: 980px) {
+      .home-hero { min-height: auto; }
+      .home-hero-layout, .home-image-panel, .home-author-panel {
+        grid-template-columns: 1fr;
+      }
+      .hero-crest, .home-image-panel figure, .viking-home-portrait {
+        width: min(100%, 480px);
+        margin-inline: auto;
+      }
+      .home-map-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 760px) {
+      .first-book-panel, .reading-paths { grid-template-columns: 1fr; }
+      .first-book-panel figure { width: min(100%, 380px); margin-inline: auto; }
+    }
+
+    @media (max-width: 560px) {
+      .home-map-grid { grid-template-columns: 1fr; }
+      .home-hero .hero-buttons .button {
+        box-sizing: border-box;
+        width: 100%;
+        text-align: center;
+      }
+    }
   </style>
 
   <script type="application/ld+json">
@@ -320,10 +144,10 @@
     "@type": "WebSite",
     "name": "The Saga of Black Wings",
     "url": "https://sagaofblackwings.com/",
-    "description": "The official website of The Saga of Black Wings by Timothy M. Halliday.",
+    "description": "The official website of The Saga of Black Wings by Timothy M Halliday.",
     "author": {
       "@type": "Person",
-      "name": "Timothy M. Halliday"
+      "name": "Timothy M Halliday"
     }
   }
   </script>
@@ -336,7 +160,6 @@
     <div class="home-hero-layout">
       <div class="hero-text">
         <p class="eyebrow">The Official Saga Map-Room</p>
-
         <h1>The Saga of Black Wings</h1>
 
         <p class="tagline">
@@ -345,25 +168,19 @@
           discovers that chosen family can become stronger than any crown.
         </p>
 
-        <blockquote class="hero-quote">
-          “No crown shall count us smaller.”
-        </blockquote>
+        <blockquote class="hero-quote">“No crown shall count us smaller.”</blockquote>
 
         <div class="hero-buttons">
-          <a href="books.html" class="button primary">Enter the Books</a>
-          <a href="characters.html" class="button secondary">Meet the Braid</a>
+          <a href="books.html#book-one-road" class="button primary">Start with Book I</a>
+          <a href="#reading-paths" class="button secondary">Explore the reading paths</a>
           <a href="world.html" class="button secondary">Enter Vardrum</a>
         </div>
       </div>
 
       <figure class="hero-crest">
-        <img
-          src="F8098CC8-B454-449C-B6F1-3623429B74A1.png"
-          alt="The Braid crest with a black raven and the motto No Crown Shall Count Us Smaller"
-          width="1254"
-          height="1254"
-          fetchpriority="high"
-        />
+        <img src="F8098CC8-B454-449C-B6F1-3623429B74A1.png"
+             alt="The Braid crest with a black raven and the motto No Crown Shall Count Us Smaller"
+             width="1254" height="1254" fetchpriority="high" />
       </figure>
     </div>
   </header>
@@ -383,14 +200,82 @@
   </nav>
 
   <main id="main-content">
+    <section class="panel first-book-panel" id="book-one" aria-labelledby="book-one-heading">
+      <div>
+        <p class="eyebrow">Book I · The First Road</p>
+        <h2 id="book-one-heading">The Road That Would Not Kneel</h2>
+
+        <p>
+          The journey begins beneath ravens, through salt-marsh law,
+          difficult mercy and the first gathering of the Braid.
+        </p>
+
+        <p>
+          In Vardrum, roads remember who crossed them. But a road cannot tell
+          you what someone will do when the Crown demands they kneel.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="books.html#book-one-road" class="button primary">Discover Book I</a>
+          <a href="maps.html" class="button secondary">Open the Map-Room</a>
+        </div>
+      </div>
+
+      <figure>
+        <a href="book-one-road-that-would-not-kneel-new-cover.png"
+           aria-label="Open the Book I cover at full size">
+          <img src="book-one-road-that-would-not-kneel-new-cover.png"
+               alt="Front cover of Book I, The Road That Would Not Kneel"
+               width="715" height="1024" />
+        </a>
+        <figcaption class="mini-note">The first named road of Black Wings.</figcaption>
+      </figure>
+    </section>
+
+    <section class="panel" id="reading-paths" aria-labelledby="reading-paths-heading">
+      <p class="eyebrow">The Books</p>
+      <h2 id="reading-paths-heading">Choose Your Reading Path</h2>
+
+      <div class="book-grid reading-paths">
+        <article class="book-card featured-book">
+          <p class="book-number">The Main Saga</p>
+          <h3>The Saga of Black Wings</h3>
+          <p>
+            Twenty planned volumes, each with its own title and storyline.
+            Explore the books in reading order, without spoilers.
+          </p>
+          <a href="books.html" class="button primary">Explore the Twenty Books</a>
+        </article>
+
+        <article class="book-card" id="braid-books">
+          <p class="book-number">Individual Stories</p>
+          <h3>The Braid Books</h3>
+          <p>
+            Individual books turn the spotlight on the people and companions
+            who make the Braid. Their stories have a place of their own,
+            separate from the twenty numbered volumes.
+          </p>
+          <a href="characters.html" class="button secondary">Meet the Braid</a>
+        </article>
+
+        <article class="book-card" id="forgotten-roads">
+          <p class="book-number">Also in Development</p>
+          <h3>The Saga of Forgotten Roads</h3>
+          <p>
+            Timothy M Halliday is also developing <em>The Saga of Forgotten Roads</em>,
+            a separate fantasy saga.
+          </p>
+        </article>
+      </div>
+    </section>
+
     <section class="panel intro-panel">
       <p class="eyebrow">Welcome to Vardrum</p>
       <h2>Where the Black Wings Gather</h2>
 
       <p>
-        <em>The Saga of Black Wings</em> is a dark epic fantasy series about
-        people who refuse to remain owned, silenced, diminished or named by
-        those who would control them.
+        <em>The Saga of Black Wings</em> is a dark epic fantasy about people
+        who refuse to let those in power decide who they are or whom they love.
       </p>
 
       <p>
@@ -399,202 +284,86 @@
         beneath pressure.
       </p>
 
-      <p>
-        Here, love is not decoration. It is shelter, oath, witness, rebellion
-        and sometimes war.
-      </p>
+      <p>Here, love is not decoration. It is shelter, oath, witness, rebellion and sometimes war.</p>
 
-      <blockquote>
-        “A name remembered is a door the dark cannot fully close.”
-      </blockquote>
-    </section>
-
-    <section class="panel first-book-panel" id="book-one">
-      <figure>
-        <a
-          href="book-one-road-that-would-not-kneel-new-cover.png"
-          target="_blank"
-          rel="noopener"
-          aria-label="Open the Book I cover at full size"
-        >
-          <img
-            src="book-one-road-that-would-not-kneel-new-cover.png"
-            alt="Front cover of Book I, The Road That Would Not Kneel"
-            width="715"
-            height="1024"
-            loading="lazy"
-          />
-        </a>
-        <figcaption>The first named road of Black Wings.</figcaption>
-      </figure>
-
-      <div>
-        <p class="eyebrow">Book I Has Taken Its Name</p>
-        <h2>The Road That Would Not Kneel</h2>
-
-        <p>
-          The first volume of <em>The Saga of Black Wings</em> now stands under
-          its full title. It begins the long journey beneath ravens, through
-          salt-marsh law, difficult mercy and the first gathering of the Braid.
-        </p>
-
-        <p>
-          The public doorway remains spoiler-safe. The road is named; what waits
-          upon it still belongs to the reader.
-        </p>
-
-        <div class="hero-buttons">
-          <a href="books.html#book-one-road" class="button primary">Enter Book I</a>
-          <a href="maps.html" class="button secondary">Open the Map-Room</a>
-        </div>
-      </div>
+      <blockquote>“A name remembered is a door the dark cannot fully close.”</blockquote>
     </section>
 
     <section class="panel">
       <p class="eyebrow">Choose Your Road</p>
-      <h2>A Map of the Whole Website</h2>
-
-      <p>
-        Begin anywhere. Every doorway below leads into a different chamber of
-        the saga, and every chamber leads back to the living Braid.
-      </p>
+      <h2>The Website Map</h2>
+      <p>Find the books, meet the witnesses or take a road deeper into Vardrum.</p>
 
       <div class="book-grid home-map-grid">
         <article class="book-card featured-book">
           <p class="book-number">The Reading Road</p>
           <h3>Books</h3>
-          <p>
-            Discover the saga from Book I onwards, with spoiler-safe story
-            introductions, themes and glimpses of the roads still being written.
-          </p>
+          <p>Discover the twenty titles and spoiler-free story introductions.</p>
           <a href="books.html" class="button primary">Open the Books</a>
         </article>
 
         <article class="book-card">
           <p class="book-number">The Living Braid</p>
           <h3>Characters</h3>
-          <p>
-            Meet the survivors, lovers, families, companions and animal
-            witnesses who carry the living heart of Black Wings.
-          </p>
+          <p>Meet the survivors, lovers, families, companions and animal witnesses of Black Wings.</p>
           <a href="characters.html" class="button secondary">Meet the Characters</a>
         </article>
 
         <article class="book-card">
           <p class="book-number">The Dark Names</p>
           <h3>Rogues</h3>
-          <p>
-            Enter a spoiler-safe gallery of crowns, roots, false mercy, cold
-            houses, old hunger and the powers that make witness necessary.
-          </p>
+          <p>Enter a spoiler-free gallery of crowns, roots, false mercy and cold houses.</p>
           <a href="rogues.html" class="button secondary">Enter the Gallery</a>
         </article>
 
         <article class="book-card">
           <p class="book-number">The Roads Beyond</p>
           <h3>World</h3>
-          <p>
-            Walk through Vardrum, Witness Isle, the Salt-Marsh, Green Deer-Wood
-            and the lands beneath forgotten law.
-          </p>
+          <p>Walk through Vardrum, Witness Isle, the Salt-Marsh and Green Deer-Wood.</p>
           <a href="world.html" class="button secondary">Enter the World</a>
         </article>
 
         <article class="book-card">
           <p class="book-number">The Remembered Words</p>
           <h3>Lore</h3>
-          <p>
-            Discover old laws, witness marks, prayers, traditions, warnings and
-            fragments carried across generations.
-          </p>
+          <p>Discover old laws, witness marks, prayers, traditions and warnings.</p>
           <a href="lore.html" class="button secondary">Read the Lore</a>
         </article>
 
         <article class="book-card">
           <p class="book-number">The Skald-Room</p>
           <h3>Odes and Songs</h3>
-          <p>
-            Read odes, songs, epitaphs, prayer-leaves, beast verses and fragments
-            preserved beside the saga.
-          </p>
+          <p>Read odes, songs, epitaphs, prayer-leaves and beast verses.</p>
           <a href="odes.html" class="button secondary">Open the Odes</a>
         </article>
 
         <article class="book-card">
           <p class="book-number">The Painted Road</p>
           <h3>Maps</h3>
-          <p>
-            Follow the known roads, islands, marshes, woods and hidden places of
-            the Black Wings world.
-          </p>
+          <p>Follow the known roads, islands, marshes, woods and hidden places of Vardrum.</p>
           <a href="maps.html" class="button secondary">Open the Maps</a>
         </article>
 
         <article class="book-card">
           <p class="book-number">The Witness Hall</p>
           <h3>Visual Archive</h3>
-          <p>
-            Explore crests, shields, banners, birds, beasts, spirit flame and
-            official visual references from across the saga.
-          </p>
+          <p>Explore crests, shields, banners, birds, beasts and spirit flame.</p>
           <a href="archive.html" class="button secondary">Visit the Archive</a>
         </article>
 
         <article class="book-card">
           <p class="book-number">Behind the Wings</p>
           <h3>Author</h3>
-          <p>
-            Read about Timothy M. Halliday, writing as T.M.H, and the world he
-            has carried for around forty years.
-          </p>
+          <p>Meet Timothy M Halliday, the author behind the world of Black Wings.</p>
           <a href="author.html" class="button secondary">Meet the Author</a>
         </article>
 
         <article class="book-card">
           <p class="book-number">The Names Behind the Page</p>
           <h3>Dedications</h3>
-          <p>
-            Visit the quiet chamber for the people, animals, memories and acts of
-            belief standing behind the long road.
-          </p>
+          <p>Meet the people and animals whose lives helped shape the saga.</p>
           <a href="dedications.html" class="button secondary">Read the Dedications</a>
         </article>
-      </div>
-    </section>
-
-    <section class="panel">
-      <p class="eyebrow">The Saga Shelf</p>
-      <h2>The Road Already Written</h2>
-
-      <p>
-        The main saga currently stretches from Book I through Book XV. Work has
-        also begun on Books XVI to XX, opening the next great movement of the story.
-      </p>
-
-      <p>
-        These later books continue the roads of the Braid, its loves, its animals,
-        its old enemies and the living laws that refuse to remain buried.
-      </p>
-
-      <div class="saga-status" aria-label="Saga writing status">
-        <div class="status-card">
-          <strong>I–XV</strong>
-          <span>Main saga manuscripts</span>
-        </div>
-
-        <div class="status-card">
-          <strong>XVI–XX</strong>
-          <span>The next movement has begun</span>
-        </div>
-
-        <div class="status-card">
-          <strong>One Braid</strong>
-          <span>Many roads, one living witness</span>
-        </div>
-      </div>
-
-      <div class="hero-buttons">
-        <a href="books.html" class="button primary">View the Saga Shelf</a>
       </div>
     </section>
 
@@ -610,10 +379,7 @@
             choosing one another when the road turns cruel.
           </p>
 
-          <p>
-            It holds warriors, survivors, lovers, children, families,
-            neighbours, beasts, birds, spirits and remembered names.
-          </p>
+          <p>It holds warriors, survivors, lovers, children, families, neighbours, beasts, birds, spirits and remembered names.</p>
 
           <div class="lore-list">
             <span>FATAS and Ness</span>
@@ -634,13 +400,9 @@
         </div>
 
         <figure>
-          <img
-            src="AB854AAB-8F11-4453-B5D2-F5850178C570.png"
-            alt="The full animal crest of The Saga of Black Wings"
-            width="1254"
-            height="1254"
-            loading="lazy"
-          />
+          <img src="AB854AAB-8F11-4453-B5D2-F5850178C570.png"
+               alt="The full animal crest of The Saga of Black Wings"
+               width="1254" height="1254" loading="lazy" />
           <figcaption class="mini-note">All remember. All bear truth.</figcaption>
         </figure>
       </div>
@@ -651,46 +413,33 @@
       <h2>The Animal Witnesses</h2>
 
       <p>
-        The animals of Black Wings are not ornaments standing at the edge of
-        human stories. They warn, judge, remember, protect, interrupt and often
-        understand the truth long before the people.
+        The animals of Black Wings warn, judge, remember, protect and interrupt.
+        Often they understand the truth long before the people do.
       </p>
 
       <div class="book-grid">
         <article class="character-card animal-card">
           <p class="role">Crow Witness</p>
           <h3>Scarlet</h3>
-          <p>
-            Calm, sharp-eyed and seldom impressed. Scarlet watches before
-            deciding whether anyone deserves her trust.
-          </p>
+          <p>Calm, sharp-eyed and seldom impressed. Scarlet watches before deciding whether anyone deserves her trust.</p>
         </article>
 
         <article class="character-card animal-card">
           <p class="role">Raven Witness</p>
           <h3>Blue</h3>
-          <p>
-            Inquisitive, iridescent and impossible to ignore. Blue notices doors
-            people hoped would remain hidden.
-          </p>
+          <p>Inquisitive, iridescent and impossible to ignore. Blue notices doors people hoped would remain hidden.</p>
         </article>
 
         <article class="character-card animal-card">
           <p class="role">Hearth Companions</p>
           <h3>Mad, Benson and Hugo</h3>
-          <p>
-            Dogs of loyalty, instinct and stubborn courage. Each carries a
-            different kind of witness.
-          </p>
+          <p>Dogs of loyalty, instinct and stubborn courage. Each carries a different kind of witness.</p>
         </article>
 
         <article class="character-card spirit-card">
           <p class="role">Spirit Flame</p>
           <h3>Bella’s Flame</h3>
-          <p>
-            A living light of courage, memory and refusal that burns without
-            becoming anyone’s possession.
-          </p>
+          <p>A living light of courage, memory and refusal that burns without becoming anyone’s possession.</p>
         </article>
       </div>
 
@@ -703,10 +452,7 @@
       <p class="eyebrow">The World Remembers</p>
       <h2>Beyond the Hearth</h2>
 
-      <p>
-        Vardrum is not a painted backdrop. Its roads listen, its marshes hold
-        buried truth and its houses remember everyone who crossed their thresholds.
-      </p>
+      <p>Vardrum’s roads listen, its marshes hold buried truth and its houses remember everyone who crossed their thresholds.</p>
 
       <div class="lore-list">
         <span>Vardrum</span>
@@ -731,11 +477,7 @@
     <section class="panel">
       <p class="eyebrow">Living Law</p>
       <h2>The Law of the Road</h2>
-
-      <p>
-        These truths run beneath the saga, older and stronger than the laws
-        written by crowns.
-      </p>
+      <p>These truths run beneath the saga, older and stronger than the laws written by crowns.</p>
 
       <div class="lore-list law-list">
         <span>Care freely given is not ransom.</span>
@@ -754,18 +496,12 @@
       <h2>Odes, Songs and Epitaphs</h2>
 
       <p>
-        Poetry within Black Wings carries record, warning, grief, humour,
-        folklore, remembrance and old magic.
+        Poetry within Black Wings carries record, warning, grief, humour, folklore,
+        remembrance and old magic. The Skald-Room gathers odes, songs, epitaphs,
+        prayer-leaves, beast verses and saga plates.
       </p>
 
-      <p>
-        The Skald-Room contains full odes, songs, short epitaphs, prayer-leaves,
-        beast verses and saga plates from across the world.
-      </p>
-
-      <blockquote>
-        “Not all who witness speak with human tongues.”
-      </blockquote>
+      <blockquote>“Not all who witness speak with human tongues.”</blockquote>
 
       <div class="hero-buttons">
         <a href="odes.html" class="button primary">Read the Odes</a>
@@ -776,23 +512,13 @@
       <div class="home-author-panel">
         <div>
           <p class="eyebrow">The Man Who Walked Beside Ravens</p>
-          <h2>Timothy M. Halliday</h2>
+          <h2>Timothy M Halliday</h2>
 
-          <p>
-            Timothy M. Halliday, writing as T.M.H, has carried
-            <em>The Saga of Black Wings</em> for around forty years.
-          </p>
-
+          <p>Timothy M Halliday, writing as T.M.H, has carried <em>The Saga of Black Wings</em> for around forty years.</p>
           <p>
             The saga grew from ravens, wolves, old roads, strange laws,
             difficult love, animal witnesses, darkness, humour and the stubborn
             belief that no life should be counted smaller.
-          </p>
-
-          <p>
-            The golden-eyed portrait carries the author into the visual language
-            of his own world: part bard, part road-witness, standing where the
-            ordinary life meets the mythic one.
           </p>
 
           <div class="hero-buttons">
@@ -802,12 +528,10 @@
         </div>
 
         <figure class="viking-home-portrait">
-          <img
-            src="FBDC2E04-E0CF-487A-B8D1-BFC81CC3ADFB.png"
-            alt="Viking-fantasy portrait of Timothy M. Halliday with golden serpent eyes, raven and staff"
-            loading="lazy"
-          />
-          <figcaption>The Man Who Walked Beside Ravens.</figcaption>
+          <img src="FBDC2E04-E0CF-487A-B8D1-BFC81CC3ADFB.png"
+               alt="Fantasy portrait of Timothy M Halliday with golden serpent eyes, a raven and a staff"
+               loading="lazy" />
+          <figcaption class="mini-note">The Man Who Walked Beside Ravens.</figcaption>
         </figure>
       </div>
     </section>
@@ -832,54 +556,33 @@
       <p class="eyebrow">Professional Contact</p>
       <h2>Publishing and Representation Enquiries</h2>
 
-      <p>
-        <em>The Saga of Black Wings</em> is currently being prepared for publication.
-      </p>
+      <p>For publishing enquiries, representation interest or professional contact:</p>
+      <p><a href="mailto:sagaofblackwings@outlook.com">sagaofblackwings@outlook.com</a></p>
 
-      <p>
-        For publishing enquiries, representation interest or professional contact:
-      </p>
-
-      <blockquote>
-        <a href="mailto:sagaofblackwings@outlook.com">
-          sagaofblackwings@outlook.com
+      <div class="hero-buttons">
+        <a href="https://www.instagram.com/sagaofblackwings/"
+           class="button secondary" target="_blank" rel="noopener noreferrer">
+          Follow @sagaofblackwings on Instagram
         </a>
-      </blockquote>
-
-      <p>
-        Follow the official Saga of Black Wings account on Instagram:
-      </p>
-
-      <blockquote>
-        <a href="https://www.instagram.com/sagaofblackwings/" target="_blank" rel="noopener noreferrer">
-          @sagaofblackwings
-        </a>
-      </blockquote>
+      </div>
     </section>
 
     <section class="panel final-road-panel">
-      <p class="eyebrow">Begin Anywhere</p>
+      <p class="eyebrow">Where the Road Opens</p>
       <h2>Every Road Leads Deeper</h2>
 
-      <p>
-        Begin with the books, the Braid, the maps, the animals, the odes or the
-        old laws. Every doorway opens onto another.
-      </p>
-
-      <blockquote>
-        “The map ends only where courage stops drawing.”
-      </blockquote>
+      <blockquote>“The map ends only where courage stops drawing.”</blockquote>
 
       <div class="hero-buttons">
-        <a href="books.html" class="button primary">Begin the Saga</a>
-        <a href="maps.html" class="button secondary">Follow the Road</a>
+        <a href="books.html#book-one-road" class="button primary">Begin with Book I</a>
+        <a href="maps.html" class="button secondary">Explore the Maps</a>
       </div>
     </section>
   </main>
 
   <footer>
     <nav class="footer-nav" aria-label="Footer navigation">
-      <a href="index.html">Home</a>
+      <a href="index.html" aria-current="page">Home</a>
       <a href="books.html">Books</a>
       <a href="characters.html">Characters</a>
       <a href="rogues.html">Rogues</a>
@@ -892,7 +595,7 @@
       <a href="dedications.html">Dedications</a>
     </nav>
 
-    <p>© 2026 Saga of Black Wings · Created by Timothy M. Halliday</p>
+    <p>© 2026 Saga of Black Wings · Created by Timothy M Halliday</p>
     <p class="footer-motto">No crown shall count us smaller.</p>
   </footer>
 </body>
